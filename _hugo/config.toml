@@ -5,3 +5,4 @@ author = "Minori Tokuda (@snowcrush)"
 hasCJKLanguage = true
 buildFuture = true
 theme = "aglaus"
+publishdir = ".."
