@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reactruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>http://tanstaafl.0pt.jp/tags/reactruby/</link>
+    <link>https://tanstaafl.0pt.jp/tags/reactruby/</link>
     <description>Recent content in Reactruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 19 Nov 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tanstaafl.0pt.jp/tags/reactruby/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/tags/reactruby/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ReactRubyをリリースした。</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
       <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;
 
 &lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;

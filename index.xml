@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>http://tanstaafl.0pt.jp/</link>
+    <link>https://tanstaafl.0pt.jp/</link>
     <description>Recent content on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 24 Feb 2016 01:02:53 +0900</lastBuildDate>
-    <atom:link href="http://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ブログをHugoに移行した</title>
-      <link>http://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</link>
       <pubDate>Wed, 24 Feb 2016 01:02:53 +0900</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</guid>
       <description>&lt;p&gt;このブログは手製blogエンジンで構築していたのだが、
 サイトの管理が面倒になってしまい放置してしまっていた。&lt;/p&gt;
 
@@ -48,11 +48,11 @@ CloudFlareは無料で証明書を提供しているのでCloudFlare経由で配
     
     <item>
       <title>SystemdでDocker上のPostgreSQLをバックアップする</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</link>
       <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</guid>
-      <description>&lt;p&gt;先日書いた、&lt;a href=&#34;http://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442&#34;&gt;CoreOSでバックアップを取っていなかったためデータを飛ばした話&lt;/a&gt;の続きである。&lt;/p&gt;
+      <guid>https://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</guid>
+      <description>&lt;p&gt;先日書いた、&lt;a href=&#34;https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442&#34;&gt;CoreOSでバックアップを取っていなかったためデータを飛ばした話&lt;/a&gt;の続きである。&lt;/p&gt;
 
 &lt;p&gt;前回fleetを使うという話をしたのだけれど、自分が今使っている環境はシングルホストだしsystemdを使うことにした。最もfleetはsystemdを分散クラスタ上で管理するためのツールのようなので、実際やることは変わらないだろう。&lt;/p&gt;
 
@@ -113,10 +113,10 @@ WantedBy=default.target
     
     <item>
       <title>CoreOSつかってたらデータが飛んだ</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</guid>
       <description>&lt;p&gt;DBのデータが飛んだので先日書いたReactについての記事は下書きから復元した。&lt;/p&gt;
 
 &lt;p&gt;原因はCoreOSが自動アップデートしたため、Postgresを動かしていたDockerコンテナが停止してしまったためだ。&lt;/p&gt;
@@ -144,10 +144,10 @@ WantedBy=default.target
     
     <item>
       <title>Kawasaki.rbでReactについて発表してきた</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
       <description>&lt;p&gt;Rubyコミュニティなのに毎回多言語の話が出る &lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;kawasaki.rb&lt;/a&gt; で &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; について発表してきた。&lt;/p&gt;
 
 &lt;p&gt;スライドはこちら。&lt;/p&gt;
@@ -162,10 +162,10 @@ WantedBy=default.target
     
     <item>
       <title>ReactRubyをリリースした。</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
       <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;
 
 &lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;
@@ -191,10 +191,10 @@ ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
     
     <item>
       <title>Ubuntu14.04でgit pull/git cloneしたときにgnutlsがエラー吐くときの対処法</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</link>
       <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</guid>
       <description>&lt;p&gt;git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;gnutls_handshake() failed: A record packet with illegal version was received.
@@ -215,10 +215,10 @@ ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
     
     <item>
       <title>dokkuでgit pushするとfatalしてハマった</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
       <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
       <description>&lt;p&gt;最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。&lt;/p&gt;
 
 &lt;p&gt;dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。&lt;/p&gt;
@@ -249,10 +249,10 @@ fatal: Could not read from remote repository.
     
     <item>
       <title>Turbolinksモドキを入れた</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
       <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
       <description>&lt;p&gt;結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。&lt;/p&gt;
 
 &lt;p&gt;というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。&lt;/p&gt;
@@ -261,10 +261,10 @@ fatal: Could not read from remote repository.
     
     <item>
       <title>AngularJS&#43;SinatraでTurbolinks</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
       <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;
 
 &lt;p&gt;スライドはこちら。&lt;/p&gt;
@@ -282,10 +282,10 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
     
     <item>
       <title>大江戸Ruby会議04に参加してきた！</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
       <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
       <description>
 
 &lt;p&gt;大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。&lt;/p&gt;
@@ -372,10 +372,10 @@ RFC7159からJSONの仕様が厳格になったようで、それに対応した
     
     <item>
       <title>AngularJSでチェックボックスとモデルを紐付ける</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</link>
       <pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</guid>
       <description>&lt;p&gt;AngularJSを使ったフォームでチェックボックスを使いたいとする。
 このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、checkboxの値（true/false）をモデルに紐付けることが出来る。&lt;/p&gt;
 
@@ -407,10 +407,10 @@ function CheckBoxController($scope){
     
     <item>
       <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
       <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
       <description>&lt;p&gt;このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
 URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。&lt;/p&gt;
 
@@ -435,10 +435,10 @@ URLのパラメータやフラグメントを元に、Ajaxなどで動的にコ�
     
     <item>
       <title>AngularJS で外部javascriptを遅延読み込み</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
       <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
       <description>&lt;p&gt;新しいブログエンジンでもコメントシステムはDisqusを使っている。
 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。&lt;/p&gt;
 
@@ -495,10 +495,10 @@ Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優�
     
     <item>
       <title>ブログのお引越し</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
       <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
       <description>&lt;p&gt;ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。&lt;/p&gt;
 
 &lt;p&gt;理由の一つはangularjsの習作として色々自分で試してみたかったからだ。
@@ -513,10 +513,10 @@ angularjsについてはまたいろいろ挑戦してみたい。&lt;/p&gt;
     
     <item>
       <title>Rubyでインスタンス変数のテスト</title>
-      <link>http://tanstaafl.0pt.jp/posts/2013/08/31/ed3690f9cb82/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2013/08/31/ed3690f9cb82/</link>
       <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2013/08/31/ed3690f9cb82/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2013/08/31/ed3690f9cb82/</guid>
       <description>&lt;ol&gt;
 &lt;li&gt;あるオブジェクトOのメソッドAを呼ぶと内部変数Xの値が変わるとする。&lt;/li&gt;
 &lt;li&gt;メソッドAの目的はXの値を更新することだが、返り値からXの値を知ることは出来ない。&lt;/li&gt;

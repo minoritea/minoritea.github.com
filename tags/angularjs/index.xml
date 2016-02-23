@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angularjs on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>http://tanstaafl.0pt.jp/tags/angularjs/</link>
+    <link>https://tanstaafl.0pt.jp/tags/angularjs/</link>
     <description>Recent content in Angularjs on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 25 Apr 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tanstaafl.0pt.jp/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Turbolinksモドキを入れた</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
       <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
       <description>&lt;p&gt;結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。&lt;/p&gt;
 
 &lt;p&gt;というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。&lt;/p&gt;
@@ -23,10 +23,10 @@
     
     <item>
       <title>AngularJS&#43;SinatraでTurbolinks</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
       <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;
 
 &lt;p&gt;スライドはこちら。&lt;/p&gt;
@@ -44,10 +44,10 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
     
     <item>
       <title>AngularJSでチェックボックスとモデルを紐付ける</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</link>
       <pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</guid>
       <description>&lt;p&gt;AngularJSを使ったフォームでチェックボックスを使いたいとする。
 このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、checkboxの値（true/false）をモデルに紐付けることが出来る。&lt;/p&gt;
 
@@ -79,10 +79,10 @@ function CheckBoxController($scope){
     
     <item>
       <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
       <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
       <description>&lt;p&gt;このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
 URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。&lt;/p&gt;
 
@@ -107,10 +107,10 @@ URLのパラメータやフラグメントを元に、Ajaxなどで動的にコ�
     
     <item>
       <title>AngularJS で外部javascriptを遅延読み込み</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
       <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
       <description>&lt;p&gt;新しいブログエンジンでもコメントシステムはDisqusを使っている。
 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。&lt;/p&gt;
 
@@ -167,10 +167,10 @@ Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優�
     
     <item>
       <title>ブログのお引越し</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
       <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
       <description>&lt;p&gt;ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。&lt;/p&gt;
 
 &lt;p&gt;理由の一つはangularjsの習作として色々自分で試してみたかったからだ。

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vps on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>http://tanstaafl.0pt.jp/tags/vps/</link>
+    <link>https://tanstaafl.0pt.jp/tags/vps/</link>
     <description>Recent content in Vps on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 27 Oct 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tanstaafl.0pt.jp/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/tags/vps/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>移転完了</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</guid>
       <description>&lt;p&gt;本ブログを新しいサーバに移転した。VPSも変えてblogエンジンも自分で実装した(scanty-redisベース)。herokuと比べて随分軽くなったように思う。ちなみにherokuから変えた理由はパフォーマンス面よりもデータベースの容量である。無料プラントはいえ5MBではさすがに不安だったからだ。&lt;/p&gt;
 
 &lt;p&gt;ちなみに過去の記事の日付がおかしなことになっているがこれは移転を手動で行ったためである。後々その辺りも整備していきたい。&lt;/p&gt;

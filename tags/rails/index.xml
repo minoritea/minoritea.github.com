@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rails on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>http://tanstaafl.0pt.jp/tags/rails/</link>
+    <link>https://tanstaafl.0pt.jp/tags/rails/</link>
     <description>Recent content in Rails on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 23 Apr 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tanstaafl.0pt.jp/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/tags/rails/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AngularJS&#43;SinatraでTurbolinks</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
       <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;
 
 &lt;p&gt;スライドはこちら。&lt;/p&gt;
@@ -32,10 +32,10 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
     
     <item>
       <title>Fabrication で Mongoid のテストデータを作る</title>
-      <link>http://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</guid>
       <description>&lt;p&gt;Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。
 MongoHQ、MongoLabなどが500MBの無料プランを提供しているからで、
 個人アプリであればこのくらいあれば十分だからだ。&lt;/p&gt;
@@ -83,10 +83,10 @@ test/models/person_test.rb&lt;/p&gt;
     
     <item>
       <title>RailsのYAMLでハマった</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</link>
       <pubDate>Sun, 07 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</guid>
       <description>&lt;p&gt;Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、&lt;/p&gt;
 
 &lt;p&gt;production:

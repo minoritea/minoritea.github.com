@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>http://tanstaafl.0pt.jp/tags/ruby/</link>
+    <link>https://tanstaafl.0pt.jp/tags/ruby/</link>
     <description>Recent content in Ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tanstaafl.0pt.jp/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Kawasaki.rbでReactについて発表してきた</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
       <description>&lt;p&gt;Rubyコミュニティなのに毎回多言語の話が出る &lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;kawasaki.rb&lt;/a&gt; で &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; について発表してきた。&lt;/p&gt;
 
 &lt;p&gt;スライドはこちら。&lt;/p&gt;
@@ -29,10 +29,10 @@
     
     <item>
       <title>ReactRubyをリリースした。</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
       <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;
 
 &lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;
@@ -58,10 +58,10 @@ ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
     
     <item>
       <title>Turbolinksモドキを入れた</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
       <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
       <description>&lt;p&gt;結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。&lt;/p&gt;
 
 &lt;p&gt;というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。&lt;/p&gt;
@@ -70,10 +70,10 @@ ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
     
     <item>
       <title>AngularJS&#43;SinatraでTurbolinks</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
       <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;
 
 &lt;p&gt;スライドはこちら。&lt;/p&gt;
@@ -91,10 +91,10 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
     
     <item>
       <title>大江戸Ruby会議04に参加してきた！</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
       <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
       <description>
 
 &lt;p&gt;大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。&lt;/p&gt;
@@ -181,10 +181,10 @@ RFC7159からJSONの仕様が厳格になったようで、それに対応した
     
     <item>
       <title>RailsのYAMLでハマった</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</link>
       <pubDate>Sun, 07 Nov 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</guid>
       <description>&lt;p&gt;Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、&lt;/p&gt;
 
 &lt;p&gt;production:
@@ -204,10 +204,10 @@ RFC7159からJSONの仕様が厳格になったようで、それに対応した
     
     <item>
       <title>フィードの過去ログ読み込み</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</link>
       <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</guid>
       <description>&lt;p&gt;GoogleReaderが不調なので自分でフィードリーダを実装しようと思い、読み込み部分はsinatraでさっと作ったのはいいがフィードの過去ログの取得方法が分からず、ずっと悩んでいた。共通の呼び出しプロトコルでもあるのかと思えば無いようだし。&lt;/p&gt;
 
 &lt;p&gt;調べてやっと分かったのはオンラインリーダは各フィードの取得内容をサイト全体でキャッシュしているので過去ログが見られるらしい。なんじゃそら。随分な力技である。そりゃ今までオンラインリーダしか使っていない人間には分からんよ。過去ログは読み込めて当然だと思ってるし。&lt;/p&gt;
@@ -218,10 +218,10 @@ RFC7159からJSONの仕様が厳格になったようで、それに対応した
     
     <item>
       <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
       <description>&lt;p&gt;このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRedisを使用しているのだが、気持ちいいほどに高速である。KVSなので若干取り扱いに難があったが、SQL初心者からするとSQLより分かりやすいと思う。オンメモリでばしばしデータをさばける上に永続化も自動で行ってくれる優れものだ。&lt;/p&gt;
 
 &lt;p&gt;アプリケーションサーバにはRuby製の軽量サーバであるUnicornを使用してある。軽量な上にロードバランシングを自動で行ってくれる優れものだ。&lt;/p&gt;
@@ -234,20 +234,20 @@ RFC7159からJSONの仕様が厳格になったようで、それに対応した
     
     <item>
       <title>Mixiアプリ</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</guid>
       <description>&lt;p&gt;ちょっと思い立ってMixiのアプリを作ってる。バックエンドはGAE/J + Sinatraの構成だ。大体概要は分かったんだけど、OAuthのところで詰まってる。 検索しても大抵出てくるのはTwitter関連の情報だ。 TwitterにOAuthでアクセスするのはConsumer側なんだよなぁ。欲しいのはServiceProvider側の作り方だ。 GithubでSinatraのサンプルコード落として勉強中だけど、なんとか分かりやすくならないかなぁ。&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>proxy script</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</guid>
       <description>&lt;p&gt;proxyがresolvableか検出して、通ったら環境変数http-proxyをセットするスクリプトを書いて、.profileから呼び出すようにした。
 小さいスクリプトだがなかなか気に入っている。&lt;/p&gt;
 </description>
@@ -255,10 +255,10 @@ RFC7159からJSONの仕様が厳格になったようで、それに対応した
     
     <item>
       <title>とりあえず</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</guid>
       <description>&lt;p&gt;件のアプリはクッキー認証で作ってみようかなあ。&lt;/p&gt;
 
 &lt;p&gt;OAuthについては、&lt;/p&gt;
@@ -271,10 +271,10 @@ OAuthProviderを利用して自分でProviderを実装。Consumerは先のアプ
     
     <item>
       <title>移転したい</title>
-      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</guid>
       <description>&lt;p&gt;内定式しんどかったけど、楽しかった。&lt;/p&gt;
 
 &lt;p&gt;さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容量が無いので長く利用するかどうかは悩みどころである。&lt;/p&gt;

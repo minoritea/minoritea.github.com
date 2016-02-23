@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seo on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>http://tanstaafl.0pt.jp/tags/seo/</link>
+    <link>https://tanstaafl.0pt.jp/tags/seo/</link>
     <description>Recent content in Seo on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Fri, 04 Apr 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://tanstaafl.0pt.jp/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/tags/seo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</title>
-      <link>http://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
       <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
       <description>&lt;p&gt;このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
 URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。&lt;/p&gt;
 
