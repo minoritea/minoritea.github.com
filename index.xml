@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/</link>
+    <description>Recent content on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 09 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SystemdでDocker上のPostgreSQLをバックアップする</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</guid>
+      <description>&lt;p&gt;先日書いた、&lt;a href=&#34;http://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442&#34;&gt;CoreOSでバックアップを取っていなかったためデータを飛ばした話&lt;/a&gt;の続きである。&lt;/p&gt;
+
+&lt;p&gt;前回fleetを使うという話をしたのだけれど、自分が今使っている環境はシングルホストだしsystemdを使うことにした。最もfleetはsystemdを分散クラスタ上で管理するためのツールのようなので、実際やることは変わらないだろう。&lt;/p&gt;
+
+&lt;p&gt;まず、Postgresからデータを取り出すためのイメージを作った。中身は単純にPostgres公式イメージ上でpg_dumpを実行するだけのシロモノである。
+dumpしたファイルは volumeとして取り込んだホスト側の領域に吐き出される。
+上記イメージを実行するコマンドをシェルスクリプトでラップし、実行ファイルとした。&lt;/p&gt;
+
+&lt;p&gt;pg-backup.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;BACKUP_DIR=バックアップファイル置き場
+docker run --rm -ti --link -v $BACKUP_DIR:/var/pg_dump \
+  my-postgres-container:pg postgres-backup-image
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;次にこのスクリプトをsystemdのサービスとして登録する。
+systemdではユニットという単位でOS上の様々なものを管理する。
+サービスもユニットの一種という扱いのようだ。
+これらのユニットを管理するための設定ファイルとしてユニットファイルを書くとsystemd側でロード、起動を実行してくれる。
+ユニットファイルはCoreOSのデフォルトだと、/etc/systemd/systemに置く。
+上のスクリプトのユニットファイルは以下のようになる。&lt;/p&gt;
+
+&lt;p&gt;pg-dump.service&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Dump data from Postgres container
+Requires=docker.service
+
+[Service]
+ExecStart=/opt/docker/scripts/pg-backup/pg-backup.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Descriptionはユニットの説明を、Requiresは依存関係（この場合dockerサービス）を表している。
+ExecStartには実際に実行されるコマンドを置く。&lt;/p&gt;
+
+&lt;p&gt;次に、ジョブスケジューリングのためのユニットファイルを書く。systemdではタイマーイベントもユニットとして扱うことが出来る。&lt;/p&gt;
+
+&lt;p&gt;pg-dump.timer&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=daily Postgres backup
+
+[Timer]
+OnCalendar=*-*-* 20:00:00
+
+[Install]
+WantedBy=default.target
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OnCalendarで起動時刻を指定する。この辺りはCronとおなじ感覚だ。
+&lt;em&gt;.serviceと&lt;/em&gt;.timerが同じ名前であれば、起動するサービス名は指定しなくてよい。&lt;/p&gt;
+
+&lt;p&gt;あとは&lt;code&gt;sudo systemctl start pg-backup.timer&lt;/code&gt;で実行すれば、タイマーイベントとして登録される。&lt;/p&gt;
+
+&lt;p&gt;タスクスケジューラとしてsystemdを使ってみた感想としては、最初の印象ほどややこしくはなかったが、このぐらいのタスクであればcronの方が楽かもしれない。
+依存関係などを考えるようになると真価を発揮するのではないかと思っている。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CoreOSつかってたらデータが飛んだ</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</guid>
+      <description>&lt;p&gt;DBのデータが飛んだので先日書いたReactについての記事は下書きから復元した。&lt;/p&gt;
+
+&lt;p&gt;原因はCoreOSが自動アップデートしたため、Postgresを動かしていたDockerコンテナが停止してしまったためだ。&lt;/p&gt;
+
+&lt;p&gt;実は先日こっそりとブログのサーバーをherokuからVPSに移動していた
+（Dockerで運用してみたかったのだ）。OSはCoreOSを使いホスティングはVultrを選択した。&lt;/p&gt;
+
+&lt;p&gt;移行の際、データベースもDockerで動かすことにしていた。PostgreSQLでデータベースコンテナを作成していたのだけれど、バックアップの仕組みはつい後回しにしていたのだ。&lt;/p&gt;
+
+&lt;p&gt;しかし間の悪いことについ昨日CoreOS（stable）のアップデートが入ってしまった。自分は知らずに運用していたのだがCoreOSはOSアップデートを自動で適用し、デフォルトだとそのまま再起動してしまう。そのためデータベースもコンテナごと落ちてしまいデータが飛んでしまったのだ。自動アップデート&amp;amp;OS再起動は、Immutableなコンテナを分散して運用する前提での設定だと思うのだがシングルホストだとあんまり美味しくない。とはいえ、セキュリティ面では自動アップデート戦略は安心感があるし、個人ブログのホスティングサーバが多少の時間落ちていても大して困らないのでこのままデフォルト設定で行くことにする。&lt;/p&gt;
+
+&lt;p&gt;さて再起動しても自動で復旧するにはコンテナのデータを永続化することとコンテナの起動を自動化することの2つが必要となる。取り急ぎ今回は永続化について対応してみた。&lt;/p&gt;
+
+&lt;p&gt;永続化といってもpg_dumpで定期的にdumpを取るだけである（自分がPostgresの運用の知識がないのでもっといいやり方があるのかもしれないけど、データ量も少ないしシンプルなので上のやりかたでいく）。dumpファイルはDockerのvolume機能を使ってホストOS上に置くことにする。&lt;/p&gt;
+
+&lt;p&gt;とりあえず、現在はdumpするスクリプトだけ作成してある。しかし手動実行はつらいので自動で定期的に回すようにしたい。定期的に実行する手段としては、コンテナの中でcronを回すか、専用のコンテナを作って、fleetで定期的に起動するかのどちらかを考えている。&lt;/p&gt;
+
+&lt;p&gt;fleetはCoreOSの主要な機能の一つで、systemdを分散してスケジューリング、実行するためのミドルウェアのようだ。自分はsystemdの知識があまりないのでcronでもよいかと思ったのだが（systemdにタスクスケジューラの機能があることも知らなかった）、せっかくCoreOSを使っているのでfleet/systemd を使う方向で考えたいと思う。&lt;/p&gt;
+
+&lt;p&gt;自動復旧のためのコンテナ起動についてもfleetを使えば良さそうだ。&lt;/p&gt;
+
+&lt;p&gt;またうまく仕組み化できたら報告したい。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kawasaki.rbでReactについて発表してきた</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
+      <description>&lt;p&gt;Rubyコミュニティなのに毎回多言語の話が出る &lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;kawasaki.rb&lt;/a&gt; で &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; について発表してきた。&lt;/p&gt;
+
+&lt;p&gt;スライドはこちら。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/react-42041864&#34;&gt;http://www.slideshare.net/minoritokuda/react-42041864&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/42041864&#34; width=&#34;425&#34; height=&#34;355&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/minoritokuda/react-42041864&#34; title=&#34;Reactつかってみた&#34; target=&#34;_blank&#34;&gt;Reactつかってみた&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;締めの発言はわりかし本気である。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ReactRubyをリリースした。</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
+      <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;
+
+&lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;
+
+&lt;p&gt;今回はFacebook製のコンポーネントフレームワークであるReactを使って、フロントエンドを作成しようと思い立った。Reactを選んだ理由として、Angularだとサーバーサイドでビューを生成できないので不満に思っていたことが挙げられる。&lt;/p&gt;
+
+&lt;p&gt;今まで、コンテンツページに関してはHAMLを使ってサーバサイドで生成していて、Angularのテンプレートキャッシュを使って読み込んでいたのだが、これだとフロントサイドでビュー生成している意味が薄くていまいち不満だったのだ（この実装だとやってることはまんまTurbolinksである）。&lt;/p&gt;
+
+&lt;p&gt;ReactはHTMLを文字列として出力できる。つまりサーバサイドでも実行可能なテンプレートエンジンとして使えるということである。ReactはjavascriptなのでNode.jsあたりで動かすのが適切なんだろうけど、今回サーバサイドは既存のアプリを使いまわしたかったのでRubyでReactを呼び出すためのブリッジを作成した。それがReactRubyである。（React本家にはRailsのバインディングがあったが、まだ安定版が出てなかったし今回サーバサイドに使ったのはSinatraだったので自作した）。&lt;/p&gt;
+
+&lt;p&gt;使い方はシンプルに、テンプレートを文字列として渡してコンパイルし、呼び出したいクラスのXMLタグを#renderメソッドに渡してやればよい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;ReactRuby.compile(jsx: your_jsx_template_as_string)
+ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
+# =&amp;gt; YourJSXClassのレンダリング結果
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;自分はこの処理をsinatraのヘルパーメソッドとして定義して、sinatraのビューの中でコンポーネント単位で呼び出している。1度サーバから画面を読み込んだら、あとの画面更新は画面上でReactを再実行してレンダリングしなおしている。流行りの&amp;rdquo;Isomorphic&amp;rdquo;アプリケーションというやつだ（正確にはビューだけのなんちゃってIsomorphicなんだけど、このブログくらいの小さいアプリなら十分だと思う）。&lt;/p&gt;
+
+&lt;p&gt;ReactRubyはgemとして公開してあるので、この記事を読んで興味をもった方は是非試してほしい。簡単なサンプルアプリもgithubにおいてあるので参考にどうぞ（&lt;a href=&#34;https://github.com/minoritea/react_ruby_sample&#34;&gt;react_ruby_sample&lt;/a&gt;）。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu14.04でgit pull/git cloneしたときにgnutlsがエラー吐くときの対処法</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</guid>
+      <description>&lt;p&gt;git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gnutls_handshake() failed: A record packet with illegal version was received.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これは、ubuntuのgitパッケージがdebianベースのため、gnutlsに依存しているためhttps接続の際にエラーとなるらしい。&lt;/p&gt;
+
+&lt;p&gt;※gnutlsのバグなのか、ポリシーが厳格なせいなのかは調べてみてちょっとよくわからなかった。&lt;/p&gt;
+
+&lt;p&gt;解決策は以下のAsk ubuntuに載っていたのだけれども、12.04の記事だったので探すのに手間取った。
+要はaptのdebianパッケージをgnutlsではなく、opensshでコンパイルしろということだそうだ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://askubuntu.com/questions/186847/error-gnutls-handshake-falied&#34;&gt;http://askubuntu.com/questions/186847/error-gnutls-handshake-falied&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;基本的にgitパッケージのバージョン以外は上の回答のとおりにやればよい。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>dokkuでgit pushするとfatalしてハマった</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
+      <description>&lt;p&gt;最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。&lt;/p&gt;
+
+&lt;p&gt;dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fatal: &#39;hogehoge.git&#39; does not appear to be a git repository
+fatal: Could not read from remote repository.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;いろいろ試行錯誤した結果、実に単純に解決した。
+~/.ssh/authorized_keys に、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;command=&amp;quot;...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;のような行が追加されている。
+これは設定時に、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cat ~/.ssh/id_rsa.pub | ssh progriumapp.com &amp;quot;sudo sshcommand acl-add dokku progrium&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;というコマンドでアクセス権限を追加された際自動で挿入されたものだが、その上に手動で自分の公開鍵を挿入していたために、どうやらgit pushが動かなかったらしい。&lt;/p&gt;
+
+&lt;p&gt;手で追加した方の公開鍵を削除したら無事解決した。&lt;/p&gt;
+
+&lt;p&gt;素直にマニュアル通りに作ればこういうことにはならないので、同様にハマる人は少ないかもしれないが一応載せておく。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turbolinksモドキを入れた</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
+      <description>&lt;p&gt;結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。&lt;/p&gt;
+
+&lt;p&gt;というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AngularJS&#43;SinatraでTurbolinks</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
+      <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
+      <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;
+
+&lt;p&gt;スライドはこちら。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34;&gt;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/33852359&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34; title=&#34;Angular jsとsinatraでturbolinks&#34; target=&#34;_blank&#34;&gt;Angular jsとsinatraでturbolinks&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;なお、このブログを対象にTurbolinksモドキを実装してみたのだが、
+Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
+
+&lt;p&gt;近いうちにお見せできればと思っている。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>大江戸Ruby会議04に参加してきた！</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
+      <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
+      <description>
+
+&lt;p&gt;大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。&lt;/p&gt;
+
+&lt;p&gt;遅刻したため途中からのレポートとなる。&lt;/p&gt;
+
+&lt;h2 id=&#34;nobody-knows-nobu:41eb78584c590241db96d7348c8a49f1&#34;&gt;Nobody Knows Nobu&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/_zzak&#34;&gt;ザックさん&lt;/a&gt;の発表は絵芝居仕立てでコア・コミッターの中田さんの貢献についての紹介。愛と笑いのある発表でほんわかした。こういう暖かさがRubyコミュニティのいいところだと思う。&lt;/p&gt;
+
+&lt;h2 id=&#34;私は如何にして異国でエンジニアとして生き抜いてきたか:41eb78584c590241db96d7348c8a49f1&#34;&gt;私は如何にして異国でエンジニアとして生き抜いてきたか&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;レオさん&lt;/a&gt;の発表は海外で働くエンジニアとしての発表。オーストラリア出身のレオさんが8年間日本で働いてきた経験から得た知見を共有してくれた。おおきくまとめると海外で働くには言語とジョブスキルが大切というこ話だった。&lt;/p&gt;
+
+&lt;p&gt;言語はとにかく時間をかけて練習するしか無いとのこと。また、単に言葉だけではなく、言語の背景にある文化を学んでいくことが大事だと主張されていた。&lt;/p&gt;
+
+&lt;p&gt;ジョブスキルについてはコミュニティから得るものが大きかったそうで、東京Railsミートアップへ参加したことで世界が広がったそうだ。&lt;/p&gt;
+
+&lt;p&gt;文化的背景を理解することが大事というのは全くその通りで、発表中におすすめされていたRedditは毎日読んでみようと思う。&lt;/p&gt;
+
+&lt;h2 id=&#34;画像を壊すこと-oss-活動をすること-その他:41eb78584c590241db96d7348c8a49f1&#34;&gt;画像を壊すこと、OSS 活動をすること、その他&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;makimotoさん&lt;/a&gt;からはグリッチについてとOSS活動についてだった。グリッチというのは壊れたテレビからの砂嵐やノイズのような画像を指すそうで、正直なところ僕にはよく分からない世界だったが、makimotoさんのグリッチ愛はひしひしと伝わってきた。&lt;/p&gt;
+
+&lt;p&gt;OSS活動はRailsへのプルリクエストやるびまの英語記事の翻訳などを紹介しておられたが、結論としては好きなモノを作って公開するのが一番いいとのこと。&lt;/p&gt;
+
+&lt;p&gt;自分も趣味方向でなにか作ってみたいと感じさせられた。&lt;/p&gt;
+
+&lt;h2 id=&#34;rubyvm読んでみた:41eb78584c590241db96d7348c8a49f1&#34;&gt;RubyVM読んでみた&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ocha-&#34;&gt;Kawamotoさん&lt;/a&gt;からはRubyVMの処理を紹介していただいた。正直なところ、内容には追いついていけなかったのだが、構文木をバイトコードに変換するあたりの処理についてのお話だったかと思う。マニアックなトピックを淡々と話されていたのが印象的だった。この日は青木峰郎さんの講演が入っていることもあってRHGがらみの発表が多かったと思う。&lt;/p&gt;
+
+&lt;p&gt;自分も折を見て処理系の中身は覗いてみたい。&lt;/p&gt;
+
+&lt;h2 id=&#34;基調講演:41eb78584c590241db96d7348c8a49f1&#34;&gt;基調講演&lt;/h2&gt;
+
+&lt;p&gt;基調講演はEbiさんとAaronさんのPatterson夫妻による講演だった。&lt;/p&gt;
+
+&lt;p&gt;Ebiさんの話はAaronさんと一緒に海外カンファレンスを回った話だった。最初はなぜそんなにカンファレンスに参加するのかと思ったそうだが、次第にEbiさん自身もコミュニティに関わるようになったとのこと。海外カンファレンスにいくことについて、相手と直接話しをする機会を得ることの大切さを訴えていたのが印象的だった。&lt;/p&gt;
+
+&lt;p&gt;Aaronさんの話はAdequateRecordというActiveRecordのforkの話。キャッシュを頑張って、高速化しているそうだ。
+途中のベンチマークの話で、パフォーマンスを測るには平均値だけではなく標準偏差が大事だと言っていたのが印象に残っている。&lt;/p&gt;
+
+&lt;h2 id=&#34;1年かけてgemを1つ作りました:41eb78584c590241db96d7348c8a49f1&#34;&gt;1年かけてgemを1つ作りました&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/kunitoo&#34;&gt;@kunitoo&lt;/a&gt;さんからはgit logをrails上で確認できる&lt;a href=&#34;https://github.com/kunitoo/rgitlog&#34;&gt;rgitlog&lt;/a&gt;というgemの作成について。簡単に作れます！と言いながらライブコーディングしておられた。途中rails generateのタイプミスで作り直しになるなど波乱がありライブコーディング怖いとおっしゃっていたが、無事完了して一安心である。ライブコーディングはライブ感があっていいと思う。楽しい！&lt;/p&gt;
+
+&lt;h2 id=&#34;https-rubygems-org-gems-rfc7159:41eb78584c590241db96d7348c8a49f1&#34;&gt;&lt;a href=&#34;https://rubygems.org/gems/RFC7159&#34;&gt;https://rubygems.org/gems/RFC7159&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/shyouhei&#34;&gt;Urabeさん&lt;/a&gt;からはタイトル通りのgemの紹介。
+RFC7159からJSONの仕様が厳格になったようで、それに対応したgemを作った話だった。既存のgemにはユニコードやバックスラッシュ周りの処理でバグが有り、RFCには則っていない。しかし、Urabeさんのgemを使えばいいかというとそうではなくRFC7159のgemは処理が重いそうだ。JSONパーサに受け渡さないようアプリ側でチェックしたほうが幸せになれるんじゃないかとおっしゃっていた。&lt;/p&gt;
+
+&lt;h2 id=&#34;bundlerの話-タイトル失念:41eb78584c590241db96d7348c8a49f1&#34;&gt;Bundlerの話（タイトル失念）&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/hone02&#34;&gt;Terence Leeさん&lt;/a&gt;からはBundlerの高速化についての話だった。BundlerってRubyistにとってインフラだと思うのでありがたい。&lt;/p&gt;
+
+&lt;h2 id=&#34;object-bouquet-幸せの花束-rvalue-のきらめきを添えて:41eb78584c590241db96d7348c8a49f1&#34;&gt;Object Bouquet ～ 幸せの花束・RValue のきらめきを添えて ～&lt;/h2&gt;
+
+&lt;p&gt;新婚のささださん夫妻による発表。惚気話とRubyのオブジェクトツリーについてのディープな話を同時に披露するという離れ業。面白かった！&lt;/p&gt;
+
+&lt;h2 id=&#34;another-language-you-should-learn:41eb78584c590241db96d7348c8a49f1&#34;&gt;Another language you should learn&lt;/h2&gt;
+
+&lt;p&gt;TechCrunch編集長の西村さんからは英語学習についてのトーク。上のレオさんの発表もそうだったけどやっぱり時間をかけることが大事とのこと。やっぱりね・・・。あとインプットが大事ということで、こちらでもRedditをおすすめされていた。&lt;/p&gt;
+
+&lt;p&gt;僕も海外の技術系ニュースは毎日読もうかなと思う。&lt;/p&gt;
+
+&lt;h2 id=&#34;mruby-hacking-guide:41eb78584c590241db96d7348c8a49f1&#34;&gt;mruby hacking guide&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://twitter.com/_ksss_&#34;&gt;Kuriharaさん&lt;/a&gt;からはmrubyへのコントリビューションの話。mrubyはブルー・オーシャンという話は魅力的で、これから処理系の中身をハックするならmrubyが敷居が低そうだと感じた。&lt;/p&gt;
+
+&lt;h2 id=&#34;hacking-home:41eb78584c590241db96d7348c8a49f1&#34;&gt;Hacking Home&lt;/h2&gt;
+
+&lt;p&gt;松田明さんからは家を建てた際のエピソードの話。テクノロジーとは関係なくゆるい話がしたいと言っておられたが、プログラマ視点からの家の建築の話は新鮮だった。確かに、ソフトウェア開発って建築に例えることが多いけれど、逆の視点で語ることってなかなかないと思う。建築、施工から家の設備のAPI化まで楽しく話されていた。個人的にはこのセッションが一番楽しかった！ここまでコアな話が続いていたので息抜きにもなったし。&lt;/p&gt;
+
+&lt;h2 id=&#34;ruby会議でsqlの話をするのは間違っているだろうか:41eb78584c590241db96d7348c8a49f1&#34;&gt;Ruby会議でSQLの話をするのは間違っているだろうか&lt;/h2&gt;
+
+&lt;p&gt;RHGの青木さんからは並列データベースの話。話の筋は前職Teradataでの経験のお話から、Hadoopの隆盛、並列DBとHadoopの比較へと展開。やっぱりSQL必要だよねという話から、MapReduceは下火になっているという話、Hadoop側もHiveを中心にSQL系DBに似た構成になっているということを述べられていて、ビッグデータに疎い自分には新鮮だった。またMapReduceは完全にダメかというとそうでもなく柔軟性を活かしてSQL系DBを補助する形がいいのではないかとのこと。大トリにふさわしいコアな話だった！&lt;/p&gt;
+
+&lt;h2 id=&#34;感想:41eb78584c590241db96d7348c8a49f1&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;とにかくコアな話の連続で大変濃密な一日だった。懇親会では地方から参加された方々と交流することが出来て、地域Rubyコミュニティの運営について熱く語っていただいたのが印象に残っている。とにかく濃いRubyistが集まっていて、Rubyistだけでこんなに楽しいお祭りが成立するのかと思い感動した。また来年も参加したいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AngularJSでチェックボックスとモデルを紐付ける</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</link>
+      <pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</guid>
+      <description>&lt;p&gt;AngularJSを使ったフォームでチェックボックスを使いたいとする。
+このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、checkboxの値（true/false）をモデルに紐付けることが出来る。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;checkbox&amp;quot; ng-model=&amp;quot;model&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;しかし真偽値以外の値をモデルに設定したい場合もある。
+その場合には&lt;code&gt;ngTrue&lt;/code&gt;, &lt;code&gt;ngFalse&lt;/code&gt;ディレクティブを使う。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;checkbox&amp;quot; ng-model=&amp;quot;model&amp;quot; ng-true=&amp;quot;OK&amp;quot; ng-false=&amp;quot;Fail&amp;quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記の例だとチェックが入っていればモデルの値は&lt;code&gt;&amp;quot;OK&amp;quot;&lt;/code&gt;に、入ってなければ&lt;code&gt;&amp;quot;Fail&amp;quot;&lt;/code&gt;にそれぞれ設定される。&lt;/p&gt;
+
+&lt;p&gt;ただし、これらの紐付けはモデルに対して行われる。つまり、モデルの変更がチェックボックス側に伝達されるわけではない。これはHTMLの仕様によるらしいが、自分の理解では&lt;code&gt;checked&lt;/code&gt;属性のような真偽値を持つ属性が偽になった時、ブラウザ側で値が保持されないため、AngularJSのバインディングが切れてしまうことによるようだ。&lt;/p&gt;
+
+&lt;p&gt;そのためモデル側の変更に合わせてチェックボックスのチェックを付け外ししたい場合は&lt;code&gt;ngChecked&lt;/code&gt;ディレクティブを使う必要がある。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;checkbox&amp;quot; ng-model=&amp;quot;model&amp;quot; ng-checked=&amp;quot;model&amp;quot; /&amp;gt;
+...
+function CheckBoxController($scope){
+  $scope.model = true;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記のようにすれば、$scope.modelが設定されたタイミングでチェックボックス側のチェックも自動で入れることが出来る。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
+      <description>&lt;p&gt;このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
+URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。&lt;/p&gt;
+
+&lt;p&gt;ここで問題になるのは、Googleなどのクローラはjavascriptを実行しないため、クローラに対してTitleタグやOGPなどのメタ情報をクライアント側で動的に出し分けることが出来ないということだ。これについて何か解決策がないか調べてみたのだが、結論としては、クローラなどにjavascrptで動的にメタ情報を付加することはやっぱり出来ないということだった。（そりゃそうだ）。&lt;/p&gt;
+
+&lt;p&gt;特に参考になったのは以下の記事である。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://coderwall.com/p/vqpfka&#34;&gt;AngularJS SEO&lt;/a&gt; &lt;a href=&#34;https://coderwall.com/p/vqpfka&#34;&gt;https://coderwall.com/p/vqpfka&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この記事では2つの解法が示されている。&lt;/p&gt;
+
+&lt;p&gt;1つ目はシンプルに&lt;strong&gt;そもそも1ページAppにはしない&lt;/strong&gt;こと。
+実はこのブログではこちらの解法を採用するつもりだ。各記事についてはサーバ側のテンプレートを分けて、そちらにはメタ情報をサーバ側で付与する。1ページに集約することにこだわるより、AngularJSのテンプレートを使って再利用できるところは再利用し、最低限のサーバ側で出しわけないといけないところはサーバ側でレンダリングする方が自然だと判断したからだ。とはいえ1ページAppというのはロマンがあったので少し残念ではある。&lt;/p&gt;
+
+&lt;p&gt;2つ目のやり方はサーバ側でHTMLページをレンダリングし、クローラに表示することだ。
+これをわざわざやってまでSEO対策するほどのメリットは見いだせなかったのでこちらの手段は取らないことにした。
+上の記事では2つ目のやり方について詳しく書かれているが、&lt;strong&gt;滅茶苦茶めんどくさそう&lt;/strong&gt;な印象を受けたからだ。&lt;/p&gt;
+
+&lt;p&gt;そういうわけで結論としては1ページAppでメタ情報を動的に扱うのは基本的に無理筋だということがわかった。（身も蓋もないが）。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AngularJS で外部javascriptを遅延読み込み</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
+      <description>&lt;p&gt;新しいブログエンジンでもコメントシステムはDisqusを使っている。
+Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。&lt;/p&gt;
+
+&lt;p&gt;Angular.jsはng-includeなどの仕組みで、HTMLテンプレートを動的に読み込みができ、HTMLをパーツとして使いまわすことができる。
+しかし、このテンプレートを読み込む際にscriptタグが含まれていた場合はセキュリティのためか、scriptタグが無視されてしまう。
+そのためDisqusのように外部スクリプトを埋め込んでDOM要素を生成するようなサービスとは相性が悪い。&lt;/p&gt;
+
+&lt;p&gt;しかし、皆考えることは同じようで、ハックを公開してくれた人がいたので参考にさせていただいた。
+使い方は簡単でngLoadModuleというモジュール（コードは以下のGist参照）をngAppで指定したモジュールに読み込んで、
+読み込ませたいscriptタグに&amp;rdquo;text/javascript-lazy&amp;rdquo;と追加するだけである。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/subudeepak/9617483&#34;&gt;https://gist.github.com/subudeepak/9617483&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以下はgistより引用。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(function (ng) {
+  &#39;use strict&#39;;
+ 
+  var app = ng.module(&#39;ngLoadScript&#39;, []);
+ 
+  app.directive(&#39;script&#39;, function() {
+    return {
+      restrict: &#39;E&#39;,
+      scope: false,
+      link: function(scope, elem, attr) 
+      {
+        if (attr.type===&#39;text/javascript-lazy&#39;) 
+        {
+          var s = document.createElement(&amp;quot;script&amp;quot;);
+          s.type = &amp;quot;text/javascript&amp;quot;;                
+          var src = elem.attr(&#39;src&#39;);
+          if(src!==undefined)
+          {
+              s.src = src;
+          }
+          else
+          {
+              var code = elem.text();
+              s.text = code;
+          }
+          document.head.appendChild(s);
+          elem.remove();
+          /*var f = new Function(code);
+          f();*/
+        }
+      }
+    };
+  });
+ 
+}(angular));
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ブログのお引越し</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
+      <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
+      <description>&lt;p&gt;ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。&lt;/p&gt;
+
+&lt;p&gt;理由の一つはangularjsの習作として色々自分で試してみたかったからだ。
+angularjsについてはまたいろいろ挑戦してみたい。&lt;/p&gt;
+
+&lt;p&gt;また、Octopressは記事をローカルで書いてrakeタスクを叩くため投稿するのが億劫になっていた。
+現在のアプリはWeb上で記事を編集でき、編集中にリアルタイムでMarkdownを変換してくれるため、大変ラクになった。&lt;/p&gt;
+
+&lt;p&gt;しばらく更新が滞っていたがまた再開したいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Rubyでインスタンス変数のテスト</title>
+      <link>http://tanstaafl.0pt.jp/posts/2013/08/31/ed3690f9cb82/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2013/08/31/ed3690f9cb82/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;あるオブジェクトOのメソッドAを呼ぶと内部変数Xの値が変わるとする。&lt;/li&gt;
+&lt;li&gt;メソッドAの目的はXの値を更新することだが、返り値からXの値を知ることは出来ない。&lt;/li&gt;
+&lt;li&gt;オブジェクトOの他のメソッドからXの値を直接知ることは出来ない。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;以上のような状況のとき、メソッドAのテストってどうすればいいんだろうと思ったんだけど、シンプルにインスタンス変数にアクセスすることにした。メソッドAの正しい挙動は内部変数を変更することなので、そのテストは、変数の変更を検知することだと思ったからだ。&lt;/p&gt;
+
+&lt;p&gt;というわけでコードは以下。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;require &#39;minitest/autostart&#39;
+O = Struct.new(:x)
+class TestO &amp;lt; Minitest::Test
+  def test_a
+    o = O.new
+    o.a #x =&amp;gt; true
+    assert o.instance_variable_get(:@x)
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;他にいいやりかたがあるのかもしれないけど、多分これが一番スッキリする。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fabrication で Mongoid のテストデータを作る</title>
+      <link>http://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</guid>
+      <description>&lt;p&gt;Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。
+MongoHQ、MongoLabなどが500MBの無料プランを提供しているからで、
+個人アプリであればこのくらいあれば十分だからだ。&lt;/p&gt;
+
+&lt;p&gt;それでMongoDBのテストデータをRailsで作りたくて探してみたところ、
+Fabricationというgemがよさげだった。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.fabricationgem.org&#34;&gt;http://www.fabricationgem.org&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Personというモデルクラスがあるとして、テストデータは以下のように作る。&lt;/p&gt;
+
+&lt;p&gt;app/models/person.rb&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Person
+  include Mongoid::Document
+  field :name, String
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;定義ファイルは以下のようなパスに置くと自動で読み込まれる。
+test_or_spec/fabricators/*/*_fabricator.rb&lt;/p&gt;
+
+&lt;p&gt;例ではこちら。
+test/fabricators/person/person_fabricator.rb&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;Fabricator(:person) do
+  name &#39;Tarou&#39;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;name属性に対してnameというメソッドが定義されているので、セットする値を渡す。&lt;/p&gt;
+
+&lt;p&gt;テストケースからは以下のように呼び出す。
+test/models/person_test.rb&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;@person = Fabricate(:person)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;便利な機能としては、Fabricatorの定義を継承して新たな定義を作ったり、
+属性値をセットする際にブロックをとれたりする。&lt;/p&gt;
+
+&lt;p&gt;手軽にテストデータを作るには便利なライブラリだと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

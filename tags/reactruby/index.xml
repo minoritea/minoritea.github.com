@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reactruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/tags/reactruby/</link>
+    <description>Recent content in Reactruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 19 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/tags/reactruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ReactRubyをリリースした。</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
+      <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;
+
+&lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;
+
+&lt;p&gt;今回はFacebook製のコンポーネントフレームワークであるReactを使って、フロントエンドを作成しようと思い立った。Reactを選んだ理由として、Angularだとサーバーサイドでビューを生成できないので不満に思っていたことが挙げられる。&lt;/p&gt;
+
+&lt;p&gt;今まで、コンテンツページに関してはHAMLを使ってサーバサイドで生成していて、Angularのテンプレートキャッシュを使って読み込んでいたのだが、これだとフロントサイドでビュー生成している意味が薄くていまいち不満だったのだ（この実装だとやってることはまんまTurbolinksである）。&lt;/p&gt;
+
+&lt;p&gt;ReactはHTMLを文字列として出力できる。つまりサーバサイドでも実行可能なテンプレートエンジンとして使えるということである。ReactはjavascriptなのでNode.jsあたりで動かすのが適切なんだろうけど、今回サーバサイドは既存のアプリを使いまわしたかったのでRubyでReactを呼び出すためのブリッジを作成した。それがReactRubyである。（React本家にはRailsのバインディングがあったが、まだ安定版が出てなかったし今回サーバサイドに使ったのはSinatraだったので自作した）。&lt;/p&gt;
+
+&lt;p&gt;使い方はシンプルに、テンプレートを文字列として渡してコンパイルし、呼び出したいクラスのXMLタグを#renderメソッドに渡してやればよい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;ReactRuby.compile(jsx: your_jsx_template_as_string)
+ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
+# =&amp;gt; YourJSXClassのレンダリング結果
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;自分はこの処理をsinatraのヘルパーメソッドとして定義して、sinatraのビューの中でコンポーネント単位で呼び出している。1度サーバから画面を読み込んだら、あとの画面更新は画面上でReactを再実行してレンダリングしなおしている。流行りの&amp;rdquo;Isomorphic&amp;rdquo;アプリケーションというやつだ（正確にはビューだけのなんちゃってIsomorphicなんだけど、このブログくらいの小さいアプリなら十分だと思う）。&lt;/p&gt;
+
+&lt;p&gt;ReactRubyはgemとして公開してあるので、この記事を読んで興味をもった方は是非試してほしい。簡単なサンプルアプリもgithubにおいてあるので参考にどうぞ（&lt;a href=&#34;https://github.com/minoritea/react_ruby_sample&#34;&gt;react_ruby_sample&lt;/a&gt;）。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

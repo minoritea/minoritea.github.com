@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Disqus on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/tags/disqus/</link>
+    <description>Recent content in Disqus on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 03 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/tags/disqus/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AngularJS で外部javascriptを遅延読み込み</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
+      <description>&lt;p&gt;新しいブログエンジンでもコメントシステムはDisqusを使っている。
+Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。&lt;/p&gt;
+
+&lt;p&gt;Angular.jsはng-includeなどの仕組みで、HTMLテンプレートを動的に読み込みができ、HTMLをパーツとして使いまわすことができる。
+しかし、このテンプレートを読み込む際にscriptタグが含まれていた場合はセキュリティのためか、scriptタグが無視されてしまう。
+そのためDisqusのように外部スクリプトを埋め込んでDOM要素を生成するようなサービスとは相性が悪い。&lt;/p&gt;
+
+&lt;p&gt;しかし、皆考えることは同じようで、ハックを公開してくれた人がいたので参考にさせていただいた。
+使い方は簡単でngLoadModuleというモジュール（コードは以下のGist参照）をngAppで指定したモジュールに読み込んで、
+読み込ませたいscriptタグに&amp;rdquo;text/javascript-lazy&amp;rdquo;と追加するだけである。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/subudeepak/9617483&#34;&gt;https://gist.github.com/subudeepak/9617483&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;以下はgistより引用。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(function (ng) {
+  &#39;use strict&#39;;
+ 
+  var app = ng.module(&#39;ngLoadScript&#39;, []);
+ 
+  app.directive(&#39;script&#39;, function() {
+    return {
+      restrict: &#39;E&#39;,
+      scope: false,
+      link: function(scope, elem, attr) 
+      {
+        if (attr.type===&#39;text/javascript-lazy&#39;) 
+        {
+          var s = document.createElement(&amp;quot;script&amp;quot;);
+          s.type = &amp;quot;text/javascript&amp;quot;;                
+          var src = elem.attr(&#39;src&#39;);
+          if(src!==undefined)
+          {
+              s.src = src;
+          }
+          else
+          {
+              var code = elem.text();
+              s.text = code;
+          }
+          document.head.appendChild(s);
+          elem.remove();
+          /*var f = new Function(code);
+          f();*/
+        }
+      }
+    };
+  });
+ 
+}(angular));
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Twitterでコメント</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/11/08/1db91739f81f/</link>
+      <pubDate>Mon, 08 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/11/08/1db91739f81f/</guid>
+      <description>&lt;p&gt;Disqusを止めて、コメントシステムをTwitterで管理するようにした。理由は出来る限りシンプルにしたかったことと、Twitter APIを試してみたかったためである。&lt;/p&gt;
+
+&lt;p&gt;ただし、現状コメント機能は無いので外部でつぶやかれたURLをトラックバックするだけの機能である。&lt;/p&gt;
+
+&lt;p&gt;追記：とりあえず、Twitter公式のボタンを挿入した。シンプルでよし。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SafariのLocationエンコードについて2</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</link>
+      <pubDate>Fri, 05 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</guid>
+      <description>&lt;p&gt;前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得されてしまう問題について、webkitのブラウザを判別するスクリプトを書いて対応した。
+その後、ChromeだとURLがきちんとエスケープされて取得されることが分かった。僕はchromeは普段使わないのでこの仕様の違いに気付かなかったのである。&lt;/p&gt;
+
+&lt;p&gt;どうやって判別するか悩んでいたのだが、結局decodeURLでエスケープされていないURLをデコードしても結果が変わらないことに着目して以下の対応とした。&lt;/p&gt;
+
+&lt;p&gt;var disqus_url = encodeURI(decodeURI(window.location.href));&lt;/p&gt;
+
+&lt;p&gt;エンコードされたURL（Firefox,Chrome,etc）だけがdecodeURIされ、その後再びencodeURIされるので正しくエスケープされたURLが取得出来る。
+URLの下位パスをタイトルから生成していたのでこのような問題となったのだから、そこを改めた方がよいのかもしれない。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SafariのLocationエンコードについて</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</link>
+      <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</guid>
+      <description>&lt;p&gt;やっぱりDisqusがSafariでうまく動作しない。どうも記事ごとにうまく読み込めるかエラーを起こすが決まっているようなので調べるとうまく動作しないのはタイトルがマルチバイトの記事だけだった。&lt;/p&gt;
+
+&lt;p&gt;このブログの各記事のリンクは全てURLをエスケープしてあるのだが、Safariでwindow.location.hrefを取得するとエスケープ前のURLになってしまうのがエラーの原因であるようだ。ちなみにFirefoxでは再現しない。何故このような仕様になっているのか理解に苦しむのだがご存知の方がいたら教えてもらいたい。（バグなんだろうか）。&lt;/p&gt;
+
+&lt;p&gt;ちなみに以下のコードを埋め込むことで一応Safariでのエラーは無くなった。あまりスマートなコードではないが仕方が無い。&lt;/p&gt;
+
+&lt;p&gt;if(!jQuery.support.checkOn){
+  var disqus_url = encodeURI(window.location.href);
+}&lt;/p&gt;
+
+&lt;p&gt;ちなみにjQueryでのブラウザ判別については「jQuery.supportでのブラウザ判別」を参照した。分かりやすいまとめで助かった。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Disqus追記</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/30/c590b8f6037f/</link>
+      <pubDate>Sat, 30 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/30/c590b8f6037f/</guid>
+      <description>&lt;p&gt;コメントシステムのDisqusを使い始めた。残念ながらコメントしてくれる人もいないが、元々Webサービスの習作として作っていて、閲覧しているのは自分だけというBlogだったのでしょうがないだろう。&lt;/p&gt;
+
+&lt;p&gt;Disqusを試しに使っていた中で、Safariで読み込まれないというトラブルは解決した。WindowsでのIEも動作確認したので問題ないだろう。もう一つ気になっていたTwitter上でのコメントの同期がしたいという点だが、実はDisqusがそのまま使えることが判明した。&lt;/p&gt;
+
+&lt;p&gt;当初TweetMemeやTopsyなどを検討していたのだが、いろいろ調べているうちにTwitterだけでなくYoutubeやFriendFeedからのコメントも拾えるBackTypeというサービスがAPIも公開されていてなかなか便利そうだと思ったので、これの導入を考えていた。調べていて分かったのはDisqus自体がこのAPIを利用していて、Twitterのコメントも拾えるということだった。それでDisqusをそのまま使ってみることにしたわけだ。&lt;/p&gt;
+
+&lt;p&gt;結局徒労だったわけだが、いろいろと面白いサービスについて知ることが出来たのでまあよかったと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Disqus</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/28/413e8772c8d6/</link>
+      <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/28/413e8772c8d6/</guid>
+      <description>&lt;p&gt;ソーシャルプラットフォームのDisqusをコメント用に利用し始めた。Scantyがデフォルトで使うようになっていたからだがなかなか便利だと思う。ただし読み込みが遅いのとSafariで読み込めなかったので、乗り換えを考えている。&lt;/p&gt;
+
+&lt;p&gt;結局Twitterでコメントしてもらうのが手っ取り早いのでそれ系のサービスを利用するか自分で実装するかしようと思う。Topsyあたりが良いのかな。&lt;/p&gt;
+
+&lt;p&gt;追記:結局タグの閉じ忘れでSafariではWidgetがうまく動いてくれなかっただけだった。
+Firefoxではそのあたりがルーズなのが面白い。しばらくはこのまま運用してみたいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

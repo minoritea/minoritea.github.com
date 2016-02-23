@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Safari on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/tags/safari/</link>
+    <description>Recent content in Safari on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 05 Nov 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/tags/safari/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SafariのLocationエンコードについて2</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</link>
+      <pubDate>Fri, 05 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</guid>
+      <description>&lt;p&gt;前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得されてしまう問題について、webkitのブラウザを判別するスクリプトを書いて対応した。
+その後、ChromeだとURLがきちんとエスケープされて取得されることが分かった。僕はchromeは普段使わないのでこの仕様の違いに気付かなかったのである。&lt;/p&gt;
+
+&lt;p&gt;どうやって判別するか悩んでいたのだが、結局decodeURLでエスケープされていないURLをデコードしても結果が変わらないことに着目して以下の対応とした。&lt;/p&gt;
+
+&lt;p&gt;var disqus_url = encodeURI(decodeURI(window.location.href));&lt;/p&gt;
+
+&lt;p&gt;エンコードされたURL（Firefox,Chrome,etc）だけがdecodeURIされ、その後再びencodeURIされるので正しくエスケープされたURLが取得出来る。
+URLの下位パスをタイトルから生成していたのでこのような問題となったのだから、そこを改めた方がよいのかもしれない。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SafariのLocationエンコードについて</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</link>
+      <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</guid>
+      <description>&lt;p&gt;やっぱりDisqusがSafariでうまく動作しない。どうも記事ごとにうまく読み込めるかエラーを起こすが決まっているようなので調べるとうまく動作しないのはタイトルがマルチバイトの記事だけだった。&lt;/p&gt;
+
+&lt;p&gt;このブログの各記事のリンクは全てURLをエスケープしてあるのだが、Safariでwindow.location.hrefを取得するとエスケープ前のURLになってしまうのがエラーの原因であるようだ。ちなみにFirefoxでは再現しない。何故このような仕様になっているのか理解に苦しむのだがご存知の方がいたら教えてもらいたい。（バグなんだろうか）。&lt;/p&gt;
+
+&lt;p&gt;ちなみに以下のコードを埋め込むことで一応Safariでのエラーは無くなった。あまりスマートなコードではないが仕方が無い。&lt;/p&gt;
+
+&lt;p&gt;if(!jQuery.support.checkOn){
+  var disqus_url = encodeURI(window.location.href);
+}&lt;/p&gt;
+
+&lt;p&gt;ちなみにjQueryでのブラウザ判別については「jQuery.supportでのブラウザ判別」を参照した。分かりやすいまとめで助かった。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

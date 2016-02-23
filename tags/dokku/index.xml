@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dokku on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/tags/dokku/</link>
+    <description>Recent content in Dokku on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 10 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/tags/dokku/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>dokkuでgit pushするとfatalしてハマった</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
+      <description>&lt;p&gt;最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。&lt;/p&gt;
+
+&lt;p&gt;dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;fatal: &#39;hogehoge.git&#39; does not appear to be a git repository
+fatal: Could not read from remote repository.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;いろいろ試行錯誤した結果、実に単純に解決した。
+~/.ssh/authorized_keys に、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;command=&amp;quot;...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;のような行が追加されている。
+これは設定時に、&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cat ~/.ssh/id_rsa.pub | ssh progriumapp.com &amp;quot;sudo sshcommand acl-add dokku progrium&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;というコマンドでアクセス権限を追加された際自動で挿入されたものだが、その上に手動で自分の公開鍵を挿入していたために、どうやらgit pushが動かなかったらしい。&lt;/p&gt;
+
+&lt;p&gt;手で追加した方の公開鍵を削除したら無事解決した。&lt;/p&gt;
+
+&lt;p&gt;素直にマニュアル通りに作ればこういうことにはならないので、同様にハマる人は少ないかもしれないが一応載せておく。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

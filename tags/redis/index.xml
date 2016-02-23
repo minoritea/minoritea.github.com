@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/tags/redis/</link>
+    <description>Recent content in Redis on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 10 Jun 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>データが飛んだ</title>
+      <link>http://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/</link>
+      <pubDate>Sun, 10 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/</guid>
+      <description>&lt;p&gt;ブログのデータが飛んだ。ごっそりだ。&lt;/p&gt;
+
+&lt;p&gt;原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先であるdump.rdbのパーミッションがredisで無くなっていたためである。ファイル所有者が僕のログインユーザになっていたので作業中になにかミスったのだろうと思うが今となってはどのタイミングで変わったのかは定かではない。&lt;/p&gt;
+
+&lt;p&gt;redisの良いところはオンメモリでデータを読み書きしていてとても速いのに、定期的にデータをファイルに書き出して永続化してくれるところだ。dump無しではmemcacheと変わらない。&lt;/p&gt;
+
+&lt;p&gt;それよりも、いくら更新の遅いブログとはいえ1年もdumpがおかしくなっていたことに気付いていないのはあんまりなのでもうすこしきっちり管理しようと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
+      <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
+      <description>&lt;p&gt;このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRedisを使用しているのだが、気持ちいいほどに高速である。KVSなので若干取り扱いに難があったが、SQL初心者からするとSQLより分かりやすいと思う。オンメモリでばしばしデータをさばける上に永続化も自動で行ってくれる優れものだ。&lt;/p&gt;
+
+&lt;p&gt;アプリケーションサーバにはRuby製の軽量サーバであるUnicornを使用してある。軽量な上にロードバランシングを自動で行ってくれる優れものだ。&lt;/p&gt;
+
+&lt;p&gt;フロントエンドの仕事はポート転送だけなのでHTTPサーバにはこれも軽量なNginxを使用している。これもロードバランサとして非常に優れているのだが今回は単純にリクエストをパスするだけのサーバになっている。&lt;/p&gt;
+
+&lt;p&gt;全体的な構成としても非常に軽量でレスポンスの早い構成になった。RailsベースのTypoをHerokuで動かしていたときとは雲泥の差である。今後どんどん発展させていきたいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

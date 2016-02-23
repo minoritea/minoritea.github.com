@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sinatra on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/tags/sinatra/</link>
+    <description>Recent content in Sinatra on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 19 Nov 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/tags/sinatra/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ReactRubyをリリースした。</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
+      <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;
+
+&lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;
+
+&lt;p&gt;今回はFacebook製のコンポーネントフレームワークであるReactを使って、フロントエンドを作成しようと思い立った。Reactを選んだ理由として、Angularだとサーバーサイドでビューを生成できないので不満に思っていたことが挙げられる。&lt;/p&gt;
+
+&lt;p&gt;今まで、コンテンツページに関してはHAMLを使ってサーバサイドで生成していて、Angularのテンプレートキャッシュを使って読み込んでいたのだが、これだとフロントサイドでビュー生成している意味が薄くていまいち不満だったのだ（この実装だとやってることはまんまTurbolinksである）。&lt;/p&gt;
+
+&lt;p&gt;ReactはHTMLを文字列として出力できる。つまりサーバサイドでも実行可能なテンプレートエンジンとして使えるということである。ReactはjavascriptなのでNode.jsあたりで動かすのが適切なんだろうけど、今回サーバサイドは既存のアプリを使いまわしたかったのでRubyでReactを呼び出すためのブリッジを作成した。それがReactRubyである。（React本家にはRailsのバインディングがあったが、まだ安定版が出てなかったし今回サーバサイドに使ったのはSinatraだったので自作した）。&lt;/p&gt;
+
+&lt;p&gt;使い方はシンプルに、テンプレートを文字列として渡してコンパイルし、呼び出したいクラスのXMLタグを#renderメソッドに渡してやればよい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;ReactRuby.compile(jsx: your_jsx_template_as_string)
+ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
+# =&amp;gt; YourJSXClassのレンダリング結果
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;自分はこの処理をsinatraのヘルパーメソッドとして定義して、sinatraのビューの中でコンポーネント単位で呼び出している。1度サーバから画面を読み込んだら、あとの画面更新は画面上でReactを再実行してレンダリングしなおしている。流行りの&amp;rdquo;Isomorphic&amp;rdquo;アプリケーションというやつだ（正確にはビューだけのなんちゃってIsomorphicなんだけど、このブログくらいの小さいアプリなら十分だと思う）。&lt;/p&gt;
+
+&lt;p&gt;ReactRubyはgemとして公開してあるので、この記事を読んで興味をもった方は是非試してほしい。簡単なサンプルアプリもgithubにおいてあるので参考にどうぞ（&lt;a href=&#34;https://github.com/minoritea/react_ruby_sample&#34;&gt;react_ruby_sample&lt;/a&gt;）。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turbolinksモドキを入れた</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
+      <description>&lt;p&gt;結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。&lt;/p&gt;
+
+&lt;p&gt;というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AngularJS&#43;SinatraでTurbolinks</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
+      <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
+      <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;
+
+&lt;p&gt;スライドはこちら。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34;&gt;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/33852359&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34; title=&#34;Angular jsとsinatraでturbolinks&#34; target=&#34;_blank&#34;&gt;Angular jsとsinatraでturbolinks&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;なお、このブログを対象にTurbolinksモドキを実装してみたのだが、
+Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
+
+&lt;p&gt;近いうちにお見せできればと思っている。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ブログのお引越し</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
+      <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
+      <description>&lt;p&gt;ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。&lt;/p&gt;
+
+&lt;p&gt;理由の一つはangularjsの習作として色々自分で試してみたかったからだ。
+angularjsについてはまたいろいろ挑戦してみたい。&lt;/p&gt;
+
+&lt;p&gt;また、Octopressは記事をローカルで書いてrakeタスクを叩くため投稿するのが億劫になっていた。
+現在のアプリはWeb上で記事を編集でき、編集中にリアルタイムでMarkdownを変換してくれるため、大変ラクになった。&lt;/p&gt;
+
+&lt;p&gt;しばらく更新が滞っていたがまた再開したいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>フィードの過去ログ読み込み</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</link>
+      <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</guid>
+      <description>&lt;p&gt;GoogleReaderが不調なので自分でフィードリーダを実装しようと思い、読み込み部分はsinatraでさっと作ったのはいいがフィードの過去ログの取得方法が分からず、ずっと悩んでいた。共通の呼び出しプロトコルでもあるのかと思えば無いようだし。&lt;/p&gt;
+
+&lt;p&gt;調べてやっと分かったのはオンラインリーダは各フィードの取得内容をサイト全体でキャッシュしているので過去ログが見られるらしい。なんじゃそら。随分な力技である。そりゃ今までオンラインリーダしか使っていない人間には分からんよ。過去ログは読み込めて当然だと思ってるし。&lt;/p&gt;
+
+&lt;p&gt;ネットで調べてもつまずく人のいない情報はなかなか出てこないのが罠だなと。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
+      <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
+      <description>&lt;p&gt;このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRedisを使用しているのだが、気持ちいいほどに高速である。KVSなので若干取り扱いに難があったが、SQL初心者からするとSQLより分かりやすいと思う。オンメモリでばしばしデータをさばける上に永続化も自動で行ってくれる優れものだ。&lt;/p&gt;
+
+&lt;p&gt;アプリケーションサーバにはRuby製の軽量サーバであるUnicornを使用してある。軽量な上にロードバランシングを自動で行ってくれる優れものだ。&lt;/p&gt;
+
+&lt;p&gt;フロントエンドの仕事はポート転送だけなのでHTTPサーバにはこれも軽量なNginxを使用している。これもロードバランサとして非常に優れているのだが今回は単純にリクエストをパスするだけのサーバになっている。&lt;/p&gt;
+
+&lt;p&gt;全体的な構成としても非常に軽量でレスポンスの早い構成になった。RailsベースのTypoをHerokuで動かしていたときとは雲泥の差である。今後どんどん発展させていきたいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

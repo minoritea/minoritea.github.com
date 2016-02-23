@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opensocial on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/tags/opensocial/</link>
+    <description>Recent content in Opensocial on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 27 Oct 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/tags/opensocial/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mixiアプリ</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</guid>
+      <description>&lt;p&gt;ちょっと思い立ってMixiのアプリを作ってる。バックエンドはGAE/J + Sinatraの構成だ。大体概要は分かったんだけど、OAuthのところで詰まってる。 検索しても大抵出てくるのはTwitter関連の情報だ。 TwitterにOAuthでアクセスするのはConsumer側なんだよなぁ。欲しいのはServiceProvider側の作り方だ。 GithubでSinatraのサンプルコード落として勉強中だけど、なんとか分かりやすくならないかなぁ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>とりあえず</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</guid>
+      <description>&lt;p&gt;件のアプリはクッキー認証で作ってみようかなあ。&lt;/p&gt;
+
+&lt;p&gt;OAuthについては、&lt;/p&gt;
+
+&lt;p&gt;Twitterを利用してOAuth::Consumer側を実装してみる。
+OAuthProviderを利用して自分でProviderを実装。Consumerは先のアプリを流用。
+でテストしてみたいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

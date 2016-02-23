@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.16-DEV" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://tanstaafl.0pt.jp//index.xml">
+
+    
+    <title>Nginx＋Unicorn＋Sinatra＋Redis - フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <meta property='og:title' content="Nginx＋Unicorn＋Sinatra＋Redis - フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+    <meta property="og:type" content="article">
+    
+
+    <meta property="og:url" content="http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/">
+    
+    
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="site">
+        <div class="title"><a href="http://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a></div>
+      </header>
+    </div>
+
+    <div class="container site">
+
+
+<div class="single">
+  <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="http://tanstaafl.0pt.jp/"/>
+    <meta itemprop="dateModified" content="2010-10-28T00:00:00&#43;00:00">
+    <meta itemprop="headline" content="Nginx＋Unicorn＋Sinatra＋Redis">
+    <meta itemprop="description" content="このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRed">
+    <meta itemprop="url" content="http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/">
+    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="http://tanstaafl.0pt.jp/images/default.jpg" />
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </div>
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="http://tanstaafl.0pt.jp/images/logo.jpg">
+        <meta itemprop="width" content="100">
+        <meta itemprop="height" content="100">
+      </div>
+      <meta itemprop="name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+    </div>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="">
+    </div>
+
+    <header class="clearfix">
+      <div class="pull-left">
+        <div class="image" style="background-image: url(http://tanstaafl.0pt.jp/images/default.jpg);"></div>
+      </div>
+
+      <div class="detail">
+        <time>Thu, Oct 28, 2010</time>
+        <h1 class="title">Nginx＋Unicorn＋Sinatra＋Redis</h1>
+      </div>
+    </header>
+
+    <div class="share">
+      <a href="http://www.facebook.com/sharer.php?src=bm&u=http%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2010%2f10%2f28%2fb0558021ecd5%2f&t=Nginx%ef%bc%8bUnicorn%ef%bc%8bSinatra%ef%bc%8bRedis" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+      <a href="http://twitter.com/intent/tweet?url=http%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2010%2f10%2f28%2fb0558021ecd5%2f&text=Nginx%ef%bc%8bUnicorn%ef%bc%8bSinatra%ef%bc%8bRedis&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+      <a href="https://plus.google.com/share?url=http%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2010%2f10%2f28%2fb0558021ecd5%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+      <a href="http://getpocket.com/edit?url=http%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2010%2f10%2f28%2fb0558021ecd5%2f&title=Nginx%ef%bc%8bUnicorn%ef%bc%8bSinatra%ef%bc%8bRedis" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+    </div>
+
+    
+
+    <div class="article-body" itemprop="articleBody"><p>このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRedisを使用しているのだが、気持ちいいほどに高速である。KVSなので若干取り扱いに難があったが、SQL初心者からするとSQLより分かりやすいと思う。オンメモリでばしばしデータをさばける上に永続化も自動で行ってくれる優れものだ。</p>
+
+<p>アプリケーションサーバにはRuby製の軽量サーバであるUnicornを使用してある。軽量な上にロードバランシングを自動で行ってくれる優れものだ。</p>
+
+<p>フロントエンドの仕事はポート転送だけなのでHTTPサーバにはこれも軽量なNginxを使用している。これもロードバランサとして非常に優れているのだが今回は単純にリクエストをパスするだけのサーバになっている。</p>
+
+<p>全体的な構成としても非常に軽量でレスポンスの早い構成になった。RailsベースのTypoをHerokuで動かしていたときとは雲泥の差である。今後どんどん発展させていきたいと思う。</p>
+</div>
+
+    <aside>
+
+      <div class="section"><a href="http://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90" class="tag">サーバ</a><a href="http://tanstaafl.0pt.jp/tags/ruby" class="tag">ruby</a><a href="http://tanstaafl.0pt.jp/tags/sinatra" class="tag">sinatra</a><a href="http://tanstaafl.0pt.jp/tags/redis" class="tag">redis</a><a href="http://tanstaafl.0pt.jp/tags/nginx" class="tag">nginx</a></div>
+
+      
+      
+      
+
+    </aside>
+
+  </article>
+</div>
+
+    </div>
+
+    <div class="container">
+      <footer class="site">
+        <p>&copy; 2014 フリーランチなど無い - There ain&#39;t no such thing as a free lunch</p>
+        <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
+        <p>Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
+      </footer>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+  </body>
+</html>
+

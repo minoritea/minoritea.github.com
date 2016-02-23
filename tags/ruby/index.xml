@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>http://tanstaafl.0pt.jp/tags/ruby/</link>
+    <description>Recent content in Ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://tanstaafl.0pt.jp/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Kawasaki.rbでReactについて発表してきた</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
+      <description>&lt;p&gt;Rubyコミュニティなのに毎回多言語の話が出る &lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;kawasaki.rb&lt;/a&gt; で &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; について発表してきた。&lt;/p&gt;
+
+&lt;p&gt;スライドはこちら。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/react-42041864&#34;&gt;http://www.slideshare.net/minoritokuda/react-42041864&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/42041864&#34; width=&#34;425&#34; height=&#34;355&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/minoritokuda/react-42041864&#34; title=&#34;Reactつかってみた&#34; target=&#34;_blank&#34;&gt;Reactつかってみた&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;締めの発言はわりかし本気である。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ReactRubyをリリースした。</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
+      <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;
+
+&lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;
+
+&lt;p&gt;今回はFacebook製のコンポーネントフレームワークであるReactを使って、フロントエンドを作成しようと思い立った。Reactを選んだ理由として、Angularだとサーバーサイドでビューを生成できないので不満に思っていたことが挙げられる。&lt;/p&gt;
+
+&lt;p&gt;今まで、コンテンツページに関してはHAMLを使ってサーバサイドで生成していて、Angularのテンプレートキャッシュを使って読み込んでいたのだが、これだとフロントサイドでビュー生成している意味が薄くていまいち不満だったのだ（この実装だとやってることはまんまTurbolinksである）。&lt;/p&gt;
+
+&lt;p&gt;ReactはHTMLを文字列として出力できる。つまりサーバサイドでも実行可能なテンプレートエンジンとして使えるということである。ReactはjavascriptなのでNode.jsあたりで動かすのが適切なんだろうけど、今回サーバサイドは既存のアプリを使いまわしたかったのでRubyでReactを呼び出すためのブリッジを作成した。それがReactRubyである。（React本家にはRailsのバインディングがあったが、まだ安定版が出てなかったし今回サーバサイドに使ったのはSinatraだったので自作した）。&lt;/p&gt;
+
+&lt;p&gt;使い方はシンプルに、テンプレートを文字列として渡してコンパイルし、呼び出したいクラスのXMLタグを#renderメソッドに渡してやればよい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;ReactRuby.compile(jsx: your_jsx_template_as_string)
+ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
+# =&amp;gt; YourJSXClassのレンダリング結果
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;自分はこの処理をsinatraのヘルパーメソッドとして定義して、sinatraのビューの中でコンポーネント単位で呼び出している。1度サーバから画面を読み込んだら、あとの画面更新は画面上でReactを再実行してレンダリングしなおしている。流行りの&amp;rdquo;Isomorphic&amp;rdquo;アプリケーションというやつだ（正確にはビューだけのなんちゃってIsomorphicなんだけど、このブログくらいの小さいアプリなら十分だと思う）。&lt;/p&gt;
+
+&lt;p&gt;ReactRubyはgemとして公開してあるので、この記事を読んで興味をもった方は是非試してほしい。簡単なサンプルアプリもgithubにおいてあるので参考にどうぞ（&lt;a href=&#34;https://github.com/minoritea/react_ruby_sample&#34;&gt;react_ruby_sample&lt;/a&gt;）。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Turbolinksモドキを入れた</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
+      <description>&lt;p&gt;結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。&lt;/p&gt;
+
+&lt;p&gt;というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AngularJS&#43;SinatraでTurbolinks</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
+      <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
+      <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;
+
+&lt;p&gt;スライドはこちら。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34;&gt;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/33852359&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34; title=&#34;Angular jsとsinatraでturbolinks&#34; target=&#34;_blank&#34;&gt;Angular jsとsinatraでturbolinks&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;なお、このブログを対象にTurbolinksモドキを実装してみたのだが、
+Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
+
+&lt;p&gt;近いうちにお見せできればと思っている。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>大江戸Ruby会議04に参加してきた！</title>
+      <link>http://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
+      <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
+      <description>
+
+&lt;p&gt;大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。&lt;/p&gt;
+
+&lt;p&gt;遅刻したため途中からのレポートとなる。&lt;/p&gt;
+
+&lt;h2 id=&#34;nobody-knows-nobu:41eb78584c590241db96d7348c8a49f1&#34;&gt;Nobody Knows Nobu&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/_zzak&#34;&gt;ザックさん&lt;/a&gt;の発表は絵芝居仕立てでコア・コミッターの中田さんの貢献についての紹介。愛と笑いのある発表でほんわかした。こういう暖かさがRubyコミュニティのいいところだと思う。&lt;/p&gt;
+
+&lt;h2 id=&#34;私は如何にして異国でエンジニアとして生き抜いてきたか:41eb78584c590241db96d7348c8a49f1&#34;&gt;私は如何にして異国でエンジニアとして生き抜いてきたか&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;レオさん&lt;/a&gt;の発表は海外で働くエンジニアとしての発表。オーストラリア出身のレオさんが8年間日本で働いてきた経験から得た知見を共有してくれた。おおきくまとめると海外で働くには言語とジョブスキルが大切というこ話だった。&lt;/p&gt;
+
+&lt;p&gt;言語はとにかく時間をかけて練習するしか無いとのこと。また、単に言葉だけではなく、言語の背景にある文化を学んでいくことが大事だと主張されていた。&lt;/p&gt;
+
+&lt;p&gt;ジョブスキルについてはコミュニティから得るものが大きかったそうで、東京Railsミートアップへ参加したことで世界が広がったそうだ。&lt;/p&gt;
+
+&lt;p&gt;文化的背景を理解することが大事というのは全くその通りで、発表中におすすめされていたRedditは毎日読んでみようと思う。&lt;/p&gt;
+
+&lt;h2 id=&#34;画像を壊すこと-oss-活動をすること-その他:41eb78584c590241db96d7348c8a49f1&#34;&gt;画像を壊すこと、OSS 活動をすること、その他&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;makimotoさん&lt;/a&gt;からはグリッチについてとOSS活動についてだった。グリッチというのは壊れたテレビからの砂嵐やノイズのような画像を指すそうで、正直なところ僕にはよく分からない世界だったが、makimotoさんのグリッチ愛はひしひしと伝わってきた。&lt;/p&gt;
+
+&lt;p&gt;OSS活動はRailsへのプルリクエストやるびまの英語記事の翻訳などを紹介しておられたが、結論としては好きなモノを作って公開するのが一番いいとのこと。&lt;/p&gt;
+
+&lt;p&gt;自分も趣味方向でなにか作ってみたいと感じさせられた。&lt;/p&gt;
+
+&lt;h2 id=&#34;rubyvm読んでみた:41eb78584c590241db96d7348c8a49f1&#34;&gt;RubyVM読んでみた&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/ocha-&#34;&gt;Kawamotoさん&lt;/a&gt;からはRubyVMの処理を紹介していただいた。正直なところ、内容には追いついていけなかったのだが、構文木をバイトコードに変換するあたりの処理についてのお話だったかと思う。マニアックなトピックを淡々と話されていたのが印象的だった。この日は青木峰郎さんの講演が入っていることもあってRHGがらみの発表が多かったと思う。&lt;/p&gt;
+
+&lt;p&gt;自分も折を見て処理系の中身は覗いてみたい。&lt;/p&gt;
+
+&lt;h2 id=&#34;基調講演:41eb78584c590241db96d7348c8a49f1&#34;&gt;基調講演&lt;/h2&gt;
+
+&lt;p&gt;基調講演はEbiさんとAaronさんのPatterson夫妻による講演だった。&lt;/p&gt;
+
+&lt;p&gt;Ebiさんの話はAaronさんと一緒に海外カンファレンスを回った話だった。最初はなぜそんなにカンファレンスに参加するのかと思ったそうだが、次第にEbiさん自身もコミュニティに関わるようになったとのこと。海外カンファレンスにいくことについて、相手と直接話しをする機会を得ることの大切さを訴えていたのが印象的だった。&lt;/p&gt;
+
+&lt;p&gt;Aaronさんの話はAdequateRecordというActiveRecordのforkの話。キャッシュを頑張って、高速化しているそうだ。
+途中のベンチマークの話で、パフォーマンスを測るには平均値だけではなく標準偏差が大事だと言っていたのが印象に残っている。&lt;/p&gt;
+
+&lt;h2 id=&#34;1年かけてgemを1つ作りました:41eb78584c590241db96d7348c8a49f1&#34;&gt;1年かけてgemを1つ作りました&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/kunitoo&#34;&gt;@kunitoo&lt;/a&gt;さんからはgit logをrails上で確認できる&lt;a href=&#34;https://github.com/kunitoo/rgitlog&#34;&gt;rgitlog&lt;/a&gt;というgemの作成について。簡単に作れます！と言いながらライブコーディングしておられた。途中rails generateのタイプミスで作り直しになるなど波乱がありライブコーディング怖いとおっしゃっていたが、無事完了して一安心である。ライブコーディングはライブ感があっていいと思う。楽しい！&lt;/p&gt;
+
+&lt;h2 id=&#34;https-rubygems-org-gems-rfc7159:41eb78584c590241db96d7348c8a49f1&#34;&gt;&lt;a href=&#34;https://rubygems.org/gems/RFC7159&#34;&gt;https://rubygems.org/gems/RFC7159&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/shyouhei&#34;&gt;Urabeさん&lt;/a&gt;からはタイトル通りのgemの紹介。
+RFC7159からJSONの仕様が厳格になったようで、それに対応したgemを作った話だった。既存のgemにはユニコードやバックスラッシュ周りの処理でバグが有り、RFCには則っていない。しかし、Urabeさんのgemを使えばいいかというとそうではなくRFC7159のgemは処理が重いそうだ。JSONパーサに受け渡さないようアプリ側でチェックしたほうが幸せになれるんじゃないかとおっしゃっていた。&lt;/p&gt;
+
+&lt;h2 id=&#34;bundlerの話-タイトル失念:41eb78584c590241db96d7348c8a49f1&#34;&gt;Bundlerの話（タイトル失念）&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/hone02&#34;&gt;Terence Leeさん&lt;/a&gt;からはBundlerの高速化についての話だった。BundlerってRubyistにとってインフラだと思うのでありがたい。&lt;/p&gt;
+
+&lt;h2 id=&#34;object-bouquet-幸せの花束-rvalue-のきらめきを添えて:41eb78584c590241db96d7348c8a49f1&#34;&gt;Object Bouquet ～ 幸せの花束・RValue のきらめきを添えて ～&lt;/h2&gt;
+
+&lt;p&gt;新婚のささださん夫妻による発表。惚気話とRubyのオブジェクトツリーについてのディープな話を同時に披露するという離れ業。面白かった！&lt;/p&gt;
+
+&lt;h2 id=&#34;another-language-you-should-learn:41eb78584c590241db96d7348c8a49f1&#34;&gt;Another language you should learn&lt;/h2&gt;
+
+&lt;p&gt;TechCrunch編集長の西村さんからは英語学習についてのトーク。上のレオさんの発表もそうだったけどやっぱり時間をかけることが大事とのこと。やっぱりね・・・。あとインプットが大事ということで、こちらでもRedditをおすすめされていた。&lt;/p&gt;
+
+&lt;p&gt;僕も海外の技術系ニュースは毎日読もうかなと思う。&lt;/p&gt;
+
+&lt;h2 id=&#34;mruby-hacking-guide:41eb78584c590241db96d7348c8a49f1&#34;&gt;mruby hacking guide&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://twitter.com/_ksss_&#34;&gt;Kuriharaさん&lt;/a&gt;からはmrubyへのコントリビューションの話。mrubyはブルー・オーシャンという話は魅力的で、これから処理系の中身をハックするならmrubyが敷居が低そうだと感じた。&lt;/p&gt;
+
+&lt;h2 id=&#34;hacking-home:41eb78584c590241db96d7348c8a49f1&#34;&gt;Hacking Home&lt;/h2&gt;
+
+&lt;p&gt;松田明さんからは家を建てた際のエピソードの話。テクノロジーとは関係なくゆるい話がしたいと言っておられたが、プログラマ視点からの家の建築の話は新鮮だった。確かに、ソフトウェア開発って建築に例えることが多いけれど、逆の視点で語ることってなかなかないと思う。建築、施工から家の設備のAPI化まで楽しく話されていた。個人的にはこのセッションが一番楽しかった！ここまでコアな話が続いていたので息抜きにもなったし。&lt;/p&gt;
+
+&lt;h2 id=&#34;ruby会議でsqlの話をするのは間違っているだろうか:41eb78584c590241db96d7348c8a49f1&#34;&gt;Ruby会議でSQLの話をするのは間違っているだろうか&lt;/h2&gt;
+
+&lt;p&gt;RHGの青木さんからは並列データベースの話。話の筋は前職Teradataでの経験のお話から、Hadoopの隆盛、並列DBとHadoopの比較へと展開。やっぱりSQL必要だよねという話から、MapReduceは下火になっているという話、Hadoop側もHiveを中心にSQL系DBに似た構成になっているということを述べられていて、ビッグデータに疎い自分には新鮮だった。またMapReduceは完全にダメかというとそうでもなく柔軟性を活かしてSQL系DBを補助する形がいいのではないかとのこと。大トリにふさわしいコアな話だった！&lt;/p&gt;
+
+&lt;h2 id=&#34;感想:41eb78584c590241db96d7348c8a49f1&#34;&gt;感想&lt;/h2&gt;
+
+&lt;p&gt;とにかくコアな話の連続で大変濃密な一日だった。懇親会では地方から参加された方々と交流することが出来て、地域Rubyコミュニティの運営について熱く語っていただいたのが印象に残っている。とにかく濃いRubyistが集まっていて、Rubyistだけでこんなに楽しいお祭りが成立するのかと思い感動した。また来年も参加したいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RailsのYAMLでハマった</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</link>
+      <pubDate>Sun, 07 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</guid>
+      <description>&lt;p&gt;Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、&lt;/p&gt;
+
+&lt;p&gt;production:
+  adapter:sqlite3&lt;/p&gt;
+
+&lt;p&gt;と書いてしまったのが原因でproduction環境でブート出来なくなってしまった。&lt;/p&gt;
+
+&lt;p&gt;正解はこちら&lt;/p&gt;
+
+&lt;p&gt;production:
+  adapter: sqlite3&lt;/p&gt;
+
+&lt;p&gt;お分かりだろうか？空白が無いとYamlではハッシュとして認識されない（参考)。
+つまらないミスなのだが、どこでハマってるか分からなかったので大分時間を取られてしまった。スペースの書き間違いには気をつけたい。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>フィードの過去ログ読み込み</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</link>
+      <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</guid>
+      <description>&lt;p&gt;GoogleReaderが不調なので自分でフィードリーダを実装しようと思い、読み込み部分はsinatraでさっと作ったのはいいがフィードの過去ログの取得方法が分からず、ずっと悩んでいた。共通の呼び出しプロトコルでもあるのかと思えば無いようだし。&lt;/p&gt;
+
+&lt;p&gt;調べてやっと分かったのはオンラインリーダは各フィードの取得内容をサイト全体でキャッシュしているので過去ログが見られるらしい。なんじゃそら。随分な力技である。そりゃ今までオンラインリーダしか使っていない人間には分からんよ。過去ログは読み込めて当然だと思ってるし。&lt;/p&gt;
+
+&lt;p&gt;ネットで調べてもつまずく人のいない情報はなかなか出てこないのが罠だなと。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
+      <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
+      <description>&lt;p&gt;このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRedisを使用しているのだが、気持ちいいほどに高速である。KVSなので若干取り扱いに難があったが、SQL初心者からするとSQLより分かりやすいと思う。オンメモリでばしばしデータをさばける上に永続化も自動で行ってくれる優れものだ。&lt;/p&gt;
+
+&lt;p&gt;アプリケーションサーバにはRuby製の軽量サーバであるUnicornを使用してある。軽量な上にロードバランシングを自動で行ってくれる優れものだ。&lt;/p&gt;
+
+&lt;p&gt;フロントエンドの仕事はポート転送だけなのでHTTPサーバにはこれも軽量なNginxを使用している。これもロードバランサとして非常に優れているのだが今回は単純にリクエストをパスするだけのサーバになっている。&lt;/p&gt;
+
+&lt;p&gt;全体的な構成としても非常に軽量でレスポンスの早い構成になった。RailsベースのTypoをHerokuで動かしていたときとは雲泥の差である。今後どんどん発展させていきたいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mixiアプリ</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</guid>
+      <description>&lt;p&gt;ちょっと思い立ってMixiのアプリを作ってる。バックエンドはGAE/J + Sinatraの構成だ。大体概要は分かったんだけど、OAuthのところで詰まってる。 検索しても大抵出てくるのはTwitter関連の情報だ。 TwitterにOAuthでアクセスするのはConsumer側なんだよなぁ。欲しいのはServiceProvider側の作り方だ。 GithubでSinatraのサンプルコード落として勉強中だけど、なんとか分かりやすくならないかなぁ。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>proxy script</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</guid>
+      <description>&lt;p&gt;proxyがresolvableか検出して、通ったら環境変数http-proxyをセットするスクリプトを書いて、.profileから呼び出すようにした。
+小さいスクリプトだがなかなか気に入っている。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>とりあえず</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</guid>
+      <description>&lt;p&gt;件のアプリはクッキー認証で作ってみようかなあ。&lt;/p&gt;
+
+&lt;p&gt;OAuthについては、&lt;/p&gt;
+
+&lt;p&gt;Twitterを利用してOAuth::Consumer側を実装してみる。
+OAuthProviderを利用して自分でProviderを実装。Consumerは先のアプリを流用。
+でテストしてみたいと思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>移転したい</title>
+      <link>http://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</guid>
+      <description>&lt;p&gt;内定式しんどかったけど、楽しかった。&lt;/p&gt;
+
+&lt;p&gt;さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容量が無いので長く利用するかどうかは悩みどころである。&lt;/p&gt;
+
+&lt;p&gt;有料化すると値段が跳ね上がるので、自分のVPS上にブログを移行しようと思うのだがRailsは重いので動かしたくない。 Sinatraあたりでいいブログエンジンがないものかなあ。それともPHPを導入してWordpressにするか。&lt;/p&gt;
+
+&lt;p&gt;悩ましい。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
