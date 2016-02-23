@@ -1,7 +1,7 @@
 
 +++
 date = "2010-11-14"
-draft = true
+draft = false
 title = "iTunesで映画レンタル"
 tags  = ['映画','itunes']
 +++
