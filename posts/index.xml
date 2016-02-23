@@ -6,8 +6,45 @@
     <description>Recent content in Posts on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 09 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Feb 2016 01:02:53 +0900</lastBuildDate>
     <atom:link href="http://tanstaafl.0pt.jp/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ブログをHugoに移行した</title>
+      <link>http://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</link>
+      <pubDate>Wed, 24 Feb 2016 01:02:53 +0900</pubDate>
+      
+      <guid>http://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</guid>
+      <description>&lt;p&gt;このブログは手製blogエンジンで構築していたのだが、
+サイトの管理が面倒になってしまい放置してしまっていた。&lt;/p&gt;
+
+&lt;p&gt;そのため、今回Github Pagesに移行することにした。
+移行にあたって静的ページジェネレータをいくつか検討した結果、
+&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を採用した。
+別にJekyllをそのまま使っても良かったのだがGo製で早いと評判だったので
+Hugoにした。今のところ、そのまま使えている。&lt;/p&gt;
+
+&lt;p&gt;工夫したところとしては、リポジトリの下に&lt;code&gt;_hugo&lt;/code&gt;という作業ディレクトリをきって、
+そこにHugoでの生成元となるファイルを全部突っ込んだ。
+設定でコンテンツの生成先を&lt;code&gt;..&lt;/code&gt;にしておいたので、
+そのままリポジトリをコミットしてgithubにPushすればデプロイできる。
+ちなみに作業ディレクトリの頭に&lt;code&gt;_&lt;/code&gt;がついているのは、
+Jekyllは&lt;code&gt;_&lt;/code&gt;付きのディレクトリを無視するからである。
+Hugoを使っているけど、リポジトリ自体はJekyll形式になっているので
+そのままGithub Pagesで読み込むことができるのである。&lt;/p&gt;
+
+&lt;p&gt;他にやったこととしては、github pagesでも独自ドメインをそのまま使い続けるため、
+いろいろ設定した。
+今時SSLくらい入れようと思い、CDNの&lt;a href=&#34;https://www.cloudflare.com&#34;&gt;CloudFlare&lt;/a&gt;を利用することにした。
+CloudFlareは無料で証明書を提供しているのでCloudFlare経由で配信することでSSL対応のサイトにできる。
+設定は以下のQiitaを参考にした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://qiita.com/superbrothers/items/95e5723e9bd320094537&#34;&gt;http://qiita.com/superbrothers/items/95e5723e9bd320094537&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;新しいブログはなかなか快適になったので、
+今後はぼちぼちコンテンツを追加していきたいところである。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SystemdでDocker上のPostgreSQLをバックアップする</title>
@@ -502,57 +539,6 @@ end
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;他にいいやりかたがあるのかもしれないけど、多分これが一番スッキリする。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Fabrication で Mongoid のテストデータを作る</title>
-      <link>http://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</link>
-      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</guid>
-      <description>&lt;p&gt;Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。
-MongoHQ、MongoLabなどが500MBの無料プランを提供しているからで、
-個人アプリであればこのくらいあれば十分だからだ。&lt;/p&gt;
-
-&lt;p&gt;それでMongoDBのテストデータをRailsで作りたくて探してみたところ、
-Fabricationというgemがよさげだった。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.fabricationgem.org&#34;&gt;http://www.fabricationgem.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Personというモデルクラスがあるとして、テストデータは以下のように作る。&lt;/p&gt;
-
-&lt;p&gt;app/models/person.rb&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Person
-  include Mongoid::Document
-  field :name, String
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;定義ファイルは以下のようなパスに置くと自動で読み込まれる。
-test_or_spec/fabricators/*/*_fabricator.rb&lt;/p&gt;
-
-&lt;p&gt;例ではこちら。
-test/fabricators/person/person_fabricator.rb&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;Fabricator(:person) do
-  name &#39;Tarou&#39;
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;name属性に対してnameというメソッドが定義されているので、セットする値を渡す。&lt;/p&gt;
-
-&lt;p&gt;テストケースからは以下のように呼び出す。
-test/models/person_test.rb&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;@person = Fabricate(:person)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;便利な機能としては、Fabricatorの定義を継承して新たな定義を作ったり、
-属性値をセットする際にブロックをとれたりする。&lt;/p&gt;
-
-&lt;p&gt;手軽にテストデータを作るには便利なライブラリだと思う。&lt;/p&gt;
 </description>
     </item>
     

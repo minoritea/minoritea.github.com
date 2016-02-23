@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+cd "$(dirname $(dirname $0))/_hugo"
+hash=$(date | shasum | cut -c 1-12)
+hugo new "posts/$(date '+%Y/%m/%d')/${hash}.md"
