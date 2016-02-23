@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd "$(dirname $0)/_hugo"
+cd "$(dirname $(dirname $0))/_hugo"
 if hugo;then
 	cd ..
 	git add . && git commit -m "deploy" \
