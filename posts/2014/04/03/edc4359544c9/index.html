@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.15-DEV" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://tanstaafl.0pt.jp//index.xml">
+
+    
+    <title>AngularJS で外部javascriptを遅延読み込み - フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <meta property='og:title' content="AngularJS で外部javascriptを遅延読み込み - フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+    <meta property="og:type" content="article">
+    
+
+    <meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/">
+    
+    
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <header class="site">
+        <div class="title"><a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a></div>
+      </header>
+    </div>
+
+    <div class="container site">
+
+
+<div class="single">
+  <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="https://tanstaafl.0pt.jp/"/>
+    <meta itemprop="dateModified" content="2014-04-03T00:00:00&#43;00:00">
+    <meta itemprop="headline" content="AngularJS で外部javascriptを遅延読み込み">
+    <meta itemprop="description" content="新しいブログエンジンでもコメントシステムはDisqusを使っている。 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービス">
+    <meta itemprop="url" content="https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/">
+    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="https://tanstaafl.0pt.jp/images/default.jpg" />
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </div>
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="https://tanstaafl.0pt.jp/images/logo.jpg">
+        <meta itemprop="width" content="100">
+        <meta itemprop="height" content="100">
+      </div>
+      <meta itemprop="name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+    </div>
+    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="">
+    </div>
+
+    <header class="clearfix">
+      <div class="pull-left">
+        <div class="image" style="background-image: url(https://tanstaafl.0pt.jp/images/default.jpg);"></div>
+      </div>
+
+      <div class="detail">
+        <time>Thu, Apr 3, 2014</time>
+        <h1 class="title">AngularJS で外部javascriptを遅延読み込み</h1>
+      </div>
+    </header>
+
+    <div class="share">
+      <a href="http://www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2014%2f04%2f03%2fedc4359544c9%2f&t=AngularJS%20%e3%81%a7%e5%a4%96%e9%83%a8javascript%e3%82%92%e9%81%85%e5%bb%b6%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
+      <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2014%2f04%2f03%2fedc4359544c9%2f&text=AngularJS%20%e3%81%a7%e5%a4%96%e9%83%a8javascript%e3%82%92%e9%81%85%e5%bb%b6%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
+      <a href="https://plus.google.com/share?url=https%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2014%2f04%2f03%2fedc4359544c9%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
+      <a href="http://getpocket.com/edit?url=https%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2014%2f04%2f03%2fedc4359544c9%2f&title=AngularJS%20%e3%81%a7%e5%a4%96%e9%83%a8javascript%e3%82%92%e9%81%85%e5%bb%b6%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
+    </div>
+
+    
+
+    <div class="article-body" itemprop="articleBody"><p>新しいブログエンジンでもコメントシステムはDisqusを使っている。
+Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。</p>
+
+<p>Angular.jsはng-includeなどの仕組みで、HTMLテンプレートを動的に読み込みができ、HTMLをパーツとして使いまわすことができる。
+しかし、このテンプレートを読み込む際にscriptタグが含まれていた場合はセキュリティのためか、scriptタグが無視されてしまう。
+そのためDisqusのように外部スクリプトを埋め込んでDOM要素を生成するようなサービスとは相性が悪い。</p>
+
+<p>しかし、皆考えることは同じようで、ハックを公開してくれた人がいたので参考にさせていただいた。
+使い方は簡単でngLoadModuleというモジュール（コードは以下のGist参照）をngAppで指定したモジュールに読み込んで、
+読み込ませたいscriptタグに&rdquo;text/javascript-lazy&rdquo;と追加するだけである。</p>
+
+<p><a href="https://gist.github.com/subudeepak/9617483">https://gist.github.com/subudeepak/9617483</a></p>
+
+<p>以下はgistより引用。</p>
+
+<pre><code>(function (ng) {
+  'use strict';
+ 
+  var app = ng.module('ngLoadScript', []);
+ 
+  app.directive('script', function() {
+    return {
+      restrict: 'E',
+      scope: false,
+      link: function(scope, elem, attr) 
+      {
+        if (attr.type==='text/javascript-lazy') 
+        {
+          var s = document.createElement(&quot;script&quot;);
+          s.type = &quot;text/javascript&quot;;                
+          var src = elem.attr('src');
+          if(src!==undefined)
+          {
+              s.src = src;
+          }
+          else
+          {
+              var code = elem.text();
+              s.text = code;
+          }
+          document.head.appendChild(s);
+          elem.remove();
+          /*var f = new Function(code);
+          f();*/
+        }
+      }
+    };
+  });
+ 
+}(angular));
+</code></pre>
+</div>
+
+    <aside>
+
+      <div class="section"><a href="https://tanstaafl.0pt.jp/tags/disqus" class="tag">disqus</a><a href="https://tanstaafl.0pt.jp/tags/angularjs" class="tag">angularjs</a></div>
+
+      
+      
+      
+
+    </aside>
+
+  </article>
+</div>
+
+    </div>
+
+    <div class="container">
+      <footer class="site">
+        <p>&copy; 2016 フリーランチなど無い - There ain&#39;t no such thing as a free lunch</p>
+        <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
+        <p>Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
+      </footer>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+  </body>
+</html>
+
