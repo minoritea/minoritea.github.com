@@ -2,7 +2,7 @@
 date = "2016-02-24T01:02:53+09:00"
 draft = false
 title = "ブログをHugoに移行した"
-
+tags  = ["Hugo", "CloudFlare"]
 +++
 
 このブログは手製blogエンジンで構築していたのだが、
