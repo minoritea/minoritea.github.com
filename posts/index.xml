@@ -6,8 +6,77 @@
     <description>Recent content in Posts on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Wed, 24 Feb 2016 13:57:31 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 10 Mar 2016 00:03:06 +0900</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>scalewayを使ってみた</title>
+      <link>https://tanstaafl.0pt.jp/posts/2016/03/09/20d0021c1058/</link>
+      <pubDate>Thu, 10 Mar 2016 00:03:06 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2016/03/09/20d0021c1058/</guid>
+      <description>&lt;p&gt;scalewayという格安ベアメタルサーバを利用してみた。
+&lt;a href=&#34;https://www.scaleway.com&#34;&gt;scaleway&lt;/a&gt;はARM CPUを使ったベアメタルサーバで、
+格安VPSに匹敵する価格（2.99ユーロ！）で完全物理サーバを提供している。&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;right&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;価格&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2.99ユーロ（約370円）&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;CPU:&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;4コア ARM 32bit&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;Memory:&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2GB&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;Sotrage:&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;50GB SSD&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;right&#34;&gt;Internet:&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;200Mbit/s&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;このサービスを知ったのは&lt;a href=&#34;http://kawasakirb.github.io&#34;&gt;kawasaki.rb&lt;/a&gt;で、
+&lt;a href=&#34;https://twitter.com/harupong&#34;&gt;@harupong&lt;/a&gt;さんの&lt;a href=&#34;http://www.slideshare.net/harupong/docker-docker-58661634&#34;&gt;清貧Docker&lt;/a&gt;という発表からである。他にも格安VPS等を紹介していただいたのだが、ベアメタルサーバで3ユーロという価格や、CPUコアにARMを使っているといった面白さに惹かれぜひ使ってみたいと思っていた。&lt;/p&gt;
+
+&lt;p&gt;残念ながら昨年11月以降、サーバの在庫が尽きたらしく、長らく新規登録できなかったのだが、
+特段急ぐ理由もないので、予約リストに登録して気長に待ってみたところ今朝になってインビテーションのメールが届いていた。
+なので早速登録してみた次第である。&lt;/p&gt;
+
+&lt;p&gt;サーバは2台作成した。せっかく安いので複数立ててクラスタ構成の練習台にしようと思ったためだ。
+なお本当は3台作成したかったのだが、初回の場合C1（ARM CPUのプラン）で立てられる最大数が2台に制限されていたため、まずは2台で組んでみた。
+最大インスタンス数を増やすには直接申請しろとのことだったのでサポートチケットを立てて依頼中である。&lt;/p&gt;
+
+&lt;p&gt;とりいそぎ2台のサーバで利用している。OSはArch Linuxを選択した。
+Arch Linuxを採用した理由はVagrantなどのゲストOSとして長く使っていて慣れているということと、
+Rolling Releaseなので、OSを再インストールしなくとも環境の更新が可能なためである。
+個別のサービスについては&lt;code&gt;Docker&lt;/code&gt;で入れてしまえばいいかなと思っている。&lt;/p&gt;
+
+&lt;p&gt;なにはともあれ、ワンコイン以下の格安価格で専用サーバが借りれるようになったとはいい時代である。
+まずは分散処理のミドルウェアの実験場として活用していきたい。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>CloudFlareのHTTP2対応</title>
@@ -77,12 +146,12 @@ CloudFlareは無料で証明書を提供しているのでCloudFlare経由で配
 dumpしたファイルは volumeとして取り込んだホスト側の領域に吐き出される。
 上記イメージを実行するコマンドをシェルスクリプトでラップし、実行ファイルとした。&lt;/p&gt;
 
-&lt;p&gt;pg-backup.sh
-&lt;code&gt;
-BACKUP_DIR=バックアップファイル置き場
+&lt;p&gt;pg-backup.sh&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;BACKUP_DIR=バックアップファイル置き場
 docker run --rm -ti --link -v $BACKUP_DIR:/var/pg_dump \
   my-postgres-container:pg postgres-backup-image
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;次にこのスクリプトをsystemdのサービスとして登録する。
 systemdではユニットという単位でOS上の様々なものを管理する。
@@ -91,32 +160,34 @@ systemdではユニットという単位でOS上の様々なものを管理す�
 ユニットファイルはCoreOSのデフォルトだと、/etc/systemd/systemに置く。
 上のスクリプトのユニットファイルは以下のようになる。&lt;/p&gt;
 
-&lt;p&gt;pg-dump.service
-```
-[Unit]
-Description=Dump data from Postgres container
-Requires=docker.service&lt;/p&gt;
+&lt;p&gt;pg-dump.service&lt;/p&gt;
 
-&lt;p&gt;[Service]
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=Dump data from Postgres container
+Requires=docker.service
+
+[Service]
 ExecStart=/opt/docker/scripts/pg-backup/pg-backup.sh
-```
-Descriptionはユニットの説明を、Requiresは依存関係（この場合dockerサービス）を表している。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Descriptionはユニットの説明を、Requiresは依存関係（この場合dockerサービス）を表している。
 ExecStartには実際に実行されるコマンドを置く。&lt;/p&gt;
 
 &lt;p&gt;次に、ジョブスケジューリングのためのユニットファイルを書く。systemdではタイマーイベントもユニットとして扱うことが出来る。&lt;/p&gt;
 
-&lt;p&gt;pg-dump.timer
-```
-[Unit]
-Description=daily Postgres backup&lt;/p&gt;
+&lt;p&gt;pg-dump.timer&lt;/p&gt;
 
-&lt;p&gt;[Timer]
-OnCalendar=&lt;em&gt;-&lt;/em&gt;-* 20:00:00&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[Unit]
+Description=daily Postgres backup
 
-&lt;p&gt;[Install]
+[Timer]
+OnCalendar=*-*-* 20:00:00
+
+[Install]
 WantedBy=default.target
-```
-OnCalendarで起動時刻を指定する。この辺りはCronとおなじ感覚だ。
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;OnCalendarで起動時刻を指定する。この辺りはCronとおなじ感覚だ。
 &lt;em&gt;.serviceと&lt;/em&gt;.timerが同じ名前であれば、起動するサービス名は指定しなくてよい。&lt;/p&gt;
 
 &lt;p&gt;あとは&lt;code&gt;sudo systemctl start pg-backup.timer&lt;/code&gt;で実行すれば、タイマーイベントとして登録される。&lt;/p&gt;
@@ -505,24 +576,6 @@ Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優�
  
 }(angular));
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ブログのお引越し</title>
-      <link>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
-      <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
-      <description>&lt;p&gt;ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。&lt;/p&gt;
-
-&lt;p&gt;理由の一つはangularjsの習作として色々自分で試してみたかったからだ。
-angularjsについてはまたいろいろ挑戦してみたい。&lt;/p&gt;
-
-&lt;p&gt;また、Octopressは記事をローカルで書いてrakeタスクを叩くため投稿するのが億劫になっていた。
-現在のアプリはWeb上で記事を編集でき、編集中にリアルタイムでMarkdownを変換してくれるため、大変ラクになった。&lt;/p&gt;
-
-&lt;p&gt;しばらく更新が滞っていたがまた再開したいと思う。&lt;/p&gt;
 </description>
     </item>
     
