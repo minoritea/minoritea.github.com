@@ -1,0 +1,8 @@
+baseurl = "https://tanstaafl.0pt.jp/slides"
+languageCode = "ja-jp"
+title = "Recent Presentation Slides"
+author = "Minori Tokuda (@snowcrush)"
+hasCJKLanguage = true
+buildFuture = true
+theme = "revealjs"
+publishdir = "../slides"
