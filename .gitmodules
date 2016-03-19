@@ -3,4 +3,4 @@
 	url = https://github.com/dim0627/hugo_theme_aglaus.git
 [submodule "_slides/themes/revealjs"]
 	path = _slides/themes/revealjs
-	url = git@github.com:minoritea/hugo-revealjs-generator.git
+	url = https://github.com/minoritea/hugo-revealjs-generator
