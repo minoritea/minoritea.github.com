@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf8">
+    <title>Recent Presentation Slides -  </title>
+    <link rel="stylesheet" href="http://localhost:1313/slides//css/reveal.css">
+    <link rel="stylesheet" href="http://localhost:1313/slides//css/theme/night.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+      
+        <section>
+          
+
+<h2 id="sparc-solaris向けにgoのクロスコンパイル環境を作った話:d4a39ee8785478e6dbc14a59ba0e1d3e">Sparc Solaris向けにGoのクロスコンパイル環境を作った話</h2>
+
+<p>Minori Tokuda(@snowcrush)</p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="goos-solaris:cf0795ff57fe2a316a142a724d93409f">GOOS=solaris</h2>
+
+<blockquote>
+<p>Solaris（ソラリス）はサン・マイクロシステムズ（サン）によって開発され、
+UNIXとして認証を受けたオペレーティングシステム (OS) である。</p>
+</blockquote>
+
+<p><em>wikipedia</em></p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="goarch-sparc64:bb782509b9ed9d628332c04b37dfa512">GOARCH=sparc64</h2>
+
+<blockquote>
+<p>SPARC（スパーク、Scalable Processor Architecture）は、
+サン・マイクロシステムズが開発・製造したRISCベースのマイクロプロセッサであり、
+その命令セットアーキテクチャの名称である。</p>
+</blockquote>
+
+<p><em>wikipedia</em></p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="q-なぜsparc-solarisなのか:1a0621da13898464ad3b842294675948">Q. なぜSparc/Solarisなのか？</h2>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="a-歴史的経緯です:640e5f6627415ca3f85c20e9a7c701f5">A. 歴史的経緯です！</h2>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="うちのサーバの現況:0af6c7c749a3f9804b20e1f320342f95">うちのサーバの現況</h2>
+
+<ol>
+<li>大量のバッチプログラムが動いている</li>
+<li>ネットワーク構成上他のサーバへは移植できない</li>
+<li>使用できる言語はJava/Perlのみ</li>
+</ol>
+
+<p>=&gt; つらい</p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="新しい開発言語が欲しい:2ad7755f356ded747482354c547511d3">新しい開発言語が欲しい！</h2>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="新たな開発言語の要件:d6b105e0d1eea57afebeaa6b858c059f">新たな開発言語の要件</h2>
+
+<ol>
+<li>ライブラリやランタイムの導入で悩まない</li>
+<li>起動が早い</li>
+<li>マイナーなアーキテクチャでも動作する</li>
+</ol>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="あれ-go-いいんじゃね:e649e1bcd6b84b6a41ee8ad22376b285">あれ、Go・・・いいんじゃね？</h2>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="goの対応os-cpuリスト:a2243b1cae1c9c75d4dabea9e827b090">Goの対応OS/CPUリスト</h2>
+
+<p><a href="https://golang.org/doc/install/source#environment">https://golang.org/doc/install/source#environment</a></p>
+
+<p><img src="/slides/img/goos_goarch_01.png" alt="GOOS/GOARCH" /></p>
+
+<p><code>...</code></p>
+
+<p><img src="/slides/img/goos_goarch_02.png" alt="solaris/amd64" /></p>
+
+<p>あっ、Sparcが無い</p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="gccgoを使う:b8adef135f58f4235b033835f2941a99">gccgoを使う</h2>
+
+<h3 id="gccgo:b8adef135f58f4235b033835f2941a99">gccgo</h3>
+
+<ul>
+<li>Go言語のもう一つのコンパイラ</li>
+<li>gccをバックエンドに使っている</li>
+<li>gccのサポートするアーキテクチャが使える</li>
+<li>gccのクロスコンパイルの仕組みが利用できる</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="作り方01:cdfb89c9221ecc38e18e2820502a7788">作り方01</h2>
+
+<p><a href="http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html">http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html</a></p>
+
+<p><strong>このサイトを全部</strong><del>コピ</del><strong>参考にしました</strong></p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="作り方02:aece11417226132488502526a9444266">作り方02</h2>
+
+<ol>
+<li>クロスコンパイル用の環境を用意します（Fedora release 20)</li>
+<li>gccをインストールします</li>
+<li>公式のGoコンパイラ(v1.4)をインストールします（重要）</li>
+</ol>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="作り方03:e128b4ee74c9b6441ab1b72d78b76342">作り方03</h2>
+
+<ol>
+<li>3つ環境変数を決めます
+
+<ul>
+<li>PREFIX=${クロスコンパイラがインストールされるルートパス}</li>
+<li>SYSROOT=${コンパイルするときにリンクする環境のルートパス}</li>
+<li>TARGET=sparc-sun-solaris2.10</li>
+</ul></li>
+</ol>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="作り方04:b262a39ec844ab0c8b03b5e6d6168d28">作り方04</h2>
+
+<ol>
+<li>SYSROOTに対象サーバのライブラリとヘッダをごっそりコピーする（rsync）</li>
+</ol>
+
+<pre><code class="language-bash">$ sudo cd $SYSROOT
+$ sudo rsync -a root@solaris_sparc_machine:/lib/ $SYSROOT/lib/
+$ sudo rsync -a root@solaris_sparc_machine:/usr/lib $SYSROOT/usr/
+$ sudo rsync -a root@solaris_sparc_machine:/usr/include $SYSROOT/usr/
+$ sudo rsync -a root@solaris_sparc_machine:/usr/platform $SYSROOT/usr/
+$ sudo rsync -a root@solaris_sparc_machine:/usr/local/lib $SYSROOT/usr/local/
+$ sudo rsync -a root@solaris_sparc_machine:/usr/local/include $SYSROOT/usr/local/
+$ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/lib $SYSROOT/usr/sfw/
+$ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="作り方05:870e7b0cdc413db71ec541c0c769dece">作り方05</h2>
+
+<ol>
+<li>対象アーキテクチャ向けにbinutilsとgccをビルドする</li>
+</ol>
+
+<pre><code class="language-bash">$ tar -zxf binutils-2.25.tar.gz
+$ mkdir build-binutils
+$ cd build-binutils
+$ sudo ../binutils-2.25/configure  -target=$TARGET --prefix=$PREFIX -with-sysroot=$SYSROOT -v
+$ sudo make -j4
+$ sudo make install
+</code></pre>
+
+<pre><code class="language-bash">$ untar gcc-5.1.0.tar.gz
+$ mkdir gcc-build
+$ cd gcc-build
+$ sudo ../gcc-5.1.0/configure --target=$TARGET --with-gnu-as --with-gnu-ld  --prefix=$PREFIX -with-sysroot=$SYSROOT --disable-libgcj --enable-languages=c,c++,go -v
+$ sudo make -j6
+$ sudo make install
+</code></pre>
+
+<p><strong>完成</strong></p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="作成したクロスコンパイラにパスを通す:ac71ef636cbf20f35bd12273bbd90c71">作成したクロスコンパイラにパスを通す</h2>
+
+<pre><code class="language-bash">$ cd $PREFIX/bin
+$ ln -s /sparc-sun-solaris2.10-gccgo  gccgo
+$ export PATH=$PREFIX/bin:$PATH
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="コンパイル:ab26de6a0e345b4c51d1736ccdc9360c">コンパイル</h2>
+
+<pre><code class="language-bash">$ go build --compiler gccgo \
+  --gccgoflags &quot;-v -static-libgo -static-libgcc -Wl,-dy -lnsl -lsocket -lrt&quot;
+</code></pre>
+
+<p><strong>重要</strong>
+参照元のオプションに<code>-static-libgcc</code>を追加しないとSolaris環境では動作しませんでした。</p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="動作確認したツール類:3ad572872dbab93a415aabe231dcd667">動作確認したツール類</h2>
+
+<ol>
+<li><a href="https://github.com/hashicorp/serf">serf</a></li>
+<li><a href="https://github.com/nats-io/gnatsd">gnatsd</a></li>
+</ol>
+
+<h2 id="動かなかったもの:3ad572872dbab93a415aabe231dcd667">動かなかったもの</h2>
+
+<ol>
+<li><a href="https://github.com/hashicorp/consul">consul</a></li>
+<li><a href="https://github.com/peco/peco">peco</a></li>
+</ol>
+
+<p><strong>go1.5以降に依存しているものはうごかないみたい</strong></p>
+
+<p><strong>特定のアーキテクチャがハードコーディングされているものは動かないみたい</strong></p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="終わりに:109e794617ca6c60faa7489612661f06">終わりに</h2>
+
+<ol>
+<li>マイナーなアーキテクチャでもgccgoなら動かせる（？）</li>
+<li>既存のツールをgo getでインストールする場合は依存関係の解決が大変</li>
+<li>公式ライブラリのみ使って自作するのであれば大丈夫</li>
+<li>gccgo6でgcc1.5相当になる模様</li>
+</ol>
+
+<p>結論: <strong>Linux使おう</strong></p>
+
+        </section>
+      
+      </div>
+    </div>
+    <script src="http://localhost:1313/slides//js/reveal.js"></script>
+    <script> Reveal.initialize(); </script>
+  <script data-no-instant>document.write('<script src="/livereload.js?mindelay=10"></' + 'script>')</script></body>
+</html>
