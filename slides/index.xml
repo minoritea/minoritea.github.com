@@ -43,6 +43,7 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/hashicorp/serf&#34;&gt;serf&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/nats-io/gnatsd&#34;&gt;gnatsd&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/fluent/fluentd-forwarder&#34;&gt;fluentd-forwarder&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;動かなかったもの:3ad572872dbab93a415aabe231dcd667&#34;&gt;動かなかったもの&lt;/h2&gt;

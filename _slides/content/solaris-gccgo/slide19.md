@@ -7,6 +7,7 @@ title = "slide19"
 
 1. [serf](https://github.com/hashicorp/serf)
 2. [gnatsd](https://github.com/nats-io/gnatsd)
+3. [fluentd-forwarder](https://github.com/fluent/fluentd-forwarder)
 
 ## 動かなかったもの
 1. [consul](https://github.com/hashicorp/consul)
