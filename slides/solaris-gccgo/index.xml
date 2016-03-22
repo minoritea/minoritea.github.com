@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Solaris-gccgos on Recent Presentation Slides</title>
-    <link>http://localhost:1313/slides/solaris-gccgo/</link>
+    <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/</link>
     <description>Recent content in Solaris-gccgos on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 22 Mar 2016 10:51:14 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/slides/solaris-gccgo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/slides/solaris-gccgo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>slide20</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide20/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide20/</link>
       <pubDate>Tue, 22 Mar 2016 10:51:14 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide20/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide20/</guid>
       <description>
 
 &lt;h2 id=&#34;終わりに:109e794617ca6c60faa7489612661f06&#34;&gt;終わりに&lt;/h2&gt;
@@ -32,10 +32,10 @@
     
     <item>
       <title>slide19</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide19/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide19/</link>
       <pubDate>Tue, 22 Mar 2016 10:02:55 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide19/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide19/</guid>
       <description>
 
 &lt;h2 id=&#34;動作確認したツール類:3ad572872dbab93a415aabe231dcd667&#34;&gt;動作確認したツール類&lt;/h2&gt;
@@ -60,10 +60,10 @@
     
     <item>
       <title>slide18</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide18/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide18/</link>
       <pubDate>Tue, 22 Mar 2016 10:02:54 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide18/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide18/</guid>
       <description>
 
 &lt;h2 id=&#34;コンパイル:ab26de6a0e345b4c51d1736ccdc9360c&#34;&gt;コンパイル&lt;/h2&gt;
@@ -79,10 +79,10 @@
     
     <item>
       <title>slide17</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide17/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide17/</link>
       <pubDate>Tue, 22 Mar 2016 09:56:33 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide17/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide17/</guid>
       <description>
 
 &lt;h2 id=&#34;作成したクロスコンパイラにパスを通す:ac71ef636cbf20f35bd12273bbd90c71&#34;&gt;作成したクロスコンパイラにパスを通す&lt;/h2&gt;
@@ -96,10 +96,10 @@ $ export PATH=$PREFIX/bin:$PATH
     
     <item>
       <title>slide16</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide16/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide16/</link>
       <pubDate>Tue, 22 Mar 2016 09:56:31 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide16/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide16/</guid>
       <description>
 
 &lt;h2 id=&#34;作り方05:870e7b0cdc413db71ec541c0c769dece&#34;&gt;作り方05&lt;/h2&gt;
@@ -130,10 +130,10 @@ $ sudo make install
     
     <item>
       <title>slide15</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide15/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide15/</link>
       <pubDate>Tue, 22 Mar 2016 09:23:52 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide15/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide15/</guid>
       <description>
 
 &lt;h2 id=&#34;作り方04:b262a39ec844ab0c8b03b5e6d6168d28&#34;&gt;作り方04&lt;/h2&gt;
@@ -157,10 +157,10 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide14</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide14/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide14/</link>
       <pubDate>Tue, 22 Mar 2016 09:23:50 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide14/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide14/</guid>
       <description>
 
 &lt;h2 id=&#34;作り方03:e128b4ee74c9b6441ab1b72d78b76342&#34;&gt;作り方03&lt;/h2&gt;
@@ -179,10 +179,10 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide13</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide13/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide13/</link>
       <pubDate>Tue, 22 Mar 2016 09:23:48 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide13/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide13/</guid>
       <description>
 
 &lt;h2 id=&#34;作り方02:aece11417226132488502526a9444266&#34;&gt;作り方02&lt;/h2&gt;
@@ -197,10 +197,10 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide12</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide12/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide12/</link>
       <pubDate>Tue, 22 Mar 2016 09:23:46 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide12/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide12/</guid>
       <description>
 
 &lt;h2 id=&#34;作り方01:cdfb89c9221ecc38e18e2820502a7788&#34;&gt;作り方01&lt;/h2&gt;
@@ -213,10 +213,10 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide11</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide11/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide11/</link>
       <pubDate>Tue, 22 Mar 2016 09:20:25 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide11/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide11/</guid>
       <description>
 
 &lt;h2 id=&#34;gccgoを使う:b8adef135f58f4235b033835f2941a99&#34;&gt;gccgoを使う&lt;/h2&gt;
@@ -234,21 +234,21 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide10</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide10/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide10/</link>
       <pubDate>Tue, 22 Mar 2016 08:03:43 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide10/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide10/</guid>
       <description>
 
 &lt;h2 id=&#34;goの対応os-cpuリスト:a2243b1cae1c9c75d4dabea9e827b090&#34;&gt;Goの対応OS/CPUリスト&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://golang.org/doc/install/source#environment&#34;&gt;https://golang.org/doc/install/source#environment&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slides/slides/img/goos_goarch_01.png&#34; alt=&#34;GOOS/GOARCH&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tanstaafl.0pt.jp/slides/slides/img/goos_goarch_01.png&#34; alt=&#34;GOOS/GOARCH&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;...&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://localhost:1313/slides/slides/img/goos_goarch_02.png&#34; alt=&#34;solaris/amd64&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://tanstaafl.0pt.jp/slides/slides/img/goos_goarch_02.png&#34; alt=&#34;solaris/amd64&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;あっ、Sparcが無い&lt;/p&gt;
 </description>
@@ -256,10 +256,10 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide09</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide09/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide09/</link>
       <pubDate>Tue, 22 Mar 2016 07:31:15 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide09/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide09/</guid>
       <description>
 
 &lt;h2 id=&#34;あれ-go-いいんじゃね:e649e1bcd6b84b6a41ee8ad22376b285&#34;&gt;あれ、Go・・・いいんじゃね？&lt;/h2&gt;
@@ -268,10 +268,10 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide08</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide08/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide08/</link>
       <pubDate>Tue, 22 Mar 2016 07:29:50 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide08/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide08/</guid>
       <description>
 
 &lt;h2 id=&#34;新たな開発言語の要件:d6b105e0d1eea57afebeaa6b858c059f&#34;&gt;新たな開発言語の要件&lt;/h2&gt;
@@ -286,10 +286,10 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide07</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide07/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide07/</link>
       <pubDate>Tue, 22 Mar 2016 07:27:31 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide07/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide07/</guid>
       <description>
 
 &lt;h2 id=&#34;新しい開発言語が欲しい:2ad7755f356ded747482354c547511d3&#34;&gt;新しい開発言語が欲しい！&lt;/h2&gt;
@@ -298,10 +298,10 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
     
     <item>
       <title>slide06</title>
-      <link>http://localhost:1313/slides/solaris-gccgo/slide06/</link>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide06/</link>
       <pubDate>Tue, 22 Mar 2016 07:25:51 +0900</pubDate>
       
-      <guid>http://localhost:1313/slides/solaris-gccgo/slide06/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide06/</guid>
       <description>
 
 &lt;h2 id=&#34;うちのサーバの現況:0af6c7c749a3f9804b20e1f320342f95&#34;&gt;うちのサーバの現況&lt;/h2&gt;
