@@ -190,7 +190,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
 &lt;ol&gt;
 &lt;li&gt;クロスコンパイル用の環境を用意します（Fedora release 20)&lt;/li&gt;
 &lt;li&gt;gccをインストールします&lt;/li&gt;
-&lt;li&gt;公式のGoコンパイラ(v1.4)をインストールします（重要）&lt;/li&gt;
+&lt;li&gt;gcコンパイラ(v1.4)をインストールします（重要）&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
