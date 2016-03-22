@@ -1,6 +1,6 @@
 +++
 date = "2016-03-22T07:16:59+09:00"
-title = "slide2"
+title = "slide02"
 
 +++
 
