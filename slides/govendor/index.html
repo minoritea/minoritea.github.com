@@ -4,23 +4,24 @@
     <meta charset="utf8">
     <title>Recent Presentation Slides -  </title>
     <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/reveal.css">
-    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/theme/night.css">
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/theme/beige.css">
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/zenburn.css">
   </head>
   <body>
-    <div class="reveal">
+    <div class="reveal cube center">
       <div class="slides">
       
         <section>
           
 
-<h1 id="govendorでvendoringしよう">govendorでvendoringしよう</h1>
+<h3 id="govendorでvendoringしよう">govendorでvendoringしよう</h3>
 
         </section>
       
         <section>
           
 
-<h1 id="vendoringとは">vendoringとは</h1>
+<h3 id="vendoringとは">vendoringとは</h3>
 
 <ul>
 <li>プロジェクト毎にimportするパッケージを保持する機能</li>
@@ -31,7 +32,7 @@
         <section>
           
 
-<h1 id="vendoringが必要な理由">vendoringが必要な理由</h1>
+<h3 id="vendoringが必要な理由">vendoringが必要な理由</h3>
 
 <ul>
 <li>Goのパッケージは$GOPATH単位で共有されるので以下のケースで問題が出る
@@ -47,7 +48,7 @@
         <section>
           
 
-<h1 id="go1-5以降vendoringが導入">Go1.5以降vendoringが導入</h1>
+<h3 id="go1-5以降vendoringが導入">Go1.5以降vendoringが導入</h3>
 
 <ul>
 <li>プロジェクト内の<code>vendor</code>ディレクトリ以下のパッケージを優先してimportするように</li>
@@ -58,7 +59,7 @@
         <section>
           
 
-<h1 id="vendoringのためのツール">vendoringのためのツール</h1>
+<h3 id="vendoringのためのツール">vendoringのためのツール</h3>
 
 <ul>
 <li>Godep (⭐4087@github)</li>
@@ -71,7 +72,7 @@
         <section>
           
 
-<h1 id="godep">Godep</h1>
+<h3 id="godep">Godep</h3>
 
 <ul>
 <li>古い
@@ -88,7 +89,7 @@
         <section>
           
 
-<h1 id="glide">Glide</h1>
+<h3 id="glide">Glide</h3>
 
 <ul>
 <li>パッケージをアップデートすると$GOPATHが汚染される</li>
@@ -100,7 +101,7 @@
         <section>
           
 
-<h1 id="govendor">govendor</h1>
+<h3 id="govendor">govendor</h3>
 
 <ul>
 <li>上記2つと比べてややマイナー</li>
@@ -111,21 +112,21 @@
         <section>
           
 
-<h1 id="なぜgovendorを選んだか">なぜgovendorを選んだか</h1>
+<h3 id="なぜgovendorを選んだか">なぜgovendorを選んだか</h3>
 
         </section>
       
         <section>
           
 
-<h1 id="1-環境を汚染しない">1. 環境を汚染しない</h1>
+<h3 id="1-環境を汚染しない">1. 環境を汚染しない</h3>
 
         </section>
       
         <section>
           
 
-<h1 id="パッケージの追加">パッケージの追加</h1>
+<h3 id="パッケージの追加">パッケージの追加</h3>
 
 <pre><code class="language-bash">$ govendor add {package}
 </code></pre>
@@ -137,7 +138,7 @@
         <section>
           
 
-<h1 id="パッケージの更新">パッケージの更新</h1>
+<h3 id="パッケージの更新">パッケージの更新</h3>
 
 <pre><code class="language-bash">$ govendor update {package}
 </code></pre>
@@ -149,7 +150,7 @@
         <section>
           
 
-<h1 id="パッケージの取得">パッケージの取得</h1>
+<h3 id="パッケージの取得">パッケージの取得</h3>
 
 <pre><code class="language-bash">$ govendor fetch {package}
 </code></pre>
@@ -161,7 +162,7 @@
         <section>
           
 
-<h1 id="パッケージの再現">パッケージの再現</h1>
+<h3 id="パッケージの再現">パッケージの再現</h3>
 
 <pre><code class="language-bash">$ govendor sync
 </code></pre>
@@ -173,7 +174,7 @@
         <section>
           
 
-<h1 id="2-ステータス">2. ステータス</h1>
+<h3 id="2-ステータス">2. ステータス</h3>
 
 <p><code>status</code>でパッケージを分類できる</p>
 
@@ -182,7 +183,7 @@
         <section>
           
 
-<h1 id="ステータスの種類">ステータスの種類</h1>
+<h3 id="ステータスの種類">ステータスの種類</h3>
 
 <pre><code>    +local    (l) プロジェクト内にあるパッケージ
     +external (e) importされている、かつGOPATHにあるがvendoringされていないパッケージ
@@ -204,7 +205,7 @@
         <section>
           
 
-<h1 id="ステータスは便利">ステータスは便利</h1>
+<h3 id="ステータスは便利">ステータスは便利</h3>
 
 <pre><code>$ cd $GOPATH/src/github.com/fluent/fluent-logger-golang
 $ govendor list
@@ -227,7 +228,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
         <section>
           
 
-<h1 id="まとめ">まとめ</h1>
+<h3 id="まとめ">まとめ</h3>
 
 <ul>
 <li>環境 (GOPATH) を汚さない</li>
@@ -239,7 +240,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
         <section>
           
 
-<h1 id="govendorいいぞ">govendorいいぞ</h1>
+<h3 id="govendorいいぞ">govendorいいぞ</h3>
 
         </section>
       
