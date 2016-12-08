@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Solaris-gccgos on Recent Presentation Slides</title>
-    <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/</link>
+    <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/index.xml</link>
     <description>Recent content in Solaris-gccgos on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
@@ -17,7 +17,7 @@
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide20/</guid>
       <description>
 
-&lt;h2 id=&#34;終わりに:109e794617ca6c60faa7489612661f06&#34;&gt;終わりに&lt;/h2&gt;
+&lt;h2 id=&#34;終わりに&#34;&gt;終わりに&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;マイナーなアーキテクチャでもgccgoなら動かせる（？）&lt;/li&gt;
@@ -38,7 +38,7 @@
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide19/</guid>
       <description>
 
-&lt;h2 id=&#34;動作確認したツール類:3ad572872dbab93a415aabe231dcd667&#34;&gt;動作確認したツール類&lt;/h2&gt;
+&lt;h2 id=&#34;動作確認したツール類&#34;&gt;動作確認したツール類&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/hashicorp/serf&#34;&gt;serf&lt;/a&gt;&lt;/li&gt;
@@ -46,7 +46,7 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/fluent/fluentd-forwarder&#34;&gt;fluentd-forwarder&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;動かなかったもの:3ad572872dbab93a415aabe231dcd667&#34;&gt;動かなかったもの&lt;/h2&gt;
+&lt;h2 id=&#34;動かなかったもの&#34;&gt;動かなかったもの&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/hashicorp/consul&#34;&gt;consul&lt;/a&gt;&lt;/li&gt;
@@ -67,7 +67,7 @@
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide18/</guid>
       <description>
 
-&lt;h2 id=&#34;コンパイル:ab26de6a0e345b4c51d1736ccdc9360c&#34;&gt;コンパイル&lt;/h2&gt;
+&lt;h2 id=&#34;コンパイル&#34;&gt;コンパイル&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ go build --compiler gccgo \
   --gccgoflags &amp;quot;-v -static-libgo -static-libgcc -Wl,-dy -lnsl -lsocket -lrt&amp;quot;
@@ -86,7 +86,7 @@
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide17/</guid>
       <description>
 
-&lt;h2 id=&#34;作成したクロスコンパイラにパスを通す:ac71ef636cbf20f35bd12273bbd90c71&#34;&gt;作成したクロスコンパイラにパスを通す&lt;/h2&gt;
+&lt;h2 id=&#34;作成したクロスコンパイラにパスを通す&#34;&gt;作成したクロスコンパイラにパスを通す&lt;/h2&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd $PREFIX/bin
 $ ln -s /sparc-sun-solaris2.10-gccgo  gccgo
@@ -103,7 +103,7 @@ $ export PATH=$PREFIX/bin:$PATH
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide16/</guid>
       <description>
 
-&lt;h2 id=&#34;作り方05:870e7b0cdc413db71ec541c0c769dece&#34;&gt;作り方05&lt;/h2&gt;
+&lt;h2 id=&#34;作り方05&#34;&gt;作り方05&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;対象アーキテクチャ向けにbinutilsとgccをビルドする&lt;/li&gt;
@@ -137,7 +137,7 @@ $ sudo make install
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide15/</guid>
       <description>
 
-&lt;h2 id=&#34;作り方04:b262a39ec844ab0c8b03b5e6d6168d28&#34;&gt;作り方04&lt;/h2&gt;
+&lt;h2 id=&#34;作り方04&#34;&gt;作り方04&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;SYSROOTに対象サーバのライブラリとヘッダをごっそりコピーする（rsync）&lt;/li&gt;
@@ -164,7 +164,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide14/</guid>
       <description>
 
-&lt;h2 id=&#34;作り方03:e128b4ee74c9b6441ab1b72d78b76342&#34;&gt;作り方03&lt;/h2&gt;
+&lt;h2 id=&#34;作り方03&#34;&gt;作り方03&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;3つ環境変数を決めます
@@ -186,7 +186,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide13/</guid>
       <description>
 
-&lt;h2 id=&#34;作り方02:aece11417226132488502526a9444266&#34;&gt;作り方02&lt;/h2&gt;
+&lt;h2 id=&#34;作り方02&#34;&gt;作り方02&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;クロスコンパイル用の環境を用意します（Fedora release 20)&lt;/li&gt;
@@ -204,7 +204,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide12/</guid>
       <description>
 
-&lt;h2 id=&#34;作り方01:cdfb89c9221ecc38e18e2820502a7788&#34;&gt;作り方01&lt;/h2&gt;
+&lt;h2 id=&#34;作り方01&#34;&gt;作り方01&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html&#34;&gt;http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html&lt;/a&gt;&lt;/p&gt;
 
@@ -220,9 +220,9 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide11/</guid>
       <description>
 
-&lt;h2 id=&#34;gccgoを使う:b8adef135f58f4235b033835f2941a99&#34;&gt;gccgoを使う&lt;/h2&gt;
+&lt;h2 id=&#34;gccgoを使う&#34;&gt;gccgoを使う&lt;/h2&gt;
 
-&lt;h3 id=&#34;gccgo:b8adef135f58f4235b033835f2941a99&#34;&gt;gccgo&lt;/h3&gt;
+&lt;h3 id=&#34;gccgo&#34;&gt;gccgo&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Go言語のもう一つのコンパイラ&lt;/li&gt;
@@ -241,7 +241,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide10/</guid>
       <description>
 
-&lt;h2 id=&#34;goの対応os-cpuリスト:a2243b1cae1c9c75d4dabea9e827b090&#34;&gt;Goの対応OS/CPUリスト&lt;/h2&gt;
+&lt;h2 id=&#34;goの対応os-cpuリスト&#34;&gt;Goの対応OS/CPUリスト&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://golang.org/doc/install/source#environment&#34;&gt;https://golang.org/doc/install/source#environment&lt;/a&gt;&lt;/p&gt;
 
@@ -263,7 +263,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide09/</guid>
       <description>
 
-&lt;h2 id=&#34;あれ-go-いいんじゃね:e649e1bcd6b84b6a41ee8ad22376b285&#34;&gt;あれ、Go・・・いいんじゃね？&lt;/h2&gt;
+&lt;h2 id=&#34;あれ-go-いいんじゃね&#34;&gt;あれ、Go・・・いいんじゃね？&lt;/h2&gt;
 </description>
     </item>
     
@@ -275,7 +275,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide08/</guid>
       <description>
 
-&lt;h2 id=&#34;新たな開発言語の要件:d6b105e0d1eea57afebeaa6b858c059f&#34;&gt;新たな開発言語の要件&lt;/h2&gt;
+&lt;h2 id=&#34;新たな開発言語の要件&#34;&gt;新たな開発言語の要件&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;ライブラリやランタイムの導入で悩まない&lt;/li&gt;
@@ -293,7 +293,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide07/</guid>
       <description>
 
-&lt;h2 id=&#34;新しい開発言語が欲しい:2ad7755f356ded747482354c547511d3&#34;&gt;新しい開発言語が欲しい！&lt;/h2&gt;
+&lt;h2 id=&#34;新しい開発言語が欲しい&#34;&gt;新しい開発言語が欲しい！&lt;/h2&gt;
 </description>
     </item>
     
@@ -305,7 +305,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide06/</guid>
       <description>
 
-&lt;h2 id=&#34;うちのサーバの現況:0af6c7c749a3f9804b20e1f320342f95&#34;&gt;うちのサーバの現況&lt;/h2&gt;
+&lt;h2 id=&#34;うちのサーバの現況&#34;&gt;うちのサーバの現況&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;大量のバッチプログラムが動いている&lt;/li&gt;

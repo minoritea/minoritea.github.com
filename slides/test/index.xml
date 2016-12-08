@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tests on Recent Presentation Slides</title>
-    <link>https://tanstaafl.0pt.jp/slides/test/</link>
+    <link>https://tanstaafl.0pt.jp/slides/test/index.xml</link>
     <description>Recent content in Tests on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
@@ -17,7 +17,7 @@
       <guid>https://tanstaafl.0pt.jp/slides/test/slide2/</guid>
       <description>
 
-&lt;h1 id=&#34;2:bb2259e6c228741027af47f6c8b484d8&#34;&gt;2&lt;/h1&gt;
+&lt;h1 id=&#34;2&#34;&gt;2&lt;/h1&gt;
 </description>
     </item>
     
@@ -29,9 +29,9 @@
       <guid>https://tanstaafl.0pt.jp/slides/test/slide1/</guid>
       <description>
 
-&lt;h1 id=&#34;hello:1515b73c2cd01d9e96d6fed5b3c9863c&#34;&gt;Hello&lt;/h1&gt;
+&lt;h1 id=&#34;hello&#34;&gt;Hello&lt;/h1&gt;
 
-&lt;h2 id=&#34;world:1515b73c2cd01d9e96d6fed5b3c9863c&#34;&gt;World&lt;/h2&gt;
+&lt;h2 id=&#34;world&#34;&gt;World&lt;/h2&gt;
 </description>
     </item>
     

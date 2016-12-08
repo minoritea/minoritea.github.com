@@ -13,7 +13,7 @@
         <section>
           
 
-<h2 id="sparc-solaris向けにgoのクロスコンパイル環境を作った話:d4a39ee8785478e6dbc14a59ba0e1d3e">Sparc Solaris向けにGoのクロスコンパイル環境を作った話</h2>
+<h2 id="sparc-solaris向けにgoのクロスコンパイル環境を作った話">Sparc Solaris向けにGoのクロスコンパイル環境を作った話</h2>
 
 <p>Minori Tokuda(@snowcrush)</p>
 
@@ -22,7 +22,7 @@
         <section>
           
 
-<h2 id="goos-solaris:cf0795ff57fe2a316a142a724d93409f">GOOS=solaris</h2>
+<h2 id="goos-solaris">GOOS=solaris</h2>
 
 <blockquote>
 <p>Solaris（ソラリス）はサン・マイクロシステムズ（サン）によって開発され、
@@ -36,7 +36,7 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="goarch-sparc64:bb782509b9ed9d628332c04b37dfa512">GOARCH=sparc64</h2>
+<h2 id="goarch-sparc64">GOARCH=sparc64</h2>
 
 <blockquote>
 <p>SPARC（スパーク、Scalable Processor Architecture）は、
@@ -51,21 +51,21 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="q-なぜsparc-solarisなのか:1a0621da13898464ad3b842294675948">Q. なぜSparc/Solarisなのか？</h2>
+<h2 id="q-なぜsparc-solarisなのか">Q. なぜSparc/Solarisなのか？</h2>
 
         </section>
       
         <section>
           
 
-<h2 id="a-歴史的経緯です:640e5f6627415ca3f85c20e9a7c701f5">A. 歴史的経緯です！</h2>
+<h2 id="a-歴史的経緯です">A. 歴史的経緯です！</h2>
 
         </section>
       
         <section>
           
 
-<h2 id="うちのサーバの現況:0af6c7c749a3f9804b20e1f320342f95">うちのサーバの現況</h2>
+<h2 id="うちのサーバの現況">うちのサーバの現況</h2>
 
 <ol>
 <li>大量のバッチプログラムが動いている</li>
@@ -80,14 +80,14 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="新しい開発言語が欲しい:2ad7755f356ded747482354c547511d3">新しい開発言語が欲しい！</h2>
+<h2 id="新しい開発言語が欲しい">新しい開発言語が欲しい！</h2>
 
         </section>
       
         <section>
           
 
-<h2 id="新たな開発言語の要件:d6b105e0d1eea57afebeaa6b858c059f">新たな開発言語の要件</h2>
+<h2 id="新たな開発言語の要件">新たな開発言語の要件</h2>
 
 <ol>
 <li>ライブラリやランタイムの導入で悩まない</li>
@@ -100,14 +100,14 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="あれ-go-いいんじゃね:e649e1bcd6b84b6a41ee8ad22376b285">あれ、Go・・・いいんじゃね？</h2>
+<h2 id="あれ-go-いいんじゃね">あれ、Go・・・いいんじゃね？</h2>
 
         </section>
       
         <section>
           
 
-<h2 id="goの対応os-cpuリスト:a2243b1cae1c9c75d4dabea9e827b090">Goの対応OS/CPUリスト</h2>
+<h2 id="goの対応os-cpuリスト">Goの対応OS/CPUリスト</h2>
 
 <p><a href="https://golang.org/doc/install/source#environment">https://golang.org/doc/install/source#environment</a></p>
 
@@ -124,9 +124,9 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="gccgoを使う:b8adef135f58f4235b033835f2941a99">gccgoを使う</h2>
+<h2 id="gccgoを使う">gccgoを使う</h2>
 
-<h3 id="gccgo:b8adef135f58f4235b033835f2941a99">gccgo</h3>
+<h3 id="gccgo">gccgo</h3>
 
 <ul>
 <li>Go言語のもう一つのコンパイラ</li>
@@ -140,7 +140,7 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="作り方01:cdfb89c9221ecc38e18e2820502a7788">作り方01</h2>
+<h2 id="作り方01">作り方01</h2>
 
 <p><a href="http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html">http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html</a></p>
 
@@ -151,7 +151,7 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="作り方02:aece11417226132488502526a9444266">作り方02</h2>
+<h2 id="作り方02">作り方02</h2>
 
 <ol>
 <li>クロスコンパイル用の環境を用意します（Fedora release 20)</li>
@@ -164,7 +164,7 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="作り方03:e128b4ee74c9b6441ab1b72d78b76342">作り方03</h2>
+<h2 id="作り方03">作り方03</h2>
 
 <ol>
 <li>3つ環境変数を決めます
@@ -181,7 +181,7 @@ UNIXとして認証を受けたオペレーティングシステム (OS) であ�
         <section>
           
 
-<h2 id="作り方04:b262a39ec844ab0c8b03b5e6d6168d28">作り方04</h2>
+<h2 id="作り方04">作り方04</h2>
 
 <ol>
 <li>SYSROOTに対象サーバのライブラリとヘッダをごっそりコピーする（rsync）</li>
@@ -203,7 +203,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
         <section>
           
 
-<h2 id="作り方05:870e7b0cdc413db71ec541c0c769dece">作り方05</h2>
+<h2 id="作り方05">作り方05</h2>
 
 <ol>
 <li>対象アーキテクチャ向けにbinutilsとgccをビルドする</li>
@@ -232,7 +232,7 @@ $ sudo make install
         <section>
           
 
-<h2 id="作成したクロスコンパイラにパスを通す:ac71ef636cbf20f35bd12273bbd90c71">作成したクロスコンパイラにパスを通す</h2>
+<h2 id="作成したクロスコンパイラにパスを通す">作成したクロスコンパイラにパスを通す</h2>
 
 <pre><code class="language-bash">$ cd $PREFIX/bin
 $ ln -s /sparc-sun-solaris2.10-gccgo  gccgo
@@ -244,7 +244,7 @@ $ export PATH=$PREFIX/bin:$PATH
         <section>
           
 
-<h2 id="コンパイル:ab26de6a0e345b4c51d1736ccdc9360c">コンパイル</h2>
+<h2 id="コンパイル">コンパイル</h2>
 
 <pre><code class="language-bash">$ go build --compiler gccgo \
   --gccgoflags &quot;-v -static-libgo -static-libgcc -Wl,-dy -lnsl -lsocket -lrt&quot;
@@ -258,7 +258,7 @@ $ export PATH=$PREFIX/bin:$PATH
         <section>
           
 
-<h2 id="動作確認したツール類:3ad572872dbab93a415aabe231dcd667">動作確認したツール類</h2>
+<h2 id="動作確認したツール類">動作確認したツール類</h2>
 
 <ol>
 <li><a href="https://github.com/hashicorp/serf">serf</a></li>
@@ -266,7 +266,7 @@ $ export PATH=$PREFIX/bin:$PATH
 <li><a href="https://github.com/fluent/fluentd-forwarder">fluentd-forwarder</a></li>
 </ol>
 
-<h2 id="動かなかったもの:3ad572872dbab93a415aabe231dcd667">動かなかったもの</h2>
+<h2 id="動かなかったもの">動かなかったもの</h2>
 
 <ol>
 <li><a href="https://github.com/hashicorp/consul">consul</a></li>
@@ -282,7 +282,7 @@ $ export PATH=$PREFIX/bin:$PATH
         <section>
           
 
-<h2 id="終わりに:109e794617ca6c60faa7489612661f06">終わりに</h2>
+<h2 id="終わりに">終わりに</h2>
 
 <ol>
 <li>マイナーなアーキテクチャでもgccgoなら動かせる（？）</li>

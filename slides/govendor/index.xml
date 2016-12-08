@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent Presentation Slides</title>
-    <link>https://tanstaafl.0pt.jp/slides/index.xml</link>
-    <description>Recent content on Recent Presentation Slides</description>
+    <title>Govendors on Recent Presentation Slides</title>
+    <link>https://tanstaafl.0pt.jp/slides/govendor/index.xml</link>
+    <description>Recent content in Govendors on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Thu, 08 Dec 2016 16:13:54 +0900</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/slides/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tanstaafl.0pt.jp/slides/govendor/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>slide01</title>
