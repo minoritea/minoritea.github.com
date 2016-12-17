@@ -2,12 +2,170 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/posts/</link>
+    <link>https://tanstaafl.0pt.jp/posts/index.xml</link>
     <description>Recent content in Posts on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 10 Mar 2016 00:03:06 +0900</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Dec 2016 17:46:40 +0900</lastBuildDate>
+    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Chromebookを買ってLinux(GalliumOS)を入れた</title>
+      <link>https://tanstaafl.0pt.jp/posts/2016/12/17/65b6078c14a5/</link>
+      <pubDate>Sat, 17 Dec 2016 17:46:40 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2016/12/17/65b6078c14a5/</guid>
+      <description>
+
+&lt;h1 id=&#34;chromebookを買う&#34;&gt;Chromebookを買う&lt;/h1&gt;
+
+&lt;p&gt;先日急に思い立ってChromebookを買った。と書くと衝動的に見えるけど、ここ一年くらいずっとほしいと思っていた。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://tanstaafl.0pt.jp/images/chromebook.png&#34; alt=&#34;chromebook image&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Chromebookというのは要はChromeOSが動くノートPCのことだ。
+ChromeOSというのはGoogle製のOSでChromeブラウザ上ですべてのUXを動かしてしまうという、
+スパルタンな構成をもつ。
+といっても僕は別にChromeOSが使いたくてChromebookを買ったわけではない。
+安価なLinuxマシンが欲しかったのだ。&lt;/p&gt;
+
+&lt;p&gt;ChromeOSのカーネル自体はLinuxである。
+ということはChromebookでLinuxを動かすのは結構簡単ということだ。
+まあ今どきWindowsPCにLinuxを入れるのも結構簡単なんだけど、
+WindowsPCにはたいていWindowsOSが入っていて、
+使いもしないOSのためにマイクロソフトに利用料を払うのはなんだか勿体無いという気持ちがある。
+ChromeOS自体はGoogleが無料で提供している。
+その代わり、ChromeOSにログインするためにはGoogleのアカウントが必要で、
+中のアプリも大抵Googleのクラウドに接続して利用する。
+Androidと同じビジネスモデルだ。
+まあそれはともかくChromebookはLinuxを入れるにも結構いいと聞いて、
+ずっと欲しかったのだ。&lt;/p&gt;
+
+&lt;p&gt;今回買った機種は東芝のChromebook2だ。
+こいつの2015年版は神機として有名だったが、
+今回は2014版の中古が安く売っていたのでそっちを購入した。&lt;/p&gt;
+
+&lt;p&gt;Chromebookを買うにあたって、スペック的な条件は以下のようなものだった。&lt;/p&gt;
+
+&lt;h3 id=&#34;必須&#34;&gt;必須&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;13インチ&lt;/li&gt;
+&lt;li&gt;重量2Kg以下&lt;/li&gt;
+&lt;li&gt;CPUがAtom/ARMでないもの（Intel Core系かその下位モデル）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;希望&#34;&gt;希望&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FHD以上の解像度&lt;/li&gt;
+&lt;li&gt;メモリ8GB&lt;/li&gt;
+&lt;li&gt;重量1.3Kg以下&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;希望条件を満たすモデルは軒並みAmazonで日本への発送を取り扱っておらず、
+並行輸入品は割高なものばかりという状況だった。&lt;/p&gt;
+
+&lt;p&gt;個人輸入を行うという選択肢もあったが、
+まずはお試しで安い中古品を買って色々遊んでみてから、
+気に入ったら高スペックのモデルを買おうと思い今回はChromebook2の旧モデルを購入した。
+スペック的には、HaswellベースのCeleronと2GBのメモリ、WXGAのディスプレイでまあまあだ。
+2万円弱だったので外してもそんなに痛くはない。&lt;/p&gt;
+
+&lt;h1 id=&#34;linuxを入れる&#34;&gt;Linuxを入れる&lt;/h1&gt;
+
+&lt;p&gt;ChromebookでLinuxを入れるメジャーな選択肢としては概ね2つある（他のやり方もあるが）。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;CroutonというツールでUbuntuを入れる&lt;/li&gt;
+&lt;li&gt;GalliumOSというディストリビューションを入れる&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;CroutonはchrootをラップしたツールでLinuxディストリとChromeOSを共存できる。
+GalliumOSはUbuntuベースのOSで、直接Chromebookマシンにインストールする。&lt;/p&gt;
+
+&lt;p&gt;僕は別にChromeOSの部分を残す必要はなかったので、後者のGalliumOSを選択した。&lt;/p&gt;
+
+&lt;p&gt;インストールは公式のwikiを見ながらやったらすんなりいった。
+カスタムファームウェアは入れなくても良いということだったので入れなかったけど、
+デフォルトのファームウェアだと起動するたびに手動でブートローダを立ちあげなければいけなくなったので、
+次にインストールするときはカスタムのファームウェアを入れたい。&lt;/p&gt;
+
+&lt;p&gt;とはいえ、大して不便はしていないので入れなおすということはしない。&lt;/p&gt;
+
+&lt;h1 id=&#34;galliumos&#34;&gt;GalliumOS&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://tanstaafl.0pt.jp/images/galliumos.png&#34; alt=&#34;gallium OS wallpaper&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GalliumOSはXubuntuベースのChromeOS向けディストリビューションだ。
+僕は普段ArchLinuxをサーバ用に使っていて、Debian系はLMDEを少し使ったことがある程度だ。
+まあでも特に使い方で迷うということもなくサクサク使えた。
+このあたりはUbuntuの良さで、デスクトップOSとしてはかなり親切な作りになっている。&lt;/p&gt;
+
+&lt;p&gt;パッケージもだいたいapt/aptitudeで入れられるし、
+野良のdebパッケージもubuntu用のものがそのまま入れられる。
+今回ChromeやSlackを入れてみたけど、
+パッケージマネージャを通さずに公式で直に配布しているアプリなどは、
+だいたいdeb形式だし、サポートOSもUbuntuが多い。
+それらをそのまま入れられるというのもUbuntu派生OSの強みだと思う。&lt;/p&gt;
+
+&lt;h1 id=&#34;デスクトップ環境&#34;&gt;デスクトップ環境&lt;/h1&gt;
+
+&lt;p&gt;GalliumOSに標準で入っているデスクトップ環境はXfceである。
+といってもかなり小奇麗なデザインでいかにも今時のディストリという感じだ。
+同僚に見せたところWindowsっぽいと言われたが、
+確かにUIはWindowsXPあたりに似ている。といってもよりモダンな感じはするけど。&lt;/p&gt;
+
+&lt;p&gt;しかし今回別のデスクトップ環境を入れることにした。
+それはタイル型ウィンドウマネージャのxmonadだ。
+選択の理由は、そもそもタイル型ウィンドウマネージャを入れてみたかったことと、
+Haskellの勉強のために触ってみたかったということで入れてみた。&lt;/p&gt;
+
+&lt;h1 id=&#34;xmonad&#34;&gt;xmonad&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://tanstaafl.0pt.jp/images/xmonad.png&#34; alt=&#34;xmonad screenshot&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;まだ大してカスタムしていないけれどとりあえず快適に使えている。
+いくつか苦労した点としては、Xfceと共存させたことと、キーマップが挙げられる。&lt;/p&gt;
+
+&lt;p&gt;xmonadにはXfceと共存させるためのコンフィグが公式で用意されていて、
+それをインポートで読みこめば基本的に問題なく動く。
+ただ、こっちで何もしなくていいというわけでもなくて、
+xmonadで立ち上げる外部コマンド（ファインダやターミナルなど）は設定する必要があったし、
+Xfceのパネル（タスクバー）は手動で殺す必要があった。&lt;/p&gt;
+
+&lt;p&gt;もうひとつ、キーマップだけれども、xmonadはmodキーという特殊キーを設定して、
+そのキーと他のキーを組み合わせることでショートカットを動かすことができる。
+WindowsにおけるWindowsキーのようなもので、実際Windows機上で動かすならWindowsキーにマップするのが普通らしい。
+ただし今回Chromebookで動かすので、キーマップがうまく動かず設定にてこずった。
+といっても苦労したのは僕がxmodmapの使い方をあまり理解してなかったからで、
+xmodmapというのはLinux向けのキーリマップ・ツールなんだけど、
+そっちを正しく動かせるようになったら、xmonadの方は特に問題なく動かせた。&lt;/p&gt;
+
+&lt;p&gt;Chromebookのサーチキー（🔍マークのついたキー）はCTRLにマップしたので、
+modキーは右シフトにマップした。
+これで使いやすいかどうかはまだ試しているところだけれど、今のところ特に不満はない。&lt;/p&gt;
+
+&lt;h1 id=&#34;おわりに&#34;&gt;おわりに&lt;/h1&gt;
+
+&lt;p&gt;ひさしぶりにこのブログを更新した。
+この記事は購入したChromebookで作成していて、まあいつものVimとHugoで書いたんだけれども、
+そういうUnix系のツールがそのまま使えるというのはやっぱりPC-Linuxの良いところである。&lt;/p&gt;
+
+&lt;p&gt;ChromebookをLinuxマシンとして使うのは概ね問題ない感じで、
+心配していたドライバ周りだったりの不都合がまだ見られないのはさすがといったところである。
+バッテリの持ちも今時のモバイルラップトップとしては普通に持つし、
+このマシンは一世代前の機種ということもあって結構低スペックなのだけれども、
+OSがXubuntuベースということもあってかかなりサクサク動いて気持ち良い。&lt;/p&gt;
+
+&lt;p&gt;僕はノートPCのGUIはブラウザとターミナルエミュレータさえ最低限使えれば良いと思っていて、
+実際仕事で使っているMacbook proもそういう使い方なのだけれど、
+このままChromebookをメインにしても良いと思えるぐらいには快適だった。&lt;/p&gt;
+
+&lt;p&gt;まあプライベートでの作業とかは、このマシンをしばらく使っていこうと思っている。
+Chromebook、おすすめである！&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>scalewayを使ってみた</title>
@@ -378,11 +536,11 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
 
 &lt;p&gt;遅刻したため途中からのレポートとなる。&lt;/p&gt;
 
-&lt;h2 id=&#34;nobody-knows-nobu:41eb78584c590241db96d7348c8a49f1&#34;&gt;Nobody Knows Nobu&lt;/h2&gt;
+&lt;h2 id=&#34;nobody-knows-nobu&#34;&gt;Nobody Knows Nobu&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/_zzak&#34;&gt;ザックさん&lt;/a&gt;の発表は絵芝居仕立てでコア・コミッターの中田さんの貢献についての紹介。愛と笑いのある発表でほんわかした。こういう暖かさがRubyコミュニティのいいところだと思う。&lt;/p&gt;
 
-&lt;h2 id=&#34;私は如何にして異国でエンジニアとして生き抜いてきたか:41eb78584c590241db96d7348c8a49f1&#34;&gt;私は如何にして異国でエンジニアとして生き抜いてきたか&lt;/h2&gt;
+&lt;h2 id=&#34;私は如何にして異国でエンジニアとして生き抜いてきたか&#34;&gt;私は如何にして異国でエンジニアとして生き抜いてきたか&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;レオさん&lt;/a&gt;の発表は海外で働くエンジニアとしての発表。オーストラリア出身のレオさんが8年間日本で働いてきた経験から得た知見を共有してくれた。おおきくまとめると海外で働くには言語とジョブスキルが大切というこ話だった。&lt;/p&gt;
 
@@ -392,7 +550,7 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
 
 &lt;p&gt;文化的背景を理解することが大事というのは全くその通りで、発表中におすすめされていたRedditは毎日読んでみようと思う。&lt;/p&gt;
 
-&lt;h2 id=&#34;画像を壊すこと-oss-活動をすること-その他:41eb78584c590241db96d7348c8a49f1&#34;&gt;画像を壊すこと、OSS 活動をすること、その他&lt;/h2&gt;
+&lt;h2 id=&#34;画像を壊すこと-oss-活動をすること-その他&#34;&gt;画像を壊すこと、OSS 活動をすること、その他&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;makimotoさん&lt;/a&gt;からはグリッチについてとOSS活動についてだった。グリッチというのは壊れたテレビからの砂嵐やノイズのような画像を指すそうで、正直なところ僕にはよく分からない世界だったが、makimotoさんのグリッチ愛はひしひしと伝わってきた。&lt;/p&gt;
 
@@ -400,13 +558,13 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
 
 &lt;p&gt;自分も趣味方向でなにか作ってみたいと感じさせられた。&lt;/p&gt;
 
-&lt;h2 id=&#34;rubyvm読んでみた:41eb78584c590241db96d7348c8a49f1&#34;&gt;RubyVM読んでみた&lt;/h2&gt;
+&lt;h2 id=&#34;rubyvm読んでみた&#34;&gt;RubyVM読んでみた&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/ocha-&#34;&gt;Kawamotoさん&lt;/a&gt;からはRubyVMの処理を紹介していただいた。正直なところ、内容には追いついていけなかったのだが、構文木をバイトコードに変換するあたりの処理についてのお話だったかと思う。マニアックなトピックを淡々と話されていたのが印象的だった。この日は青木峰郎さんの講演が入っていることもあってRHGがらみの発表が多かったと思う。&lt;/p&gt;
 
 &lt;p&gt;自分も折を見て処理系の中身は覗いてみたい。&lt;/p&gt;
 
-&lt;h2 id=&#34;基調講演:41eb78584c590241db96d7348c8a49f1&#34;&gt;基調講演&lt;/h2&gt;
+&lt;h2 id=&#34;基調講演&#34;&gt;基調講演&lt;/h2&gt;
 
 &lt;p&gt;基調講演はEbiさんとAaronさんのPatterson夫妻による講演だった。&lt;/p&gt;
 
@@ -415,42 +573,42 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
 &lt;p&gt;Aaronさんの話はAdequateRecordというActiveRecordのforkの話。キャッシュを頑張って、高速化しているそうだ。
 途中のベンチマークの話で、パフォーマンスを測るには平均値だけではなく標準偏差が大事だと言っていたのが印象に残っている。&lt;/p&gt;
 
-&lt;h2 id=&#34;1年かけてgemを1つ作りました:41eb78584c590241db96d7348c8a49f1&#34;&gt;1年かけてgemを1つ作りました&lt;/h2&gt;
+&lt;h2 id=&#34;1年かけてgemを1つ作りました&#34;&gt;1年かけてgemを1つ作りました&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/kunitoo&#34;&gt;@kunitoo&lt;/a&gt;さんからはgit logをrails上で確認できる&lt;a href=&#34;https://github.com/kunitoo/rgitlog&#34;&gt;rgitlog&lt;/a&gt;というgemの作成について。簡単に作れます！と言いながらライブコーディングしておられた。途中rails generateのタイプミスで作り直しになるなど波乱がありライブコーディング怖いとおっしゃっていたが、無事完了して一安心である。ライブコーディングはライブ感があっていいと思う。楽しい！&lt;/p&gt;
 
-&lt;h2 id=&#34;https-rubygems-org-gems-rfc7159:41eb78584c590241db96d7348c8a49f1&#34;&gt;&lt;a href=&#34;https://rubygems.org/gems/RFC7159&#34;&gt;https://rubygems.org/gems/RFC7159&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;https-rubygems-org-gems-rfc7159&#34;&gt;&lt;a href=&#34;https://rubygems.org/gems/RFC7159&#34;&gt;https://rubygems.org/gems/RFC7159&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/shyouhei&#34;&gt;Urabeさん&lt;/a&gt;からはタイトル通りのgemの紹介。
 RFC7159からJSONの仕様が厳格になったようで、それに対応したgemを作った話だった。既存のgemにはユニコードやバックスラッシュ周りの処理でバグが有り、RFCには則っていない。しかし、Urabeさんのgemを使えばいいかというとそうではなくRFC7159のgemは処理が重いそうだ。JSONパーサに受け渡さないようアプリ側でチェックしたほうが幸せになれるんじゃないかとおっしゃっていた。&lt;/p&gt;
 
-&lt;h2 id=&#34;bundlerの話-タイトル失念:41eb78584c590241db96d7348c8a49f1&#34;&gt;Bundlerの話（タイトル失念）&lt;/h2&gt;
+&lt;h2 id=&#34;bundlerの話-タイトル失念&#34;&gt;Bundlerの話（タイトル失念）&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/hone02&#34;&gt;Terence Leeさん&lt;/a&gt;からはBundlerの高速化についての話だった。BundlerってRubyistにとってインフラだと思うのでありがたい。&lt;/p&gt;
 
-&lt;h2 id=&#34;object-bouquet-幸せの花束-rvalue-のきらめきを添えて:41eb78584c590241db96d7348c8a49f1&#34;&gt;Object Bouquet ～ 幸せの花束・RValue のきらめきを添えて ～&lt;/h2&gt;
+&lt;h2 id=&#34;object-bouquet-幸せの花束-rvalue-のきらめきを添えて&#34;&gt;Object Bouquet ～ 幸せの花束・RValue のきらめきを添えて ～&lt;/h2&gt;
 
 &lt;p&gt;新婚のささださん夫妻による発表。惚気話とRubyのオブジェクトツリーについてのディープな話を同時に披露するという離れ業。面白かった！&lt;/p&gt;
 
-&lt;h2 id=&#34;another-language-you-should-learn:41eb78584c590241db96d7348c8a49f1&#34;&gt;Another language you should learn&lt;/h2&gt;
+&lt;h2 id=&#34;another-language-you-should-learn&#34;&gt;Another language you should learn&lt;/h2&gt;
 
 &lt;p&gt;TechCrunch編集長の西村さんからは英語学習についてのトーク。上のレオさんの発表もそうだったけどやっぱり時間をかけることが大事とのこと。やっぱりね・・・。あとインプットが大事ということで、こちらでもRedditをおすすめされていた。&lt;/p&gt;
 
 &lt;p&gt;僕も海外の技術系ニュースは毎日読もうかなと思う。&lt;/p&gt;
 
-&lt;h2 id=&#34;mruby-hacking-guide:41eb78584c590241db96d7348c8a49f1&#34;&gt;mruby hacking guide&lt;/h2&gt;
+&lt;h2 id=&#34;mruby-hacking-guide&#34;&gt;mruby hacking guide&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://twitter.com/_ksss_&#34;&gt;Kuriharaさん&lt;/a&gt;からはmrubyへのコントリビューションの話。mrubyはブルー・オーシャンという話は魅力的で、これから処理系の中身をハックするならmrubyが敷居が低そうだと感じた。&lt;/p&gt;
 
-&lt;h2 id=&#34;hacking-home:41eb78584c590241db96d7348c8a49f1&#34;&gt;Hacking Home&lt;/h2&gt;
+&lt;h2 id=&#34;hacking-home&#34;&gt;Hacking Home&lt;/h2&gt;
 
 &lt;p&gt;松田明さんからは家を建てた際のエピソードの話。テクノロジーとは関係なくゆるい話がしたいと言っておられたが、プログラマ視点からの家の建築の話は新鮮だった。確かに、ソフトウェア開発って建築に例えることが多いけれど、逆の視点で語ることってなかなかないと思う。建築、施工から家の設備のAPI化まで楽しく話されていた。個人的にはこのセッションが一番楽しかった！ここまでコアな話が続いていたので息抜きにもなったし。&lt;/p&gt;
 
-&lt;h2 id=&#34;ruby会議でsqlの話をするのは間違っているだろうか:41eb78584c590241db96d7348c8a49f1&#34;&gt;Ruby会議でSQLの話をするのは間違っているだろうか&lt;/h2&gt;
+&lt;h2 id=&#34;ruby会議でsqlの話をするのは間違っているだろうか&#34;&gt;Ruby会議でSQLの話をするのは間違っているだろうか&lt;/h2&gt;
 
 &lt;p&gt;RHGの青木さんからは並列データベースの話。話の筋は前職Teradataでの経験のお話から、Hadoopの隆盛、並列DBとHadoopの比較へと展開。やっぱりSQL必要だよねという話から、MapReduceは下火になっているという話、Hadoop側もHiveを中心にSQL系DBに似た構成になっているということを述べられていて、ビッグデータに疎い自分には新鮮だった。またMapReduceは完全にダメかというとそうでもなく柔軟性を活かしてSQL系DBを補助する形がいいのではないかとのこと。大トリにふさわしいコアな話だった！&lt;/p&gt;
 
-&lt;h2 id=&#34;感想:41eb78584c590241db96d7348c8a49f1&#34;&gt;感想&lt;/h2&gt;
+&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
 
 &lt;p&gt;とにかくコアな話の連続で大変濃密な一日だった。懇親会では地方から参加された方々と交流することが出来て、地域Rubyコミュニティの運営について熱く語っていただいたのが印象に残っている。とにかく濃いRubyistが集まっていて、Rubyistだけでこんなに楽しいお祭りが成立するのかと思い感動した。また来年も参加したいと思う。&lt;/p&gt;
 </description>
@@ -516,66 +674,6 @@ URLのパラメータやフラグメントを元に、Ajaxなどで動的にコ�
 上の記事では2つ目のやり方について詳しく書かれているが、&lt;strong&gt;滅茶苦茶めんどくさそう&lt;/strong&gt;な印象を受けたからだ。&lt;/p&gt;
 
 &lt;p&gt;そういうわけで結論としては1ページAppでメタ情報を動的に扱うのは基本的に無理筋だということがわかった。（身も蓋もないが）。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>AngularJS で外部javascriptを遅延読み込み</title>
-      <link>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
-      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
-      <description>&lt;p&gt;新しいブログエンジンでもコメントシステムはDisqusを使っている。
-Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。&lt;/p&gt;
-
-&lt;p&gt;Angular.jsはng-includeなどの仕組みで、HTMLテンプレートを動的に読み込みができ、HTMLをパーツとして使いまわすことができる。
-しかし、このテンプレートを読み込む際にscriptタグが含まれていた場合はセキュリティのためか、scriptタグが無視されてしまう。
-そのためDisqusのように外部スクリプトを埋め込んでDOM要素を生成するようなサービスとは相性が悪い。&lt;/p&gt;
-
-&lt;p&gt;しかし、皆考えることは同じようで、ハックを公開してくれた人がいたので参考にさせていただいた。
-使い方は簡単でngLoadModuleというモジュール（コードは以下のGist参照）をngAppで指定したモジュールに読み込んで、
-読み込ませたいscriptタグに&amp;rdquo;text/javascript-lazy&amp;rdquo;と追加するだけである。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/subudeepak/9617483&#34;&gt;https://gist.github.com/subudeepak/9617483&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;以下はgistより引用。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(function (ng) {
-  &#39;use strict&#39;;
- 
-  var app = ng.module(&#39;ngLoadScript&#39;, []);
- 
-  app.directive(&#39;script&#39;, function() {
-    return {
-      restrict: &#39;E&#39;,
-      scope: false,
-      link: function(scope, elem, attr) 
-      {
-        if (attr.type===&#39;text/javascript-lazy&#39;) 
-        {
-          var s = document.createElement(&amp;quot;script&amp;quot;);
-          s.type = &amp;quot;text/javascript&amp;quot;;                
-          var src = elem.attr(&#39;src&#39;);
-          if(src!==undefined)
-          {
-              s.src = src;
-          }
-          else
-          {
-              var code = elem.text();
-              s.text = code;
-          }
-          document.head.appendChild(s);
-          elem.remove();
-          /*var f = new Function(code);
-          f();*/
-        }
-      }
-    };
-  });
- 
-}(angular));
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

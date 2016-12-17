@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mongodb on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/mongodb/</link>
+    <link>https://tanstaafl.0pt.jp/tags/mongodb/index.xml</link>
     <description>Recent content in Mongodb on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 04 Aug 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Fabrication で Mongoid のテストデータを作る</title>
