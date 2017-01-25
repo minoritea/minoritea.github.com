@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf8">
+    <title>Recent Presentation Slides -  </title>
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/reveal.css">
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/theme/beige.css">
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal cube center">
+      <div class="slides">
+      
+        <section>
+          
+
+<h1 id="hugo-でスライド作成">hugo でスライド作成</h1>
+
+<p>@snowcrush</p>
+
+        </section>
+      
+        <section>
+          
+
+<h1 id="hugo-のsectionリスト表示を使う">hugo のSectionリスト表示を使う</h1>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="section-list">Section List</h3>
+
+<pre><code># Hugoの構造
+HUGO_ROOT/section/.../content1.md
+HUGO_ROOT/section/.../content2.md
+</code></pre>
+
+<p>=&gt; このとき、<a href="https://yourdomain/section/">https://yourdomain/section/</a> を表示すると content の一覧が表示される</p>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="section-listのレイアウトは実は自由に変えられる">Section Listのレイアウトは実は自由に変えられる</h2>
+
+        </section>
+      
+        <section>
+          <p><code>layouts/_default/list.html</code></p>
+
+<ul>
+<li>通常は短縮表示するが、コンテンツをループで全表示する</li>
+<li>sectionタグで囲む（後述）</li>
+</ul>
+
+<pre><code>      {{ range .Data.Pages.ByTitle }}
+        &lt;section&gt;
+          {{ .Content }}
+        &lt;/section&gt;
+      {{ end }}
+</code></pre>
+
+<p>記法はgo-template</p>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="reveal-js">reveal.js</h3>
+
+<p>HTMLとjsでスライドを作るためのツール</p>
+
+<p><a href="https://github.com/hakimel/reveal.js/">https://github.com/hakimel/reveal.js/</a></p>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="reveal-jsのhtml">reveal.jsのHTML</h3>
+
+<pre><code class="language-html">&lt;div class=&quot;reveal&quot;&gt;
+  &lt;div class=&quot;slides&quot;&gt;
+    &lt;section&gt;
+      ここにスライド一枚分の内容をHTMLで入れると
+      いい感じにスライド表示に変換してくれる
+    &lt;/section&gt;
+    &lt;section&gt;二枚目&lt;/section&gt;
+    &lt;section&gt;...&lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;Reveal.initialize();&lt;/script&gt;
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="sample">sample</h3>
+
+<p><a href="https://github.com/minoritea/hugo-revealjs-generator">https://github.com/minoritea/hugo-revealjs-generator</a></p>
+
+        </section>
+      
+      </div>
+    </div>
+    <script src="https://tanstaafl.0pt.jp/slides/js/reveal.js"></script>
+    <script> Reveal.initialize(); </script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugos on Recent Presentation Slides</title>
+    <link>https://tanstaafl.0pt.jp/slides/hugo/index.xml</link>
+    <description>Recent content in Hugos on Recent Presentation Slides</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 25 Jan 2017 20:50:09 +0900</lastBuildDate>
+    <atom:link href="https://tanstaafl.0pt.jp/slides/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>slide003</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide003/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide003/</guid>
+      <description>
+
+&lt;h2 id=&#34;section-listのレイアウトは実は自由に変えられる&#34;&gt;Section Listのレイアウトは実は自由に変えられる&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide004</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide004/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide004/</guid>
+      <description>&lt;p&gt;&lt;code&gt;layouts/_default/list.html&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;通常は短縮表示するが、コンテンツをループで全表示する&lt;/li&gt;
+&lt;li&gt;sectionタグで囲む（後述）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;      {{ range .Data.Pages.ByTitle }}
+        &amp;lt;section&amp;gt;
+          {{ .Content }}
+        &amp;lt;/section&amp;gt;
+      {{ end }}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;記法はgo-template&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide005</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide005/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide005/</guid>
+      <description>
+
+&lt;h3 id=&#34;reveal-js&#34;&gt;reveal.js&lt;/h3&gt;
+
+&lt;p&gt;HTMLとjsでスライドを作るためのツール&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js/&#34;&gt;https://github.com/hakimel/reveal.js/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide006</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide006/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide006/</guid>
+      <description>
+
+&lt;h3 id=&#34;reveal-jsのhtml&#34;&gt;reveal.jsのHTML&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;reveal&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;slides&amp;quot;&amp;gt;
+    &amp;lt;section&amp;gt;
+      ここにスライド一枚分の内容をHTMLで入れると
+      いい感じにスライド表示に変換してくれる
+    &amp;lt;/section&amp;gt;
+    &amp;lt;section&amp;gt;二枚目&amp;lt;/section&amp;gt;
+    &amp;lt;section&amp;gt;...&amp;lt;/section&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;Reveal.initialize();&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide007</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide007/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide007/</guid>
+      <description>
+
+&lt;h3 id=&#34;sample&#34;&gt;sample&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/minoritea/hugo-revealjs-generator&#34;&gt;https://github.com/minoritea/hugo-revealjs-generator&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide000</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide000/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide000/</guid>
+      <description>
+
+&lt;h1 id=&#34;hugo-でスライド作成&#34;&gt;hugo でスライド作成&lt;/h1&gt;
+
+&lt;p&gt;@snowcrush&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide001</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide001/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide001/</guid>
+      <description>
+
+&lt;h1 id=&#34;hugo-のsectionリスト表示を使う&#34;&gt;hugo のSectionリスト表示を使う&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide002</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide002/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide002/</guid>
+      <description>
+
+&lt;h3 id=&#34;section-list&#34;&gt;Section List&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# Hugoの構造
+HUGO_ROOT/section/.../content1.md
+HUGO_ROOT/section/.../content2.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;=&amp;gt; このとき、&lt;a href=&#34;https://yourdomain/section/&#34;&gt;https://yourdomain/section/&lt;/a&gt; を表示すると content の一覧が表示される&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

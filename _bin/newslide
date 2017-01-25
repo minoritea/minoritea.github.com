@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+name, src = ARGV.to_a
+
+fail unless name and not name.empty?
+fail unless File.exist?(src)
+
+hugodir = File.expand_path("../../_slides", __FILE__)
+Dir.chdir hugodir
+
+open(src).read.split(/^---$/).each.with_index do |content, i|
+  fn = "#{name}/slide#{"%03d" % i}.md" 
+  `hugo new #{fn}`
+  open(File.join("content", fn), "a"){|f| f.puts "\n#{content}\n" }
+end
