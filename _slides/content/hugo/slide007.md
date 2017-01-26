@@ -4,11 +4,10 @@ title = "slide007"
 
 +++
 
+つまり、
 
+- section以下のHTMLページ1ページが、スライド一枚に相当する
+- 各ページをセクションリスト・ページで結合することで一ページのHTMLにする
+- 結合したHTMLをreveal.jsでいい感じのスライドに変換する
 
-
-### sample
-
-https://github.com/minoritea/hugo-revealjs-generator
-
-
+上記の仕組みを、HugoのThemeとして組み込むことで、Hugoでスライドを作ることが出来る！

@@ -9,6 +9,8 @@ date = "2017-01-25T20:50:09+09:00"
 
 ### reveal.jsのHTML
 
+sectionタグで囲まれた部分が一枚のスライドに相当する
+
 ```html
 <div class="reveal">
   <div class="slides">

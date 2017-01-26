@@ -9,8 +9,9 @@ title = "slide004"
 
 `layouts/_default/list.html`
 
-- 通常は短縮表示するが、コンテンツをループで全表示する
-- sectionタグで囲む（後述）
+- デフォルトのテンプレートでは見出しを表示するが、各ページの内容を全部表示するように変更
+- Hugo のヘルパーメソッドでsection内の各ページの内容を取り出す
+- 取り出した各コンテンツはsectionタグで囲む（後述）
 
 ```
       {{ range .Data.Pages.ByTitle }}

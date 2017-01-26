@@ -32,12 +32,12 @@
 
 <h3 id="section-list">Section List</h3>
 
-<pre><code># Hugoの構造
-HUGO_ROOT/section/.../content1.md
-HUGO_ROOT/section/.../content2.md
+<pre><code># Hugoのソースファイルのディレクトリ構造
+HUGO_ROOT/content/section/.../content1.md
+HUGO_ROOT/content/section/.../content2.md
 </code></pre>
 
-<p>=&gt; このとき、<a href="https://yourdomain/section/">https://yourdomain/section/</a> を表示すると content の一覧が表示される</p>
+<p>=&gt; このとき、<a href="https://yourdomain/section/">https://yourdomain/section/</a> を表示するとsectionに含まれるページのリストが表示される</p>
 
         </section>
       
@@ -52,8 +52,9 @@ HUGO_ROOT/section/.../content2.md
           <p><code>layouts/_default/list.html</code></p>
 
 <ul>
-<li>通常は短縮表示するが、コンテンツをループで全表示する</li>
-<li>sectionタグで囲む（後述）</li>
+<li>デフォルトのテンプレートでは見出しを表示するが、各ページの内容を全部表示するように変更</li>
+<li>Hugo のヘルパーメソッドでsection内の各ページの内容を取り出す</li>
+<li>取り出した各コンテンツはsectionタグで囲む（後述）</li>
 </ul>
 
 <pre><code>      {{ range .Data.Pages.ByTitle }}
@@ -83,6 +84,8 @@ HUGO_ROOT/section/.../content2.md
 
 <h3 id="reveal-jsのhtml">reveal.jsのHTML</h3>
 
+<p>sectionタグで囲まれた部分が一枚のスライドに相当する</p>
+
 <pre><code class="language-html">&lt;div class=&quot;reveal&quot;&gt;
   &lt;div class=&quot;slides&quot;&gt;
     &lt;section&gt;
@@ -95,6 +98,19 @@ HUGO_ROOT/section/.../content2.md
 &lt;/div&gt;
 &lt;script&gt;Reveal.initialize();&lt;/script&gt;
 </code></pre>
+
+        </section>
+      
+        <section>
+          <p>つまり、</p>
+
+<ul>
+<li>section以下のHTMLページ1ページが、スライド一枚に相当する</li>
+<li>各ページをセクションリスト・ページで結合することで一ページのHTMLにする</li>
+<li>結合したHTMLをreveal.jsでいい感じのスライドに変換する</li>
+</ul>
+
+<p>上記の仕組みを、HugoのThemeとして組み込むことで、Hugoでスライドを作ることが出来る！</p>
 
         </section>
       

@@ -6,197 +6,175 @@
     <description>Recent content on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 08 Dec 2016 16:13:54 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 25 Jan 2017 20:50:09 +0900</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/slides/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>slide01</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide01/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
+      <title>slide003</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide003/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
       
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide01/</guid>
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide003/</guid>
       <description>
 
-&lt;h1 id=&#34;govendorでvendoringしよう&#34;&gt;govendorでvendoringしよう&lt;/h1&gt;
+&lt;h2 id=&#34;section-listのレイアウトは実は自由に変えられる&#34;&gt;Section Listのレイアウトは実は自由に変えられる&lt;/h2&gt;
 </description>
     </item>
     
     <item>
-      <title>slide02</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide02/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
+      <title>slide004</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide004/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
       
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide02/</guid>
-      <description>
-
-&lt;h1 id=&#34;vendoringとは&#34;&gt;vendoringとは&lt;/h1&gt;
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide004/</guid>
+      <description>&lt;p&gt;&lt;code&gt;layouts/_default/list.html&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;プロジェクト毎にimportするパッケージを保持する機能&lt;/li&gt;
+&lt;li&gt;デフォルトのテンプレートでは見出しを表示するが、各ページの内容を全部表示するように変更&lt;/li&gt;
+&lt;li&gt;Hugo のヘルパーメソッドでsection内の各ページの内容を取り出す&lt;/li&gt;
+&lt;li&gt;取り出した各コンテンツはsectionタグで囲む（後述）&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide03</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide03/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide03/</guid>
-      <description>
 
-&lt;h1 id=&#34;vendoringが必要な理由&#34;&gt;vendoringが必要な理由&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Goのパッケージは$GOPATH単位で共有されるので以下のケースで問題が出る
-
-&lt;ul&gt;
-&lt;li&gt;同じ$GOPATHのプロジェクト同士で必要なパッケージのバージョンが異なる場合&lt;/li&gt;
-&lt;li&gt;違う$GOPATHの同じプロジェクトでimportするパッケージのバージョンが異なる場合&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide04</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide04/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide04/</guid>
-      <description>
-
-&lt;h1 id=&#34;go1-5以降vendoringが導入&#34;&gt;Go1.5以降vendoringが導入&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;プロジェクト内の&lt;code&gt;vendor&lt;/code&gt;ディレクトリ以下のパッケージを優先してimportするように&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide05</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide05/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide05/</guid>
-      <description>
-
-&lt;h1 id=&#34;vendoringのためのツール&#34;&gt;vendoringのためのツール&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Godep (⭐4087@github)&lt;/li&gt;
-&lt;li&gt;Glide (⭐3321@github)&lt;/li&gt;
-&lt;li&gt;govendor (⭐1310@github)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide06</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide06/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide06/</guid>
-      <description>
-
-&lt;h1 id=&#34;godep&#34;&gt;Godep&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;古い
-
-&lt;ul&gt;
-&lt;li&gt;vendoring以前のツールのため、vendoringのプラクティスと噛み合っていない&lt;/li&gt;
-&lt;li&gt;最近更新されていない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;パッケージをアップデートすると$GOPATHが汚染される&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide07</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide07/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide07/</guid>
-      <description>
-
-&lt;h1 id=&#34;glide&#34;&gt;Glide&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;パッケージをアップデートすると$GOPATHが汚染される&lt;/li&gt;
-&lt;li&gt;dotfilesをコピーする&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide08</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide08/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide08/</guid>
-      <description>
-
-&lt;h1 id=&#34;govendor&#34;&gt;govendor&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;上記2つと比べてややマイナー&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide09</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide09/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide09/</guid>
-      <description>
-
-&lt;h1 id=&#34;なぜgovendorを選んだか&#34;&gt;なぜgovendorを選んだか&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide10</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide10/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide10/</guid>
-      <description>
-
-&lt;h1 id=&#34;1-環境を汚染しない&#34;&gt;1. 環境を汚染しない&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>slide11</title>
-      <link>https://tanstaafl.0pt.jp/slides/govendor/slide11/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide11/</guid>
-      <description>
-
-&lt;h1 id=&#34;パッケージの追加&#34;&gt;パッケージの追加&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ govendor add {package}
+&lt;pre&gt;&lt;code&gt;      {{ range .Data.Pages.ByTitle }}
+        &amp;lt;section&amp;gt;
+          {{ .Content }}
+        &amp;lt;/section&amp;gt;
+      {{ end }}
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;=&amp;gt; $GOPATHからコピーするだけ&lt;/p&gt;
+&lt;p&gt;記法はgo-template&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide005</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide005/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide005/</guid>
+      <description>
+
+&lt;h3 id=&#34;reveal-js&#34;&gt;reveal.js&lt;/h3&gt;
+
+&lt;p&gt;HTMLとjsでスライドを作るためのツール&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js/&#34;&gt;https://github.com/hakimel/reveal.js/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide006</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide006/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide006/</guid>
+      <description>
+
+&lt;h3 id=&#34;reveal-jsのhtml&#34;&gt;reveal.jsのHTML&lt;/h3&gt;
+
+&lt;p&gt;sectionタグで囲まれた部分が一枚のスライドに相当する&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;div class=&amp;quot;reveal&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;slides&amp;quot;&amp;gt;
+    &amp;lt;section&amp;gt;
+      ここにスライド一枚分の内容をHTMLで入れると
+      いい感じにスライド表示に変換してくれる
+    &amp;lt;/section&amp;gt;
+    &amp;lt;section&amp;gt;二枚目&amp;lt;/section&amp;gt;
+    &amp;lt;section&amp;gt;...&amp;lt;/section&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;Reveal.initialize();&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide007</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide007/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide007/</guid>
+      <description>&lt;p&gt;つまり、&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;section以下のHTMLページ1ページが、スライド一枚に相当する&lt;/li&gt;
+&lt;li&gt;各ページをセクションリスト・ページで結合することで一ページのHTMLにする&lt;/li&gt;
+&lt;li&gt;結合したHTMLをreveal.jsでいい感じのスライドに変換する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上記の仕組みを、HugoのThemeとして組み込むことで、Hugoでスライドを作ることが出来る！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide007</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide008/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide008/</guid>
+      <description>
+
+&lt;h3 id=&#34;sample&#34;&gt;sample&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/minoritea/hugo-revealjs-generator&#34;&gt;https://github.com/minoritea/hugo-revealjs-generator&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide000</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide000/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide000/</guid>
+      <description>
+
+&lt;h1 id=&#34;hugo-でスライド作成&#34;&gt;hugo でスライド作成&lt;/h1&gt;
+
+&lt;p&gt;@snowcrush&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide001</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide001/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide001/</guid>
+      <description>
+
+&lt;h1 id=&#34;hugo-のsectionリスト表示を使う&#34;&gt;hugo のSectionリスト表示を使う&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide002</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide002/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide002/</guid>
+      <description>
+
+&lt;h3 id=&#34;section-list&#34;&gt;Section List&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;# Hugoのソースファイルのディレクトリ構造
+HUGO_ROOT/content/section/.../content1.md
+HUGO_ROOT/content/section/.../content2.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;=&amp;gt; このとき、&lt;a href=&#34;https://yourdomain/section/&#34;&gt;https://yourdomain/section/&lt;/a&gt; を表示するとsectionに含まれるページのリストが表示される&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>slide12</title>
       <link>https://tanstaafl.0pt.jp/slides/govendor/slide12/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide12/</guid>
       <description>
 
-&lt;h1 id=&#34;パッケージの更新&#34;&gt;パッケージの更新&lt;/h1&gt;
+&lt;h3 id=&#34;パッケージの更新&#34;&gt;パッケージの更新&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ govendor update {package}
 &lt;/code&gt;&lt;/pre&gt;
@@ -208,12 +186,12 @@
     <item>
       <title>slide13</title>
       <link>https://tanstaafl.0pt.jp/slides/govendor/slide13/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide13/</guid>
       <description>
 
-&lt;h1 id=&#34;パッケージの取得&#34;&gt;パッケージの取得&lt;/h1&gt;
+&lt;h3 id=&#34;パッケージの取得&#34;&gt;パッケージの取得&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ govendor fetch {package}
 &lt;/code&gt;&lt;/pre&gt;
@@ -225,12 +203,12 @@
     <item>
       <title>slide14</title>
       <link>https://tanstaafl.0pt.jp/slides/govendor/slide14/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide14/</guid>
       <description>
 
-&lt;h1 id=&#34;パッケージの再現&#34;&gt;パッケージの再現&lt;/h1&gt;
+&lt;h3 id=&#34;パッケージの再現&#34;&gt;パッケージの再現&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ govendor sync
 &lt;/code&gt;&lt;/pre&gt;
@@ -242,14 +220,61 @@
     <item>
       <title>slide15</title>
       <link>https://tanstaafl.0pt.jp/slides/govendor/slide15/</link>
-      <pubDate>Thu, 08 Dec 2016 16:13:54 +0900</pubDate>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide15/</guid>
       <description>
 
-&lt;h1 id=&#34;2-ステータス&#34;&gt;2. ステータス&lt;/h1&gt;
+&lt;h3 id=&#34;2-ステータス&#34;&gt;2. ステータス&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;status&lt;/code&gt;でパッケージを分類できる&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide16</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide16/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide16/</guid>
+      <description>
+
+&lt;h3 id=&#34;ステータスの種類&#34;&gt;ステータスの種類&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    +local    (l) プロジェクト内にあるパッケージ
+    +external (e) importされている、かつGOPATHにあるがvendoringされていないパッケージ
+    +vendor   (v) vendoringされているパッケージ
+    +std      (s) 標準ライブラリ
+
+    +excluded (x) vendoringを禁止しているパッケージ
+    +unused   (u) 使われていないパッケージ
+    +missing  (m) importされているが、存在しないパッケージ
+
+    +program  (p) mainパッケージ
+
+    +outside  +external +missing
+    +all      +all packages
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>slide17</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide17/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide17/</guid>
+      <description>
+
+&lt;h3 id=&#34;ステータスは便利&#34;&gt;ステータスは便利&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd $GOPATH/src/github.com/fluent/fluent-logger-golang
+$ govendor list
+ e  github.com/philhofer/fwd
+ e  github.com/tinylib/msgp/msgp
+ l  github.com/fluent/fluent-logger-golang/fluent
+  m github.com/bmizerany/assert
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

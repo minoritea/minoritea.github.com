@@ -9,9 +9,9 @@ title = "slide002"
 ### Section List
 
 ```
-# Hugoの構造
-HUGO_ROOT/section/.../content1.md
-HUGO_ROOT/section/.../content2.md
+# Hugoのソースファイルのディレクトリ構造
+HUGO_ROOT/content/section/.../content1.md
+HUGO_ROOT/content/section/.../content2.md
 ```
-=> このとき、https://yourdomain/section/ を表示すると content の一覧が表示される
+=> このとき、https://yourdomain/section/ を表示するとsectionに含まれるページのリストが表示される
 
