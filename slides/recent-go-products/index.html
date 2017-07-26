@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf8">
+    <title>Recent Presentation Slides - Recent-go-product </title>
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/reveal.css">
+    
+    
+      
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/theme/simple.css">
+      
+    
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal cube center">
+      <div class="slides">
+      
+        <section>
+          
+
+<h3 id="最近作ったgoのプロダクト">最近作ったGoのプロダクト</h3>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="自己紹介">自己紹介</h2>
+
+<ul>
+<li>@snowcrush</li>
+<li>お仕事はgoでAPI書いたりしてます</li>
+<li>イカはじめました</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h4 id="最近作ったgoのプロダクトを紹介します">最近作ったGoのプロダクトを紹介します</h4>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="toml2json">toml2json</h3>
+
+<h4 id="https-github-com-minoritea-toml2json"><a href="https://github.com/minoritea/toml2json">https://github.com/minoritea/toml2json</a></h4>
+
+        </section>
+      
+        <section>
+          <ul>
+<li>TOMLからJSONへのコンバータ</li>
+<li>node, python製の同名ツールはあったがgoはなかったので作ってみた</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h4 id="実装">実装</h4>
+
+<pre><code class="language-go">func tomlToJson(data []byte) ([]byte, error) {
+	tree, err := toml.LoadBytes(data)
+	if err != nil {
+		return []byte{}, err
+	}
+	json, err := json.Marshal(tree.ToMap())
+	if err != nil {
+		return []byte{}, err
+	}
+	return json, nil
+}
+</code></pre>
+
+        </section>
+      
+        <section>
+          <ul>
+<li><p>ほぼ<code>github.com/pelletier/go-toml</code>と<code>encoding/json</code>の間で値を受け渡しているだけ</p></li>
+
+<li><p>go-tomlのToMapメソッドでmapをそのまま出力できるので便利</p>
+
+<ul>
+<li><p>depで採用されてるけど、これまでイマイチメリットが分からんかった</p></li>
+
+<li><p>ドキュメントをバインドせずにそのまま扱うには便利</p></li>
+</ul></li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="つかいかた">つかいかた</h3>
+
+<pre><code class="language-bash">$ cat foo.toml | toml2json | jq . # jqで整形して出力
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="tunneler">tunneler</h3>
+
+<h4 id="https-github-com-minoritea-tunneler"><a href="https://github.com/minoritea/tunneler">https://github.com/minoritea/tunneler</a></h4>
+
+        </section>
+      
+        <section>
+          <ul>
+<li>多段SSHプロキシサーバ</li>
+<li>まだ未完成（基本機能は完成）</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="想定用途">想定用途</h3>
+
+<ul>
+<li>踏み台サーバ経由でしか接続を許可していない環境でローカルから内部のサーバに接続するケース
+
+<ul>
+<li>ローカルから開発環境ネットワーク内のDBに直接アクセス</li>
+</ul></li>
+<li>さらに対象ホストがネットワーク内の特定のサーバからの接続しか許可していない場合
+
+<ul>
+<li>AWSでのVPCなど</li>
+</ul></li>
+<li>上記のような場合にSSHで多段プロキシ接続を行いたい
+
+<ul>
+<li>設定管理を楽に行いたい</li>
+</ul></li>
+</ul>
+
+        </section>
+      
+        <section>
+          <ul>
+<li>OpenSSHでトンネルを張るのは管理が面倒だった</li>
+<li>TOMLなどのファイルフォーマットで管理したい</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h4 id="tunnelerの使い方">tunnelerの使い方</h4>
+
+<pre><code class="language-bash">$ tunneler -c forwarding.toml
+</code></pre>
+
+<p>あとは起動しっぱなしになる</p>
+
+        </section>
+      
+        <section>
+          
+
+<h4 id="設定ファイル">設定ファイル</h4>
+
+<ul>
+<li>TOML形式</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <p>例えば、以下のような多段プロキシを貼りたい場合</p>
+
+<pre><code>localhost =&gt; bastion (192.168.100.1)
+              +=&gt; app-server (192.168.100.2)
+                    +=&gt; db server (192.168.101.10) port 5432
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h4 id="設定ファイル">設定ファイル</h4>
+
+<pre><code class="language-toml">[bastion-dev]
+host = &quot;192.168.100.1&quot;
+port = &quot;22&quot;
+user = &quot;bastion-user&quot;
+cert_path = &quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&quot;
+# 続く
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h4 id="設定ファイル">設定ファイル</h4>
+
+<pre><code class="language-toml">[bastion-dev.cascades.app-server]
+host = &quot;192.168.100.2&quot;
+port = &quot;22&quot;
+user = &quot;appuser&quot;
+cert_path = &quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&quot;
+
+# 続く
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h4 id="設定ファイル">設定ファイル</h4>
+
+<pre><code class="language-toml">[bastion-dev.cascades.app-server.tunnels.postgres]
+local_port = &quot;15432&quot;
+remote_host = &quot;192.168.101.10&quot;
+remote_port = &quot;5432&quot;
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h4 id="jsonで書くと">JSONで書くと</h4>
+
+<pre><code class="language-json">{
+  &quot;bastion-dev&quot;: {
+    &quot;host&quot;:&quot;192.168.100.1&quot;,
+    &quot;port&quot;:&quot;22&quot;,
+    &quot;user&quot;:&quot;bastion-user&quot;,
+    &quot;cert_path&quot;:&quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&quot;,
+    &quot;cascades&quot;: {
+      &quot;app-server&quot;: {
+        &quot;host&quot;:&quot;192.168.100.2&quot;,
+        &quot;port&quot;:&quot;22&quot;,
+        &quot;user&quot;:&quot;appuser&quot;,
+        &quot;cert_path&quot;:&quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&quot;,
+        &quot;tunnels&quot;: {
+          &quot;postgres&quot;: {
+            &quot;local_port&quot;:&quot;15432&quot;,
+            &quot;remote_host&quot;:&quot;192.168.101.10&quot;,
+            &quot;remote_port&quot;:&quot;5432&quot;
+          }
+        }
+      }
+    }
+}
+</code></pre>
+
+<p>※ 設定ファイルフォーマットはTOMLのみです</p>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="今後サポートしたい機能">今後サポートしたい機能</h3>
+
+<ul>
+<li>パスワード接続（現在はpem形式の証明書による認証のみサポート）</li>
+<li>踏み台での名前解決</li>
+<li>踏み台上の証明書利用</li>
+</ul>
+
+        </section>
+      
+      </div>
+    </div>
+    <script src="https://tanstaafl.0pt.jp/slides/js/reveal.js"></script>
+    <script> Reveal.initialize(); </script>
+  </body>
+</html>

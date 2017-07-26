@@ -2,3 +2,6 @@
 theme = "night"
 [solaris-gccgo]
 theme = "night"
+
+[recent-go-product]
+theme = "simple"
