@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Solaris-gccgos on Recent Presentation Slides</title>
-    <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/index.xml</link>
+    <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/</link>
     <description>Recent content in Solaris-gccgos on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Tue, 22 Mar 2016 10:51:14 +0900</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/slides/solaris-gccgo/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://tanstaafl.0pt.jp/slides/solaris-gccgo/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>slide20</title>
@@ -15,19 +17,7 @@
       <pubDate>Tue, 22 Mar 2016 10:51:14 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide20/</guid>
-      <description>
-
-&lt;h2 id=&#34;終わりに&#34;&gt;終わりに&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;マイナーなアーキテクチャでもgccgoなら動かせる（？）&lt;/li&gt;
-&lt;li&gt;既存のツールをgo getでインストールする場合は依存関係の解決が大変&lt;/li&gt;
-&lt;li&gt;公式ライブラリのみ使って自作するのであれば大丈夫&lt;/li&gt;
-&lt;li&gt;gccgo6でgcc1.5相当になる模様&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;結論: &lt;strong&gt;Linux使おう&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description>終わりに マイナーなアーキテクチャでもgccgoなら動かせる（？） 既存のツールをgo getでインストールする場合は依存関係の解決が大変 公式ライ</description>
     </item>
     
     <item>
@@ -36,27 +26,7 @@
       <pubDate>Tue, 22 Mar 2016 10:02:55 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide19/</guid>
-      <description>
-
-&lt;h2 id=&#34;動作確認したツール類&#34;&gt;動作確認したツール類&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hashicorp/serf&#34;&gt;serf&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/nats-io/gnatsd&#34;&gt;gnatsd&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/fluent/fluentd-forwarder&#34;&gt;fluentd-forwarder&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;動かなかったもの&#34;&gt;動かなかったもの&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hashicorp/consul&#34;&gt;consul&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/peco/peco&#34;&gt;peco&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;go1.5以降に依存しているものはうごかないみたい&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;特定のアーキテクチャがハードコーディングされているものは動かないみたい&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description>動作確認したツール類 serf gnatsd fluentd-forwarder 動かなかったもの consul peco go1.5以降に依存しているものはうごかないみたい 特定のアーキテクチャがハードコーディングされ</description>
     </item>
     
     <item>
@@ -65,17 +35,7 @@
       <pubDate>Tue, 22 Mar 2016 10:02:54 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide18/</guid>
-      <description>
-
-&lt;h2 id=&#34;コンパイル&#34;&gt;コンパイル&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ go build --compiler gccgo \
-  --gccgoflags &amp;quot;-v -static-libgo -static-libgcc -Wl,-dy -lnsl -lsocket -lrt&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;重要&lt;/strong&gt;
-参照元のオプションに&lt;code&gt;-static-libgcc&lt;/code&gt;を追加しないとSolaris環境では動作しませんでした。&lt;/p&gt;
-</description>
+      <description>コンパイル $ go build --compiler gccgo \ --gccgoflags &amp;quot;-v -static-libgo -static-libgcc -Wl,-dy -lnsl -lsocket -lrt&amp;quot; 重要 参照元のオプションに-static-libgccを追加しないとSolaris環境では動作しませんで</description>
     </item>
     
     <item>
@@ -84,15 +44,7 @@
       <pubDate>Tue, 22 Mar 2016 09:56:33 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide17/</guid>
-      <description>
-
-&lt;h2 id=&#34;作成したクロスコンパイラにパスを通す&#34;&gt;作成したクロスコンパイラにパスを通す&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cd $PREFIX/bin
-$ ln -s /sparc-sun-solaris2.10-gccgo  gccgo
-$ export PATH=$PREFIX/bin:$PATH
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>作成したクロスコンパイラにパスを通す $ cd $PREFIX/bin $ ln -s /sparc-sun-solaris2.10-gccgo gccgo $ export PATH=$PREFIX/bin:$PATH</description>
     </item>
     
     <item>
@@ -101,32 +53,7 @@ $ export PATH=$PREFIX/bin:$PATH
       <pubDate>Tue, 22 Mar 2016 09:56:31 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide16/</guid>
-      <description>
-
-&lt;h2 id=&#34;作り方05&#34;&gt;作り方05&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;対象アーキテクチャ向けにbinutilsとgccをビルドする&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ tar -zxf binutils-2.25.tar.gz
-$ mkdir build-binutils
-$ cd build-binutils
-$ sudo ../binutils-2.25/configure  -target=$TARGET --prefix=$PREFIX -with-sysroot=$SYSROOT -v
-$ sudo make -j4
-$ sudo make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ untar gcc-5.1.0.tar.gz
-$ mkdir gcc-build
-$ cd gcc-build
-$ sudo ../gcc-5.1.0/configure --target=$TARGET --with-gnu-as --with-gnu-ld  --prefix=$PREFIX -with-sysroot=$SYSROOT --disable-libgcj --enable-languages=c,c++,go -v
-$ sudo make -j6
-$ sudo make install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;完成&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description>作り方05 対象アーキテクチャ向けにbinutilsとgccをビルドする $ tar -zxf binutils-2.25.tar.gz $ mkdir build-binutils $ cd build-binutils $ sudo ../binutils-2.25/configure -target=$TARGET --prefix=$PREFIX -with-sysroot=$SYSROOT -v $ sudo make -j4 $ sudo make install $ untar gcc-5.1.0.tar.gz $ mkdir gcc-build $ cd gcc-build $</description>
     </item>
     
     <item>
@@ -135,25 +62,7 @@ $ sudo make install
       <pubDate>Tue, 22 Mar 2016 09:23:52 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide15/</guid>
-      <description>
-
-&lt;h2 id=&#34;作り方04&#34;&gt;作り方04&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;SYSROOTに対象サーバのライブラリとヘッダをごっそりコピーする（rsync）&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ sudo cd $SYSROOT
-$ sudo rsync -a root@solaris_sparc_machine:/lib/ $SYSROOT/lib/
-$ sudo rsync -a root@solaris_sparc_machine:/usr/lib $SYSROOT/usr/
-$ sudo rsync -a root@solaris_sparc_machine:/usr/include $SYSROOT/usr/
-$ sudo rsync -a root@solaris_sparc_machine:/usr/platform $SYSROOT/usr/
-$ sudo rsync -a root@solaris_sparc_machine:/usr/local/lib $SYSROOT/usr/local/
-$ sudo rsync -a root@solaris_sparc_machine:/usr/local/include $SYSROOT/usr/local/
-$ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/lib $SYSROOT/usr/sfw/
-$ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>作り方04 SYSROOTに対象サーバのライブラリとヘッダをごっそりコピーする（rsync） $ sudo cd $SYSROOT $ sudo rsync -a root@solaris_sparc_machine:/lib/ $SYSROOT/lib/ $ sudo rsync -a root@solaris_sparc_machine:/usr/lib $SYSROOT/usr/ $ sudo rsync -a root@solaris_sparc_machine:/usr/include $SYSROOT/usr/ $ sudo rsync</description>
     </item>
     
     <item>
@@ -162,20 +71,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 09:23:50 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide14/</guid>
-      <description>
-
-&lt;h2 id=&#34;作り方03&#34;&gt;作り方03&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;3つ環境変数を決めます
-
-&lt;ul&gt;
-&lt;li&gt;PREFIX=${クロスコンパイラがインストールされるルートパス}&lt;/li&gt;
-&lt;li&gt;SYSROOT=${コンパイルするときにリンクする環境のルートパス}&lt;/li&gt;
-&lt;li&gt;TARGET=sparc-sun-solaris2.10&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>作り方03 3つ環境変数を決めます PREFIX=${クロスコンパイラがインストールされるルートパス} SYSROOT=${コンパイルするときにリ</description>
     </item>
     
     <item>
@@ -184,16 +80,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 09:23:48 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide13/</guid>
-      <description>
-
-&lt;h2 id=&#34;作り方02&#34;&gt;作り方02&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;クロスコンパイル用の環境を用意します（Fedora release 20)&lt;/li&gt;
-&lt;li&gt;gccをインストールします&lt;/li&gt;
-&lt;li&gt;gcコンパイラ(v1.4)をインストールします（重要）&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>作り方02 クロスコンパイル用の環境を用意します（Fedora release 20) gccをインストールします gcコンパイラ(v1.4)をインストールします（重</description>
     </item>
     
     <item>
@@ -202,14 +89,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 09:23:46 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide12/</guid>
-      <description>
-
-&lt;h2 id=&#34;作り方01&#34;&gt;作り方01&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html&#34;&gt;http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;このサイトを全部&lt;/strong&gt;&lt;del&gt;コピ&lt;/del&gt;&lt;strong&gt;参考にしました&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description>作り方01 http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html このサイトを全部コピ参考にしました</description>
     </item>
     
     <item>
@@ -218,19 +98,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 09:20:25 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide11/</guid>
-      <description>
-
-&lt;h2 id=&#34;gccgoを使う&#34;&gt;gccgoを使う&lt;/h2&gt;
-
-&lt;h3 id=&#34;gccgo&#34;&gt;gccgo&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Go言語のもう一つのコンパイラ&lt;/li&gt;
-&lt;li&gt;gccをバックエンドに使っている&lt;/li&gt;
-&lt;li&gt;gccのサポートするアーキテクチャが使える&lt;/li&gt;
-&lt;li&gt;gccのクロスコンパイルの仕組みが利用できる&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>gccgoを使う gccgo Go言語のもう一つのコンパイラ gccをバックエンドに使っている gccのサポートするアーキテクチャが使える gccのクロスコン</description>
     </item>
     
     <item>
@@ -239,20 +107,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 08:03:43 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide10/</guid>
-      <description>
-
-&lt;h2 id=&#34;goの対応os-cpuリスト&#34;&gt;Goの対応OS/CPUリスト&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://golang.org/doc/install/source#environment&#34;&gt;https://golang.org/doc/install/source#environment&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://tanstaafl.0pt.jp/slides/slides/img/goos_goarch_01.png&#34; alt=&#34;GOOS/GOARCH&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;...&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://tanstaafl.0pt.jp/slides/slides/img/goos_goarch_02.png&#34; alt=&#34;solaris/amd64&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;あっ、Sparcが無い&lt;/p&gt;
-</description>
+      <description>Goの対応OS/CPUリスト https://golang.org/doc/install/source#environment ... あっ、Sparcが無い</description>
     </item>
     
     <item>
@@ -261,10 +116,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 07:31:15 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide09/</guid>
-      <description>
-
-&lt;h2 id=&#34;あれ-go-いいんじゃね&#34;&gt;あれ、Go・・・いいんじゃね？&lt;/h2&gt;
-</description>
+      <description>あれ、Go・・・いいんじゃね？</description>
     </item>
     
     <item>
@@ -273,16 +125,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 07:29:50 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide08/</guid>
-      <description>
-
-&lt;h2 id=&#34;新たな開発言語の要件&#34;&gt;新たな開発言語の要件&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;ライブラリやランタイムの導入で悩まない&lt;/li&gt;
-&lt;li&gt;起動が早い&lt;/li&gt;
-&lt;li&gt;マイナーなアーキテクチャでも動作する&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <description>新たな開発言語の要件 ライブラリやランタイムの導入で悩まない 起動が早い マイナーなアーキテクチャでも動作する</description>
     </item>
     
     <item>
@@ -291,10 +134,7 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 07:27:31 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide07/</guid>
-      <description>
-
-&lt;h2 id=&#34;新しい開発言語が欲しい&#34;&gt;新しい開発言語が欲しい！&lt;/h2&gt;
-</description>
+      <description>新しい開発言語が欲しい！</description>
     </item>
     
     <item>
@@ -303,18 +143,52 @@ $ sudo rsync -a root@solaris_sparc_machine:/usr/sfw/include $SYSROOT/usr/sfw/
       <pubDate>Tue, 22 Mar 2016 07:25:51 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide06/</guid>
-      <description>
-
-&lt;h2 id=&#34;うちのサーバの現況&#34;&gt;うちのサーバの現況&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;大量のバッチプログラムが動いている&lt;/li&gt;
-&lt;li&gt;ネットワーク構成上他のサーバへは移植できない&lt;/li&gt;
-&lt;li&gt;使用できる言語はJava/Perlのみ&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;=&amp;gt; つらい&lt;/p&gt;
-</description>
+      <description>うちのサーバの現況 大量のバッチプログラムが動いている ネットワーク構成上他のサーバへは移植できない 使用できる言語はJava/Perlのみ =&amp;gt; つら</description>
+    </item>
+    
+    <item>
+      <title>slide05</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide05/</link>
+      <pubDate>Tue, 22 Mar 2016 07:24:47 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide05/</guid>
+      <description>A. 歴史的経緯です！</description>
+    </item>
+    
+    <item>
+      <title>slide04</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide04/</link>
+      <pubDate>Tue, 22 Mar 2016 07:24:22 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide04/</guid>
+      <description>Q. なぜSparc/Solarisなのか？</description>
+    </item>
+    
+    <item>
+      <title>slide03</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide03/</link>
+      <pubDate>Tue, 22 Mar 2016 07:21:23 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide03/</guid>
+      <description>GOARCH=sparc64 SPARC（スパーク、Scalable Processor Architecture）は、 サン・マイクロシステムズが開発・製造したRISCベースのマイクロプロ</description>
+    </item>
+    
+    <item>
+      <title>slide02</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide02/</link>
+      <pubDate>Tue, 22 Mar 2016 07:16:59 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide02/</guid>
+      <description>GOOS=solaris Solaris（ソラリス）はサン・マイクロシステムズ（サン）によって開発され、 UNIXとして認証を受けたオペレーティングシステム (OS) である。</description>
+    </item>
+    
+    <item>
+      <title>slide01</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide01/</link>
+      <pubDate>Tue, 22 Mar 2016 07:15:06 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide01/</guid>
+      <description>Sparc Solaris向けにGoのクロスコンパイル環境を作った話 Minori Tokuda(@snowcrush)</description>
     </item>
     
   </channel>

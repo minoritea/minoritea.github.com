@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent-go-products on Recent Presentation Slides</title>
-    <link>https://tanstaafl.0pt.jp/slides/recent-go-products/index.xml</link>
+    <link>https://tanstaafl.0pt.jp/slides/recent-go-products/</link>
     <description>Recent content in Recent-go-products on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 26 Jul 2017 16:57:54 +0900</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/slides/recent-go-products/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://tanstaafl.0pt.jp/slides/recent-go-products/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>slide17_2</title>
@@ -15,36 +17,7 @@
       <pubDate>Wed, 26 Jul 2017 16:57:54 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide17_2/</guid>
-      <description>
-
-&lt;h4 id=&#34;jsonで書くと&#34;&gt;JSONで書くと&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;bastion-dev&amp;quot;: {
-    &amp;quot;host&amp;quot;:&amp;quot;192.168.100.1&amp;quot;,
-    &amp;quot;port&amp;quot;:&amp;quot;22&amp;quot;,
-    &amp;quot;user&amp;quot;:&amp;quot;bastion-user&amp;quot;,
-    &amp;quot;cert_path&amp;quot;:&amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;,
-    &amp;quot;cascades&amp;quot;: {
-      &amp;quot;app-server&amp;quot;: {
-        &amp;quot;host&amp;quot;:&amp;quot;192.168.100.2&amp;quot;,
-        &amp;quot;port&amp;quot;:&amp;quot;22&amp;quot;,
-        &amp;quot;user&amp;quot;:&amp;quot;appuser&amp;quot;,
-        &amp;quot;cert_path&amp;quot;:&amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;,
-        &amp;quot;tunnels&amp;quot;: {
-          &amp;quot;postgres&amp;quot;: {
-            &amp;quot;local_port&amp;quot;:&amp;quot;15432&amp;quot;,
-            &amp;quot;remote_host&amp;quot;:&amp;quot;192.168.101.10&amp;quot;,
-            &amp;quot;remote_port&amp;quot;:&amp;quot;5432&amp;quot;
-          }
-        }
-      }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;※ 設定ファイルフォーマットはTOMLのみです&lt;/p&gt;
-</description>
+      <description>JSONで書くと { &amp;quot;bastion-dev&amp;quot;: { &amp;quot;host&amp;quot;:&amp;quot;192.168.100.1&amp;quot;, &amp;quot;port&amp;quot;:&amp;quot;22&amp;quot;, &amp;quot;user&amp;quot;:&amp;quot;bastion-user&amp;quot;, &amp;quot;cert_path&amp;quot;:&amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;, &amp;quot;cascades&amp;quot;: { &amp;quot;app-server&amp;quot;: { &amp;quot;host&amp;quot;:&amp;quot;192.168.100.2&amp;quot;, &amp;quot;port&amp;quot;:&amp;quot;22&amp;quot;, &amp;quot;user&amp;quot;:&amp;quot;appuser&amp;quot;, &amp;quot;cert_path&amp;quot;:&amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;, &amp;quot;tunnels&amp;quot;: { &amp;quot;postgres&amp;quot;: { &amp;quot;local_port&amp;quot;:&amp;quot;15432&amp;quot;, &amp;quot;remote_host&amp;quot;:&amp;quot;192.168.101.10&amp;quot;, &amp;quot;remote_port&amp;quot;:&amp;quot;5432&amp;quot; } } } } } ※ 設定ファイルフォーマットはTOMLのみです</description>
     </item>
     
     <item>
@@ -53,16 +26,7 @@
       <pubDate>Wed, 26 Jul 2017 16:39:47 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide18/</guid>
-      <description>
-
-&lt;h3 id=&#34;今後サポートしたい機能&#34;&gt;今後サポートしたい機能&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;パスワード接続（現在はpem形式の証明書による認証のみサポート）&lt;/li&gt;
-&lt;li&gt;踏み台での名前解決&lt;/li&gt;
-&lt;li&gt;踏み台上の証明書利用&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>今後サポートしたい機能 パスワード接続（現在はpem形式の証明書による認証のみサポート） 踏み台での名前解決 踏み台上の証明書利用</description>
     </item>
     
     <item>
@@ -71,13 +35,7 @@
       <pubDate>Wed, 26 Jul 2017 16:36:39 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide14_2/</guid>
-      <description>&lt;p&gt;例えば、以下のような多段プロキシを貼りたい場合&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;localhost =&amp;gt; bastion (192.168.100.1)
-              +=&amp;gt; app-server (192.168.100.2)
-                    +=&amp;gt; db server (192.168.101.10) port 5432
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>例えば、以下のような多段プロキシを貼りたい場合 localhost =&amp;gt; bastion (192.168.100.1) +=&amp;gt; app-server (192.168.100.2) +=&amp;gt; db server (192.168.101.10) port 5432</description>
     </item>
     
     <item>
@@ -86,16 +44,7 @@
       <pubDate>Wed, 26 Jul 2017 16:34:52 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide17/</guid>
-      <description>
-
-&lt;h4 id=&#34;設定ファイル&#34;&gt;設定ファイル&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[bastion-dev.cascades.app-server.tunnels.postgres]
-local_port = &amp;quot;15432&amp;quot;
-remote_host = &amp;quot;192.168.101.10&amp;quot;
-remote_port = &amp;quot;5432&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>設定ファイル [bastion-dev.cascades.app-server.tunnels.postgres] local_port = &amp;quot;15432&amp;quot; remote_host = &amp;quot;192.168.101.10&amp;quot; remote_port = &amp;quot;5432&amp;quot;</description>
     </item>
     
     <item>
@@ -104,19 +53,7 @@ remote_port = &amp;quot;5432&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:34:49 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide16/</guid>
-      <description>
-
-&lt;h4 id=&#34;設定ファイル&#34;&gt;設定ファイル&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[bastion-dev.cascades.app-server]
-host = &amp;quot;192.168.100.2&amp;quot;
-port = &amp;quot;22&amp;quot;
-user = &amp;quot;appuser&amp;quot;
-cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
-
-# 続く
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>設定ファイル [bastion-dev.cascades.app-server] host = &amp;quot;192.168.100.2&amp;quot; port = &amp;quot;22&amp;quot; user = &amp;quot;appuser&amp;quot; cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot; # 続く</description>
     </item>
     
     <item>
@@ -125,18 +62,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:28:42 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide15/</guid>
-      <description>
-
-&lt;h4 id=&#34;設定ファイル&#34;&gt;設定ファイル&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[bastion-dev]
-host = &amp;quot;192.168.100.1&amp;quot;
-port = &amp;quot;22&amp;quot;
-user = &amp;quot;bastion-user&amp;quot;
-cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
-# 続く
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>設定ファイル [bastion-dev] host = &amp;quot;192.168.100.1&amp;quot; port = &amp;quot;22&amp;quot; user = &amp;quot;bastion-user&amp;quot; cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot; # 続く</description>
     </item>
     
     <item>
@@ -145,14 +71,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:28:20 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide14/</guid>
-      <description>
-
-&lt;h4 id=&#34;設定ファイル&#34;&gt;設定ファイル&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;TOML形式&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>設定ファイル TOML形式</description>
     </item>
     
     <item>
@@ -161,15 +80,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:27:15 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide13/</guid>
-      <description>
-
-&lt;h4 id=&#34;tunnelerの使い方&#34;&gt;tunnelerの使い方&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ tunneler -c forwarding.toml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;あとは起動しっぱなしになる&lt;/p&gt;
-</description>
+      <description>tunnelerの使い方 $ tunneler -c forwarding.toml あとは起動しっぱなしになる</description>
     </item>
     
     <item>
@@ -178,11 +89,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:24:47 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide12/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;OpenSSHでトンネルを張るのは管理が面倒だった&lt;/li&gt;
-&lt;li&gt;TOMLなどのファイルフォーマットで管理したい&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>OpenSSHでトンネルを張るのは管理が面倒だった TOMLなどのファイルフォーマットで管理したい</description>
     </item>
     
     <item>
@@ -191,28 +98,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:14:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide11/</guid>
-      <description>
-
-&lt;h3 id=&#34;想定用途&#34;&gt;想定用途&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;踏み台サーバ経由でしか接続を許可していない環境でローカルから内部のサーバに接続するケース
-
-&lt;ul&gt;
-&lt;li&gt;ローカルから開発環境ネットワーク内のDBに直接アクセス&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;さらに対象ホストがネットワーク内の特定のサーバからの接続しか許可していない場合
-
-&lt;ul&gt;
-&lt;li&gt;AWSでのVPCなど&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;上記のような場合にSSHで多段プロキシ接続を行いたい
-
-&lt;ul&gt;
-&lt;li&gt;設定管理を楽に行いたい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>想定用途 踏み台サーバ経由でしか接続を許可していない環境でローカルから内部のサーバに接続するケース ローカルから開発環境ネットワーク内のDBに直</description>
     </item>
     
     <item>
@@ -221,11 +107,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:13:27 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide10/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;多段SSHプロキシサーバ&lt;/li&gt;
-&lt;li&gt;まだ未完成（基本機能は完成）&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>多段SSHプロキシサーバ まだ未完成（基本機能は完成）</description>
     </item>
     
     <item>
@@ -234,12 +116,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:13:11 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide09/</guid>
-      <description>
-
-&lt;h3 id=&#34;tunneler&#34;&gt;tunneler&lt;/h3&gt;
-
-&lt;h4 id=&#34;https-github-com-minoritea-tunneler&#34;&gt;&lt;a href=&#34;https://github.com/minoritea/tunneler&#34;&gt;https://github.com/minoritea/tunneler&lt;/a&gt;&lt;/h4&gt;
-</description>
+      <description> tunneler https://github.com/minoritea/tunneler </description>
     </item>
     
     <item>
@@ -248,13 +125,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:12:18 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide08/</guid>
-      <description>
-
-&lt;h3 id=&#34;つかいかた&#34;&gt;つかいかた&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cat foo.toml | toml2json | jq . # jqで整形して出力
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>つかいかた $ cat foo.toml | toml2json | jq . # jqで整形して出力</description>
     </item>
     
     <item>
@@ -263,18 +134,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:08:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide07/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ほぼ&lt;code&gt;github.com/pelletier/go-toml&lt;/code&gt;と&lt;code&gt;encoding/json&lt;/code&gt;の間で値を受け渡しているだけ&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;go-tomlのToMapメソッドでmapをそのまま出力できるので便利&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;depで採用されてるけど、これまでイマイチメリットが分からんかった&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;ドキュメントをバインドせずにそのまま扱うには便利&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>ほぼgithub.com/pelletier/go-tomlとencoding/jsonの間で値を受け渡しているだけ go-tomlのToMa</description>
     </item>
     
     <item>
@@ -283,23 +143,52 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:06:39 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide06/</guid>
-      <description>
-
-&lt;h4 id=&#34;実装&#34;&gt;実装&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func tomlToJson(data []byte) ([]byte, error) {
-	tree, err := toml.LoadBytes(data)
-	if err != nil {
-		return []byte{}, err
-	}
-	json, err := json.Marshal(tree.ToMap())
-	if err != nil {
-		return []byte{}, err
-	}
-	return json, nil
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>実装 func tomlToJson(data []byte) ([]byte, error) { tree, err := toml.LoadBytes(data) if err != nil { return []byte{}, err } json, err := json.Marshal(tree.ToMap()) if err != nil { return []byte{}, err } return json, nil }</description>
+    </item>
+    
+    <item>
+      <title>slide05</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide05/</link>
+      <pubDate>Wed, 26 Jul 2017 16:05:18 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide05/</guid>
+      <description>TOMLからJSONへのコンバータ node, python製の同名ツールはあったがgoはなかったので作ってみた</description>
+    </item>
+    
+    <item>
+      <title>slide04</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide04/</link>
+      <pubDate>Wed, 26 Jul 2017 15:55:47 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide04/</guid>
+      <description> toml2json https://github.com/minoritea/toml2json </description>
+    </item>
+    
+    <item>
+      <title>slide03</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide03/</link>
+      <pubDate>Wed, 26 Jul 2017 15:54:22 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide03/</guid>
+      <description>最近作ったGoのプロダクトを紹介します</description>
+    </item>
+    
+    <item>
+      <title>slide01</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide01/</link>
+      <pubDate>Wed, 26 Jul 2017 15:50:40 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide01/</guid>
+      <description>最近作ったGoのプロダクト</description>
+    </item>
+    
+    <item>
+      <title>slide02</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide02/</link>
+      <pubDate>Wed, 26 Jul 2017 15:50:40 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide02/</guid>
+      <description>自己紹介 @snowcrush お仕事はgoでAPI書いたりしてます イカはじめました</description>
     </item>
     
   </channel>

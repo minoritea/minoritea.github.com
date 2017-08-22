@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+  <head>
+    <meta charset="utf8">
+    <title>Recent Presentation Slides - Toml </title>
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/reveal.css">
+    
+    
+      
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/theme/simple.css">
+      
+    
+    <link rel="stylesheet" href="https://tanstaafl.0pt.jp/slides/css/zenburn.css">
+  </head>
+  <body>
+    <div class="reveal cube center">
+      <div class="slides">
+      
+        <section>
+          
+
+<h2 id="tomlの紹介">TOMLの紹介</h2>
+
+        </section>
+      
+        <section>
+          <ul>
+<li>前回のkawasaki.rbでTOMLを利用したツールの話をした</li>
+<li>TOMLフォーマット自体がまだあんまり知られていなかったので紹介したい</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="tomlとは">TOMLとは</h2>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="tom-s-obvious-minimal-language">Tom&rsquo;s Obvious, Minimal Language</h3>
+
+<p>By Tom Preston-Werner.</p>
+
+        </section>
+      
+        <section>
+          <p>設定ファイルを記述するための言語</p>
+
+        </section>
+      
+        <section>
+          <pre><code class="language-toml"># 例
+title = &quot;TOML example&quot;
+
+[database]
+server = &quot;192.168.1.1&quot;
+ports = [ 8001, 8001, 8002 ]
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h3 id="特徴">特徴</h3>
+
+<ul>
+<li>iniっぽい記法</li>
+<li>連想配列、配列、あといくつかのプリミティブ型
+
+<ul>
+<li>文字列、整数、小数、ブール型、日付！</li>
+</ul></li>
+<li>ようするにJSON</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h1 id="和訳">和訳</h1>
+
+        </section>
+      
+        <section>
+          <ul>
+<li><a href="https://github.com/toml-lang/toml/blob/master/versions/ja/toml-v0.4.0.md">https://github.com/toml-lang/toml/blob/master/versions/ja/toml-v0.4.0.md</a></li>
+<li>僕が訳しました</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <ul>
+<li>練習感覚でさくっと書いた</li>
+<li>gistを本家に共有したら、マージしてくれた</li>
+<li>和訳のマージ後、韓国語と中国語の翻訳も出てきたので、先鞭付けられたのかなと</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h1 id="利用例">利用例</h1>
+
+        </section>
+      
+        <section>
+          <p>dep
+- Go言語のパッケージ依存管理ツール
+- 依存関係の記述とロックに使われる
+  - Bundler における Gemfile, Gemfile lock
+- 将来公式に取り込まれる見込み</p>
+
+        </section>
+      
+        <section>
+          <p>Cargo
+- Rust言語のパッケージマネージャ
+- ビルドツールでもある
+- Bundlerみたいなもの</p>
+
+        </section>
+      
+        <section>
+          <p>GitLab
+- 同梱のCIツールで利用</p>
+
+        </section>
+      
+        <section>
+          <p>InfluxDB
+- 時系列データベス
+- ログ集計などで使われる</p>
+
+        </section>
+      
+        <section>
+          <p>hugo
+- Go言語製の静的サイトジェネレータ
+- 軽い
+- ブログとかが割とさくっと書ける
+- このスライドもHugoで作成されている</p>
+
+        </section>
+      
+        <section>
+          
+
+<h1 id="parser">Parser</h1>
+
+        </section>
+      
+        <section>
+          <ul>
+<li>多くの言語に既に存在する</li>
+<li>まだ無い言語を見つけたらコントリビュートのチャンスかも</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <p>Ruby</p>
+
+<ul>
+<li>tomlrb</li>
+<li>toml-rb</li>
+<li>toml =&gt; あんまりメンテされていない？</li>
+</ul>
+
+        </section>
+      
+        <section>
+          
+
+<h1 id="現況">現況</h1>
+
+        </section>
+      
+        <section>
+          <ul>
+<li>最新は0.4</li>
+<li>ほとんど仕様は固まりつつある
+
+<ul>
+<li>現行を導入しても将来互換性で問題になることは殆どないと思う</li>
+</ul></li>
+<li>おそらく次期バージョンが1.0になる</li>
+<li>メンテナ(@mojombo)が忙しいため仕様策定は停滞気味</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <p>今後も、わりと広く使われると思います</p>
+
+        </section>
+      
+      </div>
+    </div>
+    <script src="https://tanstaafl.0pt.jp/slides/js/reveal.js"></script>
+    <script> Reveal.initialize(); </script>
+  </body>
+</html>

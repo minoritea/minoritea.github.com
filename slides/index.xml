@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent Presentation Slides</title>
-    <link>https://tanstaafl.0pt.jp/slides/index.xml</link>
+    <link>https://tanstaafl.0pt.jp/slides/</link>
     <description>Recent content on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 26 Jul 2017 16:57:54 +0900</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/slides/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://tanstaafl.0pt.jp/slides/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>slide17_2</title>
@@ -15,36 +17,7 @@
       <pubDate>Wed, 26 Jul 2017 16:57:54 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide17_2/</guid>
-      <description>
-
-&lt;h4 id=&#34;jsonで書くと&#34;&gt;JSONで書くと&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-  &amp;quot;bastion-dev&amp;quot;: {
-    &amp;quot;host&amp;quot;:&amp;quot;192.168.100.1&amp;quot;,
-    &amp;quot;port&amp;quot;:&amp;quot;22&amp;quot;,
-    &amp;quot;user&amp;quot;:&amp;quot;bastion-user&amp;quot;,
-    &amp;quot;cert_path&amp;quot;:&amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;,
-    &amp;quot;cascades&amp;quot;: {
-      &amp;quot;app-server&amp;quot;: {
-        &amp;quot;host&amp;quot;:&amp;quot;192.168.100.2&amp;quot;,
-        &amp;quot;port&amp;quot;:&amp;quot;22&amp;quot;,
-        &amp;quot;user&amp;quot;:&amp;quot;appuser&amp;quot;,
-        &amp;quot;cert_path&amp;quot;:&amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;,
-        &amp;quot;tunnels&amp;quot;: {
-          &amp;quot;postgres&amp;quot;: {
-            &amp;quot;local_port&amp;quot;:&amp;quot;15432&amp;quot;,
-            &amp;quot;remote_host&amp;quot;:&amp;quot;192.168.101.10&amp;quot;,
-            &amp;quot;remote_port&amp;quot;:&amp;quot;5432&amp;quot;
-          }
-        }
-      }
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;※ 設定ファイルフォーマットはTOMLのみです&lt;/p&gt;
-</description>
+      <description>JSONで書くと { &amp;quot;bastion-dev&amp;quot;: { &amp;quot;host&amp;quot;:&amp;quot;192.168.100.1&amp;quot;, &amp;quot;port&amp;quot;:&amp;quot;22&amp;quot;, &amp;quot;user&amp;quot;:&amp;quot;bastion-user&amp;quot;, &amp;quot;cert_path&amp;quot;:&amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;, &amp;quot;cascades&amp;quot;: { &amp;quot;app-server&amp;quot;: { &amp;quot;host&amp;quot;:&amp;quot;192.168.100.2&amp;quot;, &amp;quot;port&amp;quot;:&amp;quot;22&amp;quot;, &amp;quot;user&amp;quot;:&amp;quot;appuser&amp;quot;, &amp;quot;cert_path&amp;quot;:&amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;, &amp;quot;tunnels&amp;quot;: { &amp;quot;postgres&amp;quot;: { &amp;quot;local_port&amp;quot;:&amp;quot;15432&amp;quot;, &amp;quot;remote_host&amp;quot;:&amp;quot;192.168.101.10&amp;quot;, &amp;quot;remote_port&amp;quot;:&amp;quot;5432&amp;quot; } } } } } ※ 設定ファイルフォーマットはTOMLのみです</description>
     </item>
     
     <item>
@@ -53,16 +26,7 @@
       <pubDate>Wed, 26 Jul 2017 16:39:47 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide18/</guid>
-      <description>
-
-&lt;h3 id=&#34;今後サポートしたい機能&#34;&gt;今後サポートしたい機能&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;パスワード接続（現在はpem形式の証明書による認証のみサポート）&lt;/li&gt;
-&lt;li&gt;踏み台での名前解決&lt;/li&gt;
-&lt;li&gt;踏み台上の証明書利用&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>今後サポートしたい機能 パスワード接続（現在はpem形式の証明書による認証のみサポート） 踏み台での名前解決 踏み台上の証明書利用</description>
     </item>
     
     <item>
@@ -71,13 +35,7 @@
       <pubDate>Wed, 26 Jul 2017 16:36:39 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide14_2/</guid>
-      <description>&lt;p&gt;例えば、以下のような多段プロキシを貼りたい場合&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;localhost =&amp;gt; bastion (192.168.100.1)
-              +=&amp;gt; app-server (192.168.100.2)
-                    +=&amp;gt; db server (192.168.101.10) port 5432
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>例えば、以下のような多段プロキシを貼りたい場合 localhost =&amp;gt; bastion (192.168.100.1) +=&amp;gt; app-server (192.168.100.2) +=&amp;gt; db server (192.168.101.10) port 5432</description>
     </item>
     
     <item>
@@ -86,16 +44,7 @@
       <pubDate>Wed, 26 Jul 2017 16:34:52 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide17/</guid>
-      <description>
-
-&lt;h4 id=&#34;設定ファイル&#34;&gt;設定ファイル&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[bastion-dev.cascades.app-server.tunnels.postgres]
-local_port = &amp;quot;15432&amp;quot;
-remote_host = &amp;quot;192.168.101.10&amp;quot;
-remote_port = &amp;quot;5432&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>設定ファイル [bastion-dev.cascades.app-server.tunnels.postgres] local_port = &amp;quot;15432&amp;quot; remote_host = &amp;quot;192.168.101.10&amp;quot; remote_port = &amp;quot;5432&amp;quot;</description>
     </item>
     
     <item>
@@ -104,19 +53,7 @@ remote_port = &amp;quot;5432&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:34:49 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide16/</guid>
-      <description>
-
-&lt;h4 id=&#34;設定ファイル&#34;&gt;設定ファイル&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[bastion-dev.cascades.app-server]
-host = &amp;quot;192.168.100.2&amp;quot;
-port = &amp;quot;22&amp;quot;
-user = &amp;quot;appuser&amp;quot;
-cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
-
-# 続く
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>設定ファイル [bastion-dev.cascades.app-server] host = &amp;quot;192.168.100.2&amp;quot; port = &amp;quot;22&amp;quot; user = &amp;quot;appuser&amp;quot; cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot; # 続く</description>
     </item>
     
     <item>
@@ -125,18 +62,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:28:42 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide15/</guid>
-      <description>
-
-&lt;h4 id=&#34;設定ファイル&#34;&gt;設定ファイル&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-toml&#34;&gt;[bastion-dev]
-host = &amp;quot;192.168.100.1&amp;quot;
-port = &amp;quot;22&amp;quot;
-user = &amp;quot;bastion-user&amp;quot;
-cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
-# 続く
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>設定ファイル [bastion-dev] host = &amp;quot;192.168.100.1&amp;quot; port = &amp;quot;22&amp;quot; user = &amp;quot;bastion-user&amp;quot; cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot; # 続く</description>
     </item>
     
     <item>
@@ -145,14 +71,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:28:20 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide14/</guid>
-      <description>
-
-&lt;h4 id=&#34;設定ファイル&#34;&gt;設定ファイル&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;TOML形式&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>設定ファイル TOML形式</description>
     </item>
     
     <item>
@@ -161,15 +80,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:27:15 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide13/</guid>
-      <description>
-
-&lt;h4 id=&#34;tunnelerの使い方&#34;&gt;tunnelerの使い方&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ tunneler -c forwarding.toml
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;あとは起動しっぱなしになる&lt;/p&gt;
-</description>
+      <description>tunnelerの使い方 $ tunneler -c forwarding.toml あとは起動しっぱなしになる</description>
     </item>
     
     <item>
@@ -178,11 +89,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:24:47 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide12/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;OpenSSHでトンネルを張るのは管理が面倒だった&lt;/li&gt;
-&lt;li&gt;TOMLなどのファイルフォーマットで管理したい&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>OpenSSHでトンネルを張るのは管理が面倒だった TOMLなどのファイルフォーマットで管理したい</description>
     </item>
     
     <item>
@@ -191,28 +98,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:14:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide11/</guid>
-      <description>
-
-&lt;h3 id=&#34;想定用途&#34;&gt;想定用途&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;踏み台サーバ経由でしか接続を許可していない環境でローカルから内部のサーバに接続するケース
-
-&lt;ul&gt;
-&lt;li&gt;ローカルから開発環境ネットワーク内のDBに直接アクセス&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;さらに対象ホストがネットワーク内の特定のサーバからの接続しか許可していない場合
-
-&lt;ul&gt;
-&lt;li&gt;AWSでのVPCなど&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;上記のような場合にSSHで多段プロキシ接続を行いたい
-
-&lt;ul&gt;
-&lt;li&gt;設定管理を楽に行いたい&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>想定用途 踏み台サーバ経由でしか接続を許可していない環境でローカルから内部のサーバに接続するケース ローカルから開発環境ネットワーク内のDBに直</description>
     </item>
     
     <item>
@@ -221,11 +107,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:13:27 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide10/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;多段SSHプロキシサーバ&lt;/li&gt;
-&lt;li&gt;まだ未完成（基本機能は完成）&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>多段SSHプロキシサーバ まだ未完成（基本機能は完成）</description>
     </item>
     
     <item>
@@ -234,12 +116,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:13:11 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide09/</guid>
-      <description>
-
-&lt;h3 id=&#34;tunneler&#34;&gt;tunneler&lt;/h3&gt;
-
-&lt;h4 id=&#34;https-github-com-minoritea-tunneler&#34;&gt;&lt;a href=&#34;https://github.com/minoritea/tunneler&#34;&gt;https://github.com/minoritea/tunneler&lt;/a&gt;&lt;/h4&gt;
-</description>
+      <description> tunneler https://github.com/minoritea/tunneler </description>
     </item>
     
     <item>
@@ -248,13 +125,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:12:18 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide08/</guid>
-      <description>
-
-&lt;h3 id=&#34;つかいかた&#34;&gt;つかいかた&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ cat foo.toml | toml2json | jq . # jqで整形して出力
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>つかいかた $ cat foo.toml | toml2json | jq . # jqで整形して出力</description>
     </item>
     
     <item>
@@ -263,18 +134,7 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:08:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide07/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ほぼ&lt;code&gt;github.com/pelletier/go-toml&lt;/code&gt;と&lt;code&gt;encoding/json&lt;/code&gt;の間で値を受け渡しているだけ&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;go-tomlのToMapメソッドでmapをそのまま出力できるので便利&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;depで採用されてるけど、これまでイマイチメリットが分からんかった&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;ドキュメントをバインドせずにそのまま扱うには便利&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>ほぼgithub.com/pelletier/go-tomlとencoding/jsonの間で値を受け渡しているだけ go-tomlのToMa</description>
     </item>
     
     <item>
@@ -283,23 +143,709 @@ cert_path = &amp;quot;/Users/minori.tokuda/.ssh/bastion-dev.pem&amp;quot;
       <pubDate>Wed, 26 Jul 2017 16:06:39 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide06/</guid>
-      <description>
-
-&lt;h4 id=&#34;実装&#34;&gt;実装&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func tomlToJson(data []byte) ([]byte, error) {
-	tree, err := toml.LoadBytes(data)
-	if err != nil {
-		return []byte{}, err
-	}
-	json, err := json.Marshal(tree.ToMap())
-	if err != nil {
-		return []byte{}, err
-	}
-	return json, nil
-}
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>実装 func tomlToJson(data []byte) ([]byte, error) { tree, err := toml.LoadBytes(data) if err != nil { return []byte{}, err } json, err := json.Marshal(tree.ToMap()) if err != nil { return []byte{}, err } return json, nil }</description>
+    </item>
+    
+    <item>
+      <title>slide05</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide05/</link>
+      <pubDate>Wed, 26 Jul 2017 16:05:18 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide05/</guid>
+      <description>TOMLからJSONへのコンバータ node, python製の同名ツールはあったがgoはなかったので作ってみた</description>
+    </item>
+    
+    <item>
+      <title>slide04</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide04/</link>
+      <pubDate>Wed, 26 Jul 2017 15:55:47 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide04/</guid>
+      <description> toml2json https://github.com/minoritea/toml2json </description>
+    </item>
+    
+    <item>
+      <title>slide03</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide03/</link>
+      <pubDate>Wed, 26 Jul 2017 15:54:22 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide03/</guid>
+      <description>最近作ったGoのプロダクトを紹介します</description>
+    </item>
+    
+    <item>
+      <title>slide01</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide01/</link>
+      <pubDate>Wed, 26 Jul 2017 15:50:40 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide01/</guid>
+      <description>最近作ったGoのプロダクト</description>
+    </item>
+    
+    <item>
+      <title>slide02</title>
+      <link>https://tanstaafl.0pt.jp/slides/recent-go-products/slide02/</link>
+      <pubDate>Wed, 26 Jul 2017 15:50:40 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/recent-go-products/slide02/</guid>
+      <description>自己紹介 @snowcrush お仕事はgoでAPI書いたりしてます イカはじめました</description>
+    </item>
+    
+    <item>
+      <title>slide003</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide003/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide003/</guid>
+      <description>Section Listのレイアウトは実は自由に変えられる</description>
+    </item>
+    
+    <item>
+      <title>slide004</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide004/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide004/</guid>
+      <description>layouts/_default/list.html デフォルトのテンプレートでは見出しを表示するが、各ページの内容を全部表示するように変更 Hugo のヘルパーメソッドでsection内の各ページの内</description>
+    </item>
+    
+    <item>
+      <title>slide005</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide005/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide005/</guid>
+      <description>reveal.js HTMLとjsでスライドを作るためのツール https://github.com/hakimel/reveal.js/</description>
+    </item>
+    
+    <item>
+      <title>slide006</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide006/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide006/</guid>
+      <description>reveal.jsのHTML sectionタグで囲まれた部分が一枚のスライドに相当する &amp;lt;div class=&amp;quot;reveal&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;slides&amp;quot;&amp;gt; &amp;lt;section&amp;gt; ここにスライド一枚分の内容をHTMLで入れる</description>
+    </item>
+    
+    <item>
+      <title>slide007</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide007/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide007/</guid>
+      <description>つまり、 section以下のHTMLページ1ページが、スライド一枚に相当する 各ページをセクションリスト・ページで結合することで一ページのHT</description>
+    </item>
+    
+    <item>
+      <title>slide007</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide008/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide008/</guid>
+      <description>sample https://github.com/minoritea/hugo-revealjs-generator</description>
+    </item>
+    
+    <item>
+      <title>slide000</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide000/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide000/</guid>
+      <description>hugo でスライド作成 @snowcrush</description>
+    </item>
+    
+    <item>
+      <title>slide001</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide001/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide001/</guid>
+      <description>hugo のSectionリスト表示を使う</description>
+    </item>
+    
+    <item>
+      <title>slide002</title>
+      <link>https://tanstaafl.0pt.jp/slides/hugo/slide002/</link>
+      <pubDate>Wed, 25 Jan 2017 20:50:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/hugo/slide002/</guid>
+      <description>Section List # Hugoのソースファイルのディレクトリ構造 HUGO_ROOT/content/section/.../content1.md HUGO_ROOT/content/section/.../content2.md =&amp;gt; このとき、https://yourdomain/section/ を表示するとsecti</description>
+    </item>
+    
+    <item>
+      <title>slide12</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide12/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide12/</guid>
+      <description>パッケージの更新 $ govendor update {package} =&amp;gt; やっぱり$GOPATHからコピーするだけ</description>
+    </item>
+    
+    <item>
+      <title>slide13</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide13/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide13/</guid>
+      <description>パッケージの取得 $ govendor fetch {package} 直接vendorにダウンロードする</description>
+    </item>
+    
+    <item>
+      <title>slide14</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide14/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide14/</guid>
+      <description>パッケージの再現 $ govendor sync 定義ファイルから直接vendorにパッケージを展開する</description>
+    </item>
+    
+    <item>
+      <title>slide15</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide15/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide15/</guid>
+      <description>2. ステータス statusでパッケージを分類できる</description>
+    </item>
+    
+    <item>
+      <title>slide16</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide16/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide16/</guid>
+      <description>ステータスの種類 +local (l) プロジェクト内にあるパッケージ +external (e) importされている、かつGOPATHにあるがvendoringされていないパッケー</description>
+    </item>
+    
+    <item>
+      <title>slide17</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide17/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide17/</guid>
+      <description>ステータスは便利 $ cd $GOPATH/src/github.com/fluent/fluent-logger-golang $ govendor list e github.com/philhofer/fwd e github.com/tinylib/msgp/msgp l github.com/fluent/fluent-logger-golang/fluent m github.com/bmizerany/assert</description>
+    </item>
+    
+    <item>
+      <title>slide18</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide18/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide18/</guid>
+      <description>$ govendor add +e # vendoringされていないパッケージをvendoring $ govendor fetch +m # GOPATHに存在しないパッケージを取得 $ govendor remove +u # 使われてい</description>
+    </item>
+    
+    <item>
+      <title>slide19</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide19/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide19/</guid>
+      <description>まとめ 環境 (GOPATH) を汚さない パッケージをステータスで分類し、まとめて管理できる</description>
+    </item>
+    
+    <item>
+      <title>slide20</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide20/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide20/</guid>
+      <description>govendorいいぞ</description>
+    </item>
+    
+    <item>
+      <title>slide01</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide01/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide01/</guid>
+      <description>govendorでvendoringしよう</description>
+    </item>
+    
+    <item>
+      <title>slide02</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide02/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide02/</guid>
+      <description>vendoringとは プロジェクト毎にimportするパッケージを保持する機能</description>
+    </item>
+    
+    <item>
+      <title>slide03</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide03/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide03/</guid>
+      <description>vendoringが必要な理由 Goのパッケージは$GOPATH単位で共有されるので以下のケースで問題が出る 同じ$GOPATHのプロジェクト同</description>
+    </item>
+    
+    <item>
+      <title>slide04</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide04/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide04/</guid>
+      <description>Go1.5以降vendoringが導入 プロジェクト内のvendorディレクトリ以下のパッケージを優先してimportするように</description>
+    </item>
+    
+    <item>
+      <title>slide05</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide05/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide05/</guid>
+      <description>vendoringのためのツール Godep (⭐4087@github) Glide (⭐3321@github) govendor (⭐1310@github)</description>
+    </item>
+    
+    <item>
+      <title>slide06</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide06/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide06/</guid>
+      <description>Godep 古い vendoring以前のツールのため、vendoringのプラクティスと噛み合っていない 最近更新されていない パッケージをアップデートす</description>
+    </item>
+    
+    <item>
+      <title>slide07</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide07/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide07/</guid>
+      <description>Glide パッケージをアップデートすると$GOPATHが汚染される dotfilesをコピーする</description>
+    </item>
+    
+    <item>
+      <title>slide08</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide08/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide08/</guid>
+      <description>govendor 上記2つと比べてややマイナー</description>
+    </item>
+    
+    <item>
+      <title>slide09</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide09/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide09/</guid>
+      <description>なぜgovendorを選んだか</description>
+    </item>
+    
+    <item>
+      <title>slide10</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide10/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide10/</guid>
+      <description>1. 環境を汚染しない</description>
+    </item>
+    
+    <item>
+      <title>slide11</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide11/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide11/</guid>
+      <description>パッケージの追加 $ govendor add {package} =&amp;gt; $GOPATHからコピーするだけ</description>
+    </item>
+    
+    <item>
+      <title>slide20</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide20/</link>
+      <pubDate>Tue, 22 Mar 2016 10:51:14 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide20/</guid>
+      <description>終わりに マイナーなアーキテクチャでもgccgoなら動かせる（？） 既存のツールをgo getでインストールする場合は依存関係の解決が大変 公式ライ</description>
+    </item>
+    
+    <item>
+      <title>slide19</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide19/</link>
+      <pubDate>Tue, 22 Mar 2016 10:02:55 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide19/</guid>
+      <description>動作確認したツール類 serf gnatsd fluentd-forwarder 動かなかったもの consul peco go1.5以降に依存しているものはうごかないみたい 特定のアーキテクチャがハードコーディングされ</description>
+    </item>
+    
+    <item>
+      <title>slide18</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide18/</link>
+      <pubDate>Tue, 22 Mar 2016 10:02:54 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide18/</guid>
+      <description>コンパイル $ go build --compiler gccgo \ --gccgoflags &amp;quot;-v -static-libgo -static-libgcc -Wl,-dy -lnsl -lsocket -lrt&amp;quot; 重要 参照元のオプションに-static-libgccを追加しないとSolaris環境では動作しませんで</description>
+    </item>
+    
+    <item>
+      <title>slide17</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide17/</link>
+      <pubDate>Tue, 22 Mar 2016 09:56:33 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide17/</guid>
+      <description>作成したクロスコンパイラにパスを通す $ cd $PREFIX/bin $ ln -s /sparc-sun-solaris2.10-gccgo gccgo $ export PATH=$PREFIX/bin:$PATH</description>
+    </item>
+    
+    <item>
+      <title>slide16</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide16/</link>
+      <pubDate>Tue, 22 Mar 2016 09:56:31 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide16/</guid>
+      <description>作り方05 対象アーキテクチャ向けにbinutilsとgccをビルドする $ tar -zxf binutils-2.25.tar.gz $ mkdir build-binutils $ cd build-binutils $ sudo ../binutils-2.25/configure -target=$TARGET --prefix=$PREFIX -with-sysroot=$SYSROOT -v $ sudo make -j4 $ sudo make install $ untar gcc-5.1.0.tar.gz $ mkdir gcc-build $ cd gcc-build $</description>
+    </item>
+    
+    <item>
+      <title>slide15</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide15/</link>
+      <pubDate>Tue, 22 Mar 2016 09:23:52 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide15/</guid>
+      <description>作り方04 SYSROOTに対象サーバのライブラリとヘッダをごっそりコピーする（rsync） $ sudo cd $SYSROOT $ sudo rsync -a root@solaris_sparc_machine:/lib/ $SYSROOT/lib/ $ sudo rsync -a root@solaris_sparc_machine:/usr/lib $SYSROOT/usr/ $ sudo rsync -a root@solaris_sparc_machine:/usr/include $SYSROOT/usr/ $ sudo rsync</description>
+    </item>
+    
+    <item>
+      <title>slide14</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide14/</link>
+      <pubDate>Tue, 22 Mar 2016 09:23:50 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide14/</guid>
+      <description>作り方03 3つ環境変数を決めます PREFIX=${クロスコンパイラがインストールされるルートパス} SYSROOT=${コンパイルするときにリ</description>
+    </item>
+    
+    <item>
+      <title>slide13</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide13/</link>
+      <pubDate>Tue, 22 Mar 2016 09:23:48 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide13/</guid>
+      <description>作り方02 クロスコンパイル用の環境を用意します（Fedora release 20) gccをインストールします gcコンパイラ(v1.4)をインストールします（重</description>
+    </item>
+    
+    <item>
+      <title>slide12</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide12/</link>
+      <pubDate>Tue, 22 Mar 2016 09:23:46 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide12/</guid>
+      <description>作り方01 http://ggolang.blogspot.jp/2015/05/gccgo-gcc510-cross-compile-for-sparc.html このサイトを全部コピ参考にしました</description>
+    </item>
+    
+    <item>
+      <title>slide11</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide11/</link>
+      <pubDate>Tue, 22 Mar 2016 09:20:25 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide11/</guid>
+      <description>gccgoを使う gccgo Go言語のもう一つのコンパイラ gccをバックエンドに使っている gccのサポートするアーキテクチャが使える gccのクロスコン</description>
+    </item>
+    
+    <item>
+      <title>slide10</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide10/</link>
+      <pubDate>Tue, 22 Mar 2016 08:03:43 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide10/</guid>
+      <description>Goの対応OS/CPUリスト https://golang.org/doc/install/source#environment ... あっ、Sparcが無い</description>
+    </item>
+    
+    <item>
+      <title>slide09</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide09/</link>
+      <pubDate>Tue, 22 Mar 2016 07:31:15 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide09/</guid>
+      <description>あれ、Go・・・いいんじゃね？</description>
+    </item>
+    
+    <item>
+      <title>slide08</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide08/</link>
+      <pubDate>Tue, 22 Mar 2016 07:29:50 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide08/</guid>
+      <description>新たな開発言語の要件 ライブラリやランタイムの導入で悩まない 起動が早い マイナーなアーキテクチャでも動作する</description>
+    </item>
+    
+    <item>
+      <title>slide07</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide07/</link>
+      <pubDate>Tue, 22 Mar 2016 07:27:31 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide07/</guid>
+      <description>新しい開発言語が欲しい！</description>
+    </item>
+    
+    <item>
+      <title>slide06</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide06/</link>
+      <pubDate>Tue, 22 Mar 2016 07:25:51 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide06/</guid>
+      <description>うちのサーバの現況 大量のバッチプログラムが動いている ネットワーク構成上他のサーバへは移植できない 使用できる言語はJava/Perlのみ =&amp;gt; つら</description>
+    </item>
+    
+    <item>
+      <title>slide05</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide05/</link>
+      <pubDate>Tue, 22 Mar 2016 07:24:47 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide05/</guid>
+      <description>A. 歴史的経緯です！</description>
+    </item>
+    
+    <item>
+      <title>slide04</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide04/</link>
+      <pubDate>Tue, 22 Mar 2016 07:24:22 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide04/</guid>
+      <description>Q. なぜSparc/Solarisなのか？</description>
+    </item>
+    
+    <item>
+      <title>slide03</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide03/</link>
+      <pubDate>Tue, 22 Mar 2016 07:21:23 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide03/</guid>
+      <description>GOARCH=sparc64 SPARC（スパーク、Scalable Processor Architecture）は、 サン・マイクロシステムズが開発・製造したRISCベースのマイクロプロ</description>
+    </item>
+    
+    <item>
+      <title>slide02</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide02/</link>
+      <pubDate>Tue, 22 Mar 2016 07:16:59 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide02/</guid>
+      <description>GOOS=solaris Solaris（ソラリス）はサン・マイクロシステムズ（サン）によって開発され、 UNIXとして認証を受けたオペレーティングシステム (OS) である。</description>
+    </item>
+    
+    <item>
+      <title>slide01</title>
+      <link>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide01/</link>
+      <pubDate>Tue, 22 Mar 2016 07:15:06 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/solaris-gccgo/slide01/</guid>
+      <description>Sparc Solaris向けにGoのクロスコンパイル環境を作った話 Minori Tokuda(@snowcrush)</description>
+    </item>
+    
+    <item>
+      <title>slide2</title>
+      <link>https://tanstaafl.0pt.jp/slides/test/slide2/</link>
+      <pubDate>Sat, 19 Mar 2016 13:30:11 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/test/slide2/</guid>
+      <description> 2 </description>
+    </item>
+    
+    <item>
+      <title>slide1</title>
+      <link>https://tanstaafl.0pt.jp/slides/test/slide1/</link>
+      <pubDate>Sat, 19 Mar 2016 13:30:07 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/test/slide1/</guid>
+      <description> Hello World </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide000/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide000/</guid>
+      <description>TOMLの紹介</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide001/</guid>
+      <description>前回のkawasaki.rbでTOMLを利用したツールの話をした TOMLフォーマット自体がまだあんまり知られていなかったので紹介したい</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide002/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide002/</guid>
+      <description>TOMLとは</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide003/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide003/</guid>
+      <description>Tom&amp;rsquo;s Obvious, Minimal Language By Tom Preston-Werner.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide004/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide004/</guid>
+      <description>設定ファイルを記述するための言語</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide005/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide005/</guid>
+      <description># 例 title = &amp;quot;TOML example&amp;quot; [database] server = &amp;quot;192.168.1.1&amp;quot; ports = [ 8001, 8001, 8002 ]</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide006/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide006/</guid>
+      <description>特徴 iniっぽい記法 連想配列、配列、あといくつかのプリミティブ型 文字列、整数、小数、ブール型、日付！ ようするにJSON</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide007/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide007/</guid>
+      <description>和訳</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide008/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide008/</guid>
+      <description>https://github.com/toml-lang/toml/blob/master/versions/ja/toml-v0.4.0.md 僕が訳しました</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide009/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide009/</guid>
+      <description>練習感覚でさくっと書いた gistを本家に共有したら、マージしてくれた 和訳のマージ後、韓国語と中国語の翻訳も出てきたので、先鞭付けられたのかな</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide010/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide010/</guid>
+      <description>利用例</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide011/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide011/</guid>
+      <description>dep - Go言語のパッケージ依存管理ツール - 依存関係の記述とロックに使われる - Bundler における Gemfile, Gemfile lock - 将来公式に取り込まれる見込み</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide012/</guid>
+      <description>Cargo - Rust言語のパッケージマネージャ - ビルドツールでもある - Bundlerみたいなもの</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide013/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide013/</guid>
+      <description>GitLab - 同梱のCIツールで利用</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide014/</guid>
+      <description>InfluxDB - 時系列データベス - ログ集計などで使われる</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide015/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide015/</guid>
+      <description>hugo - Go言語製の静的サイトジェネレータ - 軽い - ブログとかが割とさくっと書ける - このスライドもHugoで作成されている</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide016/</guid>
+      <description> Parser </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide017/</guid>
+      <description>多くの言語に既に存在する まだ無い言語を見つけたらコントリビュートのチャンスかも</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide018/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide018/</guid>
+      <description>Ruby tomlrb toml-rb toml =&amp;gt; あんまりメンテされていない？</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide019/</guid>
+      <description>現況</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide020/</guid>
+      <description>最新は0.4 ほとんど仕様は固まりつつある 現行を導入しても将来互換性で問題になることは殆どないと思う おそらく次期バージョンが1.0になる メンテ</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide021/</guid>
+      <description>今後も、わりと広く使われると思います</description>
     </item>
     
   </channel>

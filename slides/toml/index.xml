@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tomls on Recent Presentation Slides</title>
+    <link>https://tanstaafl.0pt.jp/slides/toml/</link>
+    <description>Recent content in Tomls on Recent Presentation Slides</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    
+	<atom:link href="https://tanstaafl.0pt.jp/slides/toml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide000/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide000/</guid>
+      <description>TOMLの紹介</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide001/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide001/</guid>
+      <description>前回のkawasaki.rbでTOMLを利用したツールの話をした TOMLフォーマット自体がまだあんまり知られていなかったので紹介したい</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide002/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide002/</guid>
+      <description>TOMLとは</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide003/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide003/</guid>
+      <description>Tom&amp;rsquo;s Obvious, Minimal Language By Tom Preston-Werner.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide004/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide004/</guid>
+      <description>設定ファイルを記述するための言語</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide005/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide005/</guid>
+      <description># 例 title = &amp;quot;TOML example&amp;quot; [database] server = &amp;quot;192.168.1.1&amp;quot; ports = [ 8001, 8001, 8002 ]</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide006/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide006/</guid>
+      <description>特徴 iniっぽい記法 連想配列、配列、あといくつかのプリミティブ型 文字列、整数、小数、ブール型、日付！ ようするにJSON</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide007/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide007/</guid>
+      <description>和訳</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide008/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide008/</guid>
+      <description>https://github.com/toml-lang/toml/blob/master/versions/ja/toml-v0.4.0.md 僕が訳しました</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide009/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide009/</guid>
+      <description>練習感覚でさくっと書いた gistを本家に共有したら、マージしてくれた 和訳のマージ後、韓国語と中国語の翻訳も出てきたので、先鞭付けられたのかな</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide010/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide010/</guid>
+      <description>利用例</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide011/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide011/</guid>
+      <description>dep - Go言語のパッケージ依存管理ツール - 依存関係の記述とロックに使われる - Bundler における Gemfile, Gemfile lock - 将来公式に取り込まれる見込み</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide012/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide012/</guid>
+      <description>Cargo - Rust言語のパッケージマネージャ - ビルドツールでもある - Bundlerみたいなもの</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide013/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide013/</guid>
+      <description>GitLab - 同梱のCIツールで利用</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide014/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide014/</guid>
+      <description>InfluxDB - 時系列データベス - ログ集計などで使われる</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide015/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide015/</guid>
+      <description>hugo - Go言語製の静的サイトジェネレータ - 軽い - ブログとかが割とさくっと書ける - このスライドもHugoで作成されている</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide016/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide016/</guid>
+      <description> Parser </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide017/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide017/</guid>
+      <description>多くの言語に既に存在する まだ無い言語を見つけたらコントリビュートのチャンスかも</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide018/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide018/</guid>
+      <description>Ruby tomlrb toml-rb toml =&amp;gt; あんまりメンテされていない？</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide019/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide019/</guid>
+      <description>現況</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide020/</guid>
+      <description>最新は0.4 ほとんど仕様は固まりつつある 現行を導入しても将来互換性で問題になることは殆どないと思う おそらく次期バージョンが1.0になる メンテ</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide021/</guid>
+      <description>今後も、わりと広く使われると思います</description>
+    </item>
+    
+  </channel>
+</rss>

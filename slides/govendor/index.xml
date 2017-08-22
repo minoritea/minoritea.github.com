@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Govendors on Recent Presentation Slides</title>
-    <link>https://tanstaafl.0pt.jp/slides/govendor/index.xml</link>
+    <link>https://tanstaafl.0pt.jp/slides/govendor/</link>
     <description>Recent content in Govendors on Recent Presentation Slides</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Thu, 08 Dec 2016 19:49:09 +0900</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/slides/govendor/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://tanstaafl.0pt.jp/slides/govendor/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>slide12</title>
@@ -15,15 +17,7 @@
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide12/</guid>
-      <description>
-
-&lt;h3 id=&#34;パッケージの更新&#34;&gt;パッケージの更新&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ govendor update {package}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;=&amp;gt; やっぱり$GOPATHからコピーするだけ&lt;/p&gt;
-</description>
+      <description>パッケージの更新 $ govendor update {package} =&amp;gt; やっぱり$GOPATHからコピーするだけ</description>
     </item>
     
     <item>
@@ -32,15 +26,7 @@
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide13/</guid>
-      <description>
-
-&lt;h3 id=&#34;パッケージの取得&#34;&gt;パッケージの取得&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ govendor fetch {package}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;直接&lt;code&gt;vendor&lt;/code&gt;にダウンロードする&lt;/p&gt;
-</description>
+      <description>パッケージの取得 $ govendor fetch {package} 直接vendorにダウンロードする</description>
     </item>
     
     <item>
@@ -49,15 +35,7 @@
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide14/</guid>
-      <description>
-
-&lt;h3 id=&#34;パッケージの再現&#34;&gt;パッケージの再現&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ govendor sync
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;定義ファイルから直接&lt;code&gt;vendor&lt;/code&gt;にパッケージを展開する&lt;/p&gt;
-</description>
+      <description>パッケージの再現 $ govendor sync 定義ファイルから直接vendorにパッケージを展開する</description>
     </item>
     
     <item>
@@ -66,12 +44,7 @@
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide15/</guid>
-      <description>
-
-&lt;h3 id=&#34;2-ステータス&#34;&gt;2. ステータス&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;status&lt;/code&gt;でパッケージを分類できる&lt;/p&gt;
-</description>
+      <description>2. ステータス statusでパッケージを分類できる</description>
     </item>
     
     <item>
@@ -80,25 +53,7 @@
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide16/</guid>
-      <description>
-
-&lt;h3 id=&#34;ステータスの種類&#34;&gt;ステータスの種類&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;    +local    (l) プロジェクト内にあるパッケージ
-    +external (e) importされている、かつGOPATHにあるがvendoringされていないパッケージ
-    +vendor   (v) vendoringされているパッケージ
-    +std      (s) 標準ライブラリ
-
-    +excluded (x) vendoringを禁止しているパッケージ
-    +unused   (u) 使われていないパッケージ
-    +missing  (m) importされているが、存在しないパッケージ
-
-    +program  (p) mainパッケージ
-
-    +outside  +external +missing
-    +all      +all packages
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>ステータスの種類 +local (l) プロジェクト内にあるパッケージ +external (e) importされている、かつGOPATHにあるがvendoringされていないパッケー</description>
     </item>
     
     <item>
@@ -107,18 +62,7 @@
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide17/</guid>
-      <description>
-
-&lt;h3 id=&#34;ステータスは便利&#34;&gt;ステータスは便利&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd $GOPATH/src/github.com/fluent/fluent-logger-golang
-$ govendor list
- e  github.com/philhofer/fwd
- e  github.com/tinylib/msgp/msgp
- l  github.com/fluent/fluent-logger-golang/fluent
-  m github.com/bmizerany/assert
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>ステータスは便利 $ cd $GOPATH/src/github.com/fluent/fluent-logger-golang $ govendor list e github.com/philhofer/fwd e github.com/tinylib/msgp/msgp l github.com/fluent/fluent-logger-golang/fluent m github.com/bmizerany/assert</description>
     </item>
     
     <item>
@@ -127,11 +71,7 @@ $ govendor list
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide18/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;$ govendor add +e # vendoringされていないパッケージをvendoring
-$ govendor fetch +m # GOPATHに存在しないパッケージを取得
-$ govendor remove +u # 使われていないパッケージをvendorから削除
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>$ govendor add +e # vendoringされていないパッケージをvendoring $ govendor fetch +m # GOPATHに存在しないパッケージを取得 $ govendor remove +u # 使われてい</description>
     </item>
     
     <item>
@@ -140,15 +80,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide19/</guid>
-      <description>
-
-&lt;h3 id=&#34;まとめ&#34;&gt;まとめ&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;環境 (GOPATH) を汚さない&lt;/li&gt;
-&lt;li&gt;パッケージをステータスで分類し、まとめて管理できる&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>まとめ 環境 (GOPATH) を汚さない パッケージをステータスで分類し、まとめて管理できる</description>
     </item>
     
     <item>
@@ -157,10 +89,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
       <pubDate>Thu, 08 Dec 2016 19:49:09 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide20/</guid>
-      <description>
-
-&lt;h3 id=&#34;govendorいいぞ&#34;&gt;govendorいいぞ&lt;/h3&gt;
-</description>
+      <description>govendorいいぞ</description>
     </item>
     
     <item>
@@ -169,10 +98,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
       <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide01/</guid>
-      <description>
-
-&lt;h3 id=&#34;govendorでvendoringしよう&#34;&gt;govendorでvendoringしよう&lt;/h3&gt;
-</description>
+      <description>govendorでvendoringしよう</description>
     </item>
     
     <item>
@@ -181,14 +107,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
       <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide02/</guid>
-      <description>
-
-&lt;h3 id=&#34;vendoringとは&#34;&gt;vendoringとは&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;プロジェクト毎にimportするパッケージを保持する機能&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>vendoringとは プロジェクト毎にimportするパッケージを保持する機能</description>
     </item>
     
     <item>
@@ -197,19 +116,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
       <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide03/</guid>
-      <description>
-
-&lt;h3 id=&#34;vendoringが必要な理由&#34;&gt;vendoringが必要な理由&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Goのパッケージは$GOPATH単位で共有されるので以下のケースで問題が出る
-
-&lt;ul&gt;
-&lt;li&gt;同じ$GOPATHのプロジェクト同士で必要なパッケージのバージョンが異なる場合&lt;/li&gt;
-&lt;li&gt;違う$GOPATHの同じプロジェクトでimportするパッケージのバージョンが異なる場合&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>vendoringが必要な理由 Goのパッケージは$GOPATH単位で共有されるので以下のケースで問題が出る 同じ$GOPATHのプロジェクト同</description>
     </item>
     
     <item>
@@ -218,14 +125,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
       <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide04/</guid>
-      <description>
-
-&lt;h3 id=&#34;go1-5以降vendoringが導入&#34;&gt;Go1.5以降vendoringが導入&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;プロジェクト内の&lt;code&gt;vendor&lt;/code&gt;ディレクトリ以下のパッケージを優先してimportするように&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Go1.5以降vendoringが導入 プロジェクト内のvendorディレクトリ以下のパッケージを優先してimportするように</description>
     </item>
     
     <item>
@@ -234,16 +134,7 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
       <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide05/</guid>
-      <description>
-
-&lt;h3 id=&#34;vendoringのためのツール&#34;&gt;vendoringのためのツール&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Godep (⭐4087@github)&lt;/li&gt;
-&lt;li&gt;Glide (⭐3321@github)&lt;/li&gt;
-&lt;li&gt;govendor (⭐1310@github)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>vendoringのためのツール Godep (⭐4087@github) Glide (⭐3321@github) govendor (⭐1310@github)</description>
     </item>
     
     <item>
@@ -252,20 +143,52 @@ $ govendor remove +u # 使われていないパッケージをvendorから削除
       <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/govendor/slide06/</guid>
-      <description>
-
-&lt;h3 id=&#34;godep&#34;&gt;Godep&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;古い
-
-&lt;ul&gt;
-&lt;li&gt;vendoring以前のツールのため、vendoringのプラクティスと噛み合っていない&lt;/li&gt;
-&lt;li&gt;最近更新されていない&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;パッケージをアップデートすると$GOPATHが汚染される&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Godep 古い vendoring以前のツールのため、vendoringのプラクティスと噛み合っていない 最近更新されていない パッケージをアップデートす</description>
+    </item>
+    
+    <item>
+      <title>slide07</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide07/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide07/</guid>
+      <description>Glide パッケージをアップデートすると$GOPATHが汚染される dotfilesをコピーする</description>
+    </item>
+    
+    <item>
+      <title>slide08</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide08/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide08/</guid>
+      <description>govendor 上記2つと比べてややマイナー</description>
+    </item>
+    
+    <item>
+      <title>slide09</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide09/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide09/</guid>
+      <description>なぜgovendorを選んだか</description>
+    </item>
+    
+    <item>
+      <title>slide10</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide10/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide10/</guid>
+      <description>1. 環境を汚染しない</description>
+    </item>
+    
+    <item>
+      <title>slide11</title>
+      <link>https://tanstaafl.0pt.jp/slides/govendor/slide11/</link>
+      <pubDate>Thu, 08 Dec 2016 19:49:08 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/govendor/slide11/</guid>
+      <description>パッケージの追加 $ govendor add {package} =&amp;gt; $GOPATHからコピーするだけ</description>
     </item>
     
   </channel>
