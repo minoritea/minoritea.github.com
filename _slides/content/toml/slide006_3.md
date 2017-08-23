@@ -2,7 +2,6 @@
 
 ```toml
 [table]
-element = "value"
-
-# => {"table": {"element": "value"}}
+element = 1
+# => {"table": {"element": 1}}
 ```

@@ -93,8 +93,12 @@ ports = [ 8001, 8001, 8002 ]
 <pre><code class="language-toml">id = 10
 name = &quot;snowcrush&quot;
 birthday = 1980-01-01T00:00:00Z # RFC3339
+speed = 1.5e-3 # or 0.0015
 
-#=&gt; {&quot;id&quot;:10, &quot;name&quot;:&quot;snowcrush&quot;, &quot;birthday&quot;: &quot;1980-01-01T00:00:00Z&quot;}
+#=&gt; {&quot;id&quot;:10,
+#    &quot;name&quot;:&quot;snowcrush&quot;,
+#    &quot;birthday&quot;: &quot;1980-01-01T00:00:00Z&quot;,
+#    &quot;speed&quot;: 0.0015}
 </code></pre>
 
         </section>
@@ -103,9 +107,27 @@ birthday = 1980-01-01T00:00:00Z # RFC3339
           <p>テーブル（連想配列）はテーブル名を宣言</p>
 
 <pre><code class="language-toml">[table]
-element = &quot;value&quot;
+element = 1
+# =&gt; {&quot;table&quot;: {&quot;element&quot;: 1}}
+</code></pre>
 
-# =&gt; {&quot;table&quot;: {&quot;element&quot;: &quot;value&quot;}}
+        </section>
+      
+        <section>
+          <p>ネストしたテーブルはドットで名前をつなぐ</p>
+
+<pre><code class="language-toml">[app]
+name = &quot;app1&quot;
+[app.rootuser]
+name = &quot;snowcrush&quot;
+[app.database]
+host = &quot;192.168.0.100&quot;
+port = 5432
+
+# =&gt; {&quot;app&quot;:
+#      {&quot;name&quot;: &quot;app1&quot;,
+#       &quot;rootuser&quot;: {&quot;name&quot;: &quot;snowcrush&quot;},
+#       &quot;database&quot;: {&quot;host&quot;: &quot;192.168.0.100&quot;, &quot;port&quot;: 5432}}}
 </code></pre>
 
         </section>

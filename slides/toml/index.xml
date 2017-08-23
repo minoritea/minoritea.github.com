@@ -89,7 +89,7 @@
       
       <guid>https://tanstaafl.0pt.jp/slides/toml/slide006_2/</guid>
       <description>基本的に key = value 形式で記述
-id = 10 name = &amp;quot;snowcrush&amp;quot; birthday = 1980-01-01T00:00:00Z # RFC3339 #=&amp;gt; {&amp;quot;id&amp;quot;:10, &amp;quot;name&amp;quot;:&amp;quot;snowcrush&amp;quot;, &amp;quot;birthday&amp;quot;: &amp;quot;1980-01-01T00:00:00Z&amp;quot;}  </description>
+id = 10 name = &amp;quot;snowcrush&amp;quot; birthday = 1980-01-01T00:00:00Z # RFC3339 speed = 1.5e-3 # or 0.0015 #=&amp;gt; {&amp;quot;id&amp;quot;:10, # &amp;quot;name&amp;quot;:&amp;quot;snowcrush&amp;quot;, # &amp;quot;birthday&amp;quot;: &amp;quot;1980-01-01T00:00:00Z&amp;quot;, # &amp;quot;speed&amp;quot;: 0.0015}  </description>
     </item>
     
     <item>
@@ -99,7 +99,17 @@ id = 10 name = &amp;quot;snowcrush&amp;quot; birthday = 1980-01-01T00:00:00Z # R
       
       <guid>https://tanstaafl.0pt.jp/slides/toml/slide006_3/</guid>
       <description>テーブル（連想配列）はテーブル名を宣言
-[table] element = &amp;quot;value&amp;quot; # =&amp;gt; {&amp;quot;table&amp;quot;: {&amp;quot;element&amp;quot;: &amp;quot;value&amp;quot;}}  </description>
+[table] element = 1 # =&amp;gt; {&amp;quot;table&amp;quot;: {&amp;quot;element&amp;quot;: 1}}  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide006_3_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide006_3_1/</guid>
+      <description>ネストしたテーブルはドットで名前をつなぐ
+[app] name = &amp;quot;app1&amp;quot; [app.rootuser] name = &amp;quot;snowcrush&amp;quot; [app.database] host = &amp;quot;192.168.0.100&amp;quot; port = 5432 # =&amp;gt; {&amp;quot;app&amp;quot;: # {&amp;quot;name&amp;quot;: &amp;quot;app1&amp;quot;, # &amp;quot;rootuser&amp;quot;: {&amp;quot;name&amp;quot;: &amp;quot;snowcrush&amp;quot;}, # &amp;quot;database&amp;quot;: {&amp;quot;host&amp;quot;: &amp;quot;192.168.0.100&amp;quot;, &amp;quot;port&amp;quot;: 5432}}}  </description>
     </item>
     
     <item>
