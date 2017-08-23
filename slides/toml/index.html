@@ -83,6 +83,58 @@ ports = [ 8001, 8001, 8002 ]
         <section>
           
 
+<h2 id="文法">文法</h2>
+
+        </section>
+      
+        <section>
+          <p>基本的に <code>key  = value</code> 形式で記述</p>
+
+<pre><code class="language-toml">id = 10
+name = &quot;snowcrush&quot;
+birthday = 1980-01-01T00:00:00Z # RFC3339
+
+#=&gt; {&quot;id&quot;:10, &quot;name&quot;:&quot;snowcrush&quot;, &quot;birthday&quot;: &quot;1980-01-01T00:00:00Z&quot;}
+</code></pre>
+
+        </section>
+      
+        <section>
+          <p>テーブル（連想配列）はテーブル名を宣言</p>
+
+<pre><code class="language-toml">[table]
+element = &quot;value&quot;
+
+# =&gt; {&quot;table&quot;: {&quot;element&quot;: &quot;value&quot;}}
+</code></pre>
+
+        </section>
+      
+        <section>
+          <p>テーブルの配列という記法もある</p>
+
+<pre><code class="language-toml">[[array_of_table]]
+id = 10
+[[array_of_table]]
+id = 20
+
+# =&gt; {&quot;array_of_table&quot;: [{&quot;id&quot;:10},{&quot;id&quot;:20}]}
+</code></pre>
+
+        </section>
+      
+        <section>
+          
+
+<h2 id="ね-簡単でしょ">ね、簡単でしょ？</h2>
+
+<p>| 実際、YAMLの仕様が複雑すぎるのが開発の動機の一つらしい</p>
+
+        </section>
+      
+        <section>
+          
+
 <h1 id="和訳">和訳</h1>
 
         </section>
@@ -112,41 +164,72 @@ ports = [ 8001, 8001, 8002 ]
         </section>
       
         <section>
-          <p>dep
-- Go言語のパッケージ依存管理ツール
-- 依存関係の記述とロックに使われる
-  - Bundler における Gemfile, Gemfile lock
-- 将来公式に取り込まれる見込み</p>
+          <p>利用例</p>
+
+<ul>
+<li>dep</li>
+<li>Cargo</li>
+<li>GitLab</li>
+<li>InfluxDB</li>
+<li>hugo</li>
+</ul>
 
         </section>
       
         <section>
-          <p>Cargo
-- Rust言語のパッケージマネージャ
-- ビルドツールでもある
-- Bundlerみたいなもの</p>
+          <p>dep</p>
+
+<ul>
+<li>Go言語のパッケージ依存管理ツール</li>
+<li>依存関係の記述とロックに使われる
+
+<ul>
+<li>Bundler における Gemfile, Gemfile lock</li>
+</ul></li>
+<li>将来公式に取り込まれる見込み</li>
+</ul>
 
         </section>
       
         <section>
-          <p>GitLab
-- 同梱のCIツールで利用</p>
+          <p>Cargo</p>
+
+<ul>
+<li>Rust言語のパッケージマネージャ</li>
+<li>ビルドツールでもある</li>
+<li>Bundlerみたいなもの</li>
+</ul>
 
         </section>
       
         <section>
-          <p>InfluxDB
-- 時系列データベス
-- ログ集計などで使われる</p>
+          <p>GitLab</p>
+
+<ul>
+<li>同梱のCIツールで利用</li>
+</ul>
 
         </section>
       
         <section>
-          <p>hugo
-- Go言語製の静的サイトジェネレータ
-- 軽い
-- ブログとかが割とさくっと書ける
-- このスライドもHugoで作成されている</p>
+          <p>InfluxDB</p>
+
+<ul>
+<li>時系列データベス</li>
+<li>ログ集計などで使われる</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <p>hugo</p>
+
+<ul>
+<li>Go言語製の静的サイトジェネレータ</li>
+<li>軽い</li>
+<li>ブログとかが割とさくっと書ける</li>
+<li>このスライドもHugoで作成されている</li>
+</ul>
 
         </section>
       

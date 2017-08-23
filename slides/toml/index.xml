@@ -75,6 +75,54 @@
     
     <item>
       <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide006_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide006_1/</guid>
+      <description> 文法 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide006_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide006_2/</guid>
+      <description>基本的に key = value 形式で記述
+id = 10 name = &amp;quot;snowcrush&amp;quot; birthday = 1980-01-01T00:00:00Z # RFC3339 #=&amp;gt; {&amp;quot;id&amp;quot;:10, &amp;quot;name&amp;quot;:&amp;quot;snowcrush&amp;quot;, &amp;quot;birthday&amp;quot;: &amp;quot;1980-01-01T00:00:00Z&amp;quot;}  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide006_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide006_3/</guid>
+      <description>テーブル（連想配列）はテーブル名を宣言
+[table] element = &amp;quot;value&amp;quot; # =&amp;gt; {&amp;quot;table&amp;quot;: {&amp;quot;element&amp;quot;: &amp;quot;value&amp;quot;}}  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide006_4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide006_4/</guid>
+      <description>テーブルの配列という記法もある
+[[array_of_table]] id = 10 [[array_of_table]] id = 20 # =&amp;gt; {&amp;quot;array_of_table&amp;quot;: [{&amp;quot;id&amp;quot;:10},{&amp;quot;id&amp;quot;:20}]}  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide006_5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide006_5/</guid>
+      <description>ね、簡単でしょ？ | 実際、YAMLの仕様が複雑すぎるのが開発の動機の一つらしい</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://tanstaafl.0pt.jp/slides/toml/slide007/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -111,11 +159,21 @@
     
     <item>
       <title></title>
+      <link>https://tanstaafl.0pt.jp/slides/toml/slide010_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/slides/toml/slide010_1/</guid>
+      <description>利用例
+ dep Cargo GitLab InfluxDB hugo  </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://tanstaafl.0pt.jp/slides/toml/slide011/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/toml/slide011/</guid>
-      <description>dep - Go言語のパッケージ依存管理ツール - 依存関係の記述とロックに使われる - Bundler における Gemfile, Gemfile lock - 将来公式に取り込まれる見込み</description>
+      <description>dep Go言語のパッケージ依存管理ツール 依存関係の記述とロックに使われる Bundler における Gemfile, Gemfile lock 将来公式に取り込まれる見込み</description>
     </item>
     
     <item>
@@ -124,7 +182,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/toml/slide012/</guid>
-      <description>Cargo - Rust言語のパッケージマネージャ - ビルドツールでもある - Bundlerみたいなもの</description>
+      <description>Cargo Rust言語のパッケージマネージャ ビルドツールでもある Bundlerみたいなもの</description>
     </item>
     
     <item>
@@ -133,7 +191,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/toml/slide013/</guid>
-      <description>GitLab - 同梱のCIツールで利用</description>
+      <description>GitLab 同梱のCIツールで利用</description>
     </item>
     
     <item>
@@ -142,7 +200,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/toml/slide014/</guid>
-      <description>InfluxDB - 時系列データベス - ログ集計などで使われる</description>
+      <description>InfluxDB 時系列データベス ログ集計などで使われる</description>
     </item>
     
     <item>
@@ -151,7 +209,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/slides/toml/slide015/</guid>
-      <description>hugo - Go言語製の静的サイトジェネレータ - 軽い - ブログとかが割とさくっと書ける - このスライドもHugoで作成されている</description>
+      <description>hugo Go言語製の静的サイトジェネレータ 軽い ブログとかが割とさくっと書ける このスライドもHugoで作成されている</description>
     </item>
     
     <item>
