@@ -1,0 +1,7 @@
+#!/bin/bash
+type represent 1>/dev/null 2>&1 || (echo "Install represent: go get -u -v github.com/cmars/represent" >&2; exit 1)
+
+_dir=$(cd $(dirname $0);pwd)
+for d in $(find $_dir -type d -maxdepth 1 | grep -v "^$_dir$");do
+  represent -src $d -publish "$(cd ../slides;pwd)/$(basename $d)"
+done
