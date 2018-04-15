@@ -321,6 +321,28 @@ TLST # print top of the stack
   
       <article>
       
+        <h3>実行</h3>
+        
+  <ul>
+  
+    <li>ループでRuntime.indexを一つずつインクリメントし、順に命令オブジェクトを実行していく</li>
+  
+    <li>基本的にスタックに値を積んでそれを演算する</li>
+  
+    <li>プログラム内のループや分岐、gotoはindexにラベルに対応する行番号をセットすることで表現する</li>
+  
+    <li>関数はサブルーチン命令というのがあってコールスタックに呼び出し位置を覚えておくことができる</li>
+  
+  </ul>
+
+      
+      <div class="pagenumber">[12]</div>
+      </article>
+  
+  
+  
+      <article>
+      
         <h3>ランタイム</h3>
         
   
@@ -360,34 +382,6 @@ TLST # print top of the stack
     <li>indexはランタイムが実行している命令オブジェクトのindexである</li>
   
   </ul>
-
-      
-      <div class="pagenumber">[12]</div>
-      </article>
-  
-  
-  
-      <article>
-      
-        <h3>実行</h3>
-        
-  <ul>
-  
-    <li>ループでRuntime.indexを一つずつインクリメントし、順に命令オブジェクトを実行していく</li>
-  
-    <li>基本的にスタックに値を積んでそれを演算する</li>
-  
-    <li>プログラム内のループや分岐、gotoはindexにラベルに対応する行番号をセットすることで表現する</li>
-  
-    <li>関数はサブルーチン命令というのがあってコールスタックに呼び出し位置を覚えておくことができる</li>
-  
-  </ul>
-
-  
-  <p>
-    以上!
-  </p>
-  
 
       
       <div class="pagenumber">[13]</div>
