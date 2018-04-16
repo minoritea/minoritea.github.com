@@ -112,6 +112,7 @@ Execは命令ごとの処理をランタイムに対して行う。
 - Goで実装したのは初めてだろうと思っていたら先行者がすでに沢山いた・・・
 .link https://github.com/technohippy/go-whitespace
 .link https://github.com/135yshr/wspacego
+.link https://github.com/mattn/ws
 .link https://github.com/mattn/ujihisa
 
 - ググラビリティ低い言語名2つのコンビネーション技こわい
