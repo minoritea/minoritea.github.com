@@ -1,0 +1,61 @@
+.hack {
+    background-color: #fff8f8;
+}
+
+.header > h1 {
+    font-size: larger;
+}
+
+a {
+    color: #806;
+}
+
+h2::before {
+    color: #806;
+}
+
+.tag {
+    margin-right: 1em;
+}
+
+.date {
+    font-size: smaller;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+.header {
+    margin-bottom: 2em;
+}
+
+ul.pagination {
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap
+}
+
+li.page-item {
+    all: unset;
+    -ms-flex:1;
+    flex:1;
+    box-sizing:border-box;
+}
+
+@media screen and (min-width:768px) {
+    li.page-item {
+        -ms-flex:0 0 8.33333%;
+        flex:0 0 8.33333%
+    }
+}
+
+@media screen and (max-width:768px) {
+    ul.pagination {
+        -ms-flex-direction:column;
+        flex-direction:column
+    }
+    li.page-item {
+        -ms-flex:0 0 auto;
+        flex:0 0 auto
+    }
+}

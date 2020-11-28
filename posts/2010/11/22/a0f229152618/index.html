@@ -1,87 +1,50 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.79.0" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/custom.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://tanstaafl.0pt.jp//index.xml">
-
-    
-    <title>コメントシステムにNode.js&#43;Backtweetsを採用 - フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <meta property='og:title' content="コメントシステムにNode.js&#43;Backtweetsを採用 - フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
-    <meta property="og:type" content="article">
-    
-
-    <meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2010/11/22/a0f229152618/">
-    
-    
-
-  </head>
-
-  <body>
-
-    <div class="container">
-      <header class="site">
-        <div class="title"><a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a></div>
-      </header>
+<html><head>
+    <meta charset="utf-8" />
+    <title>フリーランチなど無い - There ain&#39;t no such thing as a free lunch </title>
+    <link rel="stylesheet" href="//unpkg.com/hack@0.8.1/dist/hack.css">
+    <link rel="stylesheet" href="/css/app.css">
+</head><body class="hack">
+        <div class="container"><div class="header">
+    <h1>
+        <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
+    </h1>
+    <div class="grid -right">
+        
     </div>
-
-    <div class="container site">
-
-
-<div class="single">
-  <article class="single" itemscope="itemscope" itemtype="http://schema.org/Article">
-
-    <meta itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" content="https://tanstaafl.0pt.jp/"/>
-    <meta itemprop="dateModified" content="2010-11-22T00:00:00&#43;00:00">
-    <meta itemprop="headline" content="コメントシステムにNode.js&#43;Backtweetsを採用">
-    <meta itemprop="description" content="最近いろいろと試行錯誤を繰り返しているTwitterでのコメントシステムだが、結局Topsyは取りやめた。コメントの一部がうまく反映されない">
-    <meta itemprop="url" content="https://tanstaafl.0pt.jp/posts/2010/11/22/a0f229152618/">
-    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-      <meta itemprop="url" content="https://tanstaafl.0pt.jp/images/default.jpg" />
-      <meta itemprop="width" content="800">
-      <meta itemprop="height" content="800">
-    </div>
-    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-        <meta itemprop="url" content="https://tanstaafl.0pt.jp/images/logo.jpg">
-        <meta itemprop="width" content="100">
-        <meta itemprop="height" content="100">
-      </div>
-      <meta itemprop="name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
-    </div>
-    <div itemprop="author" itemscope itemtype="https://schema.org/Person">
-      <meta itemprop="name" content="">
-    </div>
-
-    <header class="clearfix">
-      <div class="pull-left">
-        <div class="image" style="background-image: url(https://tanstaafl.0pt.jp/images/default.jpg);"></div>
-      </div>
-
-      <div class="detail">
-        <time>Mon, Nov 22, 2010</time>
-        <h1 class="title">コメントシステムにNode.js&#43;Backtweetsを採用</h1>
-      </div>
-    </header>
-
-    <div class="share">
-      <a href="http://www.facebook.com/sharer.php?src=bm&u=https%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2010%2f11%2f22%2fa0f229152618%2f&t=%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%abNode.js%2bBacktweets%e3%82%92%e6%8e%a1%e7%94%a8" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook"></i></a>
-      <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2010%2f11%2f22%2fa0f229152618%2f&text=%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%abNode.js%2bBacktweets%e3%82%92%e6%8e%a1%e7%94%a8&tw_p=tweetbutton" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i></a>
-      <a href="https://plus.google.com/share?url=https%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2010%2f11%2f22%2fa0f229152618%2f" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-google-plus"></i></a>
-      <a href="http://getpocket.com/edit?url=https%3a%2f%2ftanstaafl.0pt.jp%2fposts%2f2010%2f11%2f22%2fa0f229152618%2f&title=%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%abNode.js%2bBacktweets%e3%82%92%e6%8e%a1%e7%94%a8" onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-get-pocket"></i></a>
-    </div>
-
+</div><div id="content">
+<div class="date">
+    <time>Mon, Nov 22, 2010</time>
+</div>
+<h2>コメントシステムにNode.js&#43;Backtweetsを採用</h2>
+<div class="grid -right">
     
-
-    <div class="article-body" itemprop="articleBody"><p>最近いろいろと試行錯誤を繰り返しているTwitterでのコメントシステムだが、結局Topsyは取りやめた。コメントの一部がうまく反映されないことがあるからだ。</p>
+        <div class="cell -1of12">
+            <div class="tag">
+                <a href="/tags/backtweets/">backtweets</a>
+            </div>
+        </div>
+    
+        <div class="cell -1of12">
+            <div class="tag">
+                <a href="/tags/nodejs/">nodejs</a>
+            </div>
+        </div>
+    
+        <div class="cell -1of12">
+            <div class="tag">
+                <a href="/tags/twitter/">twitter</a>
+            </div>
+        </div>
+    
+        <div class="cell -1of12">
+            <div class="tag">
+                <a href="/tags/topsy/">topsy</a>
+            </div>
+        </div>
+    
+</div>
+<div><p>最近いろいろと試行錯誤を繰り返しているTwitterでのコメントシステムだが、結局Topsyは取りやめた。コメントの一部がうまく反映されないことがあるからだ。</p>
 <p>代わりに採用したのがbacktweetsだ。Topsyなどと同様に自分のサイトにリンクしているコンテンツをピックアップしてくれるBacktypeというサービスがある。Disqusにも採用されている便利検索サービスなのだが、そのBacktypeのAPIをラップしてtwitterからのリンクだけを抽出してくれるサービスがbacktweetsである。制限等はBacktypeと同じというかうまくゲートウェイだけ作って、検索等はBacktypeに乗っかっている。なのでAPIも基本的にはBacktypeへのproxyとなっている。</p>
 <p>ここで問題なのはbacktypeのAPIにJSONPが含まれていないことである。先日書いたようにJSONではブラウザのXSS対策にひっかかって他サイトのデータを取って来ることが出来ない。そこでproxyサーバを立てて自分のサーバから直接backtweetsのAPIを叩くようにした。サーバに使ったのは最近いじっていて面白いと思っているNode.jsというjavascriptの処理系だ。こいつはイベントループでIOブロックしない並列処理をガリガリかけるのが特徴なようだが今回はただのサーバとして使っている。とはいえ、たかがProxyのためにいくつもプロセスを立ち上げたくはないので、その点スケーラビリティの高いNode.jsは便利である。処理速度もGoogleのV8エンジンがベースになっているので素晴らしく早い。とはいえアプリケーションサーバ内でHTTPアクセスを繰り返しているのでページの読み込みは遅くなってしまう。</p>
 <p>対処法として</p>
@@ -91,36 +54,6 @@ Ajaxで遅延読み込みを行う
 <p>ただ、これを実装してから気付いたのだがSinatra側で読み込むのであればNode.jsのproxyはそもそも必要ない。とはいえNode.jsの（特にイベントの）勉強になったのと、せっかく作ったのにRubyで作り直すのも勿体ないのでしばらくはこのままで運用しようと思っている。</p>
 </div>
 
-    <aside>
-
-      <div class="section"><a href="https://tanstaafl.0pt.jp/tags/backtweets" class="tag">backtweets</a><a href="https://tanstaafl.0pt.jp/tags/nodejs" class="tag">nodejs</a><a href="https://tanstaafl.0pt.jp/tags/twitter" class="tag">twitter</a><a href="https://tanstaafl.0pt.jp/tags/topsy" class="tag">topsy</a></div>
-
-      
-      
-      
-
-    </aside>
-
-  </article>
-</div>
-
-    </div>
-
-    <div class="container">
-      <footer class="site">
-        <p>&copy; 2016 フリーランチなど無い - There ain&#39;t no such thing as a free lunch</p>
-        <p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a>,</p>
-        <p>Theme <a href="https://github.com/dim0627/hugo_theme_aglaus" target="_blank">Aglaus</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a></p>
-      </footer>
-    </div>
-
-    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-
-    
-
-  </body>
+            </div><div class="footer"></div></div>
+    </body>
 </html>
-

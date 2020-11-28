@@ -1,20 +1,415 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>フリーランチなど無い - There ain&#39;t no such thing as a free lunch on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/</link>
-    <description>Recent content in フリーランチなど無い - There ain&#39;t no such thing as a free lunch on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <description>Recent content on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 17 Dec 2016 17:46:40 +0900</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 17 Dec 2016 17:46:40 +0900</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Posts</title>
-      <link>https://tanstaafl.0pt.jp/posts/</link>
+      <title>Chromebookを買ってLinux(GalliumOS)を入れた</title>
+      <link>https://tanstaafl.0pt.jp/posts/2016/12/17/65b6078c14a5/</link>
       <pubDate>Sat, 17 Dec 2016 17:46:40 +0900</pubDate>
       
-      <guid>https://tanstaafl.0pt.jp/posts/</guid>
-      <description></description>
+      <guid>https://tanstaafl.0pt.jp/posts/2016/12/17/65b6078c14a5/</guid>
+      <description>Chromebookを買う 先日急に思い立ってChromebookを買った。と書くと衝動的に見えるけど、ここ一年くらいずっとほしいと思っていた</description>
+    </item>
+    
+    <item>
+      <title>scalewayを使ってみた</title>
+      <link>https://tanstaafl.0pt.jp/posts/2016/03/09/20d0021c1058/</link>
+      <pubDate>Thu, 10 Mar 2016 00:03:06 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2016/03/09/20d0021c1058/</guid>
+      <description>scalewayという格安ベアメタルサーバを利用してみた。 scalewayはARM CPUを使ったベアメタルサーバで、 格安VPSに匹敵する価格</description>
+    </item>
+    
+    <item>
+      <title>CloudFlareのHTTP2対応</title>
+      <link>https://tanstaafl.0pt.jp/posts/2016/02/24/6376f38fce39/</link>
+      <pubDate>Wed, 24 Feb 2016 13:57:31 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2016/02/24/6376f38fce39/</guid>
+      <description>https://www.cloudflare.com/http2/ でアナウンスされている通り、 CloudFlare経由でコンテンツ配信する場合、SSLかつ、ブラウザが対応していれば 自動でHTTP2プロトコ</description>
+    </item>
+    
+    <item>
+      <title>ブログをHugoに移行した</title>
+      <link>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</link>
+      <pubDate>Wed, 24 Feb 2016 01:02:53 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</guid>
+      <description>このブログは手製blogエンジンで構築していたのだが、 サイトの管理が面倒になってしまい放置してしまっていた。 そのため、今回Github Pag</description>
+    </item>
+    
+    <item>
+      <title>SystemdでDocker上のPostgreSQLをバックアップする</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</guid>
+      <description>先日書いた、CoreOSでバックアップを取っていなかったためデータを飛ばした話の続きである。 前回fleetを使うという話をしたのだけれど、自</description>
+    </item>
+    
+    <item>
+      <title>CoreOSつかってたらデータが飛んだ</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</guid>
+      <description>DBのデータが飛んだので先日書いたReactについての記事は下書きから復元した。 原因はCoreOSが自動アップデートしたため、Postgre</description>
+    </item>
+    
+    <item>
+      <title>Kawasaki.rbでReactについて発表してきた</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
+      <description>Rubyコミュニティなのに毎回多言語の話が出る kawasaki.rb で React について発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/react-42041864 締めの発言はわりかし本気である。</description>
+    </item>
+    
+    <item>
+      <title>ReactRubyをリリースした。</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
+      <description>先日、React をテンプレートとして使えるRubyライブラリの ReactRuby をリリースした。 このブログは自作のブログエンジンで動いていて、気が向くたびに</description>
+    </item>
+    
+    <item>
+      <title>dokkuでgit pushするとfatalしてハマった</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
+      <description>最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。 dokkuでマニュアル通り作成したのだ</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu14.04でgit pull/git cloneしたときにgnutlsがエラー吐くときの対処法</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</guid>
+      <description>git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。 gnutls_handshake() failed: A record packet with illegal version was received. これは、ubuntu</description>
+    </item>
+    
+    <item>
+      <title>Turbolinksモドキを入れた</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
+      <description>結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。 というわけでTurbolinksモ</description>
+    </item>
+    
+    <item>
+      <title>AngularJS&#43;SinatraでTurbolinks</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
+      <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
+      <description>表題の通りにKawasaki.rbで発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks なお、このブログを対象にTurbolinksモドキを実装してみたのだが</description>
+    </item>
+    
+    <item>
+      <title>大江戸Ruby会議04に参加してきた！</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
+      <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
+      <description>大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。 遅刻したため途中からのレポートとなる。 Nobody Knows Nobu</description>
+    </item>
+    
+    <item>
+      <title>AngularJSでチェックボックスとモデルを紐付ける</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</link>
+      <pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</guid>
+      <description>AngularJSを使ったフォームでチェックボックスを使いたいとする。 このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、ch</description>
+    </item>
+    
+    <item>
+      <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
+      <description>このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン</description>
+    </item>
+    
+    <item>
+      <title>AngularJS で外部javascriptを遅延読み込み</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
+      <description>新しいブログエンジンでもコメントシステムはDisqusを使っている。 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービス</description>
+    </item>
+    
+    <item>
+      <title>ブログのお引越し</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
+      <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
+      <description>ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。 理由の一つはangularjsの習作</description>
+    </item>
+    
+    <item>
+      <title>Rubyでインスタンス変数のテスト</title>
+      <link>https://tanstaafl.0pt.jp/posts/2013/08/31/ed3690f9cb82/</link>
+      <pubDate>Sat, 31 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2013/08/31/ed3690f9cb82/</guid>
+      <description>あるオブジェクトOのメソッドAを呼ぶと内部変数Xの値が変わるとする。 メソッドAの目的はXの値を更新することだが、返り値からXの値を知ることは</description>
+    </item>
+    
+    <item>
+      <title>Fabrication で Mongoid のテストデータを作る</title>
+      <link>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</guid>
+      <description>Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。 MongoHQ、MongoLabなどが500MBの無料</description>
+    </item>
+    
+    <item>
+      <title>flickrの画像をOctopressに埋め込むTips</title>
+      <link>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</link>
+      <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</guid>
+      <description>Octopressの画像置き場をどうするか考えてflickrにしてみた。 public/images以下に置いておくのがデフォルトなんだろうけ</description>
+    </item>
+    
+    <item>
+      <title>Octopressに移行</title>
+      <link>https://tanstaafl.0pt.jp/posts/2013/05/28/1580cb206a30/</link>
+      <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2013/05/28/1580cb206a30/</guid>
+      <description>とりあえず、disqus入れてみた。 旧サイト(http://tanstaafl.0pt.jp/)から記事を一式移行するも、 記事名のパスが日本</description>
+    </item>
+    
+    <item>
+      <title>Octopress始めました</title>
+      <link>https://tanstaafl.0pt.jp/posts/2013/05/28/e80bc1782e91/</link>
+      <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2013/05/28/e80bc1782e91/</guid>
+      <description>BlogをOctpressに移行しようかと思い、作成。 Github/Jekyllベースでシンプルな感じがすき。 しばらくは元ブログからポツポツ</description>
+    </item>
+    
+    <item>
+      <title>データが飛んだ</title>
+      <link>https://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/</link>
+      <pubDate>Sun, 10 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/</guid>
+      <description>ブログのデータが飛んだ。ごっそりだ。 原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先である</description>
+    </item>
+    
+    <item>
+      <title>復活&amp;Topsy再び</title>
+      <link>https://tanstaafl.0pt.jp/posts/2011/06/13/c21f138e3e26/</link>
+      <pubDate>Mon, 13 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2011/06/13/c21f138e3e26/</guid>
+      <description>ブログがようやく復活した。 というか、修論＋就職のコンボでメンテ自体してなかったが、 気がついていたらアプリケーション・サーバーが落ちていた。 と</description>
+    </item>
+    
+    <item>
+      <title>コメントシステムにNode.js&#43;Backtweetsを採用</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/22/a0f229152618/</link>
+      <pubDate>Mon, 22 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/22/a0f229152618/</guid>
+      <description>最近いろいろと試行錯誤を繰り返しているTwitterでのコメントシステムだが、結局Topsyは取りやめた。コメントの一部がうまく反映されない</description>
+    </item>
+    
+    <item>
+      <title>JSONとJSONPの違い</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/17/75eb52a3779e/</link>
+      <pubDate>Wed, 17 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/17/75eb52a3779e/</guid>
+      <description>Twitter APIで取得していたコメントが消えてしまった。Twitter検索で引っかかるのは7日間だけである。これでは少し寂しいのでツイートの取得にT</description>
+    </item>
+    
+    <item>
+      <title>iTunesで映画レンタル</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/14/eda9ceb4f995/</link>
+      <pubDate>Sun, 14 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/14/eda9ceb4f995/</guid>
+      <description>先週からiTunesで映画レンタルが始まった。 試しに借りてみたがなかなか便利でいい。 まだ作品数はそれほど多くないのだがある程度充実したらGE</description>
+    </item>
+    
+    <item>
+      <title>Twitterでコメント</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/08/1db91739f81f/</link>
+      <pubDate>Mon, 08 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/08/1db91739f81f/</guid>
+      <description>Disqusを止めて、コメントシステムをTwitterで管理するようにした。理由は出来る限りシンプルにしたかったことと、Twitter API</description>
+    </item>
+    
+    <item>
+      <title>Twitterでコメント2</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/08/ec3b981577bc/</link>
+      <pubDate>Mon, 08 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/08/ec3b981577bc/</guid>
+      <description>前回作ったコメントシステムだがコードは単純だ。TwitterのSearch APIをjQuery.ajaxで叩くだけだ。 戻り値はjsonなので</description>
+    </item>
+    
+    <item>
+      <title>RailsのYAMLでハマった</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</link>
+      <pubDate>Sun, 07 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</guid>
+      <description>Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、 production: adapter:sqlite3 と書いてしまったのが原因でprodu</description>
+    </item>
+    
+    <item>
+      <title>SafariのLocationエンコードについて2</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</link>
+      <pubDate>Fri, 05 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</guid>
+      <description>前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得</description>
+    </item>
+    
+    <item>
+      <title>BaiduSpiderを拒否</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</link>
+      <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</guid>
+      <description>最近、アクセス数が徐々に増えてるのでサイトをリニューアルした甲斐があったと喜んでいたら、アクセスの半分が百度ことBaiduのクローラだったこ</description>
+    </item>
+    
+    <item>
+      <title>SafariのLocationエンコードについて</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</link>
+      <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</guid>
+      <description>やっぱりDisqusがSafariでうまく動作しない。どうも記事ごとにうまく読み込めるかエラーを起こすが決まっているようなので調べるとうまく</description>
+    </item>
+    
+    <item>
+      <title>フィードの過去ログ読み込み</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</link>
+      <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</guid>
+      <description>GoogleReaderが不調なので自分でフィードリーダを実装しようと思い、読み込み部分はsinatraでさっと作ったのはいいがフィードの過</description>
+    </item>
+    
+    <item>
+      <title>Disqus追記</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/30/c590b8f6037f/</link>
+      <pubDate>Sat, 30 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/30/c590b8f6037f/</guid>
+      <description>コメントシステムのDisqusを使い始めた。残念ながらコメントしてくれる人もいないが、元々Webサービスの習作として作っていて、閲覧している</description>
+    </item>
+    
+    <item>
+      <title>Disqus</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/28/413e8772c8d6/</link>
+      <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/413e8772c8d6/</guid>
+      <description>ソーシャルプラットフォームのDisqusをコメント用に利用し始めた。Scantyがデフォルトで使うようになっていたからだがなかなか便利だと思</description>
+    </item>
+    
+    <item>
+      <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
+      <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
+      <description>このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRed</description>
+    </item>
+    
+    <item>
+      <title>Facebookが流行る理由</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/107a3d9584f3/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/107a3d9584f3/</guid>
+      <description>最近僕の周りでもFacebookが流行り始めている。まだ特定のクラスターだけで流行ってる感じだけれどもそれ以外でもぽつりぽつりと増え始めてい</description>
+    </item>
+    
+    <item>
+      <title>iPhone4</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/a10e34e299e0/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/a10e34e299e0/</guid>
+      <description>ついに買ってしまったiPhone4。 3Gからの切替なので基本的に大満足なのだが不満点も幾つかあったので以下レビュー。 不満点 持ちにくい。前モデ</description>
+    </item>
+    
+    <item>
+      <title>Mixiアプリ</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</guid>
+      <description>ちょっと思い立ってMixiのアプリを作ってる。バックエンドはGAE/J + Sinatraの構成だ。大体概要は分かったんだけど、OAuthのとこ</description>
+    </item>
+    
+    <item>
+      <title>proxy script</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</guid>
+      <description>proxyがresolvableか検出して、通ったら環境変数http-proxyをセットするスクリプトを書いて、.profileから呼び出す</description>
+    </item>
+    
+    <item>
+      <title>VPS</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</guid>
+      <description>DTIのServersman@VPSを昨日から借り始めた。学校のproxyがgitを通してくれないので、SSH転送用のサーバとしてのみ使用す</description>
+    </item>
+    
+    <item>
+      <title>とりあえず</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</guid>
+      <description>件のアプリはクッキー認証で作ってみようかなあ。 OAuthについては、 Twitterを利用してOAuth::Consumer側を実装してみる。</description>
+    </item>
+    
+    <item>
+      <title>移転したい</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</guid>
+      <description>内定式しんどかったけど、楽しかった。 さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容</description>
+    </item>
+    
+    <item>
+      <title>移転完了</title>
+      <link>https://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</guid>
+      <description>本ブログを新しいサーバに移転した。VPSも変えてblogエンジンも自分で実装した(scanty-redisベース)。herokuと比べて随分</description>
     </item>
     
   </channel>
