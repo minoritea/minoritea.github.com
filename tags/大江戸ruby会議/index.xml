@@ -1,101 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>大江戸ruby会議 on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/%E5%A4%A7%E6%B1%9F%E6%88%B8ruby%E4%BC%9A%E8%AD%B0/index.xml</link>
+    <link>https://tanstaafl.0pt.jp/tags/%E5%A4%A7%E6%B1%9F%E6%88%B8ruby%E4%BC%9A%E8%AD%B0/</link>
     <description>Recent content in 大江戸ruby会議 on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/%E5%A4%A7%E6%B1%9F%E6%88%B8ruby%E4%BC%9A%E8%AD%B0/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 20 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/%E5%A4%A7%E6%B1%9F%E6%88%B8ruby%E4%BC%9A%E8%AD%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>大江戸Ruby会議04に参加してきた！</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
       <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
-      <description>
-
-&lt;p&gt;大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。&lt;/p&gt;
-
-&lt;p&gt;遅刻したため途中からのレポートとなる。&lt;/p&gt;
-
-&lt;h2 id=&#34;nobody-knows-nobu&#34;&gt;Nobody Knows Nobu&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/_zzak&#34;&gt;ザックさん&lt;/a&gt;の発表は絵芝居仕立てでコア・コミッターの中田さんの貢献についての紹介。愛と笑いのある発表でほんわかした。こういう暖かさがRubyコミュニティのいいところだと思う。&lt;/p&gt;
-
-&lt;h2 id=&#34;私は如何にして異国でエンジニアとして生き抜いてきたか&#34;&gt;私は如何にして異国でエンジニアとして生き抜いてきたか&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;レオさん&lt;/a&gt;の発表は海外で働くエンジニアとしての発表。オーストラリア出身のレオさんが8年間日本で働いてきた経験から得た知見を共有してくれた。おおきくまとめると海外で働くには言語とジョブスキルが大切というこ話だった。&lt;/p&gt;
-
-&lt;p&gt;言語はとにかく時間をかけて練習するしか無いとのこと。また、単に言葉だけではなく、言語の背景にある文化を学んでいくことが大事だと主張されていた。&lt;/p&gt;
-
-&lt;p&gt;ジョブスキルについてはコミュニティから得るものが大きかったそうで、東京Railsミートアップへ参加したことで世界が広がったそうだ。&lt;/p&gt;
-
-&lt;p&gt;文化的背景を理解することが大事というのは全くその通りで、発表中におすすめされていたRedditは毎日読んでみようと思う。&lt;/p&gt;
-
-&lt;h2 id=&#34;画像を壊すこと-oss-活動をすること-その他&#34;&gt;画像を壊すこと、OSS 活動をすること、その他&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;makimotoさん&lt;/a&gt;からはグリッチについてとOSS活動についてだった。グリッチというのは壊れたテレビからの砂嵐やノイズのような画像を指すそうで、正直なところ僕にはよく分からない世界だったが、makimotoさんのグリッチ愛はひしひしと伝わってきた。&lt;/p&gt;
-
-&lt;p&gt;OSS活動はRailsへのプルリクエストやるびまの英語記事の翻訳などを紹介しておられたが、結論としては好きなモノを作って公開するのが一番いいとのこと。&lt;/p&gt;
-
-&lt;p&gt;自分も趣味方向でなにか作ってみたいと感じさせられた。&lt;/p&gt;
-
-&lt;h2 id=&#34;rubyvm読んでみた&#34;&gt;RubyVM読んでみた&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/ocha-&#34;&gt;Kawamotoさん&lt;/a&gt;からはRubyVMの処理を紹介していただいた。正直なところ、内容には追いついていけなかったのだが、構文木をバイトコードに変換するあたりの処理についてのお話だったかと思う。マニアックなトピックを淡々と話されていたのが印象的だった。この日は青木峰郎さんの講演が入っていることもあってRHGがらみの発表が多かったと思う。&lt;/p&gt;
-
-&lt;p&gt;自分も折を見て処理系の中身は覗いてみたい。&lt;/p&gt;
-
-&lt;h2 id=&#34;基調講演&#34;&gt;基調講演&lt;/h2&gt;
-
-&lt;p&gt;基調講演はEbiさんとAaronさんのPatterson夫妻による講演だった。&lt;/p&gt;
-
-&lt;p&gt;Ebiさんの話はAaronさんと一緒に海外カンファレンスを回った話だった。最初はなぜそんなにカンファレンスに参加するのかと思ったそうだが、次第にEbiさん自身もコミュニティに関わるようになったとのこと。海外カンファレンスにいくことについて、相手と直接話しをする機会を得ることの大切さを訴えていたのが印象的だった。&lt;/p&gt;
-
-&lt;p&gt;Aaronさんの話はAdequateRecordというActiveRecordのforkの話。キャッシュを頑張って、高速化しているそうだ。
-途中のベンチマークの話で、パフォーマンスを測るには平均値だけではなく標準偏差が大事だと言っていたのが印象に残っている。&lt;/p&gt;
-
-&lt;h2 id=&#34;1年かけてgemを1つ作りました&#34;&gt;1年かけてgemを1つ作りました&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/kunitoo&#34;&gt;@kunitoo&lt;/a&gt;さんからはgit logをrails上で確認できる&lt;a href=&#34;https://github.com/kunitoo/rgitlog&#34;&gt;rgitlog&lt;/a&gt;というgemの作成について。簡単に作れます！と言いながらライブコーディングしておられた。途中rails generateのタイプミスで作り直しになるなど波乱がありライブコーディング怖いとおっしゃっていたが、無事完了して一安心である。ライブコーディングはライブ感があっていいと思う。楽しい！&lt;/p&gt;
-
-&lt;h2 id=&#34;https-rubygems-org-gems-rfc7159&#34;&gt;&lt;a href=&#34;https://rubygems.org/gems/RFC7159&#34;&gt;https://rubygems.org/gems/RFC7159&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/shyouhei&#34;&gt;Urabeさん&lt;/a&gt;からはタイトル通りのgemの紹介。
-RFC7159からJSONの仕様が厳格になったようで、それに対応したgemを作った話だった。既存のgemにはユニコードやバックスラッシュ周りの処理でバグが有り、RFCには則っていない。しかし、Urabeさんのgemを使えばいいかというとそうではなくRFC7159のgemは処理が重いそうだ。JSONパーサに受け渡さないようアプリ側でチェックしたほうが幸せになれるんじゃないかとおっしゃっていた。&lt;/p&gt;
-
-&lt;h2 id=&#34;bundlerの話-タイトル失念&#34;&gt;Bundlerの話（タイトル失念）&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/hone02&#34;&gt;Terence Leeさん&lt;/a&gt;からはBundlerの高速化についての話だった。BundlerってRubyistにとってインフラだと思うのでありがたい。&lt;/p&gt;
-
-&lt;h2 id=&#34;object-bouquet-幸せの花束-rvalue-のきらめきを添えて&#34;&gt;Object Bouquet ～ 幸せの花束・RValue のきらめきを添えて ～&lt;/h2&gt;
-
-&lt;p&gt;新婚のささださん夫妻による発表。惚気話とRubyのオブジェクトツリーについてのディープな話を同時に披露するという離れ業。面白かった！&lt;/p&gt;
-
-&lt;h2 id=&#34;another-language-you-should-learn&#34;&gt;Another language you should learn&lt;/h2&gt;
-
-&lt;p&gt;TechCrunch編集長の西村さんからは英語学習についてのトーク。上のレオさんの発表もそうだったけどやっぱり時間をかけることが大事とのこと。やっぱりね・・・。あとインプットが大事ということで、こちらでもRedditをおすすめされていた。&lt;/p&gt;
-
-&lt;p&gt;僕も海外の技術系ニュースは毎日読もうかなと思う。&lt;/p&gt;
-
-&lt;h2 id=&#34;mruby-hacking-guide&#34;&gt;mruby hacking guide&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://twitter.com/_ksss_&#34;&gt;Kuriharaさん&lt;/a&gt;からはmrubyへのコントリビューションの話。mrubyはブルー・オーシャンという話は魅力的で、これから処理系の中身をハックするならmrubyが敷居が低そうだと感じた。&lt;/p&gt;
-
-&lt;h2 id=&#34;hacking-home&#34;&gt;Hacking Home&lt;/h2&gt;
-
-&lt;p&gt;松田明さんからは家を建てた際のエピソードの話。テクノロジーとは関係なくゆるい話がしたいと言っておられたが、プログラマ視点からの家の建築の話は新鮮だった。確かに、ソフトウェア開発って建築に例えることが多いけれど、逆の視点で語ることってなかなかないと思う。建築、施工から家の設備のAPI化まで楽しく話されていた。個人的にはこのセッションが一番楽しかった！ここまでコアな話が続いていたので息抜きにもなったし。&lt;/p&gt;
-
-&lt;h2 id=&#34;ruby会議でsqlの話をするのは間違っているだろうか&#34;&gt;Ruby会議でSQLの話をするのは間違っているだろうか&lt;/h2&gt;
-
-&lt;p&gt;RHGの青木さんからは並列データベースの話。話の筋は前職Teradataでの経験のお話から、Hadoopの隆盛、並列DBとHadoopの比較へと展開。やっぱりSQL必要だよねという話から、MapReduceは下火になっているという話、Hadoop側もHiveを中心にSQL系DBに似た構成になっているということを述べられていて、ビッグデータに疎い自分には新鮮だった。またMapReduceは完全にダメかというとそうでもなく柔軟性を活かしてSQL系DBを補助する形がいいのではないかとのこと。大トリにふさわしいコアな話だった！&lt;/p&gt;
-
-&lt;h2 id=&#34;感想&#34;&gt;感想&lt;/h2&gt;
-
-&lt;p&gt;とにかくコアな話の連続で大変濃密な一日だった。懇親会では地方から参加された方々と交流することが出来て、地域Rubyコミュニティの運営について熱く語っていただいたのが印象に残っている。とにかく濃いRubyistが集まっていて、Rubyistだけでこんなに楽しいお祭りが成立するのかと思い感動した。また来年も参加したいと思う。&lt;/p&gt;
-</description>
+      <description>大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。 遅刻したため途中からのレポートとなる。 Nobody Knows Nobu</description>
     </item>
     
   </channel>

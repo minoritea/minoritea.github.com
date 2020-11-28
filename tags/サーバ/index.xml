@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>サーバ on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/index.xml</link>
+    <link>https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/</link>
     <description>Recent content in サーバ on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/%E3%82%B5%E3%83%BC%E3%83%90/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 02 Nov 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BaiduSpiderを拒否</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</link>
       <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</guid>
-      <description>&lt;p&gt;最近、アクセス数が徐々に増えてるのでサイトをリニューアルした甲斐があったと喜んでいたら、アクセスの半分が百度ことBaiduのクローラだったことが判明。別段大した負荷もかかってないのだが、他社のBotと比べてちょっと行儀が悪いんじゃないかということで、robots.txtに以下を追加。&lt;/p&gt;
-
-&lt;p&gt;User-Agent: baiduspider
-Disallow: /&lt;/p&gt;
-</description>
+      <description>最近、アクセス数が徐々に増えてるのでサイトをリニューアルした甲斐があったと喜んでいたら、アクセスの半分が百度ことBaiduのクローラだったこ</description>
     </item>
     
     <item>
@@ -27,13 +22,7 @@ Disallow: /&lt;/p&gt;
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/413e8772c8d6/</guid>
-      <description>&lt;p&gt;ソーシャルプラットフォームのDisqusをコメント用に利用し始めた。Scantyがデフォルトで使うようになっていたからだがなかなか便利だと思う。ただし読み込みが遅いのとSafariで読み込めなかったので、乗り換えを考えている。&lt;/p&gt;
-
-&lt;p&gt;結局Twitterでコメントしてもらうのが手っ取り早いのでそれ系のサービスを利用するか自分で実装するかしようと思う。Topsyあたりが良いのかな。&lt;/p&gt;
-
-&lt;p&gt;追記:結局タグの閉じ忘れでSafariではWidgetがうまく動いてくれなかっただけだった。
-Firefoxではそのあたりがルーズなのが面白い。しばらくはこのまま運用してみたいと思う。&lt;/p&gt;
-</description>
+      <description>ソーシャルプラットフォームのDisqusをコメント用に利用し始めた。Scantyがデフォルトで使うようになっていたからだがなかなか便利だと思</description>
     </item>
     
     <item>
@@ -42,14 +31,7 @@ Firefoxではそのあたりがルーズなのが面白い。しばらくはこ�
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
-      <description>&lt;p&gt;このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRedisを使用しているのだが、気持ちいいほどに高速である。KVSなので若干取り扱いに難があったが、SQL初心者からするとSQLより分かりやすいと思う。オンメモリでばしばしデータをさばける上に永続化も自動で行ってくれる優れものだ。&lt;/p&gt;
-
-&lt;p&gt;アプリケーションサーバにはRuby製の軽量サーバであるUnicornを使用してある。軽量な上にロードバランシングを自動で行ってくれる優れものだ。&lt;/p&gt;
-
-&lt;p&gt;フロントエンドの仕事はポート転送だけなのでHTTPサーバにはこれも軽量なNginxを使用している。これもロードバランサとして非常に優れているのだが今回は単純にリクエストをパスするだけのサーバになっている。&lt;/p&gt;
-
-&lt;p&gt;全体的な構成としても非常に軽量でレスポンスの早い構成になった。RailsベースのTypoをHerokuで動かしていたときとは雲泥の差である。今後どんどん発展させていきたいと思う。&lt;/p&gt;
-</description>
+      <description>このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRed</description>
     </item>
     
     <item>
@@ -58,22 +40,7 @@ Firefoxではそのあたりがルーズなのが面白い。しばらくはこ�
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</guid>
-      <description>&lt;p&gt;DTIのServersman@VPSを昨日から借り始めた。学校のproxyがgitを通してくれないので、SSH転送用のサーバとしてのみ使用するつもりである。&lt;/p&gt;
-
-&lt;p&gt;が、せっかくCentOSを積んでいるのでLinuxの勉強も兼ねていろいろいじってみた。僕は普段Macを使っていて、他にUbuntuも多少触っているが、Redhat系のOSは随分昔にVineLinuxを使ったくらいである。&lt;/p&gt;
-
-&lt;p&gt;以下感想だが、なんといってもyumが使いにくい。UI周りもrpmの使いにくいところを引きずっている気がするが、なんと言ってもrepositoryが古いのがいただけない。そのせいでえらい苦労をした。&lt;/p&gt;
-
-&lt;p&gt;というのも例えばrvmでRuby-headをインストールしようとしたとたんにautoconfのエラーを吐く。仕方が無いのでgnuのサイトから最新版を取ってくるのだが今度はautomakeがエラーに。&lt;/p&gt;
-
-&lt;p&gt;で、いろいろ調べて分かったのがautomakeのバージョン2.66にバグがあるということと、bisonが古いのがまずいということらしい。んで両方入れてやっとrubyが動く環境に。僕は大体のスクリプトはrubyで書いているのでこれがないとどうにも使いづらくてしょうがない。デフォルトのは 1.8.5という今時レンタルサーバでももうちょっとましだろうというような古いバージョンである。&lt;/p&gt;
-
-&lt;p&gt;centosはなかなか評判のいいディストリビューションだが、公式のrepositoryが古くて野良のものに頼らざるをえないというのはなかなか使いづらいのではないだろうか。&lt;/p&gt;
-
-&lt;p&gt;お仕事できっちり管理して使うならともかく個人サーバー等で使う分にはubuntuのようにお手軽なパッケージ管理がついているものの方が使いやすいと思う。&lt;/p&gt;
-
-&lt;p&gt;まあ普段使っているmacportsもエラーが多くてあまり使いやすいとは言えないんだけれども。&lt;/p&gt;
-</description>
+      <description>DTIのServersman@VPSを昨日から借り始めた。学校のproxyがgitを通してくれないので、SSH転送用のサーバとしてのみ使用す</description>
     </item>
     
     <item>
@@ -82,14 +49,7 @@ Firefoxではそのあたりがルーズなのが面白い。しばらくはこ�
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</guid>
-      <description>&lt;p&gt;内定式しんどかったけど、楽しかった。&lt;/p&gt;
-
-&lt;p&gt;さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容量が無いので長く利用するかどうかは悩みどころである。&lt;/p&gt;
-
-&lt;p&gt;有料化すると値段が跳ね上がるので、自分のVPS上にブログを移行しようと思うのだがRailsは重いので動かしたくない。 Sinatraあたりでいいブログエンジンがないものかなあ。それともPHPを導入してWordpressにするか。&lt;/p&gt;
-
-&lt;p&gt;悩ましい。&lt;/p&gt;
-</description>
+      <description>内定式しんどかったけど、楽しかった。 さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容</description>
     </item>
     
     <item>
@@ -98,10 +58,7 @@ Firefoxではそのあたりがルーズなのが面白い。しばらくはこ�
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</guid>
-      <description>&lt;p&gt;本ブログを新しいサーバに移転した。VPSも変えてblogエンジンも自分で実装した(scanty-redisベース)。herokuと比べて随分軽くなったように思う。ちなみにherokuから変えた理由はパフォーマンス面よりもデータベースの容量である。無料プラントはいえ5MBではさすがに不安だったからだ。&lt;/p&gt;
-
-&lt;p&gt;ちなみに過去の記事の日付がおかしなことになっているがこれは移転を手動で行ったためである。後々その辺りも整備していきたい。&lt;/p&gt;
-</description>
+      <description>本ブログを新しいサーバに移転した。VPSも変えてblogエンジンも自分で実装した(scanty-redisベース)。herokuと比べて随分</description>
     </item>
     
   </channel>

@@ -1,69 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Octopress on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/octopress/index.xml</link>
-    <description>Recent content in Octopress on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>octopress on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/octopress/</link>
+    <description>Recent content in octopress on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 31 May 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>flickrの画像をOctopressに埋め込むTips</title>
       <link>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</link>
       <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</guid>
-      <description>&lt;p&gt;Octopressの画像置き場をどうするか考えてflickrにしてみた。&lt;/p&gt;
-
-&lt;p&gt;public/images以下に置いておくのがデフォルトなんだろうけど、
-githubにあんまりバイナリを置くのも悪いしなぁと思って色々探していた。&lt;/p&gt;
-
-&lt;p&gt;見つけたのが、octopress-flickr。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/neilk/octopress-flickr&#34;&gt;https://github.com/neilk/octopress-flickr&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;OctopressのGemfileに以下を追加して、&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;gem &#39;flickraw&#39;
-gem &#39;builder&#39;, &#39;&amp;gt; 2.0.0&#39;
-gem &#39;persistent_memoize&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以下を実行する。
-/path/to/octopress/には自分のoctopressのパスを入れよう。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git clone https://github.com/neilk/octopress-flickr
-cd octopress-flickr
-find . \( -name &#39;*.rb&#39; -o -name &#39;*.scss&#39; \) -exec cp {} /path/to/octopress/{} \;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;次にAPIキーをflickrで作成する。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/services/developer/api/&#34;&gt;http://www.flickr.com/services/developer/api/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;取ってきたAPIキーとシークレットキーを環境変数に入れる。
-直接定義ファイルとかに入れないのはセキュリティのためだろうね。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;export FLICKR_API_KEY=your_api_key
-export FLICKR_API_SECRET=your_api_secret
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以上で準備は終わり。Octopressのポストにflickr画像用のタグを挿入する。
-まず、flickrの写真を拡大表示した時のURLからパスの最後の数字をとる。
-例えば以下のURLだったら、&lt;code&gt;8901098353&lt;/code&gt;が画像のIDだ。
-&lt;a href=&#34;http://www.flickr.com/photos/36392485@N08/8901098353/&#34;&gt;http://www.flickr.com/photos/36392485@N08/8901098353/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;このIDを以下のようにタグに入れ、本文に挿入する。
-IDの右の&lt;code&gt;n&lt;/code&gt;は画像のサイズ、&lt;code&gt;center&lt;/code&gt;は位置、その後ろの文字列はキャプションだ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{% flickr_image 8901098353 n center &#39;sample picture&#39; %}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;この記事に画像を読み込んだ結果は以下となる。&lt;/p&gt;
-
-&lt;p&gt;///2014.03 加筆: ブログをOctpressから独自アプリに移行したため、このページ内での確認はできなくなりました。&lt;/p&gt;
-</description>
+      <description>Octopressの画像置き場をどうするか考えてflickrにしてみた。 public/images以下に置いておくのがデフォルトなんだろうけ</description>
     </item>
     
     <item>
@@ -72,20 +22,7 @@ IDの右の&lt;code&gt;n&lt;/code&gt;は画像のサイズ、&lt;code&gt;center&
       <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2013/05/28/1580cb206a30/</guid>
-      <description>&lt;p&gt;とりあえず、disqus入れてみた。&lt;/p&gt;
-
-&lt;p&gt;旧サイト(&lt;a href=&#34;http://tanstaafl.0pt.jp/)から記事を一式移行するも、&#34;&gt;http://tanstaafl.0pt.jp/)から記事を一式移行するも、&lt;/a&gt;
-記事名のパスが日本語だとダメのようで、
-かといってエスケープすると二重にエスケープされてしまい、
-そのままのパスで移行というわけには行かなかった。
-しょうがないので、ランダム文字列をファイル名に使用した。
-タイトルとは別扱いなのでむしろこっちの方がすっきりしていい。&lt;/p&gt;
-
-&lt;p&gt;Jekyllは静的ページなので取り扱いが楽でいい。
-スクリプトも拡張しやすそうな作りで、
-実際、Octopressのコード見ると結構モンキーパッチあてたりなんかしてて、
-ゆるそうで良い。&lt;/p&gt;
-</description>
+      <description>とりあえず、disqus入れてみた。 旧サイト(http://tanstaafl.0pt.jp/)から記事を一式移行するも、 記事名のパスが日本</description>
     </item>
     
     <item>
@@ -94,10 +31,7 @@ IDの右の&lt;code&gt;n&lt;/code&gt;は画像のサイズ、&lt;code&gt;center&
       <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2013/05/28/e80bc1782e91/</guid>
-      <description>&lt;p&gt;BlogをOctpressに移行しようかと思い、作成。
-Github/Jekyllベースでシンプルな感じがすき。
-しばらくは元ブログからポツポツと移行していこうと思う。&lt;/p&gt;
-</description>
+      <description>BlogをOctpressに移行しようかと思い、作成。 Github/Jekyllベースでシンプルな感じがすき。 しばらくは元ブログからポツポツ</description>
     </item>
     
   </channel>

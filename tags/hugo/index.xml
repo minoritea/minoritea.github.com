@@ -1,48 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/hugo/index.xml</link>
+    <link>https://tanstaafl.0pt.jp/tags/hugo/</link>
     <description>Recent content in Hugo on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 24 Feb 2016 01:02:53 +0900</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ブログをHugoに移行した</title>
       <link>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</link>
       <pubDate>Wed, 24 Feb 2016 01:02:53 +0900</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</guid>
-      <description>&lt;p&gt;このブログは手製blogエンジンで構築していたのだが、
-サイトの管理が面倒になってしまい放置してしまっていた。&lt;/p&gt;
-
-&lt;p&gt;そのため、今回Github Pagesに移行することにした。
-移行にあたって静的ページジェネレータをいくつか検討した結果、
-&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を採用した。
-別にJekyllをそのまま使っても良かったのだがGo製で早いと評判だったので
-Hugoにした。今のところ、そのまま使えている。&lt;/p&gt;
-
-&lt;p&gt;工夫したところとしては、リポジトリの下に&lt;code&gt;_hugo&lt;/code&gt;という作業ディレクトリをきって、
-そこにHugoでの生成元となるファイルを全部突っ込んだ。
-設定でコンテンツの生成先を&lt;code&gt;..&lt;/code&gt;にしておいたので、
-そのままリポジトリをコミットしてgithubにPushすればデプロイできる。
-ちなみに作業ディレクトリの頭に&lt;code&gt;_&lt;/code&gt;がついているのは、
-Jekyllは&lt;code&gt;_&lt;/code&gt;付きのディレクトリを無視するからである。
-Hugoを使っているけど、リポジトリ自体はJekyll形式になっているので
-そのままGithub Pagesで読み込むことができるのである。&lt;/p&gt;
-
-&lt;p&gt;他にやったこととしては、github pagesでも独自ドメインをそのまま使い続けるため、
-いろいろ設定した。
-今時SSLくらい入れようと思い、CDNの&lt;a href=&#34;https://www.cloudflare.com&#34;&gt;CloudFlare&lt;/a&gt;を利用することにした。
-CloudFlareは無料で証明書を提供しているのでCloudFlare経由で配信することでSSL対応のサイトにできる。
-設定は以下のQiitaを参考にした。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://qiita.com/superbrothers/items/95e5723e9bd320094537&#34;&gt;http://qiita.com/superbrothers/items/95e5723e9bd320094537&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;新しいブログはなかなか快適になったので、
-今後はぼちぼちコンテンツを追加していきたいところである。&lt;/p&gt;
-</description>
+      <description>このブログは手製blogエンジンで構築していたのだが、 サイトの管理が面倒になってしまい放置してしまっていた。 そのため、今回Github Pag</description>
     </item>
     
   </channel>

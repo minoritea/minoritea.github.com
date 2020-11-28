@@ -1,39 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jsonp on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/jsonp/index.xml</link>
-    <description>Recent content in Jsonp on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>jsonp on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/jsonp/</link>
+    <description>Recent content in jsonp on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/jsonp/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 17 Nov 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/jsonp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JSONとJSONPの違い</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/11/17/75eb52a3779e/</link>
       <pubDate>Wed, 17 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/17/75eb52a3779e/</guid>
-      <description>&lt;p&gt;Twitter APIで取得していたコメントが消えてしまった。Twitter検索で引っかかるのは7日間だけである。これでは少し寂しいのでツイートの取得にTopsyを利用してみた。Topsyはツイッター等の発言をベースにした検索エンジンで、公開されたAPIから特定のサイトについてのツイートを抽出して取得するといったことが出来る。&lt;/p&gt;
-
-&lt;p&gt;それでTopsyのAPIをjQueryの機能で取得してみようとしたのだがjsonを取得しようとするとリクエストは200 OKを返すのにデータが取得出来ない。jQueryが原因かと思って色々調べてみたのだが違うようだ。原因はスクリプトの実行元と異なるドメインのデータをxmlHttpRequestでは取得出来ないかららしい。何故このようにしているかというとクロスサイトスクリプティングを防止するためのようだ。しかしこの制限にも抜け道がある。それがJSONPである。&lt;/p&gt;
-
-&lt;p&gt;JSONPはscriptタグを利用してリモートのデータを読み込む。JSONの実体がjavascriptのコードであることを利用しているのだ。そしてコールバックを実行してデータを再生する。シンプルな仕組みである。&lt;/p&gt;
-
-&lt;p&gt;参考にしたのはここのサイトである（jQueryはJSONPの理解の妨げになるか？）。
-僕は今までJSONとJSONPについて違いがよくわかっておらず、単にコールバックを指定するのがJSONPだと思っていた。しかしAjaxの処理にはデータ形式によらずコールバックを使うのだからこれでは違いにならない。scriptタグを利用したデータの読み込みこそがJSONPだったのだ。こういうことはjQueryの解説サイトにはあんまり書いていない。Ajax技術としては常識なんだろうけどjQueryでAjaxを始めた人のためにも是非啓蒙して欲しいと思う。&lt;/p&gt;
-
-&lt;p&gt;まとめ&lt;/p&gt;
-
-&lt;p&gt;JSONを含め通常Ajaxで使うxmlHttpRequestでは外部サイトのデータを取得出来ない(XSS対策）
-JSONPはscriptタグで外部サイトを読み込むことで上記を回避している
-jQueryではJSONとJSONPを同じように扱えるが両者はまったく由来の異なる技術である。&lt;/p&gt;
-
-&lt;p&gt;JSONはただのデータ形式（javascriptのオブジェクトをtext化したもの）
-JSONPはデータを読み込むための技術（javascriptコードの読み込み）&lt;/p&gt;
-
-&lt;p&gt;Ajaxではデータの受け渡しの形式としてどちらも用いられている。&lt;/p&gt;
-</description>
+      <description>Twitter APIで取得していたコメントが消えてしまった。Twitter検索で引っかかるのは7日間だけである。これでは少し寂しいのでツイートの取得にT</description>
     </item>
     
   </channel>

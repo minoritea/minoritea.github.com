@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -83,13 +83,11 @@
 
     <div class="article-body" itemprop="articleBody"><p>このブログは手製blogエンジンで構築していたのだが、
 サイトの管理が面倒になってしまい放置してしまっていた。</p>
-
 <p>そのため、今回Github Pagesに移行することにした。
 移行にあたって静的ページジェネレータをいくつか検討した結果、
 <a href="https://gohugo.io/">Hugo</a>を採用した。
 別にJekyllをそのまま使っても良かったのだがGo製で早いと評判だったので
 Hugoにした。今のところ、そのまま使えている。</p>
-
 <p>工夫したところとしては、リポジトリの下に<code>_hugo</code>という作業ディレクトリをきって、
 そこにHugoでの生成元となるファイルを全部突っ込んだ。
 設定でコンテンツの生成先を<code>..</code>にしておいたので、
@@ -98,15 +96,12 @@ Hugoにした。今のところ、そのまま使えている。</p>
 Jekyllは<code>_</code>付きのディレクトリを無視するからである。
 Hugoを使っているけど、リポジトリ自体はJekyll形式になっているので
 そのままGithub Pagesで読み込むことができるのである。</p>
-
 <p>他にやったこととしては、github pagesでも独自ドメインをそのまま使い続けるため、
 いろいろ設定した。
 今時SSLくらい入れようと思い、CDNの<a href="https://www.cloudflare.com">CloudFlare</a>を利用することにした。
 CloudFlareは無料で証明書を提供しているのでCloudFlare経由で配信することでSSL対応のサイトにできる。
 設定は以下のQiitaを参考にした。</p>
-
 <p><a href="http://qiita.com/superbrothers/items/95e5723e9bd320094537">http://qiita.com/superbrothers/items/95e5723e9bd320094537</a></p>
-
 <p>新しいブログはなかなか快適になったので、
 今後はぼちぼちコンテンツを追加していきたいところである。</p>
 </div>

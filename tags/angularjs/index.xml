@@ -1,23 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Angularjs on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/angularjs/index.xml</link>
-    <description>Recent content in Angularjs on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>angularjs on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/angularjs/</link>
+    <description>Recent content in angularjs on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 25 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Turbolinksモドキを入れた</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
       <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
-      <description>&lt;p&gt;結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。&lt;/p&gt;
-
-&lt;p&gt;というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。&lt;/p&gt;
-</description>
+      <description>結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。 というわけでTurbolinksモ</description>
     </item>
     
     <item>
@@ -26,19 +22,7 @@
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
-      <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;
-
-&lt;p&gt;スライドはこちら。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34;&gt;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/33852359&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34; title=&#34;Angular jsとsinatraでturbolinks&#34; target=&#34;_blank&#34;&gt;Angular jsとsinatraでturbolinks&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;なお、このブログを対象にTurbolinksモドキを実装してみたのだが、
-Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
-
-&lt;p&gt;近いうちにお見せできればと思っている。&lt;/p&gt;
-</description>
+      <description>表題の通りにKawasaki.rbで発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks なお、このブログを対象にTurbolinksモドキを実装してみたのだが</description>
     </item>
     
     <item>
@@ -47,33 +31,7 @@ Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;
       <pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</guid>
-      <description>&lt;p&gt;AngularJSを使ったフォームでチェックボックスを使いたいとする。
-このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、checkboxの値（true/false）をモデルに紐付けることが出来る。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;checkbox&amp;quot; ng-model=&amp;quot;model&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;しかし真偽値以外の値をモデルに設定したい場合もある。
-その場合には&lt;code&gt;ngTrue&lt;/code&gt;, &lt;code&gt;ngFalse&lt;/code&gt;ディレクティブを使う。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;checkbox&amp;quot; ng-model=&amp;quot;model&amp;quot; ng-true=&amp;quot;OK&amp;quot; ng-false=&amp;quot;Fail&amp;quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上記の例だとチェックが入っていればモデルの値は&lt;code&gt;&amp;quot;OK&amp;quot;&lt;/code&gt;に、入ってなければ&lt;code&gt;&amp;quot;Fail&amp;quot;&lt;/code&gt;にそれぞれ設定される。&lt;/p&gt;
-
-&lt;p&gt;ただし、これらの紐付けはモデルに対して行われる。つまり、モデルの変更がチェックボックス側に伝達されるわけではない。これはHTMLの仕様によるらしいが、自分の理解では&lt;code&gt;checked&lt;/code&gt;属性のような真偽値を持つ属性が偽になった時、ブラウザ側で値が保持されないため、AngularJSのバインディングが切れてしまうことによるようだ。&lt;/p&gt;
-
-&lt;p&gt;そのためモデル側の変更に合わせてチェックボックスのチェックを付け外ししたい場合は&lt;code&gt;ngChecked&lt;/code&gt;ディレクティブを使う必要がある。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&amp;quot;checkbox&amp;quot; ng-model=&amp;quot;model&amp;quot; ng-checked=&amp;quot;model&amp;quot; /&amp;gt;
-...
-function CheckBoxController($scope){
-  $scope.model = true;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;上記のようにすれば、$scope.modelが設定されたタイミングでチェックボックス側のチェックも自動で入れることが出来る。&lt;/p&gt;
-</description>
+      <description>AngularJSを使ったフォームでチェックボックスを使いたいとする。 このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、ch</description>
     </item>
     
     <item>
@@ -82,26 +40,7 @@ function CheckBoxController($scope){
       <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
-      <description>&lt;p&gt;このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
-URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。&lt;/p&gt;
-
-&lt;p&gt;ここで問題になるのは、Googleなどのクローラはjavascriptを実行しないため、クローラに対してTitleタグやOGPなどのメタ情報をクライアント側で動的に出し分けることが出来ないということだ。これについて何か解決策がないか調べてみたのだが、結論としては、クローラなどにjavascrptで動的にメタ情報を付加することはやっぱり出来ないということだった。（そりゃそうだ）。&lt;/p&gt;
-
-&lt;p&gt;特に参考になったのは以下の記事である。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://coderwall.com/p/vqpfka&#34;&gt;AngularJS SEO&lt;/a&gt; &lt;a href=&#34;https://coderwall.com/p/vqpfka&#34;&gt;https://coderwall.com/p/vqpfka&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この記事では2つの解法が示されている。&lt;/p&gt;
-
-&lt;p&gt;1つ目はシンプルに&lt;strong&gt;そもそも1ページAppにはしない&lt;/strong&gt;こと。
-実はこのブログではこちらの解法を採用するつもりだ。各記事についてはサーバ側のテンプレートを分けて、そちらにはメタ情報をサーバ側で付与する。1ページに集約することにこだわるより、AngularJSのテンプレートを使って再利用できるところは再利用し、最低限のサーバ側で出しわけないといけないところはサーバ側でレンダリングする方が自然だと判断したからだ。とはいえ1ページAppというのはロマンがあったので少し残念ではある。&lt;/p&gt;
-
-&lt;p&gt;2つ目のやり方はサーバ側でHTMLページをレンダリングし、クローラに表示することだ。
-これをわざわざやってまでSEO対策するほどのメリットは見いだせなかったのでこちらの手段は取らないことにした。
-上の記事では2つ目のやり方について詳しく書かれているが、&lt;strong&gt;滅茶苦茶めんどくさそう&lt;/strong&gt;な印象を受けたからだ。&lt;/p&gt;
-
-&lt;p&gt;そういうわけで結論としては1ページAppでメタ情報を動的に扱うのは基本的に無理筋だということがわかった。（身も蓋もないが）。&lt;/p&gt;
-</description>
+      <description>このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン</description>
     </item>
     
     <item>
@@ -110,58 +49,7 @@ URLのパラメータやフラグメントを元に、Ajaxなどで動的にコ�
       <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
-      <description>&lt;p&gt;新しいブログエンジンでもコメントシステムはDisqusを使っている。
-Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。&lt;/p&gt;
-
-&lt;p&gt;Angular.jsはng-includeなどの仕組みで、HTMLテンプレートを動的に読み込みができ、HTMLをパーツとして使いまわすことができる。
-しかし、このテンプレートを読み込む際にscriptタグが含まれていた場合はセキュリティのためか、scriptタグが無視されてしまう。
-そのためDisqusのように外部スクリプトを埋め込んでDOM要素を生成するようなサービスとは相性が悪い。&lt;/p&gt;
-
-&lt;p&gt;しかし、皆考えることは同じようで、ハックを公開してくれた人がいたので参考にさせていただいた。
-使い方は簡単でngLoadModuleというモジュール（コードは以下のGist参照）をngAppで指定したモジュールに読み込んで、
-読み込ませたいscriptタグに&amp;rdquo;text/javascript-lazy&amp;rdquo;と追加するだけである。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/subudeepak/9617483&#34;&gt;https://gist.github.com/subudeepak/9617483&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;以下はgistより引用。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(function (ng) {
-  &#39;use strict&#39;;
- 
-  var app = ng.module(&#39;ngLoadScript&#39;, []);
- 
-  app.directive(&#39;script&#39;, function() {
-    return {
-      restrict: &#39;E&#39;,
-      scope: false,
-      link: function(scope, elem, attr) 
-      {
-        if (attr.type===&#39;text/javascript-lazy&#39;) 
-        {
-          var s = document.createElement(&amp;quot;script&amp;quot;);
-          s.type = &amp;quot;text/javascript&amp;quot;;                
-          var src = elem.attr(&#39;src&#39;);
-          if(src!==undefined)
-          {
-              s.src = src;
-          }
-          else
-          {
-              var code = elem.text();
-              s.text = code;
-          }
-          document.head.appendChild(s);
-          elem.remove();
-          /*var f = new Function(code);
-          f();*/
-        }
-      }
-    };
-  });
- 
-}(angular));
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description>新しいブログエンジンでもコメントシステムはDisqusを使っている。 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービス</description>
     </item>
     
     <item>
@@ -170,16 +58,7 @@ Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優�
       <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
-      <description>&lt;p&gt;ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。&lt;/p&gt;
-
-&lt;p&gt;理由の一つはangularjsの習作として色々自分で試してみたかったからだ。
-angularjsについてはまたいろいろ挑戦してみたい。&lt;/p&gt;
-
-&lt;p&gt;また、Octopressは記事をローカルで書いてrakeタスクを叩くため投稿するのが億劫になっていた。
-現在のアプリはWeb上で記事を編集でき、編集中にリアルタイムでMarkdownを変換してくれるため、大変ラクになった。&lt;/p&gt;
-
-&lt;p&gt;しばらく更新が滞っていたがまた再開したいと思う。&lt;/p&gt;
-</description>
+      <description>ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。 理由の一つはangularjsの習作</description>
     </item>
     
   </channel>

@@ -1,27 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nginx on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/nginx/index.xml</link>
-    <description>Recent content in Nginx on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>nginx on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/nginx/</link>
+    <description>Recent content in nginx on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Thu, 28 Oct 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
-      <description>&lt;p&gt;このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRedisを使用しているのだが、気持ちいいほどに高速である。KVSなので若干取り扱いに難があったが、SQL初心者からするとSQLより分かりやすいと思う。オンメモリでばしばしデータをさばける上に永続化も自動で行ってくれる優れものだ。&lt;/p&gt;
-
-&lt;p&gt;アプリケーションサーバにはRuby製の軽量サーバであるUnicornを使用してある。軽量な上にロードバランシングを自動で行ってくれる優れものだ。&lt;/p&gt;
-
-&lt;p&gt;フロントエンドの仕事はポート転送だけなのでHTTPサーバにはこれも軽量なNginxを使用している。これもロードバランサとして非常に優れているのだが今回は単純にリクエストをパスするだけのサーバになっている。&lt;/p&gt;
-
-&lt;p&gt;全体的な構成としても非常に軽量でレスポンスの早い構成になった。RailsベースのTypoをHerokuで動かしていたときとは雲泥の差である。今後どんどん発展させていきたいと思う。&lt;/p&gt;
-</description>
+      <description>このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRed</description>
     </item>
     
   </channel>

@@ -1,35 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/linux/index.xml</link>
-    <description>Recent content in Linux on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>linux on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/linux/</link>
+    <description>Recent content in linux on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Wed, 27 Oct 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VPS</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</guid>
-      <description>&lt;p&gt;DTIのServersman@VPSを昨日から借り始めた。学校のproxyがgitを通してくれないので、SSH転送用のサーバとしてのみ使用するつもりである。&lt;/p&gt;
-
-&lt;p&gt;が、せっかくCentOSを積んでいるのでLinuxの勉強も兼ねていろいろいじってみた。僕は普段Macを使っていて、他にUbuntuも多少触っているが、Redhat系のOSは随分昔にVineLinuxを使ったくらいである。&lt;/p&gt;
-
-&lt;p&gt;以下感想だが、なんといってもyumが使いにくい。UI周りもrpmの使いにくいところを引きずっている気がするが、なんと言ってもrepositoryが古いのがいただけない。そのせいでえらい苦労をした。&lt;/p&gt;
-
-&lt;p&gt;というのも例えばrvmでRuby-headをインストールしようとしたとたんにautoconfのエラーを吐く。仕方が無いのでgnuのサイトから最新版を取ってくるのだが今度はautomakeがエラーに。&lt;/p&gt;
-
-&lt;p&gt;で、いろいろ調べて分かったのがautomakeのバージョン2.66にバグがあるということと、bisonが古いのがまずいということらしい。んで両方入れてやっとrubyが動く環境に。僕は大体のスクリプトはrubyで書いているのでこれがないとどうにも使いづらくてしょうがない。デフォルトのは 1.8.5という今時レンタルサーバでももうちょっとましだろうというような古いバージョンである。&lt;/p&gt;
-
-&lt;p&gt;centosはなかなか評判のいいディストリビューションだが、公式のrepositoryが古くて野良のものに頼らざるをえないというのはなかなか使いづらいのではないだろうか。&lt;/p&gt;
-
-&lt;p&gt;お仕事できっちり管理して使うならともかく個人サーバー等で使う分にはubuntuのようにお手軽なパッケージ管理がついているものの方が使いやすいと思う。&lt;/p&gt;
-
-&lt;p&gt;まあ普段使っているmacportsもエラーが多くてあまり使いやすいとは言えないんだけれども。&lt;/p&gt;
-</description>
+      <description>DTIのServersman@VPSを昨日から借り始めた。学校のproxyがgitを通してくれないので、SSH転送用のサーバとしてのみ使用す</description>
     </item>
     
   </channel>

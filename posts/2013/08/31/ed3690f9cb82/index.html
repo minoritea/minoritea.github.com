@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -86,23 +86,18 @@
 <li>メソッドAの目的はXの値を更新することだが、返り値からXの値を知ることは出来ない。</li>
 <li>オブジェクトOの他のメソッドからXの値を直接知ることは出来ない。</li>
 </ol>
-
 <p>以上のような状況のとき、メソッドAのテストってどうすればいいんだろうと思ったんだけど、シンプルにインスタンス変数にアクセスすることにした。メソッドAの正しい挙動は内部変数を変更することなので、そのテストは、変数の変更を検知することだと思ったからだ。</p>
-
 <p>というわけでコードは以下。</p>
-
-<pre><code class="language-ruby">require 'minitest/autostart'
-O = Struct.new(:x)
-class TestO &lt; Minitest::Test
-  def test_a
-    o = O.new
-    o.a #x =&gt; true
-    assert o.instance_variable_get(:@x)
-  end
-end
-</code></pre>
-
-<p>他にいいやりかたがあるのかもしれないけど、多分これが一番スッキリする。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#39;minitest/autostart&#39;</span>
+O <span style="color:#f92672">=</span> <span style="color:#66d9ef">Struct</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">:x</span>)
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestO</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Minitest</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Test</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_a</span>
+    o <span style="color:#f92672">=</span> O<span style="color:#f92672">.</span>new
+    o<span style="color:#f92672">.</span>a <span style="color:#75715e">#x =&gt; true</span>
+    assert o<span style="color:#f92672">.</span>instance_variable_get(<span style="color:#e6db74">:@x</span>)
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>他にいいやりかたがあるのかもしれないけど、多分これが一番スッキリする。</p>
 </div>
 
     <aside>

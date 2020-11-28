@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -82,44 +82,31 @@
     
 
     <div class="article-body" itemprop="articleBody"><p>先日書いた、<a href="/posts/2014/12/06/8fc4abc5b442">CoreOSでバックアップを取っていなかったためデータを飛ばした話</a>の続きである。</p>
-
 <p>前回fleetを使うという話をしたのだけれど、自分が今使っている環境はシングルホストだしsystemdを使うことにした。最もfleetはsystemdを分散クラスタ上で管理するためのツールのようなので、実際やることは変わらないだろう。</p>
-
 <p>まず、Postgresからデータを取り出すためのイメージを作った。中身は単純にPostgres公式イメージ上でpg_dumpを実行するだけのシロモノである。
 dumpしたファイルは volumeとして取り込んだホスト側の領域に吐き出される。
 上記イメージを実行するコマンドをシェルスクリプトでラップし、実行ファイルとした。</p>
-
 <p>pg-backup.sh</p>
-
 <pre><code>BACKUP_DIR=バックアップファイル置き場
 docker run --rm -ti --link -v $BACKUP_DIR:/var/pg_dump \
   my-postgres-container:pg postgres-backup-image
-</code></pre>
-
-<p>次にこのスクリプトをsystemdのサービスとして登録する。
+</code></pre><p>次にこのスクリプトをsystemdのサービスとして登録する。
 systemdではユニットという単位でOS上の様々なものを管理する。
 サービスもユニットの一種という扱いのようだ。
 これらのユニットを管理するための設定ファイルとしてユニットファイルを書くとsystemd側でロード、起動を実行してくれる。
 ユニットファイルはCoreOSのデフォルトだと、/etc/systemd/systemに置く。
 上のスクリプトのユニットファイルは以下のようになる。</p>
-
 <p>pg-dump.service</p>
-
 <pre><code>[Unit]
 Description=Dump data from Postgres container
 Requires=docker.service
 
 [Service]
 ExecStart=/opt/docker/scripts/pg-backup/pg-backup.sh
-</code></pre>
-
-<p>Descriptionはユニットの説明を、Requiresは依存関係（この場合dockerサービス）を表している。
+</code></pre><p>Descriptionはユニットの説明を、Requiresは依存関係（この場合dockerサービス）を表している。
 ExecStartには実際に実行されるコマンドを置く。</p>
-
 <p>次に、ジョブスケジューリングのためのユニットファイルを書く。systemdではタイマーイベントもユニットとして扱うことが出来る。</p>
-
 <p>pg-dump.timer</p>
-
 <pre><code>[Unit]
 Description=daily Postgres backup
 
@@ -128,13 +115,9 @@ OnCalendar=*-*-* 20:00:00
 
 [Install]
 WantedBy=default.target
-</code></pre>
-
-<p>OnCalendarで起動時刻を指定する。この辺りはCronとおなじ感覚だ。
+</code></pre><p>OnCalendarで起動時刻を指定する。この辺りはCronとおなじ感覚だ。
 <em>.serviceと</em>.timerが同じ名前であれば、起動するサービス名は指定しなくてよい。</p>
-
 <p>あとは<code>sudo systemctl start pg-backup.timer</code>で実行すれば、タイマーイベントとして登録される。</p>
-
 <p>タスクスケジューラとしてsystemdを使ってみた感想としては、最初の印象ほどややこしくはなかったが、このぐらいのタスクであればcronの方が楽かもしれない。
 依存関係などを考えるようになると真価を発揮するのではないかと思っている。</p>
 </div>

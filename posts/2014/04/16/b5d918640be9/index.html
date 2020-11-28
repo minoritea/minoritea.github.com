@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -83,30 +83,19 @@
 
     <div class="article-body" itemprop="articleBody"><p>AngularJSを使ったフォームでチェックボックスを使いたいとする。
 このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、checkboxの値（true/false）をモデルに紐付けることが出来る。</p>
-
 <pre><code>&lt;input type=&quot;checkbox&quot; ng-model=&quot;model&quot; /&gt;
-</code></pre>
-
-<p>しかし真偽値以外の値をモデルに設定したい場合もある。
+</code></pre><p>しかし真偽値以外の値をモデルに設定したい場合もある。
 その場合には<code>ngTrue</code>, <code>ngFalse</code>ディレクティブを使う。</p>
-
 <pre><code>&lt;input type=&quot;checkbox&quot; ng-model=&quot;model&quot; ng-true=&quot;OK&quot; ng-false=&quot;Fail&quot; /&gt;
-</code></pre>
-
-<p>上記の例だとチェックが入っていればモデルの値は<code>&quot;OK&quot;</code>に、入ってなければ<code>&quot;Fail&quot;</code>にそれぞれ設定される。</p>
-
+</code></pre><p>上記の例だとチェックが入っていればモデルの値は<code>&quot;OK&quot;</code>に、入ってなければ<code>&quot;Fail&quot;</code>にそれぞれ設定される。</p>
 <p>ただし、これらの紐付けはモデルに対して行われる。つまり、モデルの変更がチェックボックス側に伝達されるわけではない。これはHTMLの仕様によるらしいが、自分の理解では<code>checked</code>属性のような真偽値を持つ属性が偽になった時、ブラウザ側で値が保持されないため、AngularJSのバインディングが切れてしまうことによるようだ。</p>
-
 <p>そのためモデル側の変更に合わせてチェックボックスのチェックを付け外ししたい場合は<code>ngChecked</code>ディレクティブを使う必要がある。</p>
-
 <pre><code>&lt;input type=&quot;checkbox&quot; ng-model=&quot;model&quot; ng-checked=&quot;model&quot; /&gt;
 ...
 function CheckBoxController($scope){
   $scope.model = true;
 }
-</code></pre>
-
-<p>上記のようにすれば、$scope.modelが設定されたタイミングでチェックボックス側のチェックも自動で入れることが出来る。</p>
+</code></pre><p>上記のようにすれば、$scope.modelが設定されたタイミングでチェックボックス側のチェックも自動で入れることが出来る。</p>
 </div>
 
     <aside>

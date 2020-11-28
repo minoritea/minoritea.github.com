@@ -1,24 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Webサービス on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/index.xml</link>
-    <description>Recent content in Webサービス on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>webサービス on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/</link>
+    <description>Recent content in webサービス on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 02 Nov 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BaiduSpiderを拒否</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</link>
       <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</guid>
-      <description>&lt;p&gt;最近、アクセス数が徐々に増えてるのでサイトをリニューアルした甲斐があったと喜んでいたら、アクセスの半分が百度ことBaiduのクローラだったことが判明。別段大した負荷もかかってないのだが、他社のBotと比べてちょっと行儀が悪いんじゃないかということで、robots.txtに以下を追加。&lt;/p&gt;
-
-&lt;p&gt;User-Agent: baiduspider
-Disallow: /&lt;/p&gt;
-</description>
+      <description>最近、アクセス数が徐々に増えてるのでサイトをリニューアルした甲斐があったと喜んでいたら、アクセスの半分が百度ことBaiduのクローラだったこ</description>
     </item>
     
     <item>
@@ -27,14 +22,7 @@ Disallow: /&lt;/p&gt;
       <pubDate>Sat, 30 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/30/c590b8f6037f/</guid>
-      <description>&lt;p&gt;コメントシステムのDisqusを使い始めた。残念ながらコメントしてくれる人もいないが、元々Webサービスの習作として作っていて、閲覧しているのは自分だけというBlogだったのでしょうがないだろう。&lt;/p&gt;
-
-&lt;p&gt;Disqusを試しに使っていた中で、Safariで読み込まれないというトラブルは解決した。WindowsでのIEも動作確認したので問題ないだろう。もう一つ気になっていたTwitter上でのコメントの同期がしたいという点だが、実はDisqusがそのまま使えることが判明した。&lt;/p&gt;
-
-&lt;p&gt;当初TweetMemeやTopsyなどを検討していたのだが、いろいろ調べているうちにTwitterだけでなくYoutubeやFriendFeedからのコメントも拾えるBackTypeというサービスがAPIも公開されていてなかなか便利そうだと思ったので、これの導入を考えていた。調べていて分かったのはDisqus自体がこのAPIを利用していて、Twitterのコメントも拾えるということだった。それでDisqusをそのまま使ってみることにしたわけだ。&lt;/p&gt;
-
-&lt;p&gt;結局徒労だったわけだが、いろいろと面白いサービスについて知ることが出来たのでまあよかったと思う。&lt;/p&gt;
-</description>
+      <description>コメントシステムのDisqusを使い始めた。残念ながらコメントしてくれる人もいないが、元々Webサービスの習作として作っていて、閲覧している</description>
     </item>
     
   </channel>

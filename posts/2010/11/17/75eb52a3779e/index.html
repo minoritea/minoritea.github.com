@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -82,23 +82,16 @@
     
 
     <div class="article-body" itemprop="articleBody"><p>Twitter APIで取得していたコメントが消えてしまった。Twitter検索で引っかかるのは7日間だけである。これでは少し寂しいのでツイートの取得にTopsyを利用してみた。Topsyはツイッター等の発言をベースにした検索エンジンで、公開されたAPIから特定のサイトについてのツイートを抽出して取得するといったことが出来る。</p>
-
 <p>それでTopsyのAPIをjQueryの機能で取得してみようとしたのだがjsonを取得しようとするとリクエストは200 OKを返すのにデータが取得出来ない。jQueryが原因かと思って色々調べてみたのだが違うようだ。原因はスクリプトの実行元と異なるドメインのデータをxmlHttpRequestでは取得出来ないかららしい。何故このようにしているかというとクロスサイトスクリプティングを防止するためのようだ。しかしこの制限にも抜け道がある。それがJSONPである。</p>
-
 <p>JSONPはscriptタグを利用してリモートのデータを読み込む。JSONの実体がjavascriptのコードであることを利用しているのだ。そしてコールバックを実行してデータを再生する。シンプルな仕組みである。</p>
-
 <p>参考にしたのはここのサイトである（jQueryはJSONPの理解の妨げになるか？）。
 僕は今までJSONとJSONPについて違いがよくわかっておらず、単にコールバックを指定するのがJSONPだと思っていた。しかしAjaxの処理にはデータ形式によらずコールバックを使うのだからこれでは違いにならない。scriptタグを利用したデータの読み込みこそがJSONPだったのだ。こういうことはjQueryの解説サイトにはあんまり書いていない。Ajax技術としては常識なんだろうけどjQueryでAjaxを始めた人のためにも是非啓蒙して欲しいと思う。</p>
-
 <p>まとめ</p>
-
 <p>JSONを含め通常Ajaxで使うxmlHttpRequestでは外部サイトのデータを取得出来ない(XSS対策）
 JSONPはscriptタグで外部サイトを読み込むことで上記を回避している
 jQueryではJSONとJSONPを同じように扱えるが両者はまったく由来の異なる技術である。</p>
-
 <p>JSONはただのデータ形式（javascriptのオブジェクトをtext化したもの）
 JSONPはデータを読み込むための技術（javascriptコードの読み込み）</p>
-
 <p>Ajaxではデータの受け渡しの形式としてどちらも用いられている。</p>
 </div>
 

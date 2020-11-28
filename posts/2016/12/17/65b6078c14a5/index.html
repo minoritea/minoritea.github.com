@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -81,20 +81,14 @@
 
     
 
-    <div class="article-body" itemprop="articleBody">
-
-<h1 id="chromebookを買う">Chromebookを買う</h1>
-
+    <div class="article-body" itemprop="articleBody"><h1 id="chromebookを買う">Chromebookを買う</h1>
 <p>先日急に思い立ってChromebookを買った。と書くと衝動的に見えるけど、ここ一年くらいずっとほしいと思っていた。</p>
-
-<p><img src="/images/chromebook.png" alt="chromebook image" /></p>
-
+<p><img src="/images/chromebook.png" alt="chromebook image"></p>
 <p>Chromebookというのは要はChromeOSが動くノートPCのことだ。
 ChromeOSというのはGoogle製のOSでChromeブラウザ上ですべてのUXを動かしてしまうという、
 スパルタンな構成をもつ。
 といっても僕は別にChromeOSが使いたくてChromebookを買ったわけではない。
 安価なLinuxマシンが欲しかったのだ。</p>
-
 <p>ChromeOSのカーネル自体はLinuxである。
 ということはChromebookでLinuxを動かすのは結構簡単ということだ。
 まあ今どきWindowsPCにLinuxを入れるのも結構簡単なんだけど、
@@ -106,100 +100,73 @@ ChromeOS自体はGoogleが無料で提供している。
 Androidと同じビジネスモデルだ。
 まあそれはともかくChromebookはLinuxを入れるにも結構いいと聞いて、
 ずっと欲しかったのだ。</p>
-
 <p>今回買った機種は東芝のChromebook2だ。
 こいつの2015年版は神機として有名だったが、
 今回は2014版の中古が安く売っていたのでそっちを購入した。</p>
-
 <p>Chromebookを買うにあたって、スペック的な条件は以下のようなものだった。</p>
-
 <h3 id="必須">必須</h3>
-
 <ul>
 <li>13インチ</li>
 <li>重量2Kg以下</li>
 <li>CPUがAtom/ARMでないもの（Intel Core系かその下位モデル）</li>
 </ul>
-
 <h3 id="希望">希望</h3>
-
 <ul>
 <li>FHD以上の解像度</li>
 <li>メモリ8GB</li>
 <li>重量1.3Kg以下</li>
 </ul>
-
 <p>希望条件を満たすモデルは軒並みAmazonで日本への発送を取り扱っておらず、
 並行輸入品は割高なものばかりという状況だった。</p>
-
 <p>個人輸入を行うという選択肢もあったが、
 まずはお試しで安い中古品を買って色々遊んでみてから、
 気に入ったら高スペックのモデルを買おうと思い今回はChromebook2の旧モデルを購入した。
 スペック的には、HaswellベースのCeleronと2GBのメモリ、WXGAのディスプレイでまあまあだ。
 2万円弱だったので外してもそんなに痛くはない。</p>
-
 <h1 id="linuxを入れる">Linuxを入れる</h1>
-
 <p>ChromebookでLinuxを入れるメジャーな選択肢としては概ね2つある（他のやり方もあるが）。</p>
-
 <ol>
 <li>CroutonというツールでUbuntuを入れる</li>
 <li>GalliumOSというディストリビューションを入れる</li>
 </ol>
-
 <p>CroutonはchrootをラップしたツールでLinuxディストリとChromeOSを共存できる。
 GalliumOSはUbuntuベースのOSで、直接Chromebookマシンにインストールする。</p>
-
 <p>僕は別にChromeOSの部分を残す必要はなかったので、後者のGalliumOSを選択した。</p>
-
 <p>インストールは公式のwikiを見ながらやったらすんなりいった。
 カスタムファームウェアは入れなくても良いということだったので入れなかったけど、
 デフォルトのファームウェアだと起動するたびに手動でブートローダを立ちあげなければいけなくなったので、
 次にインストールするときはカスタムのファームウェアを入れたい。</p>
-
 <p>とはいえ、大して不便はしていないので入れなおすということはしない。</p>
-
 <h1 id="galliumos">GalliumOS</h1>
-
-<p><img src="/images/galliumos.png" alt="gallium OS wallpaper" /></p>
-
+<p><img src="/images/galliumos.png" alt="gallium OS wallpaper"></p>
 <p>GalliumOSはXubuntuベースのChromeOS向けディストリビューションだ。
 僕は普段ArchLinuxをサーバ用に使っていて、Debian系はLMDEを少し使ったことがある程度だ。
 まあでも特に使い方で迷うということもなくサクサク使えた。
 このあたりはUbuntuの良さで、デスクトップOSとしてはかなり親切な作りになっている。</p>
-
 <p>パッケージもだいたいapt/aptitudeで入れられるし、
 野良のdebパッケージもubuntu用のものがそのまま入れられる。
 今回ChromeやSlackを入れてみたけど、
 パッケージマネージャを通さずに公式で直に配布しているアプリなどは、
 だいたいdeb形式だし、サポートOSもUbuntuが多い。
 それらをそのまま入れられるというのもUbuntu派生OSの強みだと思う。</p>
-
 <h1 id="デスクトップ環境">デスクトップ環境</h1>
-
 <p>GalliumOSに標準で入っているデスクトップ環境はXfceである。
 といってもかなり小奇麗なデザインでいかにも今時のディストリという感じだ。
 同僚に見せたところWindowsっぽいと言われたが、
 確かにUIはWindowsXPあたりに似ている。といってもよりモダンな感じはするけど。</p>
-
 <p>しかし今回別のデスクトップ環境を入れることにした。
 それはタイル型ウィンドウマネージャのxmonadだ。
 選択の理由は、そもそもタイル型ウィンドウマネージャを入れてみたかったことと、
 Haskellの勉強のために触ってみたかったということで入れてみた。</p>
-
 <h1 id="xmonad">xmonad</h1>
-
-<p><img src="/images/xmonad.png" alt="xmonad screenshot" /></p>
-
+<p><img src="/images/xmonad.png" alt="xmonad screenshot"></p>
 <p>まだ大してカスタムしていないけれどとりあえず快適に使えている。
 いくつか苦労した点としては、Xfceと共存させたことと、キーマップが挙げられる。</p>
-
 <p>xmonadにはXfceと共存させるためのコンフィグが公式で用意されていて、
 それをインポートで読みこめば基本的に問題なく動く。
 ただ、こっちで何もしなくていいというわけでもなくて、
 xmonadで立ち上げる外部コマンド（ファインダやターミナルなど）は設定する必要があったし、
 Xfceのパネル（タスクバー）は手動で殺す必要があった。</p>
-
 <p>もうひとつ、キーマップだけれども、xmonadはmodキーという特殊キーを設定して、
 そのキーと他のキーを組み合わせることでショートカットを動かすことができる。
 WindowsにおけるWindowsキーのようなもので、実際Windows機上で動かすならWindowsキーにマップするのが普通らしい。
@@ -207,27 +174,21 @@ WindowsにおけるWindowsキーのようなもので、実際Windows機上で�
 といっても苦労したのは僕がxmodmapの使い方をあまり理解してなかったからで、
 xmodmapというのはLinux向けのキーリマップ・ツールなんだけど、
 そっちを正しく動かせるようになったら、xmonadの方は特に問題なく動かせた。</p>
-
 <p>Chromebookのサーチキー（🔍マークのついたキー）はCTRLにマップしたので、
 modキーは右シフトにマップした。
 これで使いやすいかどうかはまだ試しているところだけれど、今のところ特に不満はない。</p>
-
 <h1 id="おわりに">おわりに</h1>
-
 <p>ひさしぶりにこのブログを更新した。
 この記事は購入したChromebookで作成していて、まあいつものVimとHugoで書いたんだけれども、
 そういうUnix系のツールがそのまま使えるというのはやっぱりPC-Linuxの良いところである。</p>
-
 <p>ChromebookをLinuxマシンとして使うのは概ね問題ない感じで、
 心配していたドライバ周りだったりの不都合がまだ見られないのはさすがといったところである。
 バッテリの持ちも今時のモバイルラップトップとしては普通に持つし、
 このマシンは一世代前の機種ということもあって結構低スペックなのだけれども、
 OSがXubuntuベースということもあってかかなりサクサク動いて気持ち良い。</p>
-
 <p>僕はノートPCのGUIはブラウザとターミナルエミュレータさえ最低限使えれば良いと思っていて、
 実際仕事で使っているMacbook proもそういう使い方なのだけれど、
 このままChromebookをメインにしても良いと思えるぐらいには快適だった。</p>
-
 <p>まあプライベートでの作業とかは、このマシンをしばらく使っていこうと思っている。
 Chromebook、おすすめである！</p>
 </div>

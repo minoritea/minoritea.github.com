@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/</link>
+    <description>Recent content in Tags on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Wed, 24 Feb 2016 13:57:31 +0900</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CloudFlare</title>
+      <link>https://tanstaafl.0pt.jp/tags/cloudflare/</link>
+      <pubDate>Wed, 24 Feb 2016 13:57:31 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/cloudflare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http2</title>
+      <link>https://tanstaafl.0pt.jp/tags/http2/</link>
+      <pubDate>Wed, 24 Feb 2016 13:57:31 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/http2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://tanstaafl.0pt.jp/tags/hugo/</link>
+      <pubDate>Wed, 24 Feb 2016 01:02:53 +0900</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coreos</title>
+      <link>https://tanstaafl.0pt.jp/tags/coreos/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/coreos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://tanstaafl.0pt.jp/tags/docker/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgres</title>
+      <link>https://tanstaafl.0pt.jp/tags/postgres/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/postgres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>systemd</title>
+      <link>https://tanstaafl.0pt.jp/tags/systemd/</link>
+      <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/systemd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fleet</title>
+      <link>https://tanstaafl.0pt.jp/tags/fleet/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/fleet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://tanstaafl.0pt.jp/tags/react/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://tanstaafl.0pt.jp/tags/ruby/</link>
+      <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://tanstaafl.0pt.jp/tags/javascript/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reactruby</title>
+      <link>https://tanstaafl.0pt.jp/tags/reactruby/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/reactruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sinatra</title>
+      <link>https://tanstaafl.0pt.jp/tags/sinatra/</link>
+      <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/sinatra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dokku</title>
+      <link>https://tanstaafl.0pt.jp/tags/dokku/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/dokku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://tanstaafl.0pt.jp/tags/git/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gnutls</title>
+      <link>https://tanstaafl.0pt.jp/tags/gnutls/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/gnutls/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://tanstaafl.0pt.jp/tags/ubuntu/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angularjs</title>
+      <link>https://tanstaafl.0pt.jp/tags/angularjs/</link>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/angularjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>turbolinks</title>
+      <link>https://tanstaafl.0pt.jp/tags/turbolinks/</link>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/turbolinks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rails</title>
+      <link>https://tanstaafl.0pt.jp/tags/rails/</link>
+      <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>asakusa.rb</title>
+      <link>https://tanstaafl.0pt.jp/tags/asakusa.rb/</link>
+      <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/asakusa.rb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>大江戸ruby会議</title>
+      <link>https://tanstaafl.0pt.jp/tags/%E5%A4%A7%E6%B1%9F%E6%88%B8ruby%E4%BC%9A%E8%AD%B0/</link>
+      <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/%E5%A4%A7%E6%B1%9F%E6%88%B8ruby%E4%BC%9A%E8%AD%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>1ページapp</title>
+      <link>https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/</link>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seo</title>
+      <link>https://tanstaafl.0pt.jp/tags/seo/</link>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/seo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spa</title>
+      <link>https://tanstaafl.0pt.jp/tags/spa/</link>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/spa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>disqus</title>
+      <link>https://tanstaafl.0pt.jp/tags/disqus/</link>
+      <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/disqus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fabrication</title>
+      <link>https://tanstaafl.0pt.jp/tags/fabrication/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/fabrication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongodb</title>
+      <link>https://tanstaafl.0pt.jp/tags/mongodb/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongoid</title>
+      <link>https://tanstaafl.0pt.jp/tags/mongoid/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/mongoid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tdd</title>
+      <link>https://tanstaafl.0pt.jp/tags/tdd/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/tdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flickr</title>
+      <link>https://tanstaafl.0pt.jp/tags/flickr/</link>
+      <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/flickr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>octopress</title>
+      <link>https://tanstaafl.0pt.jp/tags/octopress/</link>
+      <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/octopress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redis</title>
+      <link>https://tanstaafl.0pt.jp/tags/redis/</link>
+      <pubDate>Sun, 10 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backtweets</title>
+      <link>https://tanstaafl.0pt.jp/tags/backtweets/</link>
+      <pubDate>Mon, 22 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/backtweets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://tanstaafl.0pt.jp/tags/nodejs/</link>
+      <pubDate>Mon, 22 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>topsy</title>
+      <link>https://tanstaafl.0pt.jp/tags/topsy/</link>
+      <pubDate>Mon, 22 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/topsy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitter</title>
+      <link>https://tanstaafl.0pt.jp/tags/twitter/</link>
+      <pubDate>Mon, 22 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ajax</title>
+      <link>https://tanstaafl.0pt.jp/tags/ajax/</link>
+      <pubDate>Wed, 17 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/ajax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>json</title>
+      <link>https://tanstaafl.0pt.jp/tags/json/</link>
+      <pubDate>Wed, 17 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jsonp</title>
+      <link>https://tanstaafl.0pt.jp/tags/jsonp/</link>
+      <pubDate>Wed, 17 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/jsonp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>itunes</title>
+      <link>https://tanstaafl.0pt.jp/tags/itunes/</link>
+      <pubDate>Sun, 14 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/itunes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>映画</title>
+      <link>https://tanstaafl.0pt.jp/tags/%E6%98%A0%E7%94%BB/</link>
+      <pubDate>Sun, 14 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/%E6%98%A0%E7%94%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>safari</title>
+      <link>https://tanstaafl.0pt.jp/tags/safari/</link>
+      <pubDate>Fri, 05 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/safari/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webサービス</title>
+      <link>https://tanstaafl.0pt.jp/tags/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/</link>
+      <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>サーバ</title>
+      <link>https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/</link>
+      <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>https://tanstaafl.0pt.jp/tags/nginx/</link>
+      <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>facebook</title>
+      <link>https://tanstaafl.0pt.jp/tags/facebook/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/facebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iphone</title>
+      <link>https://tanstaafl.0pt.jp/tags/iphone/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/iphone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://tanstaafl.0pt.jp/tags/linux/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mixi</title>
+      <link>https://tanstaafl.0pt.jp/tags/mixi/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/mixi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensocial</title>
+      <link>https://tanstaafl.0pt.jp/tags/opensocial/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/opensocial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vps</title>
+      <link>https://tanstaafl.0pt.jp/tags/vps/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/vps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>シェル</title>
+      <link>https://tanstaafl.0pt.jp/tags/%E3%82%B7%E3%82%A7%E3%83%AB/</link>
+      <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/tags/%E3%82%B7%E3%82%A7%E3%83%AB/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

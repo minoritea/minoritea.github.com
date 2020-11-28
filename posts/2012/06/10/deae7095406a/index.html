@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -82,11 +82,8 @@
     
 
     <div class="article-body" itemprop="articleBody"><p>ブログのデータが飛んだ。ごっそりだ。</p>
-
 <p>原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先であるdump.rdbのパーミッションがredisで無くなっていたためである。ファイル所有者が僕のログインユーザになっていたので作業中になにかミスったのだろうと思うが今となってはどのタイミングで変わったのかは定かではない。</p>
-
 <p>redisの良いところはオンメモリでデータを読み書きしていてとても速いのに、定期的にデータをファイルに書き出して永続化してくれるところだ。dump無しではmemcacheと変わらない。</p>
-
 <p>それよりも、いくら更新の遅いブログとはいえ1年もdumpがおかしくなっていたことに気付いていないのはあんまりなのでもうすこしきっちり管理しようと思う。</p>
 </div>
 

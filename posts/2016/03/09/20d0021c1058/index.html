@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -84,61 +84,49 @@
     <div class="article-body" itemprop="articleBody"><p>scalewayという格安ベアメタルサーバを利用してみた。
 <a href="https://www.scaleway.com">scaleway</a>はARM CPUを使ったベアメタルサーバで、
 格安VPSに匹敵する価格（2.99ユーロ！）で完全物理サーバを提供している。</p>
-
 <table>
 <thead>
 <tr>
-<th align="right"></th>
-<th align="left"></th>
+<th style="text-align:right"></th>
+<th></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td align="right">価格</td>
-<td align="left">2.99ユーロ（約370円）</td>
+<td style="text-align:right">価格</td>
+<td style="text-align:left">2.99ユーロ（約370円）</td>
 </tr>
-
 <tr>
-<td align="right">CPU:</td>
-<td align="left">4コア ARM 32bit</td>
+<td style="text-align:right">CPU:</td>
+<td style="text-align:left">4コア ARM 32bit</td>
 </tr>
-
 <tr>
-<td align="right">Memory:</td>
-<td align="left">2GB</td>
+<td style="text-align:right">Memory:</td>
+<td style="text-align:left">2GB</td>
 </tr>
-
 <tr>
-<td align="right">Sotrage:</td>
-<td align="left">50GB SSD</td>
+<td style="text-align:right">Sotrage:</td>
+<td style="text-align:left">50GB SSD</td>
 </tr>
-
 <tr>
-<td align="right">Internet:</td>
-<td align="left">200Mbit/s</td>
+<td style="text-align:right">Internet:</td>
+<td style="text-align:left">200Mbit/s</td>
 </tr>
 </tbody>
 </table>
-
-<p>&nbsp;</p>
-
+<p> </p>
 <p>このサービスを知ったのは<a href="http://kawasakirb.github.io">kawasaki.rb</a>で、
 <a href="https://twitter.com/harupong">@harupong</a>さんの<a href="http://www.slideshare.net/harupong/docker-docker-58661634">清貧Docker</a>という発表からである。他にも格安VPS等を紹介していただいたのだが、ベアメタルサーバで3ユーロという価格や、CPUコアにARMを使っているといった面白さに惹かれぜひ使ってみたいと思っていた。</p>
-
 <p>残念ながら昨年11月以降、サーバの在庫が尽きたらしく、長らく新規登録できなかったのだが、
 特段急ぐ理由もないので、予約リストに登録して気長に待ってみたところ今朝になってインビテーションのメールが届いていた。
 なので早速登録してみた次第である。</p>
-
 <p>サーバは2台作成した。せっかく安いので複数立ててクラスタ構成の練習台にしようと思ったためだ。
 なお本当は3台作成したかったのだが、初回の場合C1（ARM CPUのプラン）で立てられる最大数が2台に制限されていたため、まずは2台で組んでみた。
 最大インスタンス数を増やすには直接申請しろとのことだったのでサポートチケットを立てて依頼中である。</p>
-
 <p>とりいそぎ2台のサーバで利用している。OSはArch Linuxを選択した。
 Arch Linuxを採用した理由はVagrantなどのゲストOSとして長く使っていて慣れているということと、
 Rolling Releaseなので、OSを再インストールしなくとも環境の更新が可能なためである。
 個別のサービスについては<code>Docker</code>で入れてしまえばいいかなと思っている。</p>
-
 <p>なにはともあれ、ワンコイン以下の格安価格で専用サーバが借りれるようになったとはいい時代である。
 まずは分散処理のミドルウェアの実験場として活用していきたい。</p>
 </div>

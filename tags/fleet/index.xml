@@ -1,42 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Fleet on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/fleet/index.xml</link>
-    <description>Recent content in Fleet on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>fleet on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/fleet/</link>
+    <description>Recent content in fleet on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/fleet/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/fleet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CoreOSつかってたらデータが飛んだ</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</guid>
-      <description>&lt;p&gt;DBのデータが飛んだので先日書いたReactについての記事は下書きから復元した。&lt;/p&gt;
-
-&lt;p&gt;原因はCoreOSが自動アップデートしたため、Postgresを動かしていたDockerコンテナが停止してしまったためだ。&lt;/p&gt;
-
-&lt;p&gt;実は先日こっそりとブログのサーバーをherokuからVPSに移動していた
-（Dockerで運用してみたかったのだ）。OSはCoreOSを使いホスティングはVultrを選択した。&lt;/p&gt;
-
-&lt;p&gt;移行の際、データベースもDockerで動かすことにしていた。PostgreSQLでデータベースコンテナを作成していたのだけれど、バックアップの仕組みはつい後回しにしていたのだ。&lt;/p&gt;
-
-&lt;p&gt;しかし間の悪いことについ昨日CoreOS（stable）のアップデートが入ってしまった。自分は知らずに運用していたのだがCoreOSはOSアップデートを自動で適用し、デフォルトだとそのまま再起動してしまう。そのためデータベースもコンテナごと落ちてしまいデータが飛んでしまったのだ。自動アップデート&amp;amp;OS再起動は、Immutableなコンテナを分散して運用する前提での設定だと思うのだがシングルホストだとあんまり美味しくない。とはいえ、セキュリティ面では自動アップデート戦略は安心感があるし、個人ブログのホスティングサーバが多少の時間落ちていても大して困らないのでこのままデフォルト設定で行くことにする。&lt;/p&gt;
-
-&lt;p&gt;さて再起動しても自動で復旧するにはコンテナのデータを永続化することとコンテナの起動を自動化することの2つが必要となる。取り急ぎ今回は永続化について対応してみた。&lt;/p&gt;
-
-&lt;p&gt;永続化といってもpg_dumpで定期的にdumpを取るだけである（自分がPostgresの運用の知識がないのでもっといいやり方があるのかもしれないけど、データ量も少ないしシンプルなので上のやりかたでいく）。dumpファイルはDockerのvolume機能を使ってホストOS上に置くことにする。&lt;/p&gt;
-
-&lt;p&gt;とりあえず、現在はdumpするスクリプトだけ作成してある。しかし手動実行はつらいので自動で定期的に回すようにしたい。定期的に実行する手段としては、コンテナの中でcronを回すか、専用のコンテナを作って、fleetで定期的に起動するかのどちらかを考えている。&lt;/p&gt;
-
-&lt;p&gt;fleetはCoreOSの主要な機能の一つで、systemdを分散してスケジューリング、実行するためのミドルウェアのようだ。自分はsystemdの知識があまりないのでcronでもよいかと思ったのだが（systemdにタスクスケジューラの機能があることも知らなかった）、せっかくCoreOSを使っているのでfleet/systemd を使う方向で考えたいと思う。&lt;/p&gt;
-
-&lt;p&gt;自動復旧のためのコンテナ起動についてもfleetを使えば良さそうだ。&lt;/p&gt;
-
-&lt;p&gt;またうまく仕組み化できたら報告したい。&lt;/p&gt;
-</description>
+      <description>DBのデータが飛んだので先日書いたReactについての記事は下書きから復元した。 原因はCoreOSが自動アップデートしたため、Postgre</description>
     </item>
     
   </channel>

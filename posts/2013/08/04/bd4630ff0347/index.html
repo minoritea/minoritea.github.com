@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -84,44 +84,28 @@
     <div class="article-body" itemprop="articleBody"><p>Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。
 MongoHQ、MongoLabなどが500MBの無料プランを提供しているからで、
 個人アプリであればこのくらいあれば十分だからだ。</p>
-
 <p>それでMongoDBのテストデータをRailsで作りたくて探してみたところ、
 Fabricationというgemがよさげだった。</p>
-
 <p><a href="http://www.fabricationgem.org">http://www.fabricationgem.org</a></p>
-
 <p>Personというモデルクラスがあるとして、テストデータは以下のように作る。</p>
-
 <p>app/models/person.rb</p>
-
-<pre><code class="language-ruby">class Person
-  include Mongoid::Document
-  field :name, String
-end
-</code></pre>
-
-<p>定義ファイルは以下のようなパスに置くと自動で読み込まれる。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Mongoid</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Document</span>
+  field <span style="color:#e6db74">:name</span>, String
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>定義ファイルは以下のようなパスに置くと自動で読み込まれる。
 test_or_spec/fabricators/*/*_fabricator.rb</p>
-
 <p>例ではこちら。
 test/fabricators/person/person_fabricator.rb</p>
-
-<pre><code class="language-ruby">Fabricator(:person) do
-  name 'Tarou'
-end
-</code></pre>
-
-<p>name属性に対してnameというメソッドが定義されているので、セットする値を渡す。</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Fabricator</span>(<span style="color:#e6db74">:person</span>) <span style="color:#66d9ef">do</span>
+  name <span style="color:#e6db74">&#39;Tarou&#39;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>name属性に対してnameというメソッドが定義されているので、セットする値を渡す。</p>
 <p>テストケースからは以下のように呼び出す。
 test/models/person_test.rb</p>
-
-<pre><code class="language-ruby">@person = Fabricate(:person)
-</code></pre>
-
-<p>便利な機能としては、Fabricatorの定義を継承して新たな定義を作ったり、
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">@person <span style="color:#f92672">=</span> <span style="color:#66d9ef">Fabricate</span>(<span style="color:#e6db74">:person</span>)
+</code></pre></div><p>便利な機能としては、Fabricatorの定義を継承して新たな定義を作ったり、
 属性値をセットする際にブロックをとれたりする。</p>
-
 <p>手軽にテストデータを作るには便利なライブラリだと思う。</p>
 </div>
 

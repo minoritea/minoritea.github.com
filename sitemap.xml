@@ -1,8 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://tanstaafl.0pt.jp/posts/2016/12/17/65b6078c14a5/</loc>
+    <lastmod>2016-12-17T17:46:40+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/posts/</loc>
+    <lastmod>2016-12-17T17:46:40+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/</loc>
     <lastmod>2016-12-17T17:46:40+09:00</lastmod>
   </url>
   
@@ -12,13 +23,53 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/cloudflare/</loc>
+    <lastmod>2016-02-24T13:57:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2016/02/24/6376f38fce39/</loc>
     <lastmod>2016-02-24T13:57:31+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/http2/</loc>
+    <lastmod>2016-02-24T13:57:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/</loc>
+    <lastmod>2016-02-24T13:57:31+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/hugo/</loc>
+    <lastmod>2016-02-24T01:02:53+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</loc>
     <lastmod>2016-02-24T01:02:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/coreos/</loc>
+    <lastmod>2014-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/docker/</loc>
+    <lastmod>2014-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/postgres/</loc>
+    <lastmod>2014-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/systemd/</loc>
+    <lastmod>2014-12-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -32,8 +83,33 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/fleet/</loc>
+    <lastmod>2014-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</loc>
     <lastmod>2014-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/react/</loc>
+    <lastmod>2014-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/ruby/</loc>
+    <lastmod>2014-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/javascript/</loc>
+    <lastmod>2014-11-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/reactruby/</loc>
+    <lastmod>2014-11-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -42,13 +118,48 @@
   </url>
   
   <url>
-    <loc>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</loc>
+    <loc>https://tanstaafl.0pt.jp/tags/sinatra/</loc>
+    <lastmod>2014-11-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/dokku/</loc>
     <lastmod>2014-05-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</loc>
     <lastmod>2014-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/git/</loc>
+    <lastmod>2014-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/gnutls/</loc>
+    <lastmod>2014-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/ubuntu/</loc>
+    <lastmod>2014-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</loc>
+    <lastmod>2014-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/angularjs/</loc>
+    <lastmod>2014-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/turbolinks/</loc>
+    <lastmod>2014-04-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -62,6 +173,21 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/rails/</loc>
+    <lastmod>2014-04-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/asakusa.rb/</loc>
+    <lastmod>2014-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/%E5%A4%A7%E6%B1%9F%E6%88%B8ruby%E4%BC%9A%E8%AD%B0/</loc>
+    <lastmod>2014-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</loc>
     <lastmod>2014-04-20T00:00:00+00:00</lastmod>
   </url>
@@ -72,12 +198,32 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/</loc>
+    <lastmod>2014-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</loc>
     <lastmod>2014-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/seo/</loc>
+    <lastmod>2014-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/spa/</loc>
+    <lastmod>2014-04-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</loc>
+    <lastmod>2014-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/disqus/</loc>
     <lastmod>2014-04-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -92,12 +238,42 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/fabrication/</loc>
+    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</loc>
     <lastmod>2013-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/mongodb/</loc>
+    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/mongoid/</loc>
+    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/tdd/</loc>
+    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/flickr/</loc>
+    <lastmod>2013-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</loc>
+    <lastmod>2013-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/octopress/</loc>
     <lastmod>2013-05-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -112,6 +288,11 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/redis/</loc>
+    <lastmod>2012-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/</loc>
     <lastmod>2012-06-10T00:00:00+00:00</lastmod>
   </url>
@@ -122,8 +303,43 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/backtweets/</loc>
+    <lastmod>2010-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/nodejs/</loc>
+    <lastmod>2010-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/topsy/</loc>
+    <lastmod>2010-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/twitter/</loc>
+    <lastmod>2010-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2010/11/22/a0f229152618/</loc>
     <lastmod>2010-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/ajax/</loc>
+    <lastmod>2010-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/json/</loc>
+    <lastmod>2010-11-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/jsonp/</loc>
+    <lastmod>2010-11-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -132,7 +348,17 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/itunes/</loc>
+    <lastmod>2010-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2010/11/14/eda9ceb4f995/</loc>
+    <lastmod>2010-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/%E6%98%A0%E7%94%BB/</loc>
     <lastmod>2010-11-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -152,12 +378,27 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/safari/</loc>
+    <lastmod>2010-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</loc>
     <lastmod>2010-11-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</loc>
+    <lastmod>2010-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/</loc>
+    <lastmod>2010-11-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/</loc>
     <lastmod>2010-11-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -182,8 +423,18 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/nginx/</loc>
+    <lastmod>2010-10-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</loc>
     <lastmod>2010-10-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/facebook/</loc>
+    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -192,12 +443,7 @@
   </url>
   
   <url>
-    <loc>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</loc>
-    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</loc>
+    <loc>https://tanstaafl.0pt.jp/tags/iphone/</loc>
     <lastmod>2010-10-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -207,12 +453,47 @@
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/tags/linux/</loc>
+    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/mixi/</loc>
+    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</loc>
+    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/opensocial/</loc>
+    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</loc>
     <lastmod>2010-10-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</loc>
+    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/vps/</loc>
+    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</loc>
+    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tanstaafl.0pt.jp/tags/%E3%82%B7%E3%82%A7%E3%83%AB/</loc>
     <lastmod>2010-10-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -227,338 +508,7 @@
   </url>
   
   <url>
-    <loc>https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/</loc>
-    <lastmod>2014-04-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/ajax/</loc>
-    <lastmod>2010-11-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/angularjs/</loc>
-    <lastmod>2014-04-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/asakusa/index.rb/</loc>
-    <lastmod>2014-04-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/backtweets/</loc>
-    <lastmod>2010-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/cloudflare/</loc>
-    <lastmod>2016-02-24T13:57:31+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/coreos/</loc>
-    <lastmod>2014-12-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/disqus/</loc>
-    <lastmod>2014-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/docker/</loc>
-    <lastmod>2014-12-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/dokku/</loc>
-    <lastmod>2014-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/fabrication/</loc>
-    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/facebook/</loc>
-    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/fleet/</loc>
-    <lastmod>2014-12-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/flickr/</loc>
-    <lastmod>2013-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/git/</loc>
-    <lastmod>2014-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/gnutls/</loc>
-    <lastmod>2014-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/http2/</loc>
-    <lastmod>2016-02-24T13:57:31+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/hugo/</loc>
-    <lastmod>2016-02-24T01:02:53+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/iphone/</loc>
-    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/itunes/</loc>
-    <lastmod>2010-11-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/javascript/</loc>
-    <lastmod>2014-11-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/json/</loc>
-    <lastmod>2010-11-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/jsonp/</loc>
-    <lastmod>2010-11-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/linux/</loc>
-    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/mixi/</loc>
-    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/mongodb/</loc>
-    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/mongoid/</loc>
-    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/nginx/</loc>
-    <lastmod>2010-10-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/nodejs/</loc>
-    <lastmod>2010-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/octopress/</loc>
-    <lastmod>2013-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/opensocial/</loc>
-    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/postgres/</loc>
-    <lastmod>2014-12-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/posts/</loc>
-    <lastmod>2016-12-17T17:46:40+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/rails/</loc>
-    <lastmod>2014-04-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/react/</loc>
-    <lastmod>2014-12-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/reactruby/</loc>
-    <lastmod>2014-11-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/redis/</loc>
-    <lastmod>2012-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/ruby/</loc>
-    <lastmod>2014-12-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/safari/</loc>
-    <lastmod>2010-11-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/seo/</loc>
-    <lastmod>2014-04-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/sinatra/</loc>
-    <lastmod>2014-11-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/spa/</loc>
-    <lastmod>2014-04-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/systemd/</loc>
-    <lastmod>2014-12-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/tdd/</loc>
-    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/topsy/</loc>
-    <lastmod>2010-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/turbolinks/</loc>
-    <lastmod>2014-04-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/twitter/</loc>
-    <lastmod>2010-11-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/ubuntu/</loc>
-    <lastmod>2014-05-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/vps/</loc>
-    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9/</loc>
-    <lastmod>2010-11-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/</loc>
-    <lastmod>2010-11-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/%E3%82%B7%E3%82%A7%E3%83%AB/</loc>
-    <lastmod>2010-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/</loc>
-    <lastmod>2016-12-17T17:46:40+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/%E5%A4%A7%E6%B1%9F%E6%88%B8ruby%E4%BC%9A%E8%AD%B0/</loc>
-    <lastmod>2014-04-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tanstaafl.0pt.jp/tags/%E6%98%A0%E7%94%BB/</loc>
-    <lastmod>2010-11-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://tanstaafl.0pt.jp/categories/</loc>
   </url>
   
 </urlset>

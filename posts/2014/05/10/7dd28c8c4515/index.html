@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -82,29 +82,17 @@
     
 
     <div class="article-body" itemprop="articleBody"><p>最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。</p>
-
 <p>dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。</p>
-
 <pre><code>fatal: 'hogehoge.git' does not appear to be a git repository
 fatal: Could not read from remote repository.
-</code></pre>
-
-<p>いろいろ試行錯誤した結果、実に単純に解決した。
+</code></pre><p>いろいろ試行錯誤した結果、実に単純に解決した。
 ~/.ssh/authorized_keys に、</p>
-
 <pre><code>command=&quot;...
-</code></pre>
-
-<p>のような行が追加されている。
+</code></pre><p>のような行が追加されている。
 これは設定時に、</p>
-
 <pre><code>cat ~/.ssh/id_rsa.pub | ssh progriumapp.com &quot;sudo sshcommand acl-add dokku progrium&quot;
-</code></pre>
-
-<p>というコマンドでアクセス権限を追加された際自動で挿入されたものだが、その上に手動で自分の公開鍵を挿入していたために、どうやらgit pushが動かなかったらしい。</p>
-
+</code></pre><p>というコマンドでアクセス権限を追加された際自動で挿入されたものだが、その上に手動で自分の公開鍵を挿入していたために、どうやらgit pushが動かなかったらしい。</p>
 <p>手で追加した方の公開鍵を削除したら無事解決した。</p>
-
 <p>素直にマニュアル通りに作ればこういうことにはならないので、同様にハマる人は少ないかもしれないが一応載せておく。</p>
 </div>
 

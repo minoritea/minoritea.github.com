@@ -1,29 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>React on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/react/index.xml</link>
-    <description>Recent content in React on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>react on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/react/</link>
+    <description>Recent content in react on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/react/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kawasaki.rbでReactについて発表してきた</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
-      <description>&lt;p&gt;Rubyコミュニティなのに毎回多言語の話が出る &lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;kawasaki.rb&lt;/a&gt; で &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; について発表してきた。&lt;/p&gt;
-
-&lt;p&gt;スライドはこちら。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/react-42041864&#34;&gt;http://www.slideshare.net/minoritokuda/react-42041864&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/42041864&#34; width=&#34;425&#34; height=&#34;355&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/minoritokuda/react-42041864&#34; title=&#34;Reactつかってみた&#34; target=&#34;_blank&#34;&gt;Reactつかってみた&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;締めの発言はわりかし本気である。&lt;/p&gt;
-</description>
+      <description>Rubyコミュニティなのに毎回多言語の話が出る kawasaki.rb で React について発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/react-42041864 締めの発言はわりかし本気である。</description>
     </item>
     
     <item>
@@ -32,27 +22,7 @@
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
-      <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;
-
-&lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;
-
-&lt;p&gt;今回はFacebook製のコンポーネントフレームワークであるReactを使って、フロントエンドを作成しようと思い立った。Reactを選んだ理由として、Angularだとサーバーサイドでビューを生成できないので不満に思っていたことが挙げられる。&lt;/p&gt;
-
-&lt;p&gt;今まで、コンテンツページに関してはHAMLを使ってサーバサイドで生成していて、Angularのテンプレートキャッシュを使って読み込んでいたのだが、これだとフロントサイドでビュー生成している意味が薄くていまいち不満だったのだ（この実装だとやってることはまんまTurbolinksである）。&lt;/p&gt;
-
-&lt;p&gt;ReactはHTMLを文字列として出力できる。つまりサーバサイドでも実行可能なテンプレートエンジンとして使えるということである。ReactはjavascriptなのでNode.jsあたりで動かすのが適切なんだろうけど、今回サーバサイドは既存のアプリを使いまわしたかったのでRubyでReactを呼び出すためのブリッジを作成した。それがReactRubyである。（React本家にはRailsのバインディングがあったが、まだ安定版が出てなかったし今回サーバサイドに使ったのはSinatraだったので自作した）。&lt;/p&gt;
-
-&lt;p&gt;使い方はシンプルに、テンプレートを文字列として渡してコンパイルし、呼び出したいクラスのXMLタグを#renderメソッドに渡してやればよい。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;ReactRuby.compile(jsx: your_jsx_template_as_string)
-ReactRuby.render(&amp;quot;&amp;lt;YourJSXClass /&amp;gt;&amp;quot;)
-# =&amp;gt; YourJSXClassのレンダリング結果
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;自分はこの処理をsinatraのヘルパーメソッドとして定義して、sinatraのビューの中でコンポーネント単位で呼び出している。1度サーバから画面を読み込んだら、あとの画面更新は画面上でReactを再実行してレンダリングしなおしている。流行りの&amp;rdquo;Isomorphic&amp;rdquo;アプリケーションというやつだ（正確にはビューだけのなんちゃってIsomorphicなんだけど、このブログくらいの小さいアプリなら十分だと思う）。&lt;/p&gt;
-
-&lt;p&gt;ReactRubyはgemとして公開してあるので、この記事を読んで興味をもった方は是非試してほしい。簡単なサンプルアプリもgithubにおいてあるので参考にどうぞ（&lt;a href=&#34;https://github.com/minoritea/react_ruby_sample&#34;&gt;react_ruby_sample&lt;/a&gt;）。&lt;/p&gt;
-</description>
+      <description>先日、React をテンプレートとして使えるRubyライブラリの ReactRuby をリリースした。 このブログは自作のブログエンジンで動いていて、気が向くたびに</description>
     </item>
     
   </channel>

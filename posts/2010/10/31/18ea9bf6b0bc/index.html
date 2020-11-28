@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -82,15 +82,11 @@
     
 
     <div class="article-body" itemprop="articleBody"><p>やっぱりDisqusがSafariでうまく動作しない。どうも記事ごとにうまく読み込めるかエラーを起こすが決まっているようなので調べるとうまく動作しないのはタイトルがマルチバイトの記事だけだった。</p>
-
 <p>このブログの各記事のリンクは全てURLをエスケープしてあるのだが、Safariでwindow.location.hrefを取得するとエスケープ前のURLになってしまうのがエラーの原因であるようだ。ちなみにFirefoxでは再現しない。何故このような仕様になっているのか理解に苦しむのだがご存知の方がいたら教えてもらいたい。（バグなんだろうか）。</p>
-
 <p>ちなみに以下のコードを埋め込むことで一応Safariでのエラーは無くなった。あまりスマートなコードではないが仕方が無い。</p>
-
 <p>if(!jQuery.support.checkOn){
-  var disqus_url = encodeURI(window.location.href);
+var disqus_url = encodeURI(window.location.href);
 }</p>
-
 <p>ちなみにjQueryでのブラウザ判別については「jQuery.supportでのブラウザ判別」を参照した。分かりやすいまとめで助かった。</p>
 </div>
 

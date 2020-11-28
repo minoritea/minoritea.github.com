@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -83,19 +83,14 @@
 
     <div class="article-body" itemprop="articleBody"><p>新しいブログエンジンでもコメントシステムはDisqusを使っている。
 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。</p>
-
 <p>Angular.jsはng-includeなどの仕組みで、HTMLテンプレートを動的に読み込みができ、HTMLをパーツとして使いまわすことができる。
 しかし、このテンプレートを読み込む際にscriptタグが含まれていた場合はセキュリティのためか、scriptタグが無視されてしまう。
 そのためDisqusのように外部スクリプトを埋め込んでDOM要素を生成するようなサービスとは相性が悪い。</p>
-
 <p>しかし、皆考えることは同じようで、ハックを公開してくれた人がいたので参考にさせていただいた。
 使い方は簡単でngLoadModuleというモジュール（コードは以下のGist参照）をngAppで指定したモジュールに読み込んで、
-読み込ませたいscriptタグに&rdquo;text/javascript-lazy&rdquo;と追加するだけである。</p>
-
+読み込ませたいscriptタグに&quot;text/javascript-lazy&quot;と追加するだけである。</p>
 <p><a href="https://gist.github.com/subudeepak/9617483">https://gist.github.com/subudeepak/9617483</a></p>
-
 <p>以下はgistより引用。</p>
-
 <pre><code>(function (ng) {
   'use strict';
  
@@ -131,8 +126,7 @@ Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優�
   });
  
 }(angular));
-</code></pre>
-</div>
+</code></pre></div>
 
     <aside>
 

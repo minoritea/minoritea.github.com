@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="generator" content="Hugo 0.18-DEV" />
+    <meta name="generator" content="Hugo 0.79.0" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Open+Sans|Lobster'>
@@ -82,53 +82,33 @@
     
 
     <div class="article-body" itemprop="articleBody"><p>Octopressの画像置き場をどうするか考えてflickrにしてみた。</p>
-
 <p>public/images以下に置いておくのがデフォルトなんだろうけど、
 githubにあんまりバイナリを置くのも悪いしなぁと思って色々探していた。</p>
-
 <p>見つけたのが、octopress-flickr。</p>
-
 <p><a href="https://github.com/neilk/octopress-flickr">https://github.com/neilk/octopress-flickr</a></p>
-
 <p>OctopressのGemfileに以下を追加して、</p>
-
-<pre><code class="language-ruby">gem 'flickraw'
-gem 'builder', '&gt; 2.0.0'
-gem 'persistent_memoize'
-</code></pre>
-
-<p>以下を実行する。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">gem <span style="color:#e6db74">&#39;flickraw&#39;</span>
+gem <span style="color:#e6db74">&#39;builder&#39;</span>, <span style="color:#e6db74">&#39;&gt; 2.0.0&#39;</span>
+gem <span style="color:#e6db74">&#39;persistent_memoize&#39;</span>
+</code></pre></div><p>以下を実行する。
 /path/to/octopress/には自分のoctopressのパスを入れよう。</p>
-
 <pre><code>git clone https://github.com/neilk/octopress-flickr
 cd octopress-flickr
 find . \( -name '*.rb' -o -name '*.scss' \) -exec cp {} /path/to/octopress/{} \;
-</code></pre>
-
-<p>次にAPIキーをflickrで作成する。</p>
-
+</code></pre><p>次にAPIキーをflickrで作成する。</p>
 <p><a href="http://www.flickr.com/services/developer/api/">http://www.flickr.com/services/developer/api/</a></p>
-
 <p>取ってきたAPIキーとシークレットキーを環境変数に入れる。
 直接定義ファイルとかに入れないのはセキュリティのためだろうね。</p>
-
 <pre><code>export FLICKR_API_KEY=your_api_key
 export FLICKR_API_SECRET=your_api_secret
-</code></pre>
-
-<p>以上で準備は終わり。Octopressのポストにflickr画像用のタグを挿入する。
+</code></pre><p>以上で準備は終わり。Octopressのポストにflickr画像用のタグを挿入する。
 まず、flickrの写真を拡大表示した時のURLからパスの最後の数字をとる。
 例えば以下のURLだったら、<code>8901098353</code>が画像のIDだ。
 <a href="http://www.flickr.com/photos/36392485@N08/8901098353/">http://www.flickr.com/photos/36392485@N08/8901098353/</a></p>
-
 <p>このIDを以下のようにタグに入れ、本文に挿入する。
 IDの右の<code>n</code>は画像のサイズ、<code>center</code>は位置、その後ろの文字列はキャプションだ。</p>
-
 <pre><code>{% flickr_image 8901098353 n center 'sample picture' %}
-</code></pre>
-
-<p>この記事に画像を読み込んだ結果は以下となる。</p>
-
+</code></pre><p>この記事に画像を読み込んだ結果は以下となる。</p>
 <p>///2014.03 加筆: ブログをOctpressから独自アプリに移行したため、このページ内での確認はできなくなりました。</p>
 </div>
 

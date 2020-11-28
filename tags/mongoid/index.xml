@@ -1,62 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mongoid on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/mongoid/index.xml</link>
-    <description>Recent content in Mongoid on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>mongoid on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/mongoid/</link>
+    <description>Recent content in mongoid on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/mongoid/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 04 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/mongoid/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fabrication で Mongoid のテストデータを作る</title>
       <link>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</guid>
-      <description>&lt;p&gt;Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。
-MongoHQ、MongoLabなどが500MBの無料プランを提供しているからで、
-個人アプリであればこのくらいあれば十分だからだ。&lt;/p&gt;
-
-&lt;p&gt;それでMongoDBのテストデータをRailsで作りたくて探してみたところ、
-Fabricationというgemがよさげだった。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.fabricationgem.org&#34;&gt;http://www.fabricationgem.org&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Personというモデルクラスがあるとして、テストデータは以下のように作る。&lt;/p&gt;
-
-&lt;p&gt;app/models/person.rb&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;class Person
-  include Mongoid::Document
-  field :name, String
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;定義ファイルは以下のようなパスに置くと自動で読み込まれる。
-test_or_spec/fabricators/*/*_fabricator.rb&lt;/p&gt;
-
-&lt;p&gt;例ではこちら。
-test/fabricators/person/person_fabricator.rb&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;Fabricator(:person) do
-  name &#39;Tarou&#39;
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;name属性に対してnameというメソッドが定義されているので、セットする値を渡す。&lt;/p&gt;
-
-&lt;p&gt;テストケースからは以下のように呼び出す。
-test/models/person_test.rb&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-ruby&#34;&gt;@person = Fabricate(:person)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;便利な機能としては、Fabricatorの定義を継承して新たな定義を作ったり、
-属性値をセットする際にブロックをとれたりする。&lt;/p&gt;
-
-&lt;p&gt;手軽にテストデータを作るには便利なライブラリだと思う。&lt;/p&gt;
-</description>
+      <description>Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。 MongoHQ、MongoLabなどが500MBの無料</description>
     </item>
     
   </channel>

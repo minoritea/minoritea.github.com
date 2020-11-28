@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/git/index.xml</link>
-    <description>Recent content in Git on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <title>git on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <link>https://tanstaafl.0pt.jp/tags/git/</link>
+    <description>Recent content in git on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 May 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dokkuでgit pushするとfatalしてハマった</title>
+      <link>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
+      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
+      <description>最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。 dokkuでマニュアル通り作成したのだ</description>
+    </item>
     
     <item>
       <title>Ubuntu14.04でgit pull/git cloneしたときにgnutlsがエラー吐くときの対処法</title>
@@ -14,56 +22,7 @@
       <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</guid>
-      <description>&lt;p&gt;git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;gnutls_handshake() failed: A record packet with illegal version was received.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これは、ubuntuのgitパッケージがdebianベースのため、gnutlsに依存しているためhttps接続の際にエラーとなるらしい。&lt;/p&gt;
-
-&lt;p&gt;※gnutlsのバグなのか、ポリシーが厳格なせいなのかは調べてみてちょっとよくわからなかった。&lt;/p&gt;
-
-&lt;p&gt;解決策は以下のAsk ubuntuに載っていたのだけれども、12.04の記事だったので探すのに手間取った。
-要はaptのdebianパッケージをgnutlsではなく、opensshでコンパイルしろということだそうだ。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://askubuntu.com/questions/186847/error-gnutls-handshake-falied&#34;&gt;http://askubuntu.com/questions/186847/error-gnutls-handshake-falied&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;基本的にgitパッケージのバージョン以外は上の回答のとおりにやればよい。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>dokkuでgit pushするとfatalしてハマった</title>
-      <link>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
-      <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
-      <description>&lt;p&gt;最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。&lt;/p&gt;
-
-&lt;p&gt;dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;fatal: &#39;hogehoge.git&#39; does not appear to be a git repository
-fatal: Could not read from remote repository.
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;いろいろ試行錯誤した結果、実に単純に解決した。
-~/.ssh/authorized_keys に、&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;command=&amp;quot;...
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;のような行が追加されている。
-これは設定時に、&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;cat ~/.ssh/id_rsa.pub | ssh progriumapp.com &amp;quot;sudo sshcommand acl-add dokku progrium&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;というコマンドでアクセス権限を追加された際自動で挿入されたものだが、その上に手動で自分の公開鍵を挿入していたために、どうやらgit pushが動かなかったらしい。&lt;/p&gt;
-
-&lt;p&gt;手で追加した方の公開鍵を削除したら無事解決した。&lt;/p&gt;
-
-&lt;p&gt;素直にマニュアル通りに作ればこういうことにはならないので、同様にハマる人は少ないかもしれないが一応載せておく。&lt;/p&gt;
-</description>
+      <description>git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。 gnutls_handshake() failed: A record packet with illegal version was received. これは、ubuntu</description>
     </item>
     
   </channel>

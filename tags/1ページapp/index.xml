@@ -1,39 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1ページapp on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-    <link>https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/index.xml</link>
+    <link>https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/</link>
     <description>Recent content in 1ページapp on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <atom:link href="/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 04 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
       <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
-      <description>&lt;p&gt;このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
-URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。&lt;/p&gt;
-
-&lt;p&gt;ここで問題になるのは、Googleなどのクローラはjavascriptを実行しないため、クローラに対してTitleタグやOGPなどのメタ情報をクライアント側で動的に出し分けることが出来ないということだ。これについて何か解決策がないか調べてみたのだが、結論としては、クローラなどにjavascrptで動的にメタ情報を付加することはやっぱり出来ないということだった。（そりゃそうだ）。&lt;/p&gt;
-
-&lt;p&gt;特に参考になったのは以下の記事である。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://coderwall.com/p/vqpfka&#34;&gt;AngularJS SEO&lt;/a&gt; &lt;a href=&#34;https://coderwall.com/p/vqpfka&#34;&gt;https://coderwall.com/p/vqpfka&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;この記事では2つの解法が示されている。&lt;/p&gt;
-
-&lt;p&gt;1つ目はシンプルに&lt;strong&gt;そもそも1ページAppにはしない&lt;/strong&gt;こと。
-実はこのブログではこちらの解法を採用するつもりだ。各記事についてはサーバ側のテンプレートを分けて、そちらにはメタ情報をサーバ側で付与する。1ページに集約することにこだわるより、AngularJSのテンプレートを使って再利用できるところは再利用し、最低限のサーバ側で出しわけないといけないところはサーバ側でレンダリングする方が自然だと判断したからだ。とはいえ1ページAppというのはロマンがあったので少し残念ではある。&lt;/p&gt;
-
-&lt;p&gt;2つ目のやり方はサーバ側でHTMLページをレンダリングし、クローラに表示することだ。
-これをわざわざやってまでSEO対策するほどのメリットは見いだせなかったのでこちらの手段は取らないことにした。
-上の記事では2つ目のやり方について詳しく書かれているが、&lt;strong&gt;滅茶苦茶めんどくさそう&lt;/strong&gt;な印象を受けたからだ。&lt;/p&gt;
-
-&lt;p&gt;そういうわけで結論としては1ページAppでメタ情報を動的に扱うのは基本的に無理筋だということがわかった。（身も蓋もないが）。&lt;/p&gt;
-</description>
+      <description>このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン</description>
     </item>
     
   </channel>
