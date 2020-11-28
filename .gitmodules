@@ -1,6 +1,6 @@
-[submodule "themes/aglaus"]
-	path = _hugo/themes/aglaus
-	url = https://github.com/dim0627/hugo_theme_aglaus.git
 [submodule "_slides/themes/revealjs"]
 	path = _slides/themes/revealjs
 	url = https://github.com/minoritea/hugo-revealjs-generator
+[submodule "_hugo/themes/hacked"]
+	path = _hugo/themes/hacked
+	url = git@github.com:minoritea/hugo-hacked.git
