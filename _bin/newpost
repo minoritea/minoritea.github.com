@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+title=$1
+body=$2
+if [ -z "$title" -o -z "$body" ];then
+  echo "Both title: $title and body: $body are required" >&2
+  exit 1
+fi
+cd "$(dirname $(dirname $0))"
+newpost="$(_bin/new | sed -e 's/ created//g')"
+if [ ! -f "$newpost" ];then
+  echo "Target file: $newpost was not found" >&2
+  exit 1
+fi
+echo -e '+++\ntitle: '$title'\ndate: {{ .Date }}\ndraft: false\n+++\n' > $newpost
+echo "$body" >> $newpost
