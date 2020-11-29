@@ -15,7 +15,7 @@ if [ -f "_postmap/$postID" ];then
   postPath=$(cat _postmap/$postID)
 else
   hash=$(date | shasum | cut -c 1-12)
-  postPath="posts/$(date '+%Y/%m/%d')/${hash}.md"
+  postPath="posts/$(date -d "$createdAt" '+%Y/%m/%d')/${hash}.md"
   mkdir -p _postmap
   echo -n $postPath > _postmap/$postID
 fi
