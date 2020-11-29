@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+postID=$1
+title=$2
+body=$3
+createdAt=$4
+
+if [ -z "$postID" -o -z "$title" -o -z "$body" -o -z "$createdAt" ];then
+  echo "All params(postID: $postID, title: $title, body: $body and createdAt: $createdAt) are required" >&2
+  exit 1
+fi
+
+cd "$(dirname $(dirname $0))"
+
+if [ -f "_postmap/$postID" ];then
+  postPath=$(cat _postmap/$postID)
+else
+  hash=$(date | shasum | cut -c 1-12)
+  postPath="posts/$(date '+%Y/%m/%d')/${hash}.md"
+  mkdir -p _postmap
+  echo -n $postPath > _postmap/$postID
+fi
+
+mkdir -p "_hugo/content/$(dirname $postPath)"
+echo -e '+++\ntitle = '"'''$title'''"'\ndate = '"$createdAt"'\ndraft = false\n+++\n' > _hugo/content/$postPath
+echo "$body" >> _hugo/content/$postPath
