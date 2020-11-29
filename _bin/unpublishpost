@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+postID=$1
+if [ -z "$postID" ];then
+  echo "PostID: $postID is required" >&2
+  exit 1
+fi
+
+cd "$(dirname $(dirname $0))"
+if [ -f "_postmap/$postID" ];then
+  postPath=$(cat _postmap/$postID)
+else
+  echo "Post associated with $postID was not found" >&2
+  exit 1
+fi
+
+if [ ! -f "_hugo/content/$postPath" ];then
+  echo "File: _hugo/content/$postPath was not found" >&2
+  exit 1
+fi
+
+sed -i "_hugo/content/$postPath" -e 's/draft = false/draft = true/g'
