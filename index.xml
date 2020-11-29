@@ -6,7 +6,16 @@
     <description>Recent content on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 17 Dec 2016 17:46:40 +0900</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Nov 2020 05:48:17 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github issueでブログを書くようにした</title>
+      <link>https://tanstaafl.0pt.jp/posts/2020/11/29/bfb2f2812f07/</link>
+      <pubDate>Sun, 29 Nov 2020 05:48:17 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2020/11/29/bfb2f2812f07/</guid>
+      <description>このブログも結構長い間放置していた。放置していた理由の一つは、ローカルでhugoコンテンツを編集するのが面倒だったからで、まあそこまで面倒で</description>
+    </item>
+    
     <item>
       <title>Chromebookを買ってLinux(GalliumOS)を入れた</title>
       <link>https://tanstaafl.0pt.jp/posts/2016/12/17/65b6078c14a5/</link>
