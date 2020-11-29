@@ -11,5 +11,5 @@ if [ ! -f "$newpost" ];then
   echo "Target file: $newpost was not found" >&2
   exit 1
 fi
-echo -e '+++\ntitle = '"'''$title'''"'\ndate = {{ .Date }}\ndraft = false\n+++\n' > $newpost
+echo -e '+++\ntitle = '"'''$title'''"'\ndate = '"$(date --iso-8601="seconds")"'\ndraft = false\n+++\n' > $newpost
 echo "$body" >> $newpost
