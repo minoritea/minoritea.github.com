@@ -6,6 +6,7 @@ hasCJKLanguage = true
 buildFuture = true
 theme = "hacked"
 publishdir = ".."
+googleAnalytics = "UA-19366665-1"
 
 [taxonomies]
 tags = "tags"
