@@ -6,7 +6,16 @@
     <description>Recent content in Posts on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 29 Nov 2020 05:48:17 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Mar 2021 16:21:26 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GPLについての非常に簡単な解説</title>
+      <link>https://tanstaafl.0pt.jp/posts/2021/03/26/84e37c4e0e7c/</link>
+      <pubDate>Fri, 26 Mar 2021 16:21:26 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2021/03/26/84e37c4e0e7c/</guid>
+      <description>最近、mimemagicの件をきっかけにGPLが話題になることが多いのですが、 どうもSNS等ではGPLは難しい、わからん！という声をよく目に</description>
+    </item>
+    
     <item>
       <title>Github issueでブログを書くようにした</title>
       <link>https://tanstaafl.0pt.jp/posts/2020/11/29/bfb2f2812f07/</link>
