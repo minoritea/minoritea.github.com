@@ -1,5 +1,22 @@
+html {
+  font-size: 0.8em;
+}
+
+.article-title h1:after {
+  content: none;
+}
+
+.article-title > a, .blog-title > a {
+  border-bottom: none;
+}
+
 .hack {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     background-color: #fff8f8;
+}
+
+.hack h1, .hack h2, .hack h3, .hack h4, .hack h5, .hack h6 {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
 .header > h1 {
@@ -10,7 +27,7 @@ a {
     color: #806;
 }
 
-h2::before {
+h2::before, h3::before, h4::before, h5::before, h6::before{
     color: #806;
 }
 
