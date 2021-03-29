@@ -8,5 +8,8 @@ theme = "hacked"
 publishdir = ".."
 googleAnalytics = "UA-19366665-1"
 
+[Params]
+images = ["images/sakura_thumbnail.jpg"]
+
 [taxonomies]
 tags = "tags"
