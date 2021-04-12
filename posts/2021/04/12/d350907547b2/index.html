@@ -40,7 +40,7 @@
 結論から言うと、これは<code>Rewrites and Redirects</code>の設定漏れによるもの。</p>
 <p>SSGで生成したコンテンツにDynamic Routingを行う場合配信サーバ（Amplifyの場合Cloudfront）で書き換えの設定を行う必要がある。</p>
 <p>このとき、<code>/foo/&lt;*&gt;</code> =&gt; <code>/foo/[id].html</code> のように設定してしまうと、<code>/foo/[id]/bar</code>も<code>/foo/[id]</code> にリダイレクトしてしまう。
-<code>/foo/&lt;id&gt;</code> =&gt; <code>/foo/[id].html</code>、<code>/foo/&lt;id&gt;/bar</code> =&gt; <code>/foo/&lt;id&gt;/bar.html</code> のようにプレイスホルダーを使えば良い。</p>
+<code>/foo/&lt;id&gt;</code> =&gt; <code>/foo/[id].html</code>、<code>/foo/&lt;id&gt;/bar</code> =&gt; <code>/foo/&lt;id&gt;/bar.html</code> のようにプレースホルダーを使えば良い。</p>
 <p>わりと忘れがちなので書き残しておく。</p>
 </div>
 
