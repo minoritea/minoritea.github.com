@@ -6,7 +6,16 @@
     <description>Recent content in Posts on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 12 Apr 2021 03:13:37 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Apr 2021 08:37:47 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ユニコーン企業のひみつ</title>
+      <link>https://tanstaafl.0pt.jp/posts/2021/04/26/6d5662badcb9/</link>
+      <pubDate>Mon, 26 Apr 2021 08:37:47 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2021/04/26/6d5662badcb9/</guid>
+      <description>「ユニコーン企業のひみつ」という本を読んだ。 本旨は、成功したスタートアップ企業、所謂ユニコーンの開発手法や組織は、エンタープライズ系開発を主</description>
+    </item>
+    
     <item>
       <title>Amplify&amp;Next.jsでnext/linkを使ったときに `incompatible with the href value` エラーが出る</title>
       <link>https://tanstaafl.0pt.jp/posts/2021/04/12/d350907547b2/</link>
