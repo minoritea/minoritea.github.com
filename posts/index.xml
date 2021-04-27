@@ -22,7 +22,7 @@
       <pubDate>Mon, 12 Apr 2021 03:13:37 +0000</pubDate>
       
       <guid>https://tanstaafl.0pt.jp/posts/2021/04/12/d350907547b2/</guid>
-      <description>The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。 SS</description>
+      <description>The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). 上記のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。</description>
     </item>
     
     <item>

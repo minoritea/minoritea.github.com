@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     
     <title>Amplify&amp;Next.jsでnext/linkを使ったときに `incompatible with the href value` エラーが出る | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     
     <link rel="stylesheet" href="//unpkg.com/hack@0.8.1/dist/hack.css">
     <link rel="stylesheet" href="/css/app.css">
     <meta property="og:title" content="Amplify&amp;Next.jsでnext/linkを使ったときに `incompatible with the href value` エラーが出る" />
-<meta property="og:description" content="The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。 SS" />
+<meta property="og:description" content="The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). 上記のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2021/04/12/d350907547b2/" />
 <meta property="og:image" content="https://tanstaafl.0pt.jp/images/sakura_thumbnail.jpg"/>
@@ -15,7 +16,7 @@
 <meta property="article:modified_time" content="2021-04-12T03:13:37+00:00" />
 
     <meta name="twitter:title" content="Amplify&amp;Next.jsでnext/linkを使ったときに `incompatible with the href value` エラーが出る"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/sakura_thumbnail.jpg"/><meta name="twitter:card" content="summary"/>
-    <meta name="twitter:description" content="The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。 SS"/>
+    <meta name="twitter:description" content="The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). 上記のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。"/>
 </head>
 <body class="hack">
         <div class="container"><div class="header">
@@ -36,7 +37,7 @@
     
 </div>
 <div><pre><code>The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar).
-</code></pre><p>のようなエラーが出るときがある。
+</code></pre><p>上記のようなエラーが出るときがある。
 結論から言うと、これは<code>Rewrites and Redirects</code>の設定漏れによるもの。</p>
 <p>SSGで生成したコンテンツにDynamic Routingを行う場合配信サーバ（Amplifyの場合Cloudfront）で書き換えの設定を行う必要がある。</p>
 <p>このとき、<code>/foo/&lt;*&gt;</code> =&gt; <code>/foo/[id].html</code> のように設定してしまうと、<code>/foo/[id]/bar</code>も<code>/foo/[id]</code> にリダイレクトしてしまう。
