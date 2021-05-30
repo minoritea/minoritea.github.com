@@ -59,7 +59,7 @@
 </code></pre><p>これは、ubuntuのgitパッケージがdebianベースのため、gnutlsに依存しているためhttps接続の際にエラーとなるらしい。</p>
 <p>※gnutlsのバグなのか、ポリシーが厳格なせいなのかは調べてみてちょっとよくわからなかった。</p>
 <p>解決策は以下のAsk ubuntuに載っていたのだけれども、12.04の記事だったので探すのに手間取った。
-要はaptのdebianパッケージをgnutlsではなく、opensshでコンパイルしろということだそうだ。</p>
+要はgitのdebianパッケージをgnutlsではなく、opensshベースでコンパイルしろということだそうだ。</p>
 <p><a href="http://askubuntu.com/questions/186847/error-gnutls-handshake-falied">http://askubuntu.com/questions/186847/error-gnutls-handshake-falied</a></p>
 <p>基本的にgitパッケージのバージョン以外は上の回答のとおりにやればよい。</p>
 </div>
