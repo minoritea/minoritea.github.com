@@ -4,7 +4,7 @@ title = "フリーランチなど無い - There ain't no such thing as a free lu
 author = "Minori Tokuda (@snowcrush)"
 hasCJKLanguage = true
 buildFuture = true
-theme = "hacked"
+theme = "julius"
 publishdir = ".."
 googleAnalytics = "UA-19366665-1"
 

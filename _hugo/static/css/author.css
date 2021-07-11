@@ -1,0 +1,21 @@
+.footer {
+  margin: 2em 0;
+}
+
+.avatar {
+  width: 100px;
+}
+
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.footer-body {
+  margin-left: 2em;
+  flex-direction: column;
+}
+
+.footer-body * {
+  margin-top: 0.5em;
+}
