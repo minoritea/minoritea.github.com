@@ -1,88 +1,67 @@
-.avatarholder {
-  border-color: #fff8f8;
-  background-color: #fff8f8;
-}
-
 html {
-  font-size: 0.9em;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
-.article-title h1:after {
-  content: none;
+.container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.article-title > a, .blog-title > a {
-  border-bottom: none;
+.container .main {
+  flex: 700px;
 }
 
-img {
+.container .left, .right {
+  flex: 1px;
+}
+
+.article {
+  padding: 2em 0;
+}
+
+.article p {
+  line-height: 2em;
+  margin-bottom: 2.5em;
+}
+
+.article-heading {
+  margin-bottom: 2.5em;
+}
+
+.article-heading .tags {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.article-title a {
+  color: black;
+}
+
+.content img {
+  margin: 0 auto 2em auto;
   max-width: 100%;
   height: auto;
 }
 
-.hack {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    background-color: #fff8f8;
-}
-
-.hack h1, .hack h2, .hack h3, .hack h4, .hack h5, .hack h6 {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-}
-
-.header > h1 {
-    font-size: larger;
-}
-
-a {
-    color: #806;
-}
-
-h2::before, h3::before, h4::before, h5::before, h6::before{
-    color: #806;
-}
-
-.tag {
-    margin-right: 1em;
-}
-
-.date {
-    font-size: smaller;
-    color: #666;
-    margin-bottom: 0.5em;
-}
-
-.header {
-    margin-bottom: 2em;
+.article .summary {
+  max-width: 600px;
+  margin: 2em 0;
 }
 
 ul.pagination {
-    display:-ms-flexbox;
-    display:flex;
-    -ms-flex-wrap:wrap;
-    flex-wrap:wrap
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 1em;
 }
 
-li.page-item {
-    all: unset;
-    -ms-flex:1;
-    flex:1;
-    box-sizing:border-box;
+.header {
+  background: gray;
+  padding: 1em 0;
 }
 
-@media screen and (min-width:768px) {
-    li.page-item {
-        -ms-flex:0 0 8.33333%;
-        flex:0 0 8.33333%
-    }
-}
-
-@media screen and (max-width:768px) {
-    ul.pagination {
-        -ms-flex-direction:column;
-        flex-direction:column
-    }
-    li.page-item {
-        -ms-flex:0 0 auto;
-        flex:0 0 auto
-    }
+.blog-title a {
+  color: white;
+  text-decoration: none;
 }

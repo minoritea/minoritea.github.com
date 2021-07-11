@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     
     <title>RailsのYAMLでハマった | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     
-    <link rel="stylesheet" href="//unpkg.com/hack@0.8.1/dist/hack.css">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/app.css">
-    <meta property="og:title" content="RailsのYAMLでハマった" />
+<meta property="og:title" content="RailsのYAMLでハマった" />
 <meta property="og:description" content="Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、 production: adapter:sqlite3 と書いてしまったのが原因でprodu" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/" />
@@ -15,40 +16,45 @@
 <meta property="article:published_time" content="2010-11-07T00:00:00+00:00" />
 <meta property="article:modified_time" content="2010-11-07T00:00:00+00:00" />
 
-    <meta name="twitter:title" content="RailsのYAMLでハマった"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/sakura_thumbnail.jpg"/><meta name="twitter:card" content="summary"/>
-    <meta name="twitter:description" content="Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、 production: adapter:sqlite3 と書いてしまったのが原因でprodu"/>
+<meta name="twitter:title" content="RailsのYAMLでハマった"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/sakura_thumbnail.jpg"/><meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、 production: adapter:sqlite3 と書いてしまったのが原因でprodu"/>
+<link rel="stylesheet" href="/css/author.css">
+
 </head>
-<body class="hack">
-        <div class="container"><div class="header">
-    <img src="https://tanstaafl.0pt.jp//images/sakura.jpg" style="width:100%;"/>
-    <h1 class="blog-title">
+<body><div class="header">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="blog-title">
         <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
-    </h1>
-    <div class="grid -right">
-        
+      </div>
     </div>
+    <div class="right"></div>
+  </div>
 </div>
-<div id="content">
-<div class="date">
-    <time>Sun, Nov 7, 2010</time>
-</div>
-<h1 class="article-title">RailsのYAMLでハマった</h1>
-<div class="grid -right">
-    
-        <div class="cell -1of12">
+
+<div class="container">
+  <div class="left"></div>
+  <div class="main">
+    <article class="article">
+      <div class="date">
+          <time>Sun, Nov 7, 2010</time>
+      </div>
+      <div class="article-heading">
+        <h1 class="article-title">RailsのYAMLでハマった</h1>
+        <div class="tags">
+          
             <div class="tag">
                 <a href="/tags/ruby/">ruby</a>
             </div>
-        </div>
-    
-        <div class="cell -1of12">
+          
             <div class="tag">
                 <a href="/tags/rails/">rails</a>
             </div>
+          
         </div>
-    
-</div>
-<div><p>Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、</p>
+      </div>
+      <div><p>Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、</p>
 <p>production:
 adapter:sqlite3</p>
 <p>と書いてしまったのが原因でproduction環境でブート出来なくなってしまった。</p>
@@ -58,26 +64,30 @@ adapter: sqlite3</p>
 <p>お分かりだろうか？空白が無いとYamlではハッシュとして認識されない（参考)。
 つまらないミスなのだが、どこでハマってるか分からなかったので大分時間を取られてしまった。スペースの書き間違いには気をつけたい。</p>
 </div>
-
-            </div><div class="footer" style="margin-bottom: 2rem;">
-  <h1></h1>
-  <div class="media">
-    <div class="media-left">
-      <div class="avatarholder"><img style="width: 100%;border-radius: 50%;" src="/images/me.jpeg"></div>
-    </div>
-    <div class="media-body">
-      <div class="media-heading">Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
-      <div class="media-content">
-        <p>
-        <div>
-        A programmer, and loving software technologies.
+    </article>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="avatarholder container">
+        <div class="avatar">
+          <img src="/images/me.jpeg">
         </div>
-        <div>
-        github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+        <div class="footer-body container">
+          <div>Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
+          <div>
+          A programmer, and loving software technologies.
+          </div>
+          <div>
+          github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+          </div>
         </div>
-        </p>
       </div>
     </div>
+    <div class="right"></div>
   </div>
 </div>
 
@@ -92,6 +102,5 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-</div>
-    </body>
+</body>
 </html>

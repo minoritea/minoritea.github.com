@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     
     <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？ | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     
-    <link rel="stylesheet" href="//unpkg.com/hack@0.8.1/dist/hack.css">
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/app.css">
-    <meta property="og:title" content="1ページAppでクローラに動的なメタ情報を読ませることが出来るか？" />
+<meta property="og:title" content="1ページAppでクローラに動的なメタ情報を読ませることが出来るか？" />
 <meta property="og:description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/" />
@@ -15,58 +16,57 @@
 <meta property="article:published_time" content="2014-04-04T00:00:00+00:00" />
 <meta property="article:modified_time" content="2014-04-04T00:00:00+00:00" />
 
-    <meta name="twitter:title" content="1ページAppでクローラに動的なメタ情報を読ませることが出来るか？"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/sakura_thumbnail.jpg"/><meta name="twitter:card" content="summary"/>
-    <meta name="twitter:description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン"/>
+<meta name="twitter:title" content="1ページAppでクローラに動的なメタ情報を読ませることが出来るか？"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/sakura_thumbnail.jpg"/><meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン"/>
+<link rel="stylesheet" href="/css/author.css">
+
 </head>
-<body class="hack">
-        <div class="container"><div class="header">
-    <img src="https://tanstaafl.0pt.jp//images/sakura.jpg" style="width:100%;"/>
-    <h1 class="blog-title">
+<body><div class="header">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="blog-title">
         <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
-    </h1>
-    <div class="grid -right">
-        
+      </div>
     </div>
+    <div class="right"></div>
+  </div>
 </div>
-<div id="content">
-<div class="date">
-    <time>Fri, Apr 4, 2014</time>
-</div>
-<h1 class="article-title">1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</h1>
-<div class="grid -right">
-    
-        <div class="cell -1of12">
+
+<div class="container">
+  <div class="left"></div>
+  <div class="main">
+    <article class="article">
+      <div class="date">
+          <time>Fri, Apr 4, 2014</time>
+      </div>
+      <div class="article-heading">
+        <h1 class="article-title">1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</h1>
+        <div class="tags">
+          
             <div class="tag">
                 <a href="/tags/javascript/">javascript</a>
             </div>
-        </div>
-    
-        <div class="cell -1of12">
+          
             <div class="tag">
                 <a href="/tags/angularjs/">angularjs</a>
             </div>
-        </div>
-    
-        <div class="cell -1of12">
+          
             <div class="tag">
                 <a href="/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/">1ページapp</a>
             </div>
-        </div>
-    
-        <div class="cell -1of12">
+          
             <div class="tag">
                 <a href="/tags/spa/">spa</a>
             </div>
-        </div>
-    
-        <div class="cell -1of12">
+          
             <div class="tag">
                 <a href="/tags/seo/">seo</a>
             </div>
+          
         </div>
-    
-</div>
-<div><p>このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
+      </div>
+      <div><p>このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
 URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。</p>
 <p>ここで問題になるのは、Googleなどのクローラはjavascriptを実行しないため、クローラに対してTitleタグやOGPなどのメタ情報をクライアント側で動的に出し分けることが出来ないということだ。これについて何か解決策がないか調べてみたのだが、結論としては、クローラなどにjavascrptで動的にメタ情報を付加することはやっぱり出来ないということだった。（そりゃそうだ）。</p>
 <p>特に参考になったのは以下の記事である。</p>
@@ -79,26 +79,30 @@ URLのパラメータやフラグメントを元に、Ajaxなどで動的にコ�
 上の記事では2つ目のやり方について詳しく書かれているが、<strong>滅茶苦茶めんどくさそう</strong>な印象を受けたからだ。</p>
 <p>そういうわけで結論としては1ページAppでメタ情報を動的に扱うのは基本的に無理筋だということがわかった。（身も蓋もないが）。</p>
 </div>
-
-            </div><div class="footer" style="margin-bottom: 2rem;">
-  <h1></h1>
-  <div class="media">
-    <div class="media-left">
-      <div class="avatarholder"><img style="width: 100%;border-radius: 50%;" src="/images/me.jpeg"></div>
-    </div>
-    <div class="media-body">
-      <div class="media-heading">Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
-      <div class="media-content">
-        <p>
-        <div>
-        A programmer, and loving software technologies.
+    </article>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="avatarholder container">
+        <div class="avatar">
+          <img src="/images/me.jpeg">
         </div>
-        <div>
-        github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+        <div class="footer-body container">
+          <div>Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
+          <div>
+          A programmer, and loving software technologies.
+          </div>
+          <div>
+          github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+          </div>
         </div>
-        </p>
       </div>
     </div>
+    <div class="right"></div>
   </div>
 </div>
 
@@ -113,6 +117,5 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-</div>
-    </body>
+</body>
 </html>
