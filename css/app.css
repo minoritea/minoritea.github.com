@@ -2,6 +2,31 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
+a {
+  color: black;
+}
+
+pre {
+  white-space: pre-wrap;
+  background: gray;
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+
+code, pre {
+  font-family: SFMono-Regular, Consolas, 'Courier New', 'BIZ UDGothic', Meiryo, monospace
+}
+
+table tr:nth-child(odd) td {
+  background: #d0d0d0;
+  padding: 0.25em;
+}
+
+table tr:nth-child(even) td {
+  background: #b0b0b0;
+  padding: 0.25em;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +37,7 @@ html {
 }
 
 .container .left, .right {
-  flex: 1px;
+  flex: 0px;
 }
 
 .article {
@@ -33,10 +58,6 @@ html {
   display: flex;
   flex-direction: row;
   gap: 1em;
-}
-
-.article-title a {
-  color: black;
 }
 
 .content img {
@@ -60,7 +81,10 @@ ul.pagination {
 
 .header {
   background: gray;
-  padding: 1em 2em;
+}
+
+.blog-title {
+  margin: 1em 2em;
 }
 
 .blog-title a {
