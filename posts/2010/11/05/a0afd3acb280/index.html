@@ -57,7 +57,7 @@
           
         </div>
       </div>
-      <div><p>前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得されてしまう問題について、webkitのブラウザを判別するスクリプトを書いて対応した。
+      <div class="article-body"><p>前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得されてしまう問題について、webkitのブラウザを判別するスクリプトを書いて対応した。
 その後、ChromeだとURLがきちんとエスケープされて取得されることが分かった。僕はchromeは普段使わないのでこの仕様の違いに気付かなかったのである。</p>
 <p>どうやって判別するか悩んでいたのだが、結局decodeURLでエスケープされていないURLをデコードしても結果が変わらないことに着目して以下の対応とした。</p>
 <p>var disqus_url = encodeURI(decodeURI(window.location.href));</p>

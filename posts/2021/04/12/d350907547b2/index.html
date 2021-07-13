@@ -45,7 +45,7 @@
           
         </div>
       </div>
-      <div><pre><code>The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar).
+      <div class="article-body"><pre><code>The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar).
 </code></pre><p>上記のようなエラーが出るときがある。
 結論から言うと、これは<code>Rewrites and Redirects</code>の設定漏れによるもの。</p>
 <p>SSGで生成したコンテンツにDynamic Routingを行う場合配信サーバ（Amplifyの場合Cloudfront）で書き換えの設定を行う必要がある。</p>

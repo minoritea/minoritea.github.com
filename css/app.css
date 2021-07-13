@@ -19,6 +19,16 @@ code, pre {
   font-family: SFMono-Regular, Consolas, 'Courier New', 'BIZ UDGothic', Meiryo, monospace;
 }
 
+blockquote {
+  border-left: 4px solid #b0b0b0;
+  background: #d0d0d0;
+  padding: 1em 2em;
+  margin: 0 1em 2em 1em;
+}
+
+blockquote > p {
+}
+
 hr {
   height:0;
   border:0;
@@ -54,7 +64,7 @@ table tr:nth-child(even) td {
   padding: 2em 0;
 }
 
-.article p {
+.article-body > p {
   line-height: 2em;
   margin-bottom: 2.5em;
 }
