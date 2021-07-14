@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/author.css">
 {{ template "_internal/opengraph.html" . }}
 <meta name="twitter:title" content="{{ .Title }}"/>
 {{- with $.Site.Params.images -}}
@@ -5,4 +6,3 @@
 {{- end -}}
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
-<link rel="stylesheet" href="/css/author.css">
