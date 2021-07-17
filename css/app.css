@@ -80,6 +80,7 @@ table tr:nth-child(even) td {
 
 .article-heading .tags {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 1em;
 }
