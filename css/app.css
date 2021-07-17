@@ -97,8 +97,9 @@ table tr:nth-child(even) td {
 }
 
 ul.pagination {
+  flex-wrap: wrap;
   font-size: 1.25em;
-  margin-left: 2em;
+  margin: 0 2em;
   padding: 0;
   list-style-type: none;
   display: flex;
