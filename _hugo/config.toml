@@ -9,7 +9,7 @@ publishdir = ".."
 googleAnalytics = "UA-19366665-1"
 
 [Params]
-images = []
+images = ["images/simple_thumbnail.jpg"]
 
 [taxonomies]
 tags = "tags"
