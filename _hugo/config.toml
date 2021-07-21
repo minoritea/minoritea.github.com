@@ -13,3 +13,10 @@ images = ["images/simple_thumbnail.png"]
 
 [taxonomies]
 tags = "tags"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+linenos = true
+tabWidth = 2
