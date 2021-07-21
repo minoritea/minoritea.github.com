@@ -53,7 +53,20 @@
 </ol>
 <p>以上のような状況のとき、メソッドAのテストってどうすればいいんだろうと思ったんだけど、シンプルにインスタンス変数にアクセスすることにした。メソッドAの正しい挙動は内部変数を変更することなので、そのテストは、変数の変更を検知することだと思ったからだ。</p>
 <p>というわけでコードは以下。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#39;minitest/autostart&#39;</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ruby" data-lang="ruby">require <span style="color:#e6db74">&#39;minitest/autostart&#39;</span>
 O <span style="color:#f92672">=</span> <span style="color:#66d9ef">Struct</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">:x</span>)
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestO</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Minitest</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Test</span>
   <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_a</span>
@@ -62,7 +75,9 @@ O <span style="color:#f92672">=</span> <span style="color:#66d9ef">Struct</span>
     assert o<span style="color:#f92672">.</span>instance_variable_get(<span style="color:#e6db74">:@x</span>)
   <span style="color:#66d9ef">end</span>
 <span style="color:#66d9ef">end</span>
-</code></pre></div><p>他にいいやりかたがあるのかもしれないけど、多分これが一番スッキリする。</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>他にいいやりかたがあるのかもしれないけど、多分これが一番スッキリする。</p>
 </div>
     </article>
   </div>
