@@ -46,14 +46,11 @@ table tr:nth-child(even) td {
 .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .container .main {
   flex: 700px;
-}
-
-.container .left, .right {
-  flex: 0px;
 }
 
 .article {
