@@ -16,10 +16,10 @@ pre:not(.highlight *) {
   border-radius: 3px;
 }
 
-div.highlight {
-  border: 1px solid #bbb;
-  border-radius: 3px;
+div.highlight > div, div.highlight > pre {
   margin: 2em 0;
+  border-radius: 3px;
+  padding: 0.5em 1em;
 }
 
 code, pre {
