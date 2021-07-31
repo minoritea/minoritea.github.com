@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>データエンジニアリングに入門した | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp//css/app.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp//css/author.css">
+<meta property="og:title" content="データエンジニアリングに入門した" />
+<meta property="og:description" content="新しい会社は小さなスタートアップなので何でも自分でやる必要がある。エンドユーザや導入企業の分析のためのデータソースが必要ということでETLの" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2021/07/31/249a0d374054/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
+<meta property="article:published_time" content="2021-07-31T04:06:30+00:00" />
+<meta property="article:modified_time" content="2021-07-31T04:06:30+00:00" />
+
+<meta name="twitter:title" content="データエンジニアリングに入門した"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="新しい会社は小さなスタートアップなので何でも自分でやる必要がある。エンドユーザや導入企業の分析のためのデータソースが必要ということでETLの"/>
+<link rel="icon" type="image/png" href="/images/favicon.png">
+
+</head>
+<body><div class="header">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="blog-title">
+        <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left"></div>
+  <div class="main">
+    <article class="article">
+      <div class="date">
+          <time>Sat, Jul 31, 2021</time>
+      </div>
+      <div class="article-heading">
+        <h1 class="article-title">データエンジニアリングに入門した</h1>
+        <div class="tags">
+          
+        </div>
+      </div>
+      <div class="article-body"><p>新しい会社は小さなスタートアップなので何でも自分でやる必要がある。エンドユーザや導入企業の分析のためのデータソースが必要ということでETLの仕組みを導入することになった。</p>
+<p>よく考えたら今までデータエンジニアリングということを一から通しでやったことがなかった気がする。Redshiftにバッチでデータを流し込むようなジョブをメンテしたことはあるけど、始めから書いたわけじゃないし、どっちかというとワークフローエンジン向けのアダプターのコードをメンテしていてETLのロジックは触らなかったようにも思う。あと前職だと大規模データ処理の基盤を触っていたのだけれど、これも足回りのチューニングだったり、パイプラインの中の一部だけ触ったりしていたのであまりデータエンジニアリングという実感はしなかった。</p>
+<p>そもそもデータエンジニアリングというのが何かあんまり分かっていなかった。要するにデータ処理のためにはDWHやBIツールなどの分析用のフロントエンド向けにデータを流し込むためのパイプラインを構築する必要があり、その作業に工数がかかったりノウハウが必要だったりするので専任のエンジニアを置くという話である。僕は別に専任ではないが必要があればやる。</p>
+<p>実際一からやってみて、データ処理パイプラインの構築作業ってフロントエンドのパイプライン構築と似ているなーと思った。実際データをかき集めて変換してどっかに置くというざっくりした概要は同じであるし。専任のメンテナがいた方が楽なのも同じである。既存のエコシステムがあるのでそこに乗れるかどうかが重要なところも似ている。Vercelみたいな企業が出てくればおまかせでやってくれそうな気がする。色々出てきてはいるみたいだけどまだ覇権を取っているところはないみたい。最終的にAmazonかGoogleに市場を取られるだろうから難しいのだろう。実際データソースもロード先も実行基盤も全部AWSかGCP上にあるケースがほとんどなわけだし。</p>
+<p>僕らも今回選択したロード先はBigQueryでとにかく全部そっちに流し込むことにした。BigQueryを選択した理由はGoogleデータポータルをダッシュボードとして使っているからで、データポータルのデータソースにするなら同じGoogleのプロダクトのほうがいいだろうという理由である（実際相性がいい）。</p>
+<p>データの抽出元はRDSである。そうするとAWS&lt;=&gt;GCP間でデータの受け渡しを行う必要があり、ちょっと手間がかかった。</p>
+<p>最初に選択したのはAWS GlueでS3に抽出してBigQuery Data Transferでデータを流し込むという仕組みだったがこれが失敗だった。詳細は書かないがあまり細かい設定が出来なかった。結局ノーコードでポチポチ設定すればETLを実装できるという世界はまだまだ遠いみたいだ。やりたいことをやるには自分でコードを書かないといけなくてそれだとわざわざGlueを使う必要がないと判断した。Sparkのような分散処理基盤が必要なくらい大規模になったらマネージドなSparkとしてGlueを選ぶ価値もあるだろうからそのとき再検討するつもりである。</p>
+<p>次に検討したのはLambdaでゼロからコードを書くというもので、そんな大した処理をするわけではなく、DBからテーブルごとレコードを取得して、多少の変換処理をかけて、BigQueryに投入すればよかったので検討したのだけれど、もうちょい楽できないかなと思ってETL用のフレームワークの導入を検討した。</p>
+<p>周りに相談しておすすめされていたのがEmbulkで、最初ちょっとやりたいことに対してリッチすぎるかなと思って敬遠してたのだけれど、これが今のところ正解だった。プラグインが充実していてだいたいやりたいことはYAMLを書くだけで実現してしまった。このプラグインシステムが良くできていて、RubyのBundlerの仕組みをそのまま使っている。Embulkのプラグインは（今のところ）JRubyで書くようになっているんだけど、Bundlerの仕組みに乗せたいためだけにRubyを導入しているのかと思うくらいだ（Embulk本体はJava製）。</p>
+<p>Embulkの欠点として、エラーメッセージが分かりにくいというところがある。スタックトレースがだらだら出てきてヒューマンリーダブルではない。自分はGoのエラーメッセージはスタックトレースではなく意味のあるメッセージを出しましょうという文化圏の住人なので余計そう感じるのかもしれない。このあたりはJavaの文化圏の特徴で、Rubyとかもどっちかというとスタックトレースを過剰に出しがちである。Googleは多分世界有数のJavaユーザなので、Goのエラーメッセージに対するプラクティスが今のようになっているのはそういう辛みに対するカウンターなのかなと思った。</p>
+<p>あと標準の設定フォーマットがいけてなくて、基本はYAMLで記述するのだけれど、この手の処理はだいたい環境変数などから設定情報を渡したいケースが多いため、LiquidというShopifyが出している拡張YAMLというかYAML向けテンプレートエンジンというような代物があり、それを採用していて変数埋め込みが出来るのだけれどこれが結構辛かった。まずShopify公式のと大分バージョンが異なるみたいでShopifyのマニュアル通りに書いてもうまくいかなかった。あとLiquidは結局テンプレートエンジンとしての機能しかないので、YAMLのドキュメント構造ときちんと連携してくれないことがあり、具体的に言うとLiquidでYAMLコンテンツを変数に入れて展開したときにインデントがずれるため、宣言時に予め展開先のインデントを入れておかないといけないのがしんどかった。自分はテーブル毎に別途設定ファイルを書いて、共通処理部分はテンプレートとして読み込むような書き方をしているのだけれど、Liquidはいまいちこの用途にあってないんじゃないかと思った。あとテンプレートがどのように展開されるのかが確認できないため、毎回設定ロード時のエラーで詰まってしまいとても辛かった。実際上のエラーメッセージで苦労したのもほとんどが設定ロード時のエラーがどこで起きたかが分からないときだった。プラグインの方はとくに問題なく入れるだけで動いたので安定していて非常に頼もしかった。</p>
+<p>なんか長くなったけど、Embulkはまだ少ししか運用していないけれどプラグインのエコシステムも良くできているし個々のプラグインも少なくとも今使っている分に関しては非常に安定していて良いので使ってみてよかったと思う。上で挙げた欠点に関しては折角プラガブルな作りになっているのだから設定ローダーやロガーも入れ替えられるようにしてくれればいいのにと思った。まあでも一度組んでしまえば少なくとも自分が今やってるくらいの規模感では全く問題なく動いてくれるので信頼できそうだと感じている。</p>
+<p>なんかEmbulkの感想含め長くなってしまったけど、結構データエンジニアリングをなめていたなという反省がある。個々の要素技術は自分も結構経験があるので通用するだろうと思ってやったけど技術選択などのノウハウとかエコシステムの理解とかはちゃんと勉強してからやらないと結構辛いなと思った。世間でデータエンジニアが引っ張りだこなのも納得である。</p>
+</div>
+    </article>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="container">
+        <div class="avatar">
+          <img src="/images/me.jpeg">
+        </div>
+        <div class="footer-body container">
+          <div>Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
+          <div>
+          A programmer, and loving software technologies.
+          </div>
+          <div>
+          github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-19366665-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
