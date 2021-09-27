@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Raspberry Pi 400を買ってManjaro Sway Editionを入れた | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp//css/app.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp//css/author.css">
+<meta property="og:title" content="Raspberry Pi 400を買ってManjaro Sway Editionを入れた" />
+<meta property="og:description" content="Raspberry Pi 400を買った。昨年発表されたときからちょっと欲しいなと思っていて価格もそんなに高くないしお遊びで買ってみようとは思っていた。 ただ、最初" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2021/09/27/96f73a304bc6/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
+<meta property="article:published_time" content="2021-09-27T14:46:56+00:00" />
+<meta property="article:modified_time" content="2021-09-27T14:46:56+00:00" />
+
+<meta name="twitter:title" content="Raspberry Pi 400を買ってManjaro Sway Editionを入れた"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Raspberry Pi 400を買った。昨年発表されたときからちょっと欲しいなと思っていて価格もそんなに高くないしお遊びで買ってみようとは思っていた。 ただ、最初"/>
+<link rel="icon" type="image/png" href="/images/favicon.png">
+
+</head>
+<body><div class="header">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="blog-title">
+        <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left"></div>
+  <div class="main">
+    <article class="article">
+      <div class="date">
+          <time>Mon, Sep 27, 2021</time>
+      </div>
+      <div class="article-heading">
+        <h1 class="article-title">Raspberry Pi 400を買ってManjaro Sway Editionを入れた</h1>
+        <div class="tags">
+          
+        </div>
+      </div>
+      <div class="article-body"><p><img src="https://user-images.githubusercontent.com/3453386/134940849-574b4943-2256-4eed-b5fe-d621ed1ebfbc.jpeg" alt="image">
+Raspberry Pi 400を買った。昨年発表されたときからちょっと欲しいなと思っていて価格もそんなに高くないしお遊びで買ってみようとは思っていた。</p>
+<p>ただ、最初に出てきたのがJP配列だったのでやっぱり躊躇してしまったのだけれど、今月ようやくUSキーボード版が日本で発売され購入意欲が復活してしまった。</p>
+<p>スイッチサイエンスで購入して翌週には届いた。在庫はすぐ無くなったようなので衝動買いだけど結果的には正解だったのかもしれない。</p>
+<p>OSはManjaroを入れることにした。僕は普段は趣味用途のサーバOSとしてArch Linuxを使っている。ただ、Arch LinuxのRaspberry Piサポートがあまり充実していないようで、以前トラブルで困っていたときにManjaroに乗り換えたらうまく動いてそれ以来Raspberry PiではManjaroを使うようにしている。ManjaroもArch派生OSなので構成はよく似ている。ArchLinuxの一番のメリットは公式Wikiだと思っているのだけど、Manjaroでもほぼそのままの知識を流用できるのは大きい。あと、Archと比べたときのManjaroの一番のメリットはGUI環境のインストールが楽ということに尽きるのだけれどRaspberry Pi版でもそれは同じで、僕はRaspberry Piは基本的にGUIで使うことにしているのでManjaroは本当に楽で気に入っている。</p>
+<p>そんなManjaroだけど今回は少し手こずった。Swayを入れたからだ。SwayというのはWaylandベースのタイル型ウィンドウマネージャでi3互換で作られている。今回Swayを選んだのはマウス無しでRaspberry Pi 400を使いたかったからだ。最初に見たときからこの端末はマウスをつけたくないなと思った。美しくない。なるべくコードを減らしてディスプレイにキーボードをそのままつなぐだけのような感覚で運用したいと思っていた。タイル型ウィンドウマネージャはキーボード・ショートカットで操作するように作られているのでマウスなしでも快適に動いてくれるんじゃないかと思った。</p>
+<p>実際今は快適に動いてくれている。ただ導入のときは少し困った。</p>
+<p>どこで詰まったかというとログイン画面で、Manjaro RP4 Sway Editionのログイン画面はポインティングデバイスを繋いでいないと何をどうやってもユーザー名の入力欄にフォーカスが動いてくれないのだ。これがどうにもならなくて一度はSwayを諦めて自分でi3を導入しようかと思ったくらいだ。</p>
+<p>しかしi3について調べる中でどうも上記の不具合はSway本体というよりgreetdというディスプレイマネージャの問題だということに気づいた。greetdはGreeterというプラグインを呼び出してログインUIはそちらに任せる方式になっているのだが、このGreeterにSwayを直接指定しているように見えたのでSway自身がGreeterの機能を持っていると勘違いしていたのだ。よく読むとSwayの設定ファイルの中でログイン時にGtkGreetというGreeterを自動起動するようになっていた。ややこしいことをするものだ。</p>
+<p>結局greetdから直接別のGreeterを呼び出すようにすることで解決した。新しいGreeterにはAgreetyというCUIのGreeterを使うことにした。自分には充分だ。</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># /etc/greetd/config.tomlのcommand欄を以下のように書き換えた</span>
+<span style="color:#a6e22e">command</span> = <span style="color:#e6db74">&#34;agreety --cmd sway&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Swayについてはもう一つ詰まった箇所があってそちらの方が難儀したかもしれない。
+それはスクリーンロック画面で、swaylockというツールで実装されているんだけど、画面に円が表示されるというシンプルな構成だ。ユーザーパスワードを打ち込むと円の縁がピカピカ光って正しいパスワードを入力するとスクリーンロックが解ける。エラーなら円が赤くなる。このswaylockの操作が全くわからず、最初のうちはスクリーンがロックされたら再起動していた。再起動時にディスクが飛んだらしく、起動でこけたりするようになって何度かOSを入れ直すはめになりすっかり嫌になってしまった。そもそも最初はスクリーンロック機能だとは気づかなかった放置していると画面が暗転して入力を受け付けなくなるということはスクリーンロックだろうとあたりをつけたけど、UIがシンプルすぎてその推測にも全く確信が持てなかった。操作に困ったのは他に理由があって、検索しても画面のスクリーンショットが出てこないのだ。どうもシンプルすぎて言及する人もいないらしい。そのためswaylockという単語はなんどか引っかかったのだが該当の機能かどうか確信が持てず、調査に時間を要することになってしまった。結局何度か操作しているうちに円が表示されている間にブラインドでパスワードを入れればいいということがなんとなく分かったけど初見でその操作に気づくのはなかなかハードルが高いと思う。せめてフォーム一つ置いてくれればわかるのに。まあこのSwaylockが僕にとっては第二の鬼門だった。</p>
+<p>上の２つが解決したら、その後はすんなり快適に動いてくれている。まだ操作や設定周りでよくわからない点もあるけれどせっかくなので（ディスプレイマネージャ以外は）Manjaroのデフォルト設定のまましばらく運用してみようと思う。</p>
+<p><img src="https://user-images.githubusercontent.com/3453386/134939923-621d75d1-e4e9-445c-8f4a-25fad18a4e05.png" alt="image"></p>
+<p>Raspberry Pi 400については今のところキーボード付きのただのラズパイという感じだ。ただその点が結構重要でディスプレイと電源ケーブルさえ繋げば普通にLinux環境が立ち上がるのはとても楽だ。メイン機にもLinuxを入れてデュアルブートにしているけど、やっぱり切り替えは面倒くさい。その点Raspberry Pi 400はモニタに繋いで切り替えればすぐにLinux環境が立ち上がる。ケーブルも少ないし本体も薄いから使わないときは邪魔にならない。デスクトップでのLinux
+サブマシンとしては非常に優秀だと思う。あとやっぱり触っていて楽しい。</p>
+</div>
+    </article>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="container">
+        <div class="avatar">
+          <img src="/images/me.jpeg">
+        </div>
+        <div class="footer-body container">
+          <div>Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
+          <div>
+          A programmer, and loving software technologies.
+          </div>
+          <div>
+          github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-19366665-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
