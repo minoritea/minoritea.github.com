@@ -20,3 +20,4 @@ unsafe = true
 [markup.highlight]
 linenos = true
 tabWidth = 2
+lineNumbersInTable = false
