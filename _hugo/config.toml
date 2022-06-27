@@ -6,7 +6,7 @@ hasCJKLanguage = true
 buildFuture = true
 theme = "julius"
 publishdir = ".."
-googleAnalytics = "UA-19366665-1"
+googleAnalytics = "G-WMCEBYW7WE"
 
 [Params]
 images = ["images/simple_thumbnail.png"]
