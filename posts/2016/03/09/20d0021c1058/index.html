@@ -11,10 +11,10 @@
 <meta property="og:title" content="scalewayを使ってみた" />
 <meta property="og:description" content="scalewayという格安ベアメタルサーバを利用してみた。 scalewayはARM CPUを使ったベアメタルサーバで、 格安VPSに匹敵する価格" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2016/03/09/20d0021c1058/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2016/03/09/20d0021c1058/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
 <meta property="article:published_time" content="2016-03-10T00:03:06+09:00" />
 <meta property="article:modified_time" content="2016-03-10T00:03:06+09:00" />
-
 
 <meta name="twitter:title" content="scalewayを使ってみた"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="scalewayという格安ベアメタルサーバを利用してみた。 scalewayはARM CPUを使ったベアメタルサーバで、 格安VPSに匹敵する価格"/>
@@ -122,14 +122,16 @@ Rolling Releaseなので、OSを再インストールしなくとも環境の更
   </div>
 </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMCEBYW7WE"></script>
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-WMCEBYW7WE', { 'anonymize_ip': false });
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-WMCEBYW7WE', 'auto');
+	
+	ga('send', 'pageview');
 }
 </script>
 

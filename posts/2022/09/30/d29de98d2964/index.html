@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>VPC as a Service | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/app.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
+<meta property="og:title" content="VPC as a Service" />
+<meta property="og:description" content="VPC as a Serviceというサービスを考えた。 Virtual private server network as a Serviceと言い換えてもよい。 要するにサーバー用の仮想ネットワークをSaaSとし" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2022/09/30/d29de98d2964/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
+<meta property="article:published_time" content="2022-09-30T13:38:46+00:00" />
+<meta property="article:modified_time" content="2022-09-30T13:38:46+00:00" />
+
+<meta name="twitter:title" content="VPC as a Service"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="VPC as a Serviceというサービスを考えた。 Virtual private server network as a Serviceと言い換えてもよい。 要するにサーバー用の仮想ネットワークをSaaSとし"/>
+<link rel="icon" type="image/png" href="/images/favicon.png">
+
+</head>
+<body><div class="header">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="blog-title">
+        <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left"></div>
+  <div class="main">
+    <article class="article">
+      <div class="date">
+          <time>Fri, Sep 30, 2022</time>
+      </div>
+      <div class="article-heading">
+        <h1 class="article-title">VPC as a Service</h1>
+        <div class="tags">
+          
+        </div>
+      </div>
+      <div class="article-body"><p><strong>VPC as a Service</strong>というサービスを考えた。
+Virtual private server network as a Serviceと言い換えてもよい。
+要するにサーバー用の仮想ネットワークをSaaSとして提供するものである。</p>
+<p>結構需要が出るんじゃないかなどと考えているが、自分で実装するには知識不足なので誰か作って欲しい。
+誰かが起業するなら、コントロールプレーン以上の開発なら出来るし、むしろ得意領域だから声をかけて欲しい。</p>
+<h2 id="背景">背景</h2>
+<p>思いついた背景については入り組んでいる上に自分ももやもやしているので徒然に書く。</p>
+<h2 id="aws-vs-gcp">AWS vs GCP</h2>
+<p>現代においてクラウドインフラは事実上AWSとGCPの2択である。
+某所で個人開発においては圧倒的にGCPの方が使いやすいという意見を見かけた。
+一方別の場所ではGCPは素人くさくプロユースの利用においてはAWSの方が信頼がおけると言う人もいた。</p>
+<p>この違いはどこから出るのかと考えたとき、他にもあるだろうが一つの要素としてネットワーク設計の思想の違いもあるのかなと思った。
+AWSはネットワーク設計や設定がわりと細かく求められるのに対し、GCPはあまり考慮しなくてもざっくり動いてしまう。
+ネットワーク運用の知識のない人にとってはGCPの方が使いやすく、逆に知識のある人にとってはAWSの方が信頼感がおける、ということなのかのもしれない。</p>
+<h2 id="vpsの再評価">VPSの再評価</h2>
+<p>ところで個人開発という観点からするとクラウドを使わないという選択肢もあると思っていて、VPSやベアメタルのサーバーを利用するというのも意外と良いのではと思っている。</p>
+<p>今どきだと月5ドルも出せばそれなりのスペックのサーバーが借りられるのでコスト面でと悪くない。</p>
+<p>クラウドで安くあげようとすると結局サーバレスインフラとイマイチ使い勝手の悪いKVSの組み合わせで頑張るということになり、サービスのデプロイはお手軽だけど、ローカルで開発スタックを立ち上げるのはそれなりに面倒くさいことになる。</p>
+<p>それに技術選択も限られてしまい、勉強、スキルアップという意味でも不利だ。</p>
+<p>自分でサーバー構築するなら好きな環境を構築して遊べるのでVPSで個人サービスを立ち上げるのはありだと思っている。</p>
+<h2 id="サーバー構築運用の難点">サーバー構築、運用の難点</h2>
+<p>自分でサーバーを構築する場合の難点として、ネットワークやセキュリティの設定が面倒というのはある。</p>
+<p>そこで考えたのはネットワークは全部VPN経由でのアクセスのみ許可して外部からの接続はすべてブロックしてしまうことだ。これなら設定も簡単である。</p>
+<p>外部からの接続はどうするのかということだが、管理者のアクセスはその管理者（個人の場合は自分自身）の開発環境をそのままVPNに繋いでしまえばよいし、サービスへのアクセスはマネージドなロードバランサーを外に置いて、ロードバランサーからのアクセスだけ許可すればよい。</p>
+<p>自分はcloudflaredでロードバランサから直接トンネルを張っているがセキュアだし管理も楽である。</p>
+<p>VPNにはtailscaleを使っておりこちらも設定が非常に楽で良い。</p>
+<p>VPSで計算リソースが足りないなら自宅サーバーにVPN接続してそちらで処理するという手が使えるのも良い。</p>
+<h2 id="もうちょっと大きなサービスについて">もうちょっと大きなサービスについて</h2>
+<p>上で挙げたのは本当の個人で趣味でやっている開発の例だが、ある程度収益を目指したりPoCだったり小規模受託開発なりだとシンプルなVPNでは不安というケースも出てくると思う。</p>
+<p>セグメント分けしたり、ネットワーク内でファイアウォールの設定を分けたりしたくなってくると結局設定が複雑になってくる。</p>
+<p>AWSやGCPでインフラ構築するメリットの一つはそういうネットワーク周りもマネージドなリソースとして取り扱えることである。</p>
+<p>だからある程度成長を見込んだインフラを考えるとクラウド構築一択という風潮になるのもわかる。</p>
+<p>だが本当にそうなのだろうか？</p>
+<h2 id="必要なのはネットワークインフラだけでは">必要なのはネットワークインフラだけでは？</h2>
+<p>クラウドなら一つのパッケージに全部入りなのは魅力だが、逆に全部入りでなければならない理由はないのではと思っている。</p>
+<p>たとえばDNSやロードバランサーについては僕は前述のCloudflareを使っている。</p>
+<p>サーバーインフラについてはec2などよりVPSで建てた方が安い。
+短時間でのスケーラビリティを求めないのであればVPSの方にメリットがあると感じている。</p>
+<p>足りないのはマネージドな仮想ネットワークで、これらも個別に導入出来るなら、色々なSaaSを組み合わせで自分の好きなインフラを構築できる。</p>
+<h2 id="vpc-as-a-service">VPC as a Service</h2>
+<p>そう考えるとVPC as a Serviceというのは結構潜在的なニーズがあるのではないかと思えてくる。
+まあ、cloudflareかtailscaleあたりがそのうちやりそうな気もするけど、そのときには僕もアイディアとして思いついていたよと言えるようにここに書き残しておく。</p>
+</div>
+    </article>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="container">
+        <div class="avatar">
+          <img src="/images/me.jpeg">
+        </div>
+        <div class="footer-body container">
+          <div>Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
+          <div>
+          A programmer, and loving software technologies.
+          </div>
+          <div>
+          github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-WMCEBYW7WE', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+</body>
+</html>

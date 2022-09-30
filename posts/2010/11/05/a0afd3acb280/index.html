@@ -11,10 +11,10 @@
 <meta property="og:title" content="SafariのLocationエンコードについて2" />
 <meta property="og:description" content="前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
 <meta property="article:published_time" content="2010-11-05T00:00:00+00:00" />
 <meta property="article:modified_time" content="2010-11-05T00:00:00+00:00" />
-
 
 <meta name="twitter:title" content="SafariのLocationエンコードについて2"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得"/>
@@ -92,14 +92,16 @@ URLの下位パスをタイトルから生成していたのでこのような�
   </div>
 </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WMCEBYW7WE"></script>
-<script>
+<script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-WMCEBYW7WE', { 'anonymize_ip': false });
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-WMCEBYW7WE', 'auto');
+	
+	ga('send', 'pageview');
 }
 </script>
 

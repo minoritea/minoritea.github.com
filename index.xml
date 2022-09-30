@@ -6,7 +6,16 @@
     <description>Recent content on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 27 Sep 2021 14:46:56 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Sep 2022 13:38:46 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VPC as a Service</title>
+      <link>https://tanstaafl.0pt.jp/posts/2022/09/30/d29de98d2964/</link>
+      <pubDate>Fri, 30 Sep 2022 13:38:46 +0000</pubDate>
+      
+      <guid>https://tanstaafl.0pt.jp/posts/2022/09/30/d29de98d2964/</guid>
+      <description>VPC as a Serviceというサービスを考えた。 Virtual private server network as a Serviceと言い換えてもよい。 要するにサーバー用の仮想ネットワークをSaaSとし</description>
+    </item>
+    
     <item>
       <title>Raspberry Pi 400を買ってManjaro Sway Editionを入れた</title>
       <link>https://tanstaafl.0pt.jp/posts/2021/09/27/96f73a304bc6/</link>
