@@ -63,8 +63,8 @@
 また一応アクセス解析のためにGoogle Analyticsを入れていて、大してアクセス数があるわけではないがモチベーションにつながっている。
 ただしせっかく静的ページで読み込みを早くしているのにGoogle Analyticsのためにページロードの時間が割かれることにちょっと釈然としないものを感じていた。
 GA一つでそこまで遅くなるわけではないけれど、頑張ってチューニングしたのにサードパーティスクリプトに律速されるのはなんとなく面白くない。</p>
-<p>そこでpartytownを導入することにした。
-<a href="https://partytown.builder.io/">https://partytown.builder.io/</a></p>
+<p>そこでpartytownを導入することにした。</p>
+<p><a href="https://partytown.builder.io/">https://partytown.builder.io/</a></p>
 <p>partytownというのはDOM操作をするJavaScriptをServiceWorkerで動かすためのライブラリである。
 名前の通りサードパーティスクリプトを動かすことを想定しており、Worker側で遅延読み込みすることでメインスレッドでのページ読み込みを阻害しないようにすることが出来る。
 ServiceWorkerでサードパーティスクリプトを動かすときの問題点として、Workerは別スレッドで動くためメインスレッドのDOMに同期的にアクセスすることが出来ないということが挙げられるが、partytownはXMLHttpRequestのブロッキング呼び出しを流用することでこの問題を解決している。</p>
@@ -72,12 +72,12 @@ ServiceWorkerでサードパーティスクリプトを動かすときの問題�
 <p>導入については簡単でHTMLヘッダにスニペットとサードパーティスクリプトの呼び出しを書いておくだけである。</p>
 <p>しかし公式での説明がちょっと不足していると感じたので簡単に手順を共有する。</p>
 <p>まず、静的ページのアセットディレクトリに<code>@builder.io/partytown/lib</code>に含まれる以下のファイルをコピーしておく。</p>
-<p>@builder.io/partytown/lib/
+<pre><code>@builder.io/partytown/lib/
 ├── partytown-atomics.js
 ├── partytown-media.js
 ├── partytown-sw.js
-└── partytown.js</p>
-<p>AstroやNext.jsなどではnpmで入れて設定やスニペットを書けばそれで終わりけど、
+└── partytown.js
+</code></pre><p>AstroやNext.jsなどではnpmで入れて設定やスニペットを書けばそれで終わりけど、
 静的ページの場合はこれらのファイルを入手することから始めないといけない。</p>
 <p>まず、<a href="https://www.npmjs.com/package/@builder.io/partytown">@builder.io/partytown</a>を任意のディレクトリに展開しておく。
 このディレクトリは作業のためのものなので最終的な静的サイトには含めなくてもよい。
@@ -87,8 +87,8 @@ ServiceWorkerでサードパーティスクリプトを動かすときの問題�
 </code></pre></div><p>次に以下のコマンドでスニペットを生成して静的ページのHeadタグ内のscriptタグに入れておく（外部ファイルからロードしない理由は謎だけど公式での案内に従っておく）。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>node -e <span style="color:#e6db74">&#34;import(&#39;@builder.io/partytown/integration&#39;).then(({ partytownSnippet }) =&gt; console.log(partytownSnippet({forward:[&#39;dataLayer.push&#39;],lib:&#39;ライブラリのパス&#39;})))&#34;</span> 
 </code></pre></div><p>出力されたスニペットをコピーしておく。
-forwardに入れるパラメータは以下を参考にGA用のものをコピーした。
-<a href="https://partytown.builder.io/common-services">https://partytown.builder.io/common-services</a></p>
+forwardに入れるパラメータは以下を参考にGA用のものをコピーした。</p>
+<p><a href="https://partytown.builder.io/common-services">https://partytown.builder.io/common-services</a></p>
 <p>libに入れるパスは<code>@builder.io/partytown/lib</code>を展開したディレクトリのパスをWebサイトのルートからの絶対パスで入れる。
 例えばこのブログの場合は<code>https://tanstaafl.0pt.jp/js/partytown/</code>というパス以下にライブラリを配置したので<code>/js/partytown/</code>と入れた。
 最後の<code>/</code>も忘れずに入れること。</p>
