@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>静的ウェブサイト（ブログ）にpartytownを入れた | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/app.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
+<meta property="og:title" content="静的ウェブサイト（ブログ）にpartytownを入れた" />
+<meta property="og:description" content="このブログはHugoで生成した静的webサイトである。 静的ページなので当然ながら読み込みは早い。Github Pagesで配布しているのでGi" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2023/05/08/e6725aadb317/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
+<meta property="article:published_time" content="2023-05-08T13:03:52+00:00" />
+<meta property="article:modified_time" content="2023-05-08T13:03:52+00:00" />
+
+<meta name="twitter:title" content="静的ウェブサイト（ブログ）にpartytownを入れた"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="このブログはHugoで生成した静的webサイトである。 静的ページなので当然ながら読み込みは早い。Github Pagesで配布しているのでGi"/>
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<script>
+ 
+!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/js/partytown/"});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');
+!function(t,e,n,i,r,o,a,d,s,c,l,p){function u(){p||(p=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(f,1e4),e.addEventListener("pt0",w),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.8.0":"sandbox-sw.html?"+Date.now()),e.querySelector(o.sandboxParent||"body").appendChild(c)}function f(n,r){for(w(),i==t&&(o.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<s.length;n++)(r=e.createElement("script")).innerHTML=s[n].innerHTML,e.head.appendChild(r);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){l=t,e.split(".").map((function(e,n,i){l=l[i[n]]=n+1<i.length?"push"==i[n+1]?[]:l[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);
+</script>
+<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-WMCEBYW7WE"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WMCEBYW7WE');
+</script>
+
+</head>
+<body><div class="header">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="blog-title">
+        <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left"></div>
+  <div class="main">
+    <article class="article">
+      <div class="date">
+          <time>Mon, May 8, 2023</time>
+      </div>
+      <div class="article-heading">
+        <h1 class="article-title">静的ウェブサイト（ブログ）にpartytownを入れた</h1>
+        <div class="tags">
+          
+        </div>
+      </div>
+      <div class="article-body"><p>このブログはHugoで生成した静的webサイトである。
+静的ページなので当然ながら読み込みは早い。Github Pagesで配布しているのでGithubのコンテンツキャッシュも効いている。
+また一応アクセス解析のためにGoogle Analyticsを入れていて、大してアクセス数があるわけではないがモチベーションにつながっている。
+ただしせっかく静的ページで読み込みを早くしているのにGoogle Analyticsのためにページロードの時間が割かれることにちょっと釈然としないものを感じていた。
+GA一つでそこまで遅くなるわけではないけれど、頑張ってチューニングしたのにサードパーティスクリプトに律速されるのはなんとなく面白くない。</p>
+<p>そこでpartytownを導入することにした。
+<a href="https://partytown.builder.io/">https://partytown.builder.io/</a></p>
+<p>partytownというのはDOM操作をするJavaScriptをServiceWorkerで動かすためのライブラリである。
+名前の通りサードパーティスクリプトを動かすことを想定しており、Worker側で遅延読み込みすることでメインスレッドでのページ読み込みを阻害しないようにすることが出来る。
+ServiceWorkerでサードパーティスクリプトを動かすときの問題点として、Workerは別スレッドで動くためメインスレッドのDOMに同期的にアクセスすることが出来ないということが挙げられるが、partytownはXMLHttpRequestのブロッキング呼び出しを流用することでこの問題を解決している。</p>
+<p>参考: <a href="https://zenn.dev/stomita/articles/2c16a53223f3c9">https://zenn.dev/stomita/articles/2c16a53223f3c9</a></p>
+<p>導入については簡単でHTMLヘッダにスニペットとサードパーティスクリプトの呼び出しを書いておくだけである。</p>
+<p>しかし公式での説明がちょっと不足していると感じたので簡単に手順を共有する。</p>
+<p>まず、静的ページのアセットディレクトリに<code>@builder.io/partytown/lib</code>に含まれる以下のファイルをコピーしておく。</p>
+<p>@builder.io/partytown/lib/
+├── partytown-atomics.js
+├── partytown-media.js
+├── partytown-sw.js
+└── partytown.js</p>
+<p>AstroやNext.jsなどではnpmで入れて設定やスニペットを書けばそれで終わりけど、
+静的ページの場合はこれらのファイルを入手することから始めないといけない。</p>
+<p>まず、<a href="https://www.npmjs.com/package/@builder.io/partytown">@builder.io/partytown</a>を任意のディレクトリに展開しておく。
+このディレクトリは作業のためのものなので最終的な静的サイトには含めなくてもよい。
+以下はそのディレクトリを作業ディレクトリとする。</p>
+<p>最初に以下のコマンドで<code>@builder.io/partytown/lib</code>以下のソースをアセットディレクトリにコピーする。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>npx @builder.io/partytown copylib --no-debug <span style="color:#f92672">{</span>展開先のパス<span style="color:#f92672">}</span>
+</code></pre></div><p>次に以下のコマンドでスニペットを生成して静的ページのHeadタグ内のscriptタグに入れておく（外部ファイルからロードしない理由は謎だけど公式での案内に従っておく）。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>node -e <span style="color:#e6db74">&#34;import(&#39;@builder.io/partytown/integration&#39;).then(({ partytownSnippet }) =&gt; console.log(partytownSnippet({forward:[&#39;dataLayer.push&#39;],lib:&#39;ライブラリのパス&#39;})))&#34;</span> 
+</code></pre></div><p>出力されたスニペットをコピーしておく。
+forwardに入れるパラメータは以下を参考にGA用のものをコピーした。
+<a href="https://partytown.builder.io/common-services">https://partytown.builder.io/common-services</a></p>
+<p>libに入れるパスは<code>@builder.io/partytown/lib</code>を展開したディレクトリのパスをWebサイトのルートからの絶対パスで入れる。
+例えばこのブログの場合は<code>https://tanstaafl.0pt.jp/js/partytown/</code>というパス以下にライブラリを配置したので<code>/js/partytown/</code>と入れた。
+最後の<code>/</code>も忘れずに入れること。</p>
+<p>最後にHTMLのHeadに以下のようにscriptタグを入れる。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>&lt;<span style="color:#f92672">head</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>    &lt;<span style="color:#f92672">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>        <span style="color:#75715e">// コピーしたスニペットをここに貼り付ける
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#75715e"></span>    &lt;/<span style="color:#f92672">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/partytown&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.googletagmanager.com/gtag/js?id=GタグのID&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/partytown&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>          window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">||</span> [];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>          <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">gtag</span>(){<span style="color:#a6e22e">dataLayer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arguments</span>);}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>          <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;js&#39;</span>, <span style="color:#66d9ef">new</span> Date());
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>          <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;config&#39;</span>, <span style="color:#e6db74">&#39;GタグのID&#39;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    &lt;/<span style="color:#f92672">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>&lt;/<span style="color:#f92672">head</span>&gt;
+</code></pre></div><p>GタグのIDには自分のものを入れておく。</p>
+<p>基本的にはこれだけでGAがServiceWorkerで動作する。他のサードパーティスクリプトも同様に設定すればよい。
+対応状況などは公式で確認するとよいだろう。</p>
+<p>これで早くなったかというとあまり実感はないのだけれど、気分的にすっきりしたので追加してよかったと思う。</p>
+</div>
+    </article>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="container">
+        <div class="avatar">
+          <img src="/images/me.jpeg">
+        </div>
+        <div class="footer-body container">
+          <div>Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
+          <div>
+          A programmer, and loving software technologies.
+          </div>
+          <div>
+          github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+</body>
+</html>
