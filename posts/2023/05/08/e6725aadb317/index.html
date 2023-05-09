@@ -65,9 +65,9 @@
 GA一つでそこまで遅くなるわけではないけれど、頑張ってチューニングしたのにサードパーティスクリプトに律速されるのはなんとなく面白くない。</p>
 <p>そこでpartytownを導入することにした。</p>
 <p><a href="https://partytown.builder.io/">https://partytown.builder.io/</a></p>
-<p>partytownというのはDOM操作をするJavaScriptをServiceWorkerで動かすためのライブラリである。
+<p>partytownというのはDOM操作をするJavaScriptをWebWorkerで動かすためのライブラリである。
 名前の通りサードパーティスクリプトを動かすことを想定しており、Worker側で遅延読み込みすることでメインスレッドでのページ読み込みを阻害しないようにすることが出来る。
-ServiceWorkerでサードパーティスクリプトを動かすときの問題点として、Workerは別スレッドで動くためメインスレッドのDOMに同期的にアクセスすることが出来ないということが挙げられるが、partytownはXMLHttpRequestのブロッキング呼び出しを流用することでこの問題を解決している。</p>
+WebWorkerでサードパーティスクリプトを動かすときの問題点として、Workerは別スレッドで動くためメインスレッドのDOMに同期的にアクセスすることが出来ないということが挙げられるが、partytownはXMLHttpRequestのブロッキング呼び出しを流用することでこの問題を解決している。</p>
 <p>参考: <a href="https://zenn.dev/stomita/articles/2c16a53223f3c9">https://zenn.dev/stomita/articles/2c16a53223f3c9</a></p>
 <p>導入については簡単でHTMLヘッダにスニペットとサードパーティスクリプトの呼び出しを書いておくだけである。</p>
 <p>しかし公式での説明がちょっと不足していると感じたので簡単に手順を共有する。</p>
@@ -106,7 +106,7 @@ forwardに入れるパラメータは以下を参考にGA用のものをコピ�
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    &lt;/<span style="color:#f92672">script</span>&gt;
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>&lt;/<span style="color:#f92672">head</span>&gt;
 </code></pre></div><p>GタグのIDには自分のものを入れておく。</p>
-<p>基本的にはこれだけでGAがServiceWorkerで動作する。他のサードパーティスクリプトも同様に設定すればよい。
+<p>基本的にはこれだけでGAがWebWorkerで動作する。他のサードパーティスクリプトも同様に設定すればよい。
 対応状況などは公式で確認するとよいだろう。</p>
 <p>これで早くなったかというとあまり実感はないのだけれど、気分的にすっきりしたので追加してよかったと思う。</p>
 </div>
