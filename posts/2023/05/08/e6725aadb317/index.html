@@ -67,7 +67,7 @@ GA一つでそこまで遅くなるわけではないけれど、頑張ってチ
 <p><a href="https://partytown.builder.io/">https://partytown.builder.io/</a></p>
 <p>partytownというのはDOM操作をするJavaScriptをWebWorkerで動かすためのライブラリである。
 名前の通りサードパーティスクリプトを動かすことを想定しており、Worker側で遅延読み込みすることでメインスレッドでのページ読み込みを阻害しないようにすることが出来る。
-WebWorkerでサードパーティスクリプトを動かすときの問題点として、Workerは別スレッドで動くためメインスレッドのDOMに同期的にアクセスすることが出来ないということが挙げられるが、partytownはXMLHttpRequestのブロッキング呼び出しを流用することでこの問題を解決している。</p>
+WebWorkerでサードパーティスクリプトを動かすときの問題点として、Workerは別スレッドで動くためメインスレッドへのアクセスが非同期APIによる呼び出しになる。このためDOMアクセスなどの同期的なプロパティ呼び出しをエミュレートすることが難しくなるが、partytownはXMLHttpRequestのブロッキング呼び出しを流用することでこの問題を解決している。</p>
 <p>参考: <a href="https://zenn.dev/stomita/articles/2c16a53223f3c9">https://zenn.dev/stomita/articles/2c16a53223f3c9</a></p>
 <p>導入については簡単でHTMLヘッダにスニペットとサードパーティスクリプトの呼び出しを書いておくだけである。</p>
 <p>しかし公式での説明がちょっと不足していると感じたので簡単に手順を共有する。</p>
