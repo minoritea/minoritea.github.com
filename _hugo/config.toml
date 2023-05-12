@@ -7,6 +7,7 @@ buildFuture = true
 theme = "julius"
 publishdir = ".."
 googleAnalytics = "G-WMCEBYW7WE"
+description = "A blog written by Minori Tokuda (@snowcrush)."
 
 [Params]
 images = ["images/simple_thumbnail.png"]
