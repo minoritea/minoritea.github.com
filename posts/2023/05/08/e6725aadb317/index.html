@@ -87,11 +87,22 @@ WebWorkerでサードパーティスクリプトを動かすときの問題点�
 </code></pre></div><p>次に以下のコマンドでスニペットを生成して静的ページのHeadタグ内のscriptタグに入れておく（外部ファイルからロードしない理由は謎だけど公式での案内に従っておく）。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>node -e <span style="color:#e6db74">&#34;import(&#39;@builder.io/partytown/integration&#39;).then(({ partytownSnippet }) =&gt; console.log(partytownSnippet({forward:[&#39;dataLayer.push&#39;],lib:&#39;ライブラリのパス&#39;})))&#34;</span> 
 </code></pre></div><p>出力されたスニペットをコピーしておく。
-forwardに入れるパラメータは以下を参考にGA用のものをコピーした。</p>
+partytownSnippet関数の引数はpartytownに渡す設定値である。今回はGA用に以下のように設定した。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>    <span style="color:#a6e22e">forward</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;dataLayer.push&#39;</span>],
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>    <span style="color:#a6e22e">lib</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/js/partytown&#39;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>}
+</code></pre></div><p>forwardに入れるパラメータは以下を参考にGA用のものをコピーした。</p>
 <p><a href="https://partytown.builder.io/common-services">https://partytown.builder.io/common-services</a></p>
 <p>libに入れるパスは<code>@builder.io/partytown/lib</code>を展開したディレクトリのパスをWebサイトのルートからの絶対パスで入れる。
 例えばこのブログの場合は<code>https://tanstaafl.0pt.jp/js/partytown/</code>というパス以下にライブラリを配置したので<code>/js/partytown/</code>と入れた。
 最後の<code>/</code>も忘れずに入れること。</p>
+<p>ちなみに上記のコマンドで生成したスニペットは、以下の二つを結合したものと同じである。</p>
+<ol>
+<li><code>window.partytown</code>に上記設定値のオブジェクトを代入するコード</li>
+<li>copylibコマンドで展開したライブラリのうち<code>partytown.js</code>の中身</li>
+</ol>
+<p>そのため直接そのようなコードを書いてもよい。</p>
 <p>最後にHTMLのHeadに以下のようにscriptタグを入れる。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>&lt;<span style="color:#f92672">head</span>&gt;
 <span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>    &lt;<span style="color:#f92672">script</span>&gt;
