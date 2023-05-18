@@ -9,6 +9,8 @@ publishdir = ".."
 googleAnalytics = "G-WMCEBYW7WE"
 description = "A blog written by Minori Tokuda (@snowcrush)."
 
+disableKinds = ["sitemap"]
+
 [Params]
 images = ["images/simple_thumbnail.png"]
 
