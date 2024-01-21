@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html  lang="ja" ><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>運用が楽な個人サービスを作ってみる | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+  <meta name="description" content="年末年始の休みを利用してチャットサービスを作った。特に理由は無い。強いて言えば今自分の中でやりたい技術の組み合わせというのがある程度固まった" />
+  
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
+<meta property="og:title" content="運用が楽な個人サービスを作ってみる" />
+<meta property="og:description" content="年末年始の休みを利用してチャットサービスを作った。特に理由は無い。強いて言えば今自分の中でやりたい技術の組み合わせというのがある程度固まった" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2024/01/21/6dee4a958852/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
+<meta property="article:published_time" content="2024-01-21T07:00:10+00:00" />
+<meta property="article:modified_time" content="2024-01-21T07:00:10+00:00" />
+
+<meta name="twitter:title" content="運用が楽な個人サービスを作ってみる"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="年末年始の休みを利用してチャットサービスを作った。特に理由は無い。強いて言えば今自分の中でやりたい技術の組み合わせというのがある程度固まった"/>
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<script>
+ 
+!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/js/partytown/"});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');
+!function(t,e,n,i,r,o,a,d,s,c,l,p){function u(){p||(p=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(f,1e4),e.addEventListener("pt0",w),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.8.0":"sandbox-sw.html?"+Date.now()),e.querySelector(o.sandboxParent||"body").appendChild(c)}function f(n,r){for(w(),i==t&&(o.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<s.length;n++)(r=e.createElement("script")).innerHTML=s[n].innerHTML,e.head.appendChild(r);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){l=t,e.split(".").map((function(e,n,i){l=l[i[n]]=n+1<i.length?"push"==i[n+1]?[]:l[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);
+</script>
+<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-WMCEBYW7WE"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WMCEBYW7WE');
+</script>
+
+</head>
+<body><div class="header">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="blog-title">
+        <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left"></div>
+  <div class="main">
+    <article class="article">
+      <div class="date">
+          <time>Sun, Jan 21, 2024</time>
+      </div>
+      <div class="article-heading">
+        <h1 class="article-title">運用が楽な個人サービスを作ってみる</h1>
+        <div class="tags">
+          
+        </div>
+      </div>
+      <div class="article-body"><p>年末年始の休みを利用してチャットサービスを作った。特に理由は無い。強いて言えば今自分の中でやりたい技術の組み合わせというのがある程度固まったので何かアプリケーションを組んでみたいと思っていて題材としてちょうど良かったということがある。</p>
+<p>チャットについては以下から入れるので試してみて欲しい。認証にはGithubアカウントが必要である。
+<a href="https://chat.0pt.jp">https://chat.0pt.jp</a></p>
+<h1 id="技術スタックについて">技術スタックについて</h1>
+<p>以下はアプリケーションの技術スタックの解説である。</p>
+<p>とにかくやりたいのは個人サービスを低コストで建ててメンテナンスフリーで運用したいということで技術選択をした。
+今後いくつか個人サービスを作りたいという気持ちがあり、そのためのお試しとしてまず一つ作ってみたということである。</p>
+<p>ソースコードは以下に公開している。
+<a href="https://github.com/minoritea/chat">https://github.com/minoritea/chat</a></p>
+<h2 id="言語">言語</h2>
+<p>まず言語についてはGoを選択した。とにかくGoについては運用が楽ということに尽きる。処理系や標準ライブラリに破壊的変更が少ないためツールチェインをアップデートして再ビルドすればほとんどの場合コードは変更せずにそのまま動かすことができる。セキュリティフィックスが無ければバイナリの置き換えすら不要で半永久的に動かし続けることが可能である。ビルドで苦労することもほとんどないし、クロスコンパイルも簡単でデプロイ先のホストOSやCPUアーキを気にする必要もない。シングルバイナリのためデプロイもバイナリを転送して再起動するだけで済むし、ホスト側の環境管理に頭を悩ませる必要性も少ない。サーバーアプリケーションは簡単にマルチコアを活用する実装が組めるしIOブロックに頭を悩ませる必要もない。
+自分はGoの上記のような点に魅力を感じているため正直現在においてはサーバーサイドアプリケーションを組む上で他の言語は比較対象にすらならない。</p>
+<p>Goのプレーンな書き味や冗長だが可読性の高い文法は気に入っているがそこはあまり本質ではないし、逆にそのあたりが気に入らずにGoを敵視している人とは根本的にエンジニアリングの思想が合わないなと感じている。個人のプログラミング技法が発揮できるかどうかは枝葉であって運用のしやすさこそが重要である。もちろんこれは個人のポリシーであって他の人に押し付けるつもりはないが、プログラミング言語の良し悪しを議論する上ではコーディング時におけるメリット・デメリット以外にも目を向けて欲しいなとは思っている。</p>
+<h2 id="ライブラリ">ライブラリ</h2>
+<p>ライブラリとしては、ルーターとして<a href="https://github.com/go-chi/chi">chi</a>を、DBとのやりとりには<a href="https://sqlc.dev/">sqlc</a>を採用した。</p>
+<p>chiは長年ルーターライブラリとして使い続けていて個人的にはこれ一択である。
+自分はnet/http原理主義者なのでGoのいわゆるマイクロフレームワーク類は好みではなく標準のnet/httpとインターフェース互換なライブラリ群を組み合わせて使うことが多い。
+chiはミドルウェアとよばれる各種の拡張も提供していて、それらを活用すればMVC2におけるコントローラ層のみ担っているようなマイクロフレームワークと機能的にはほとんど変わらず使うことが出来る。chiの良いところはミドルウェアも標準インターフェースに準拠しているので他の同様のライブラリと組み合わせることが可能なことである。
+今回はCSRFトークンの実装にgorilla/csrfを採用したがライブラリをそのままchiのミドルウェアとして利用することが出来た。</p>
+<p>sqlcについては今回初めて使ってみたが、非常に良かった。いくつか機能的に足りないと感じるところはあり今後の拡張に期待だが、一般的なDBレイヤーの実装に使うツールとしては充分使えそうである。sqlcというのはコードジェネレータで、いわゆるORマッピング機能を提供するツールである。
+特徴的な点としては、構造体からではなくSQLクエリからマッピングのコードを生成する点である。
+GoのORMapperは静的にコードジェネレーションで生成するにせよ、動的にランタイム・リフレクションで生成するにせよ、構造体をベースにORMapperを生成することが多いが、自分はこのアプローチに疑問を感じていた。
+ORMapperは一般的にクエリビルダとORマッピングの2つの機能を持つ。構造体ベースのORMapperは構造体を元にクエリを生成するため、テーブルと構造体が1:1でマッピングされるようなケースでは有用であるが、複数のテーブルを結合したり、SELECT句内に式を書いたりしていた場合、結果を柔軟にハンドリングすることが難しい。
+であれば、sqlcのように最初からクエリを元にマッピングのコードを生成するアプローチの方が優れていると感じている。</p>
+<h2 id="ディレクトリ構成">ディレクトリ構成</h2>
+<p>クリーンアーキテクチャっぽい見た目だが、あまり関係ない。そもそもレイヤードアーキテクチャに疑問を持っているためある程度フラットにパッケージを切っていった感じだ。DIもなるべくしないようにしている。このあたりについては結構知見と拘りがあるのだが長くなるのでまた別途記事にしたい。</p>
+<p>domainと名付けたパッケージだけ誤解を招くかなと思ったので解説しておくと、一応ドメインロジックを置くということでこの名前にしているが、ドメインモデルは配置していないので特にDDDに則っているというわけではない。sqlcを採用しているのでデータモデルをGo側で表しているのはsqlcで生成した構造体ということになるが、これらの構造体は単にデータベースとやり取りするためのメッセージに過ぎないので正確にはモデルというわけではない。というかORMapperに渡す構造体をドメインモデルと同一視するような作り方は自分は問題だと感じていて、この2つは概念的には別物である。もちろん、実装上はドメインモデルをそのままORMapperに渡すような構成の方が楽ではあるのだが、そのようなアプローチでよいかどうかは
+そのようなアプローチで良いかどうかは一考の余地がある。
+そして、すくなくともこのサービスの実装におけるsqlc生成の構造体はドメインモデルではないと考えている。</p>
+<p>別にDDDを採用しているわけではないので、ドメインモデルが必須かというとそういうわけではなく、ドメインロジックだけシンプルに置いておいて入出力の値を処理していけばよいのではないかと考えている。もちろんドメインとしてモデリングした方が都合が良い状況があればそれに応じてドメインモデルも置いていくが、現在の状況では不要だと考えている。</p>
+<p>※DDDではないのにドメインロジックという呼び方が適切かどうかは分からない。単にパッケージ命名上、ビジネスロジックとかアプリケーションロジックという名前をGoのパッケージ名に落とすときにしっくりこなかったというだけである。</p>
+<h2 id="データベース">データベース</h2>
+<p>データベースはSQLiteを選択した。運用を楽にするためにはとにかく構成が単純なことが重要でそうするとシングルプロセスでDB処理含めてサーバーサイドのすべての処理が完結することが望ましい。そうするとプログラム組込で単一ファイルに永続化出来るようなデータベースが良い。また運用面での利便性を考えるとSQLでクエリを発行できトランザクションをサポートする関係データベースが望ましい。それらを考慮すると個人サービス程度ならSQLiteが良いのではないかと以前から思っていた。また個人サービスなのでスケーラビリティはそもそも捨てて良いと判断した。</p>
+<h2 id="フロントエンド">フロントエンド</h2>
+<p>フロントエンドは<a href="https://hotwired.dev/">hotwire</a>を選択した。以前から感じていたのはSPAをテンプレートエンジン代わりにして開発するのは無駄が多いと思っていて、結局HTMLをレンダリングするのであればSSRして直接サーバーの値をHTMLに埋め込んでしまった方がサーバーアプリケーションにおいては効率的だと感じていた。いわゆるレンダリング対象のデータをJSONにしてまたJSONから戻してという作業に無駄を感じていたということである。逆にクライアント側がアプリケーション本体でサーバーサイドはシンプルなCRUDの APIしか提供しないのであればSPAのアプローチの方が自然だとは思うのでアプリケーションのコアをどちらに置くかという話である。もちろんもっと複雑な構成もあって、例えばビジネスロジックをマイクロサービスに分散して持たせて、それらを統合する役割をSPAに持たせるような作りも考えられるが、ここではそのような複雑な構成は対象にしない。あくまで個人サービスとして運用が楽なアーキテクチャを考えている。</p>
+<p>SSRする場合問題になるのはhydrationで、今主流のアプローチはSSR側とCSR側で同じテンプレートエンジンを使うことでサーバーサイドで定義したハンドラーを再アタッチする戦略でこの場合テンプレートエンジンは（TypeScriptなどのAltJSを含む）JavaScriptフレームワークになる。JavaScript製フレームワークの問題はサーバーとしてアプリケーション本体とは別にレンダリング用のサーバーを立てる必要があるということで、これは運用するスタックが複雑になる。JavaScriptサーバーにアプリケーションロジックを埋め込んでしまうという手もあるが自分はGoを選択しているし、またSSR用のフレームワークは当然ながらフルスタックフレームワークではないのでアプリケーションロジックを動かすには向いていないと感じることが多い。そのためそのようなアプローチは取らなかった。</p>
+<p>結局Go側のテンプレートエンジンでSSRするのがよく、例えばもっとシンプルなフォームアプリケーションであれば生のHTMLを返してMPAにしても良かったが今回はchatサービスということでHTMLベースのフロントエンドライブラリであるhotwireを選択した。</p>
+<p>hotwireはTurboとStimulusというライブラリの総称である（正確にはStradaというネイティブ・アプリ用のライブラリも含む）。Ruby on Rails用のフレームワークだという印象も強いかもしれないがバックエンドに関わらずそれぞれ単体としてフロントエンドで完結して使えるライブラリである。2つのライブラリに共通しているのはObserverでDOMイベントを監視してイベントに応じてアクションを起こすことである。</p>
+<p>Turboの場合はリンククリックやフォーム投稿を監視してHTMLレスポンスを受け取ったときにページ遷移する代わりに動的なコンテンツ差し替えを行う。このためHTMLをSSRするアプリケーション上で容易にCSRを実行することができSSRでありながらSPAのような挙動を再現できる。SPAでJSONの代わりにHTMLをそのままサーバから返すイメージで、クライアントサイドでJSONからHTMLへの変換コードを書く必要がないので楽である。</p>
+<p>StimulusはDOMの追加削除を監視してマッチするDOMにコントローラと呼ばれるイベントハンドラをアタッチする。ブラウザ上でDOMツリーを差し替える場合、DOMそのものの差し替えは簡単だがそれに紐付くイベントハンドラをどのように保持するかが問題となる。Stimulusであれば差し替えたDOM要素にイベントハンドラを自動で紐付けするためこの問題をスムーズに解決出来る。ちなみにStimulusはTurboとは独立して単体で使える。例えばTurboに類似するライブラリとしてhtmxなどがあるが、Stimulusはそれらと組み合わせてもよい。今回はhotwireにスタックを統一したかったのでTurboを選択した。</p>
+<p>今回の実装対象はChatサービスということで上記のようなシンプルなフォームベースのアプリケーションより動的な要素が増えるため、用途としてすこし不適ではないかなという心配があったが、ChatのタイムラインもTurbo Streamで動的に読み込めており、無限スクロールも実装しているので、動的なフロントエンドでも問題なく使えるということが分かってよかった。</p>
+<h2 id="インフラ">インフラ</h2>
+<p>インフラはLinuxサーバーホスティング+cloudflareで構成した。
+ここは悩んだところで、とにかくコストを安く運用したかった。
+SQLiteを運用することを考えると選択肢は以下の4つくらいであろう。</p>
+<ol>
+<li>cloudflare workers+D1</li>
+<li>fly.io</li>
+<li>CGIレンタルサーバー</li>
+<li>自前サーバー</li>
+</ol>
+<p>1のcloudflare workersについては一番最初に考えたし、実装も実は作っていたのだが、途中で止めることにした。
+Goをwasmでコンパイルしてworkers上で動かす場合、元のバイナリにコンパイルする想定で書いたGoコードそのままではうまく動かないことが多く、wasm専用の処理をパッチ的に書かざるをえないことが多かった。
+この辺りは、<a href="https://github.com/syumai/workers">github.com/syumai/workers</a>というフレームワークを導入することで大分助かったのだが、それでも自分で書き換えないといけない部分がちょこちょこあり、今後の保守性なども考えると、そもそもやりたい運用な楽なアプリを書いてみるという目的に合致しないということで中止した。</p>
+<p>※一応意地があったのでworkers上で現在のアプリケーションはそのまま動かすところまでは持っていったが、本採用はやめたということである。</p>
+<p>2については検討時点で却下した。これには理由があり、コンテナで開発したくなかったのである。
+Dockerは便利なツールでなんでもコンテナで閉じて開発できるが、Goの場合コンテナに閉じなくてもシングルバイナリでデプロイできるのでコンテナレイヤーを加える意味がなく無駄だと感じていた。別にGoがコンテナ運用に向いていないわけではなく、scratchなどの極小コンテナで運用できるのでメリットは大きい。コンテナ系のインフラが前提であればGoを採用するメリットはもちろんあるが、逆にGoだからコンテナを採用しないといけないわけではないということである。なので、もっとミニマルに運用したいと考えたのである。</p>
+<p>3については実はSakuraのレンタルサーバーを借りて一週間ほど運用していた。実はGoはCGIにコンパイルできる。net/http/cgiにhttp.Handlerを渡してコンパイルすればそのままCGIプログラムとして動作し、他に特別な追加処理は不要なので、workers上でwasmで運用することと比べて断然楽である。楽ではあるし、CGIというレガシーな技術を活用することにもロマンがあったが、低額とはいえ今後ほとんど利用がないであろうアプリにコストを払い続けるのはどうかな、と思ったので採用を止めた。ホスティングの方は試用期間中にキャンセルしたのでお金はかかっていない。</p>
+<p>このアプリは作ること自体が目的のようなものだったので今後なにかChatコミュニティを盛り上げていくとかそういうことは考えていない。仮に使う人がいたとしたら気楽に使ってほしい。</p>
+<p>さて、最終的に採用したのは4である。オラクルクラウドの無料インスタンスを持っていて4core ARM CPUを遊ばせてあり、勿体ないと感じていたのでそちらでホスティングすることにした。自分はlinuxサーバーを個人で立てて遊ぶのが好きで自分で運用することは苦にしないタイプである。このあたりは人によって感覚が違うので、サーバレスが良ければfly.ioやcloudflare workersを選ぶのも良いのだろう。</p>
+<p>ちなみにこのサービスはx64 CPUのPC上で開発している。サーバーはARMだが、Goのツールチェーンをサーバーにいれて環境を汚したくはなかったのでクロスコンパイルすることにした。
+CGOがなければGoのクロスコンパイルは非常に簡単だが、CGO込みだとちょっとややこしくなる。しかし今回Cコンパイラとしてzig ccを採用したのだがこれが非常に良かった。
+zigは独立したプログラミング言語であり、またその処理系だが、処理系中にCコンパイラも含まれていて、ただのCコンパイラとして使うこともできる。
+zigをC言語コンパイラとして採用したときの最大のメリットはクロスコンパイルが非常に楽なことである。
+クロスコンパイル用の依存関係が全部同梱されているので、zigだけいれればよく、またzigもGoと同様パッケージ構成がシンプルなので、管理が楽である。
+zigをGo用のクロスコンパイラとして使うパターンはあちこちで採用されていて便利そうだなとは感じていたが実際採用してみて非常に良かったと思っている。
+これを使うことで手元のPCでコンパイルしたバイナリをARMサーバー上でそのまま動かすことが出来る。
+Goの場合はシングルバイナリを転送すればそれで済むため転送後プロセスを再起動するだけで良く、非常に楽でよい。</p>
+<p>リバースプロキシとしてはcloudflare tunnelを採用した。VPNで中から繋ぐので、Firewallでインバウンド通信を全て遮断した状態でサービスを公開できるため、非常にセキュアな構成が取れる。自分はFirewallの設定が面倒なのでインバウンドは全遮断してVPN経由でアクセスするようなネットワーク構成が好みであるがcloudflare tunnelはまさにこの目的にうってつけである。またcloudflareのCDNを挟むのでキャッシュも効くし、https化もcloudflare側でやってくれることもメリットである。
+個人的にはシンプルなサービスであればVPS+cloudflareの構成の方がAWSのような巨大クラウドを運用するより楽であると考えている。</p>
+<h2 id="自動テスト">自動テスト</h2>
+<p>このあたりはまだ固まっていない。
+モックまみれのテストは書きたくないので、シンプルにビジネスロジックの単体テストをいくつか書いてみたが、いまいちだった。
+このサイズのアプリだとロジックもシンプルなのでわざわざ単体テストを書くほどでは無いという感じである。</p>
+<p>そのため動作検証はE2Eテストでカバーすることにし、テスト・フレームワークとしてplaywright-goを採用した。
+playwright-goはマイクロソフトのブラウザ用E2EテストフレームワークであるplaywrightをGoから呼び出すためのライブラリである。</p>
+<p>採用理由は単純でせっかくGoだけでツールチェインを完結させているのにテストのためにchromiumやnode.jsを入れたくないなという気持ちがあった。
+playwright-goも内部でブラウザやnodeはダウンロードして実行しているのだが、システムインストールするわけではないので環境を汚さないし、コード上もGoで完結できるので良いと感じている。</p>
+<p>E2Eテスト自体はまだあまり書けていないが、とりあえずシンプルなリグレッションテストとしては機能してくれている。何度か壊れたときに検知してくれたので良かった。
+playwright-go自体は最近までメンテナンスが滞っていたようだが、メンテナーも追加されているので今後もウォッチしていきたいところである。</p>
+<h1 id="さいごに">さいごに</h1>
+<p>このアプリはお試しで書いてみたという感じだが、シンプルにまとまったので、雛形として良いと感じている。
+今後も応用して個人サービスをちょこちょこ作っていきたいが、まとまった時間がとれないと作りかけて放置することが多く、今回のように正月休みでないとまとまった時間が取れないのが悩みである。</p>
+</div>
+    </article>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="container">
+        <div class="avatar">
+          <img alt="avatar" src="/images/me.jpeg">
+        </div>
+        <div class="footer-body container">
+          <div>Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
+          <div>
+          A programmer, and loving software technologies.
+          </div>
+          <div>
+          github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+</body>
+</html>
