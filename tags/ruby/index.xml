@@ -6,114 +6,91 @@
     <description>Recent content in ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanstaafl.0pt.jp/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kawasaki.rbでReactについて発表してきた</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
       <description>Rubyコミュニティなのに毎回多言語の話が出る kawasaki.rb で React について発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/react-42041864 Reactつかってみた from Minori Tokuda 締めの発言はわりか</description>
     </item>
-    
     <item>
       <title>ReactRubyをリリースした。</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
       <description>先日、React をテンプレートとして使えるRubyライブラリの ReactRuby をリリースした。 このブログは自作のブログエンジンで動いていて、気が向くたびに</description>
     </item>
-    
     <item>
       <title>Turbolinksモドキを入れた</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
       <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
       <description>結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。 というわけでTurbolinksモ</description>
     </item>
-    
     <item>
       <title>AngularJS&#43;SinatraでTurbolinks</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
       <description>表題の通りにKawasaki.rbで発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks Angular jsとsinatraでturbolinks from Minori Tokuda なお、このブログを</description>
     </item>
-    
     <item>
       <title>大江戸Ruby会議04に参加してきた！</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
       <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
       <description>大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。 遅刻したため途中からのレポートとなる。 Nobody Knows Nobu</description>
     </item>
-    
     <item>
       <title>RailsのYAMLでハマった</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</link>
       <pubDate>Sun, 07 Nov 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</guid>
       <description>Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、 production: adapter:sqlite3 と書いてしまったのが原因でprodu</description>
     </item>
-    
     <item>
       <title>フィードの過去ログ読み込み</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</link>
       <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</guid>
       <description>GoogleReaderが不調なので自分でフィードリーダを実装しようと思い、読み込み部分はsinatraでさっと作ったのはいいがフィードの過</description>
     </item>
-    
     <item>
       <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
       <description>このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRed</description>
     </item>
-    
     <item>
       <title>Mixiアプリ</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</guid>
       <description>ちょっと思い立ってMixiのアプリを作ってる。バックエンドはGAE/J + Sinatraの構成だ。大体概要は分かったんだけど、OAuthのとこ</description>
     </item>
-    
     <item>
       <title>proxy script</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</guid>
       <description>proxyがresolvableか検出して、通ったら環境変数http-proxyをセットするスクリプトを書いて、.profileから呼び出す</description>
     </item>
-    
     <item>
       <title>とりあえず</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</guid>
       <description>件のアプリはクッキー認証で作ってみようかなあ。 OAuthについては、 Twitterを利用してOAuth::Consumer側を実装してみる。</description>
     </item>
-    
     <item>
       <title>移転したい</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</guid>
       <description>内定式しんどかったけど、楽しかった。 さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容</description>
     </item>
-    
   </channel>
 </rss>

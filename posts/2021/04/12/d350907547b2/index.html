@@ -7,14 +7,15 @@
   <meta name="description" content="The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). 上記のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。" />
   
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
-  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
+<link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
 <meta property="og:title" content="Amplify&amp;Next.jsでnext/linkを使ったときに `incompatible with the href value` エラーが出る" />
 <meta property="og:description" content="The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). 上記のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2021/04/12/d350907547b2/" />
-<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2021/04/12/d350907547b2/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-04-12T03:13:37+00:00" />
 <meta property="article:modified_time" content="2021-04-12T03:13:37+00:00" />
+
 
 <meta name="twitter:title" content="Amplify&amp;Next.jsでnext/linkを使ったときに `incompatible with the href value` エラーが出る"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). 上記のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。"/>
@@ -58,7 +59,7 @@
           
         </div>
       </div>
-      <div class="article-body"><pre><code>The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar).
+      <div class="article-body"><pre tabindex="0"><code>The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar).
 </code></pre><p>上記のようなエラーが出るときがある。
 結論から言うと、これは<code>Rewrites and Redirects</code>の設定漏れによるもの。</p>
 <p>SSGで生成したコンテンツにDynamic Routingを行う場合配信サーバ（Amplifyの場合Cloudfront）で書き換えの設定を行う必要がある。</p>

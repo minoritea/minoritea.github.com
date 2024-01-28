@@ -7,14 +7,15 @@
   <meta name="description" content="Octopressの画像置き場をどうするか考えてflickrにしてみた。 public/images以下に置いておくのがデフォルトなんだろうけ" />
   
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
-  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
+<link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
 <meta property="og:title" content="flickrの画像をOctopressに埋め込むTips" />
 <meta property="og:description" content="Octopressの画像置き場をどうするか考えてflickrにしてみた。 public/images以下に置いておくのがデフォルトなんだろうけ" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/" />
-<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2013-05-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2013-05-31T00:00:00+00:00" />
+
 
 <meta name="twitter:title" content="flickrの画像をOctopressに埋め込むTips"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="Octopressの画像置き場をどうするか考えてflickrにしてみた。 public/images以下に置いておくのがデフォルトなんだろうけ"/>
@@ -72,19 +73,19 @@ githubにあんまりバイナリを置くのも悪いしなぁと思って色�
 <p>見つけたのが、octopress-flickr。</p>
 <p><a href="https://github.com/neilk/octopress-flickr">https://github.com/neilk/octopress-flickr</a></p>
 <p>OctopressのGemfileに以下を追加して、</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-ruby" data-lang="ruby"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>gem <span style="color:#e6db74">&#39;flickraw&#39;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>gem <span style="color:#e6db74">&#39;builder&#39;</span>, <span style="color:#e6db74">&#39;&gt; 2.0.0&#39;</span>
-<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>gem <span style="color:#e6db74">&#39;persistent_memoize&#39;</span>
-</code></pre></div><p>以下を実行する。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>gem <span style="color:#e6db74">&#39;flickraw&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>gem <span style="color:#e6db74">&#39;builder&#39;</span>, <span style="color:#e6db74">&#39;&gt; 2.0.0&#39;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>gem <span style="color:#e6db74">&#39;persistent_memoize&#39;</span>
+</span></span></code></pre></div><p>以下を実行する。
 /path/to/octopress/には自分のoctopressのパスを入れよう。</p>
-<pre><code>git clone https://github.com/neilk/octopress-flickr
+<pre tabindex="0"><code>git clone https://github.com/neilk/octopress-flickr
 cd octopress-flickr
-find . \( -name '*.rb' -o -name '*.scss' \) -exec cp {} /path/to/octopress/{} \;
+find . \( -name &#39;*.rb&#39; -o -name &#39;*.scss&#39; \) -exec cp {} /path/to/octopress/{} \;
 </code></pre><p>次にAPIキーをflickrで作成する。</p>
 <p><a href="http://www.flickr.com/services/developer/api/">http://www.flickr.com/services/developer/api/</a></p>
 <p>取ってきたAPIキーとシークレットキーを環境変数に入れる。
 直接定義ファイルとかに入れないのはセキュリティのためだろうね。</p>
-<pre><code>export FLICKR_API_KEY=your_api_key
+<pre tabindex="0"><code>export FLICKR_API_KEY=your_api_key
 export FLICKR_API_SECRET=your_api_secret
 </code></pre><p>以上で準備は終わり。Octopressのポストにflickr画像用のタグを挿入する。
 まず、flickrの写真を拡大表示した時のURLからパスの最後の数字をとる。
@@ -92,7 +93,7 @@ export FLICKR_API_SECRET=your_api_secret
 <a href="http://www.flickr.com/photos/36392485@N08/8901098353/">http://www.flickr.com/photos/36392485@N08/8901098353/</a></p>
 <p>このIDを以下のようにタグに入れ、本文に挿入する。
 IDの右の<code>n</code>は画像のサイズ、<code>center</code>は位置、その後ろの文字列はキャプションだ。</p>
-<pre><code>{% flickr_image 8901098353 n center 'sample picture' %}
+<pre tabindex="0"><code>{% flickr_image 8901098353 n center &#39;sample picture&#39; %}
 </code></pre><p>この記事に画像を読み込んだ結果は以下となる。</p>
 <p>///2014.03 加筆: ブログをOctpressから独自アプリに移行したため、このページ内での確認はできなくなりました。</p>
 </div>

@@ -6,60 +6,49 @@
     <description>Recent content in サーバ on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 02 Nov 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Nov 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanstaafl.0pt.jp/tags/%E3%82%B5%E3%83%BC%E3%83%90/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BaiduSpiderを拒否</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</link>
       <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/02/1fc79729f5b0/</guid>
       <description>最近、アクセス数が徐々に増えてるのでサイトをリニューアルした甲斐があったと喜んでいたら、アクセスの半分が百度ことBaiduのクローラだったこ</description>
     </item>
-    
     <item>
       <title>Disqus</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/28/413e8772c8d6/</link>
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/413e8772c8d6/</guid>
       <description>ソーシャルプラットフォームのDisqusをコメント用に利用し始めた。Scantyがデフォルトで使うようになっていたからだがなかなか便利だと思</description>
     </item>
-    
     <item>
       <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
       <description>このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRed</description>
     </item>
-    
     <item>
       <title>VPS</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</guid>
       <description>DTIのServersman@VPSを昨日から借り始めた。学校のproxyがgitを通してくれないので、SSH転送用のサーバとしてのみ使用す</description>
     </item>
-    
     <item>
       <title>移転したい</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</guid>
       <description>内定式しんどかったけど、楽しかった。 さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容</description>
     </item>
-    
     <item>
       <title>移転完了</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/70d2dcb66475/</guid>
       <description>本ブログを新しいサーバに移転した。VPSも変えてblogエンジンも自分で実装した(scanty-redisベース)。herokuと比べて随分</description>
     </item>
-    
   </channel>
 </rss>

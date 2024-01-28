@@ -6,24 +6,21 @@
     <description>Recent content in opensocial on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 27 Oct 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/opensocial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Oct 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanstaafl.0pt.jp/tags/opensocial/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mixiアプリ</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</guid>
       <description>ちょっと思い立ってMixiのアプリを作ってる。バックエンドはGAE/J + Sinatraの構成だ。大体概要は分かったんだけど、OAuthのとこ</description>
     </item>
-    
     <item>
       <title>とりあえず</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</guid>
       <description>件のアプリはクッキー認証で作ってみようかなあ。 OAuthについては、 Twitterを利用してOAuth::Consumer側を実装してみる。</description>
     </item>
-    
   </channel>
 </rss>

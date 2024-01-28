@@ -6,24 +6,21 @@
     <description>Recent content in redis on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 10 Jun 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jun 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanstaafl.0pt.jp/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>データが飛んだ</title>
       <link>https://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/</link>
       <pubDate>Sun, 10 Jun 2012 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/</guid>
       <description>ブログのデータが飛んだ。ごっそりだ。 原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先である</description>
     </item>
-    
     <item>
       <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
       <description>このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRed</description>
     </item>
-    
   </channel>
 </rss>

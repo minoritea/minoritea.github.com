@@ -7,14 +7,15 @@
   <meta name="description" content="前回作ったコメントシステムだがコードは単純だ。TwitterのSearch APIをjQuery.ajaxで叩くだけだ。 戻り値はjsonなので" />
   
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
-  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
+<link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
 <meta property="og:title" content="Twitterでコメント2" />
 <meta property="og:description" content="前回作ったコメントシステムだがコードは単純だ。TwitterのSearch APIをjQuery.ajaxで叩くだけだ。 戻り値はjsonなので" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2010/11/08/ec3b981577bc/" />
-<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2010/11/08/ec3b981577bc/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2010-11-08T00:00:00+00:00" />
 <meta property="article:modified_time" content="2010-11-08T00:00:00+00:00" />
+
 
 <meta name="twitter:title" content="Twitterでコメント2"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="前回作ったコメントシステムだがコードは単純だ。TwitterのSearch APIをjQuery.ajaxで叩くだけだ。 戻り値はjsonなので"/>
@@ -70,7 +71,7 @@
 戻り値はjsonなので処理も簡単に出来る。ハマったのはcallbackを指定しないとjsonが取れないということだ。APIの説明を読んでもOptionalだと書いてあるのだが、どうも必須なようなので取りあえず空で指定してある。取得するコードは以下でjsonを取得したあとはjQueryを使ってHTMLに挿入している。</p>
 <p>var thisurl = encodeURI(encodeURI(decodeURI(window.location.href)));
 $.ajax({
-url :&ldquo;<a href="http://search.twitter.com/search.json%22,">http://search.twitter.com/search.json&quot;,</a>
+url :&ldquo;<a href="http://search.twitter.com/search.json%22">http://search.twitter.com/search.json&quot;</a>,
 dataType : &ldquo;json&rdquo;,
 data : &ldquo;callback=?&amp;q=&quot;+thisurl+&quot;&amp;show_user=false&rdquo;,
 success : function(json){
