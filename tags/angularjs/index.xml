@@ -6,60 +6,49 @@
     <description>Recent content in angularjs on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 25 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanstaafl.0pt.jp/tags/angularjs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Turbolinksモドキを入れた</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
       <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
       <description>結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。 というわけでTurbolinksモ</description>
     </item>
-    
     <item>
       <title>AngularJS&#43;SinatraでTurbolinks</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
       <description>表題の通りにKawasaki.rbで発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks Angular jsとsinatraでturbolinks from Minori Tokuda なお、このブログを</description>
     </item>
-    
     <item>
       <title>AngularJSでチェックボックスとモデルを紐付ける</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</link>
       <pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/16/b5d918640be9/</guid>
       <description>AngularJSを使ったフォームでチェックボックスを使いたいとする。 このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、ch</description>
     </item>
-    
     <item>
       <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
       <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
       <description>このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン</description>
     </item>
-    
     <item>
       <title>AngularJS で外部javascriptを遅延読み込み</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</link>
       <pubDate>Thu, 03 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/</guid>
       <description>新しいブログエンジンでもコメントシステムはDisqusを使っている。 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービス</description>
     </item>
-    
     <item>
       <title>ブログのお引越し</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</link>
       <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/01/2ea63fe1b3f1/</guid>
       <description>ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。 理由の一つはangularjsの習作</description>
     </item>
-    
   </channel>
 </rss>

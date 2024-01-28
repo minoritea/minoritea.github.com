@@ -6,24 +6,21 @@
     <description>Recent content in turbolinks on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 25 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/turbolinks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanstaafl.0pt.jp/tags/turbolinks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Turbolinksモドキを入れた</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
       <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
       <description>結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。 というわけでTurbolinksモ</description>
     </item>
-    
     <item>
       <title>AngularJS&#43;SinatraでTurbolinks</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
       <description>表題の通りにKawasaki.rbで発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks Angular jsとsinatraでturbolinks from Minori Tokuda なお、このブログを</description>
     </item>
-    
   </channel>
 </rss>

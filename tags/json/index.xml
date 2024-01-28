@@ -6,15 +6,14 @@
     <description>Recent content in json on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 17 Nov 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Nov 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tanstaafl.0pt.jp/tags/json/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JSONとJSONPの違い</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/11/17/75eb52a3779e/</link>
       <pubDate>Wed, 17 Nov 2010 00:00:00 +0000</pubDate>
-      
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/17/75eb52a3779e/</guid>
       <description>Twitter APIで取得していたコメントが消えてしまった。Twitter検索で引っかかるのは7日間だけである。これでは少し寂しいのでツイートの取得にT</description>
     </item>
-    
   </channel>
 </rss>
