@@ -12,10 +12,10 @@
 <meta property="og:title" content="AngularJS で外部javascriptを遅延読み込み" />
 <meta property="og:description" content="新しいブログエンジンでもコメントシステムはDisqusを使っている。 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービス" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2014/04/03/edc4359544c9/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
 <meta property="article:published_time" content="2014-04-03T00:00:00+00:00" />
 <meta property="article:modified_time" content="2014-04-03T00:00:00+00:00" />
-
 
 <meta name="twitter:title" content="AngularJS で外部javascriptを遅延読み込み"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="新しいブログエンジンでもコメントシステムはDisqusを使っている。 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービス"/>
@@ -77,22 +77,22 @@ Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優�
 読み込ませたいscriptタグに&quot;text/javascript-lazy&quot;と追加するだけである。</p>
 <p><a href="https://gist.github.com/subudeepak/9617483">https://gist.github.com/subudeepak/9617483</a></p>
 <p>以下はgistより引用。</p>
-<pre tabindex="0"><code>(function (ng) {
-  &#39;use strict&#39;;
+<pre><code>(function (ng) {
+  'use strict';
  
-  var app = ng.module(&#39;ngLoadScript&#39;, []);
+  var app = ng.module('ngLoadScript', []);
  
-  app.directive(&#39;script&#39;, function() {
+  app.directive('script', function() {
     return {
-      restrict: &#39;E&#39;,
+      restrict: 'E',
       scope: false,
       link: function(scope, elem, attr) 
       {
-        if (attr.type===&#39;text/javascript-lazy&#39;) 
+        if (attr.type==='text/javascript-lazy') 
         {
-          var s = document.createElement(&#34;script&#34;);
-          s.type = &#34;text/javascript&#34;;                
-          var src = elem.attr(&#39;src&#39;);
+          var s = document.createElement(&quot;script&quot;);
+          s.type = &quot;text/javascript&quot;;                
+          var src = elem.attr('src');
           if(src!==undefined)
           {
               s.src = src;

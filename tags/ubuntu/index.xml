@@ -6,14 +6,15 @@
     <description>Recent content in ubuntu on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 10 May 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 May 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu14.04でgit pull/git cloneしたときにgnutlsがエラー吐くときの対処法</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</link>
       <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</guid>
       <description>git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。 gnutls_handshake() failed: A record packet with illegal version was received. これは、ubuntu</description>
     </item>
+    
   </channel>
 </rss>

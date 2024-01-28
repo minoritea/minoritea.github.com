@@ -6,21 +6,24 @@
     <description>Recent content in CloudFlare on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 24 Feb 2016 13:57:31 +0900</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Feb 2016 13:57:31 +0900</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CloudFlareのHTTP2対応</title>
       <link>https://tanstaafl.0pt.jp/posts/2016/02/24/6376f38fce39/</link>
       <pubDate>Wed, 24 Feb 2016 13:57:31 +0900</pubDate>
+      
       <guid>https://tanstaafl.0pt.jp/posts/2016/02/24/6376f38fce39/</guid>
       <description>https://www.cloudflare.com/http2/ でアナウンスされている通り、 CloudFlare経由でコンテンツ配信する場合、SSLかつ、ブラウザが対応していれば 自動でHTTP2プロトコ</description>
     </item>
+    
     <item>
       <title>ブログをHugoに移行した</title>
       <link>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</link>
       <pubDate>Wed, 24 Feb 2016 01:02:53 +0900</pubDate>
+      
       <guid>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</guid>
       <description>このブログは手製blogエンジンで構築していたのだが、 サイトの管理が面倒になってしまい放置してしまっていた。 そのため、今回Github Pag</description>
     </item>
+    
   </channel>
 </rss>

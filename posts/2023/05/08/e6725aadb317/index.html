@@ -12,10 +12,10 @@
 <meta property="og:title" content="静的ウェブサイト（ブログ）にpartytownを入れた" />
 <meta property="og:description" content="このブログはHugoで生成した静的webサイトである。 静的ページなので当然ながら読み込みは早い。Github Pagesで配布しているのでGi" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2023/05/08/e6725aadb317/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2023/05/08/e6725aadb317/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
 <meta property="article:published_time" content="2023-05-08T13:03:52+00:00" />
 <meta property="article:modified_time" content="2023-05-08T13:03:52+00:00" />
-
 
 <meta name="twitter:title" content="静的ウェブサイト（ブログ）にpartytownを入れた"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="このブログはHugoで生成した静的webサイトである。 静的ページなので当然ながら読み込みは早い。Github Pagesで配布しているのでGi"/>
@@ -73,7 +73,7 @@ WebWorkerでサードパーティスクリプトを動かすときの問題点�
 <p>導入については簡単でHTMLヘッダにスニペットとサードパーティスクリプトの呼び出しを書いておくだけである。</p>
 <p>しかし公式での説明がちょっと不足していると感じたので簡単に手順を共有する。</p>
 <p>まず、静的ページのアセットディレクトリに<code>@builder.io/partytown/lib</code>に含まれる以下のファイルをコピーしておく。</p>
-<pre tabindex="0"><code>@builder.io/partytown/lib/
+<pre><code>@builder.io/partytown/lib/
 ├── partytown-atomics.js
 ├── partytown-media.js
 ├── partytown-sw.js
@@ -84,16 +84,16 @@ WebWorkerでサードパーティスクリプトを動かすときの問題点�
 このディレクトリは作業のためのものなので最終的な静的サイトには含めなくてもよい。
 以下はそのディレクトリを作業ディレクトリとする。</p>
 <p>最初に以下のコマンドで<code>@builder.io/partytown/lib</code>以下のソースをアセットディレクトリにコピーする。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>npx @builder.io/partytown copylib --no-debug <span style="color:#f92672">{</span>展開先のパス<span style="color:#f92672">}</span>
-</span></span></code></pre></div><p>次に以下のコマンドでスニペットを生成して静的ページのHeadタグ内のscriptタグに入れておく（外部ファイルからロードしない理由は謎だけど公式での案内に従っておく）。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>node -e <span style="color:#e6db74">&#34;import(&#39;@builder.io/partytown/integration&#39;).then(({ partytownSnippet }) =&gt; console.log(partytownSnippet({forward:[&#39;dataLayer.push&#39;],lib:&#39;ライブラリのパス&#39;})))&#34;</span> 
-</span></span></code></pre></div><p>出力されたスニペットをコピーしておく。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>npx @builder.io/partytown copylib --no-debug <span style="color:#f92672">{</span>展開先のパス<span style="color:#f92672">}</span>
+</code></pre></div><p>次に以下のコマンドでスニペットを生成して静的ページのHeadタグ内のscriptタグに入れておく（外部ファイルからロードしない理由は謎だけど公式での案内に従っておく）。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-bash" data-lang="bash"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>node -e <span style="color:#e6db74">&#34;import(&#39;@builder.io/partytown/integration&#39;).then(({ partytownSnippet }) =&gt; console.log(partytownSnippet({forward:[&#39;dataLayer.push&#39;],lib:&#39;ライブラリのパス&#39;})))&#34;</span> 
+</code></pre></div><p>出力されたスニペットをコピーしておく。
 partytownSnippet関数の引数はpartytownに渡す設定値である。今回はGA用に以下のように設定した。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-js" data-lang="js"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>{
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#a6e22e">forward</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;dataLayer.push&#39;</span>],
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#a6e22e">lib</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/js/partytown&#39;</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>}
-</span></span></code></pre></div><p>forwardに入れるパラメータは以下を参考にGA用のものをコピーした。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-js" data-lang="js"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span>{
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span>    <span style="color:#a6e22e">forward</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;dataLayer.push&#39;</span>],
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span>    <span style="color:#a6e22e">lib</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/js/partytown&#39;</span>,
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span>}
+</code></pre></div><p>forwardに入れるパラメータは以下を参考にGA用のものをコピーした。</p>
 <p><a href="https://partytown.builder.io/common-services">https://partytown.builder.io/common-services</a></p>
 <p>libに入れるパスは<code>@builder.io/partytown/lib</code>を展開したディレクトリのパスをWebサイトのルートからの絶対パスで入れる。
 例えばこのブログの場合は<code>https://tanstaafl.0pt.jp/js/partytown/</code>というパス以下にライブラリを配置したので<code>/js/partytown/</code>と入れた。
@@ -105,19 +105,19 @@ partytownSnippet関数の引数はpartytownに渡す設定値である。今回�
 </ol>
 <p>そのため直接そのようなコードを書いてもよい。</p>
 <p>最後にHTMLのHeadに以下のようにscriptタグを入れる。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>&lt;<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    &lt;<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#75715e">// コピーしたスニペットをここに貼り付ける
-</span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#75715e"></span>    &lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/partytown&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.googletagmanager.com/gtag/js?id=GタグのID&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/partytown&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>          window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">||</span> [];
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>          <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">gtag</span>(){<span style="color:#a6e22e">dataLayer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arguments</span>);}
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>          <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;js&#39;</span>, <span style="color:#66d9ef">new</span> Date());
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>          <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;config&#39;</span>, <span style="color:#e6db74">&#39;GタグのID&#39;</span>);
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    &lt;/<span style="color:#f92672">script</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>&lt;/<span style="color:#f92672">head</span>&gt;
-</span></span></code></pre></div><p>最初のスニペット以外は、GAの設定例からコピーしたHTMLのうちscriptタグのtype属性にtext/partytownを入れたものを貼り付ける。GタグのIDには自分のものを入れておく。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span>&lt;<span style="color:#f92672">head</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span>    &lt;<span style="color:#f92672">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span>        <span style="color:#75715e">// コピーしたスニペットをここに貼り付ける
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span style="color:#75715e"></span>    &lt;/<span style="color:#f92672">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/partytown&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://www.googletagmanager.com/gtag/js?id=GタグのID&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/partytown&#34;</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span>          window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">=</span> window.<span style="color:#a6e22e">dataLayer</span> <span style="color:#f92672">||</span> [];
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span>          <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">gtag</span>(){<span style="color:#a6e22e">dataLayer</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">arguments</span>);}
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span>          <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;js&#39;</span>, <span style="color:#66d9ef">new</span> Date());
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span>          <span style="color:#a6e22e">gtag</span>(<span style="color:#e6db74">&#39;config&#39;</span>, <span style="color:#e6db74">&#39;GタグのID&#39;</span>);
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span>    &lt;/<span style="color:#f92672">script</span>&gt;
+<span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span>&lt;/<span style="color:#f92672">head</span>&gt;
+</code></pre></div><p>最初のスニペット以外は、GAの設定例からコピーしたHTMLのうちscriptタグのtype属性にtext/partytownを入れたものを貼り付ける。GタグのIDには自分のものを入れておく。</p>
 <p>基本的にはこれだけでGAがWebWorkerで動作する。他のサードパーティスクリプトも同様に設定すればよい。
 対応状況などは公式で確認するとよいだろう。</p>
 <p>これで早くなったかというとあまり実感はないのだけれど、気分的にすっきりしたので追加してよかったと思う。</p>

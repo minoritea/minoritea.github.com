@@ -6,21 +6,24 @@
     <description>Recent content in react on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kawasaki.rbでReactについて発表してきた</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
       <description>Rubyコミュニティなのに毎回多言語の話が出る kawasaki.rb で React について発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/react-42041864 Reactつかってみた from Minori Tokuda 締めの発言はわりか</description>
     </item>
+    
     <item>
       <title>ReactRubyをリリースした。</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
       <description>先日、React をテンプレートとして使えるRubyライブラリの ReactRuby をリリースした。 このブログは自作のブログエンジンで動いていて、気が向くたびに</description>
     </item>
+    
   </channel>
 </rss>

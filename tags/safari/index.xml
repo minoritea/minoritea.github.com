@@ -6,21 +6,24 @@
     <description>Recent content in safari on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 05 Nov 2010 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/tags/safari/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Nov 2010 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/safari/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SafariのLocationエンコードについて2</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</link>
       <pubDate>Fri, 05 Nov 2010 00:00:00 +0000</pubDate>
+      
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</guid>
       <description>前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得</description>
     </item>
+    
     <item>
       <title>SafariのLocationエンコードについて</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</link>
       <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
+      
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</guid>
       <description>やっぱりDisqusがSafariでうまく動作しない。どうも記事ごとにうまく読み込めるかエラーを起こすが決まっているようなので調べるとうまく</description>
     </item>
+    
   </channel>
 </rss>

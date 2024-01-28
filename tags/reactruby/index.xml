@@ -6,14 +6,15 @@
     <description>Recent content in reactruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 19 Nov 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tanstaafl.0pt.jp/tags/reactruby/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Nov 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://tanstaafl.0pt.jp/tags/reactruby/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ReactRubyをリリースした。</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
+      
       <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
       <description>先日、React をテンプレートとして使えるRubyライブラリの ReactRuby をリリースした。 このブログは自作のブログエンジンで動いていて、気が向くたびに</description>
     </item>
+    
   </channel>
 </rss>

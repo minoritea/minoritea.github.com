@@ -12,10 +12,10 @@
 <meta property="og:title" content="Raspberry Pi 400を買ってManjaro Sway Editionを入れた" />
 <meta property="og:description" content="Raspberry Pi 400を買った。昨年発表されたときからちょっと欲しいなと思っていて価格もそんなに高くないしお遊びで買ってみようとは思っていた。 ただ、最初" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2021/09/27/96f73a304bc6/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2021/09/27/96f73a304bc6/" />
+<meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/>
 <meta property="article:published_time" content="2021-09-27T14:46:56+00:00" />
 <meta property="article:modified_time" content="2021-09-27T14:46:56+00:00" />
-
 
 <meta name="twitter:title" content="Raspberry Pi 400を買ってManjaro Sway Editionを入れた"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content="Raspberry Pi 400を買った。昨年発表されたときからちょっと欲しいなと思っていて価格もそんなに高くないしお遊びで買ってみようとは思っていた。 ただ、最初"/>
@@ -69,8 +69,8 @@ Raspberry Pi 400を買った。昨年発表されたときからちょっと欲�
 <p>どこで詰まったかというとログイン画面で、Manjaro RP4 Sway Editionのログイン画面はポインティングデバイスを繋いでいないと何をどうやってもユーザー名の入力欄にフォーカスが動いてくれないのだ。これがどうにもならなくて一度はSwayを諦めて自分でi3を導入しようかと思ったくらいだ。</p>
 <p>しかしi3について調べる中でどうも上記の不具合はSway本体というよりgreetdというディスプレイマネージャの問題だということに気づいた。greetdはGreeterというプラグインを呼び出してログインUIはそちらに任せる方式になっているのだが、このGreeterにSwayを直接指定しているように見えたのでSway自身がGreeterの機能を持っていると勘違いしていたのだ。よく読むとSwayの設定ファイルの中でログイン時にGtkGreetというGreeterを自動起動するようになっていた。ややこしいことをするものだ。</p>
 <p>結局greetdから直接別のGreeterを呼び出すようにすることで解決した。新しいGreeterにはAgreetyというCUIのGreeterを使うことにした。自分には充分だ。</p>
-<pre tabindex="0"><code># /etc/greetd/config.tomlのcommand欄を以下のように書き換えた
-command = &#34;agreety --cmd sway&#34;
+<pre><code># /etc/greetd/config.tomlのcommand欄を以下のように書き換えた
+command = &quot;agreety --cmd sway&quot;
 </code></pre><p>Swayについてはもう一つ詰まった箇所があってそちらの方が難儀したかもしれない。
 それはスクリーンロック画面で、swaylockというツールで実装されているんだけど、画面に円が表示されるというシンプルな構成だ。ユーザーパスワードを打ち込むと円の縁がピカピカ光って正しいパスワードを入力するとスクリーンロックが解ける。エラーなら円が赤くなる。このswaylockの操作が全くわからず、最初のうちはスクリーンがロックされたら再起動していた。再起動時にディスクが飛んだらしく、起動でこけたりするようになって何度かOSを入れ直すはめになりすっかり嫌になってしまった。そもそも最初はスクリーンロック機能だとは気づかなかった放置していると画面が暗転して入力を受け付けなくなるということはスクリーンロックだろうとあたりをつけたけど、UIがシンプルすぎてその推測にも全く確信が持てなかった。操作に困ったのは他に理由があって、検索しても画面のスクリーンショットが出てこないのだ。どうもシンプルすぎて言及する人もいないらしい。そのためswaylockという単語はなんどか引っかかったのだが該当の機能かどうか確信が持てず、調査に時間を要することになってしまった。結局何度か操作しているうちに円が表示されている間にブラインドでパスワードを入れればいいということがなんとなく分かったけど初見でその操作に気づくのはなかなかハードルが高いと思う。せめてフォーム一つ置いてくれればわかるのに。まあこのSwaylockが僕にとっては第二の鬼門だった。</p>
 <p>上の２つが解決したら、その後はすんなり快適に動いてくれている。まだ操作や設定周りでよくわからない点もあるけれどせっかくなので（ディスプレイマネージャ以外は）Manjaroのデフォルト設定のまましばらく運用してみようと思う。</p>
