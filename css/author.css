@@ -1,9 +1,11 @@
 .footer {
-  margin: 2em 0;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1rem;
 }
 
 .avatar {
-  margin-left: 2em;
   width: 100px;
 }
 
@@ -13,10 +15,9 @@
 }
 
 .footer-body {
-  margin-left: 2em;
   flex-direction: column;
 }
 
 .footer-body * {
-  margin-top: 0.5em;
+  margin-bottom: 0.2rem;
 }
