@@ -57,8 +57,16 @@ table:not(.highlight *) tr:nth-child(even) td {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 700px 1fr;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .main {
+  flex: 700px;
+}
+
+.container .left, .right {
+  flex: 0px;
 }
 
 .article {
@@ -98,7 +106,7 @@ table:not(.highlight *) tr:nth-child(even) td {
 
 .article .summary {
   line-height: 2em;
-  max-width: 660px;
+  max-width: 600px;
   margin: 2.5em 0;
 }
 
