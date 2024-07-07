@@ -6,8 +6,15 @@
     <description>Recent content in Posts on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 21 Jan 2024 07:00:10 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2024 14:44:53 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux/Hyprlandでデスクトップ環境を構築した</title>
+      <link>https://tanstaafl.0pt.jp/posts/2024/07/07/dd524aa97a08/</link>
+      <pubDate>Sun, 07 Jul 2024 14:44:53 +0000</pubDate>
+      <guid>https://tanstaafl.0pt.jp/posts/2024/07/07/dd524aa97a08/</guid>
+      <description>ずっと個人環境はラップトップのWindows機でWSL2を動かして使っていたんだけど、あるときArch Linuxの環境を構築していて、これだ</description>
+    </item>
     <item>
       <title>運用が楽な個人サービスを作ってみる</title>
       <link>https://tanstaafl.0pt.jp/posts/2024/01/21/6dee4a958852/</link>
