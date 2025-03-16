@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 cd "$(dirname $(dirname $0))/_hugo"
-if hugo;then
-	cd ..
-	git add . && git commit -m "deploy" \
+if ! command -v hugo;then
+	ecoh "No hugo command found"
+	exit 1
+fi
+
+if hugo; then
+	git add .. && git commit -m "deploy ${TITLE}" \
 		&& git push origin master
 else
 	exit 2
