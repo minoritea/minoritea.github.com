@@ -6,8 +6,15 @@
     <description>Recent content on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 07 Mar 2025 02:19:08 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Jul 2025 15:54:15 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>コーディングエージェントはサンドボックス環境が命</title>
+      <link>https://tanstaafl.0pt.jp/posts/2025/07/18/54f2ed63c515/</link>
+      <pubDate>Fri, 18 Jul 2025 15:54:15 +0000</pubDate>
+      <guid>https://tanstaafl.0pt.jp/posts/2025/07/18/54f2ed63c515/</guid>
+      <description>最近Padawan（Github Copilot Coding Agent）をお仕事で使っているのだがめちゃくちゃ開発体験が良い。 イシュー作成（要件、設計の記述、実装方</description>
+    </item>
     <item>
       <title>中国語の部屋</title>
       <link>https://tanstaafl.0pt.jp/posts/2025/03/07/51fd2309c446/</link>

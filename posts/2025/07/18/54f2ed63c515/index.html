@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html  lang="ja" ><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>コーディングエージェントはサンドボックス環境が命 | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+  <meta name="description" content="最近Padawan（Github Copilot Coding Agent）をお仕事で使っているのだがめちゃくちゃ開発体験が良い。 イシュー作成（要件、設計の記述、実装方" />
+  
+  <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
+  <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
+<link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
+<meta property="og:title" content="コーディングエージェントはサンドボックス環境が命" />
+<meta property="og:description" content="最近Padawan（Github Copilot Coding Agent）をお仕事で使っているのだがめちゃくちゃ開発体験が良い。 イシュー作成（要件、設計の記述、実装方" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2025/07/18/54f2ed63c515/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-07-18T15:54:15+00:00" />
+<meta property="article:modified_time" content="2025-07-18T15:54:15+00:00" />
+
+
+<meta name="twitter:title" content="コーディングエージェントはサンドボックス環境が命"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="最近Padawan（Github Copilot Coding Agent）をお仕事で使っているのだがめちゃくちゃ開発体験が良い。 イシュー作成（要件、設計の記述、実装方"/>
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<script>
+ 
+!(function(w,p,f,c){c=w[p]=Object.assign(w[p]||{},{"lib":"/js/partytown/"});c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');
+!function(t,e,n,i,r,o,a,d,s,c,l,p){function u(){p||(p=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(f,1e4),e.addEventListener("pt0",w),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.8.0":"sandbox-sw.html?"+Date.now()),e.querySelector(o.sandboxParent||"body").appendChild(c)}function f(n,r){for(w(),i==t&&(o.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<s.length;n++)(r=e.createElement("script")).innerHTML=s[n].innerHTML,e.head.appendChild(r);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){l=t,e.split(".").map((function(e,n,i){l=l[i[n]]=n+1<i.length?"push"==i[n+1]?[]:l[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);
+</script>
+<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-WMCEBYW7WE"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WMCEBYW7WE');
+</script>
+
+</head>
+<body><div class="header">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="blog-title">
+        <a href="https://tanstaafl.0pt.jp/">フリーランチなど無い - There ain&#39;t no such thing as a free lunch</a>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="left"></div>
+  <div class="main">
+    <article class="article">
+      <div class="date">
+          <time>Fri, Jul 18, 2025</time>
+      </div>
+      <div class="article-heading">
+        <h1 class="article-title">コーディングエージェントはサンドボックス環境が命</h1>
+        <div class="tags">
+          
+        </div>
+      </div>
+      <div class="article-body"><p>最近Padawan（Github Copilot Coding Agent）をお仕事で使っているのだがめちゃくちゃ開発体験が良い。</p>
+<ul>
+<li>イシュー作成（要件、設計の記述、実装方針の指示）</li>
+<li>→コーディング（エージェントに丸投げ）</li>
+<li>→レビュー、修正指示</li>
+</ul>
+<p>のサイクルが簡単に回せてしまうのが良い。まあ結局PRのレビューの手間はかかってしまうわけで人間相手にレビューしているのと同じだけの大変さはあるのだけれど。</p>
+<p>他のコーディングエージェントと比べて何が違うのかというとGithubのはサンドボックス環境がついていることとGitの差分レビュー用のUIが用意されていることの2点なんだろうなと思っている。</p>
+<p>とくにサンドボックス環境は重要で、これがあるから複数並列でエージェントを動かして人間は指示書を書いて結果をレビューするだけという動き方ができる。これが楽しいかどうかは別としてテックリードやプレイングマネージャをやっていた人は元々似たような動き方をしていたんじゃないだろうか。サンドボックス環境が自動で用意されるというのが大きなメリットで、エディタでエージェントを動かすと結局ユーザーのローカル環境を占有してしまうので並列に動作させるということが出来ない。Dockerなどでコンテナを作れば並列稼働させられるけれど、周辺サービスも含めて複数コンテナで同じ環境のクローンを並行稼働させるのは結構面倒である。そう考えるとPRごとに環境を作ってくれるPadawanはめちゃくちゃ並行稼働の準備が楽である。Githubは元々CI環境を持っていたしユーザー側も環境を作っていたチームが多いだろうから自然にサンドボックスを提供できたのだろう。</p>
+<p>サンドボックスの中でエージェントに自由にコードを書かせているときに考慮しないといけないのが外部アクセスで、セキュリティに気を使うなら勝手にアクセスされないように制限はかけておきたいものである。この点でもローカルで外部アクセスを制限した環境を用意するのは結構面倒で、Padawanのようにサービス側で環境を用意してもらうほうが楽である。</p>
+<p>並列でエージェントを動作させるとアウトプットの確認が大変だが、Padawanの場合はPRベースのため、通常のPRのレビューと同じようにGithubでコメントを返していくだけで確認と修正指示が出せてしまう。このあたりも良いと思っているところで人間に対するワークフローと変わらないため、メンタルモデルを変える必要なくレビュープロセスを回していける。</p>
+<p>あと、コードレビュー中に指示出しが大変だなと感じたらその場でブランチをチェックアウトして修正してそのままプッシュすれば反映されるのもよい。Padawanはそのまま引き継いで作業してくれる。</p>
+<p>上で人間に指示出ししてタスク割り振ってレビューするのと変わらないと書いたけれど、人間と違って横からタスクを奪ったり、何度もやり直しさせたり、頭から作り直させても文句を言わないところがよい。新卒にこれをやると100%ふてくされるかモチベーションをなくすので気をつかう。</p>
+<p>一方でイシューでの説明や指示についてはきちんとやらないといい感じのニュアンスをくみ取って作ってくれたりしない。この辺りは実は人間相手でも同じなのだけれどAI相手だとより意識的にやるようになったのでそこは良かったのかなと思う。</p>
+<p>こういったフローを実現しているのは、ここまで書いたようにサンドボックス環境の提供とDVCSによるコードレビュー・プロセスとそれ用のUIを備えていてAIコーディングも提供しているからなのだけれど、これらを一式提供できるのは現状GithubだけなのでPadawanはすごく強みのあるプロダクトだと感じている。自分はClaude Codeも使っているけれどローカルで補助的に動かしている。自分が主でClaude Codeは従だ。一方でPadawanはエージェントが主体で自分は指示者、評価者ではあるけれど作業に対しては補助的な役割だととらえている。メインで操縦しているのはCopilotの方で自分は後ろから見守っていたり、手助けしたりしているイメージだ。まだイシューを並行で動かすのに慣れていなくて、アウトプットが遅いけれど使いこなせれば1チーム丸々引っ張っているくらいの状態を一人で作れるんじゃないかと思っている。自分の上司はかなり並列でアウトプットさせていてめちゃくちゃ効率的に開発しているので自分も早くそのような状態になれればと考えている。</p>
+<p>AIにコードを書かせる時代になって面白みが減った部分と新しい時代を楽しんでいる部分と両方あるけれど少なくともPadawanについては早く使いこなせるようになりたいと思っている。もちろん今の時点でもとても良い体験だと感じているしおすすめできる良いプロダクトだと思う。</p>
+</div>
+    </article>
+  </div>
+  <div class="right"></div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="left"></div>
+    <div class="main">
+      <div class="container">
+        <div class="avatar">
+          <img src="/images/me.jpeg">
+        </div>
+        <div class="footer-body container">
+          <div>Minori Tokuda(<a href="https://twitter.com/snowcrush">@snowcrush</a>)</div>
+          <div>
+          A programmer, and loving software technologies.
+          </div>
+          <div>
+          github: <a href="https://github.com/minoritea">https://github.com/minoritea</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right"></div>
+  </div>
+</div>
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-WMCEBYW7WE', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</body>
+</html>
