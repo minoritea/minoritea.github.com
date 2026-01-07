@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html  lang="ja" ><head>
-	<meta name="generator" content="Hugo 0.122.0">
+	<meta name="generator" content="Hugo 0.154.2">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
 <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
-<meta property="og:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" />
-
+<meta property="og:url" content="https://tanstaafl.0pt.jp/">
+  <meta property="og:site_name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png">
 
 <meta name="twitter:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content=""/>
@@ -57,7 +58,9 @@
       <time>Sun, Aug 4, 2013</time>
   </div>
   <h1 class="article-title"><a href="/posts/2013/08/04/bd4630ff0347/">Fabrication で Mongoid のテストデータを作る</a></h1>
-  <div class="summary">Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。 MongoHQ、MongoLabなどが500MBの無料...</div>
+  <div class="summary"><p>Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。
+MongoHQ、MongoLabなどが500MBの無料プランを提供しているからで、
+個人アプリであればこのくらいあれば十分だからだ。</p>...</div>
 </article>
 
       
@@ -66,7 +69,9 @@
       <time>Fri, May 31, 2013</time>
   </div>
   <h1 class="article-title"><a href="/posts/2013/05/31/c1143b3e227b/">flickrの画像をOctopressに埋め込むTips</a></h1>
-  <div class="summary">Octopressの画像置き場をどうするか考えてflickrにしてみた。 public/images以下に置いておくのがデフォルトなんだろうけ...</div>
+  <div class="summary"><p>Octopressの画像置き場をどうするか考えてflickrにしてみた。</p>
+<p>public/images以下に置いておくのがデフォルトなんだろうけど、
+githubにあんまりバイナリを置くのも悪いしなぁと思って色々探していた。</p>...</div>
 </article>
 
       
@@ -75,7 +80,13 @@
       <time>Tue, May 28, 2013</time>
   </div>
   <h1 class="article-title"><a href="/posts/2013/05/28/1580cb206a30/">Octopressに移行</a></h1>
-  <div class="summary">とりあえず、disqus入れてみた。 旧サイト(http://tanstaafl.0pt.jp/)から記事を一式移行するも、 記事名のパスが日本...</div>
+  <div class="summary"><p>とりあえず、disqus入れてみた。</p>
+<p>旧サイト(<a href="http://tanstaafl.0pt.jp/">http://tanstaafl.0pt.jp/</a>)から記事を一式移行するも、
+記事名のパスが日本語だとダメのようで、
+かといってエスケープすると二重にエスケープされてしまい、
+そのままのパスで移行というわけには行かなかった。
+しょうがないので、ランダム文字列をファイル名に使用した。
+タイトルとは別扱いなのでむしろこっちの方がすっきりしていい。</p>...</div>
 </article>
 
       
@@ -84,7 +95,9 @@
       <time>Tue, May 28, 2013</time>
   </div>
   <h1 class="article-title"><a href="/posts/2013/05/28/e80bc1782e91/">Octopress始めました</a></h1>
-  <div class="summary">BlogをOctpressに移行しようかと思い、作成。 Github/Jekyllベースでシンプルな感じがすき。 しばらくは元ブログからポツポツ...</div>
+  <div class="summary"><p>BlogをOctpressに移行しようかと思い、作成。
+Github/Jekyllベースでシンプルな感じがすき。
+しばらくは元ブログからポツポツと移行していこうと思う。</p>...</div>
 </article>
 
       
@@ -93,7 +106,8 @@
       <time>Sun, Jun 10, 2012</time>
   </div>
   <h1 class="article-title"><a href="/posts/2012/06/10/deae7095406a/">データが飛んだ</a></h1>
-  <div class="summary">ブログのデータが飛んだ。ごっそりだ。 原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先である...</div>
+  <div class="summary"><p>ブログのデータが飛んだ。ごっそりだ。</p>
+<p>原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先であるdump.rdbのパーミッションがredisで無くなっていたためである。ファイル所有者が僕のログインユーザになっていたので作業中になにかミスったのだろうと思うが今となってはどのタイミングで変わったのかは定かではない。</p>...</div>
 </article>
 
       
@@ -154,17 +168,5 @@
     <div class="right"></div>
   </div>
 </div>
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-WMCEBYW7WE', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>safari on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Safari on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/safari/</link>
-    <description>Recent content in safari on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Safari on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 05 Nov 2010 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/safari/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</link>
       <pubDate>Fri, 05 Nov 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/05/a0afd3acb280/</guid>
-      <description>前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得</description>
+      <description>&lt;p&gt;前回、SafariでエスケープされたURLのサイトを表示したときに、location.hrefでアドレスを取得するとデコードした文字列が取得されてしまう問題について、webkitのブラウザを判別するスクリプトを書いて対応した。&#xA;その後、ChromeだとURLがきちんとエスケープされて取得されることが分かった。僕はchromeは普段使わないのでこの仕様の違いに気付かなかったのである。&lt;/p&gt;</description>
     </item>
     <item>
       <title>SafariのLocationエンコードについて</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</link>
       <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/31/18ea9bf6b0bc/</guid>
-      <description>やっぱりDisqusがSafariでうまく動作しない。どうも記事ごとにうまく読み込めるかエラーを起こすが決まっているようなので調べるとうまく</description>
+      <description>&lt;p&gt;やっぱりDisqusがSafariでうまく動作しない。どうも記事ごとにうまく読み込めるかエラーを起こすが決まっているようなので調べるとうまく動作しないのはタイトルがマルチバイトの記事だけだった。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

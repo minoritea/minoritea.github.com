@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>octopress on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Octopress on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/octopress/</link>
-    <description>Recent content in octopress on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Octopress on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 31 May 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</link>
       <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</guid>
-      <description>Octopressの画像置き場をどうするか考えてflickrにしてみた。 public/images以下に置いておくのがデフォルトなんだろうけ</description>
+      <description>&lt;p&gt;Octopressの画像置き場をどうするか考えてflickrにしてみた。&lt;/p&gt;&#xA;&lt;p&gt;public/images以下に置いておくのがデフォルトなんだろうけど、&#xA;githubにあんまりバイナリを置くのも悪いしなぁと思って色々探していた。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Octopressに移行</title>
       <link>https://tanstaafl.0pt.jp/posts/2013/05/28/1580cb206a30/</link>
       <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2013/05/28/1580cb206a30/</guid>
-      <description>とりあえず、disqus入れてみた。 旧サイト(http://tanstaafl.0pt.jp/)から記事を一式移行するも、 記事名のパスが日本</description>
+      <description>&lt;p&gt;とりあえず、disqus入れてみた。&lt;/p&gt;&#xA;&lt;p&gt;旧サイト(&lt;a href=&#34;http://tanstaafl.0pt.jp/&#34;&gt;http://tanstaafl.0pt.jp/&lt;/a&gt;)から記事を一式移行するも、&#xA;記事名のパスが日本語だとダメのようで、&#xA;かといってエスケープすると二重にエスケープされてしまい、&#xA;そのままのパスで移行というわけには行かなかった。&#xA;しょうがないので、ランダム文字列をファイル名に使用した。&#xA;タイトルとは別扱いなのでむしろこっちの方がすっきりしていい。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Octopress始めました</title>
       <link>https://tanstaafl.0pt.jp/posts/2013/05/28/e80bc1782e91/</link>
       <pubDate>Tue, 28 May 2013 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2013/05/28/e80bc1782e91/</guid>
-      <description>BlogをOctpressに移行しようかと思い、作成。 Github/Jekyllベースでシンプルな感じがすき。 しばらくは元ブログからポツポツ</description>
+      <description>&lt;p&gt;BlogをOctpressに移行しようかと思い、作成。&#xA;Github/Jekyllベースでシンプルな感じがすき。&#xA;しばらくは元ブログからポツポツと移行していこうと思う。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

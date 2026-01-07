@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>react on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>React on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/react/</link>
-    <description>Recent content in react on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in React on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/react/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
-      <description>Rubyコミュニティなのに毎回多言語の話が出る kawasaki.rb で React について発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/react-42041864 Reactつかってみた from Minori Tokuda 締めの発言はわりか</description>
+      <description>&lt;p&gt;Rubyコミュニティなのに毎回多言語の話が出る &lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;kawasaki.rb&lt;/a&gt; で &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; について発表してきた。&lt;/p&gt;&#xA;&lt;p&gt;スライドはこちら。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/react-42041864&#34;&gt;http://www.slideshare.net/minoritokuda/react-42041864&lt;/a&gt;&lt;/p&gt;&#xA;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/42041864&#34; width=&#34;425&#34; height=&#34;355&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/minoritokuda/react-42041864&#34; title=&#34;Reactつかってみた&#34; target=&#34;_blank&#34;&gt;Reactつかってみた&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&#xD;&#xA;&lt;p&gt;締めの発言はわりかし本気である。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ReactRubyをリリースした。</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
-      <description>先日、React をテンプレートとして使えるRubyライブラリの ReactRuby をリリースした。 このブログは自作のブログエンジンで動いていて、気が向くたびに</description>
+      <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;&#xA;&lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/ruby/</link>
-    <description>Recent content in ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Ruby on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 06 Dec 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
@@ -13,84 +13,84 @@
       <link>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/73110afd5955/</guid>
-      <description>Rubyコミュニティなのに毎回多言語の話が出る kawasaki.rb で React について発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/react-42041864 Reactつかってみた from Minori Tokuda 締めの発言はわりか</description>
+      <description>&lt;p&gt;Rubyコミュニティなのに毎回多言語の話が出る &lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;kawasaki.rb&lt;/a&gt; で &lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; について発表してきた。&lt;/p&gt;&#xA;&lt;p&gt;スライドはこちら。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/react-42041864&#34;&gt;http://www.slideshare.net/minoritokuda/react-42041864&lt;/a&gt;&lt;/p&gt;&#xA;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/42041864&#34; width=&#34;425&#34; height=&#34;355&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//www.slideshare.net/minoritokuda/react-42041864&#34; title=&#34;Reactつかってみた&#34; target=&#34;_blank&#34;&gt;Reactつかってみた&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&#xD;&#xA;&lt;p&gt;締めの発言はわりかし本気である。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ReactRubyをリリースした。</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</link>
       <pubDate>Wed, 19 Nov 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/11/19/b22b24ca7ea5/</guid>
-      <description>先日、React をテンプレートとして使えるRubyライブラリの ReactRuby をリリースした。 このブログは自作のブログエンジンで動いていて、気が向くたびに</description>
+      <description>&lt;p&gt;先日、&lt;a href=&#34;http://facebook.github.io/react/&#34;&gt;React&lt;/a&gt; をテンプレートとして使えるRubyライブラリの &lt;a href=&#34;https://github.com/minoritea/react_ruby&#34;&gt;ReactRuby&lt;/a&gt; をリリースした。&lt;/p&gt;&#xA;&lt;p&gt;このブログは自作のブログエンジンで動いていて、気が向くたびに作りなおしている。何か使いたい技術やライブラリがあって試してみたいというとき、ブログエンジンというのは結構良い題材だと思っていて、実際今までもNode.jsを使ったりAngularJSを使ったりしてきた。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Turbolinksモドキを入れた</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</link>
       <pubDate>Fri, 25 Apr 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/25/17fc41c12020/</guid>
-      <description>結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。 というわけでTurbolinksモ</description>
+      <description>&lt;p&gt;結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。&lt;/p&gt;&#xA;&lt;p&gt;というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。&lt;/p&gt;</description>
     </item>
     <item>
       <title>AngularJS&#43;SinatraでTurbolinks</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</link>
       <pubDate>Wed, 23 Apr 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/23/a5f908f6c164/</guid>
-      <description>表題の通りにKawasaki.rbで発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks Angular jsとsinatraでturbolinks from Minori Tokuda なお、このブログを</description>
+      <description>&lt;p&gt;表題の通りに&lt;a href=&#34;http://kawasakirb.doorkeeper.jp/&#34;&gt;Kawasaki.rb&lt;/a&gt;で発表してきた。&lt;/p&gt;&#xA;&lt;p&gt;スライドはこちら。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34;&gt;http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&lt;/a&gt;&lt;/p&gt;&#xA;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/33852359&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks&#34; title=&#34;Angular jsとsinatraでturbolinks&#34; target=&#34;_blank&#34;&gt;Angular jsとsinatraでturbolinks&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/minoritokuda&#34; target=&#34;_blank&#34;&gt;Minori Tokuda&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&#xA;&lt;p&gt;なお、このブログを対象にTurbolinksモドキを実装してみたのだが、&#xA;Zenbackと相性が悪く今日のDeployは断念した。&lt;/p&gt;</description>
     </item>
     <item>
       <title>大江戸Ruby会議04に参加してきた！</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
       <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
-      <description>大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。 遅刻したため途中からのレポートとなる。 Nobody Knows Nobu</description>
+      <description>&lt;p&gt;大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。&lt;/p&gt;&#xA;&lt;p&gt;遅刻したため途中からのレポートとなる。&lt;/p&gt;&#xA;&lt;h2 id=&#34;nobody-knows-nobu&#34;&gt;Nobody Knows Nobu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://twitter.com/_zzak&#34;&gt;ザックさん&lt;/a&gt;の発表は絵芝居仕立てでコア・コミッターの中田さんの貢献についての紹介。愛と笑いのある発表でほんわかした。こういう暖かさがRubyコミュニティのいいところだと思う。&lt;/p&gt;&#xA;&lt;h2 id=&#34;私は如何にして異国でエンジニアとして生き抜いてきたか&#34;&gt;私は如何にして異国でエンジニアとして生き抜いてきたか&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;レオさん&lt;/a&gt;の発表は海外で働くエンジニアとしての発表。オーストラリア出身のレオさんが8年間日本で働いてきた経験から得た知見を共有してくれた。おおきくまとめると海外で働くには言語とジョブスキルが大切というこ話だった。&lt;/p&gt;</description>
     </item>
     <item>
       <title>RailsのYAMLでハマった</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</link>
       <pubDate>Sun, 07 Nov 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/07/fcf18a9ef920/</guid>
-      <description>Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、 production: adapter:sqlite3 と書いてしまったのが原因でprodu</description>
+      <description>&lt;p&gt;Redmineをインストールしようとしてdatabase.ymlではまった。どういうことかというと、&lt;/p&gt;&#xA;&lt;p&gt;production:&#xA;adapter:sqlite3&lt;/p&gt;&#xA;&lt;p&gt;と書いてしまったのが原因でproduction環境でブート出来なくなってしまった。&lt;/p&gt;</description>
     </item>
     <item>
       <title>フィードの過去ログ読み込み</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</link>
       <pubDate>Sun, 31 Oct 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/31/5656c6c48687/</guid>
-      <description>GoogleReaderが不調なので自分でフィードリーダを実装しようと思い、読み込み部分はsinatraでさっと作ったのはいいがフィードの過</description>
+      <description>&lt;p&gt;GoogleReaderが不調なので自分でフィードリーダを実装しようと思い、読み込み部分はsinatraでさっと作ったのはいいがフィードの過去ログの取得方法が分からず、ずっと悩んでいた。共通の呼び出しプロトコルでもあるのかと思えば無いようだし。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nginx＋Unicorn＋Sinatra＋Redis</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</link>
       <pubDate>Thu, 28 Oct 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/28/b0558021ecd5/</guid>
-      <description>このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRed</description>
+      <description>&lt;p&gt;このblogはSinatraベースのblogエンジンであるScanty-redisをカスタマイズして使用している。当然データベースにはRedisを使用しているのだが、気持ちいいほどに高速である。KVSなので若干取り扱いに難があったが、SQL初心者からするとSQLより分かりやすいと思う。オンメモリでばしばしデータをさばける上に永続化も自動で行ってくれる優れものだ。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mixiアプリ</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/b99ad48e6770/</guid>
-      <description>ちょっと思い立ってMixiのアプリを作ってる。バックエンドはGAE/J + Sinatraの構成だ。大体概要は分かったんだけど、OAuthのとこ</description>
+      <description>&lt;p&gt;ちょっと思い立ってMixiのアプリを作ってる。バックエンドはGAE/J + Sinatraの構成だ。大体概要は分かったんだけど、OAuthのところで詰まってる。 検索しても大抵出てくるのはTwitter関連の情報だ。 TwitterにOAuthでアクセスするのはConsumer側なんだよなぁ。欲しいのはServiceProvider側の作り方だ。 GithubでSinatraのサンプルコード落として勉強中だけど、なんとか分かりやすくならないかなぁ。&lt;/p&gt;</description>
     </item>
     <item>
       <title>proxy script</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/73c9fa4aa54e/</guid>
-      <description>proxyがresolvableか検出して、通ったら環境変数http-proxyをセットするスクリプトを書いて、.profileから呼び出す</description>
+      <description>&lt;p&gt;proxyがresolvableか検出して、通ったら環境変数http-proxyをセットするスクリプトを書いて、.profileから呼び出すようにした。&#xA;小さいスクリプトだがなかなか気に入っている。&lt;/p&gt;</description>
     </item>
     <item>
       <title>とりあえず</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/201134101f08/</guid>
-      <description>件のアプリはクッキー認証で作ってみようかなあ。 OAuthについては、 Twitterを利用してOAuth::Consumer側を実装してみる。</description>
+      <description>&lt;p&gt;件のアプリはクッキー認証で作ってみようかなあ。&lt;/p&gt;&#xA;&lt;p&gt;OAuthについては、&lt;/p&gt;&#xA;&lt;p&gt;Twitterを利用してOAuth::Consumer側を実装してみる。&#xA;OAuthProviderを利用して自分でProviderを実装。Consumerは先のアプリを流用。&#xA;でテストしてみたいと思う。&lt;/p&gt;</description>
     </item>
     <item>
       <title>移転したい</title>
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/93764014b9fe/</guid>
-      <description>内定式しんどかったけど、楽しかった。 さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容</description>
+      <description>&lt;p&gt;内定式しんどかったけど、楽しかった。&lt;/p&gt;&#xA;&lt;p&gt;さてこのブログはHerokuというRubyによるPaaS上で運用されている。しかし無料DBは5MBしか容量が無いので長く利用するかどうかは悩みどころである。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

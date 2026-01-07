@@ -4,7 +4,7 @@
     <title>1ページapp on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/</link>
     <description>Recent content in 1ページapp on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 04 Apr 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/1%E3%83%9A%E3%83%BC%E3%82%B8app/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</link>
       <pubDate>Fri, 04 Apr 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/</guid>
-      <description>このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン</description>
+      <description>&lt;p&gt;このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。&#xA;URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

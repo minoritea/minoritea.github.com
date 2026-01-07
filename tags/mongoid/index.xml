@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mongoid on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Mongoid on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/mongoid/</link>
-    <description>Recent content in mongoid on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Mongoid on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 04 Aug 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/mongoid/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2013/08/04/bd4630ff0347/</guid>
-      <description>Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。 MongoHQ、MongoLabなどが500MBの無料</description>
+      <description>&lt;p&gt;Herokuに上げているRailsアプリのDBは、最近MongoDBをよく使っている。&#xA;MongoHQ、MongoLabなどが500MBの無料プランを提供しているからで、&#xA;個人アプリであればこのくらいあれば十分だからだ。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

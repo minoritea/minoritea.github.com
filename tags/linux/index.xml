@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Linux on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/linux/</link>
-    <description>Recent content in linux on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Linux on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 27 Oct 2010 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/linux/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</link>
       <pubDate>Wed, 27 Oct 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/10/27/e55640c3654d/</guid>
-      <description>DTIのServersman@VPSを昨日から借り始めた。学校のproxyがgitを通してくれないので、SSH転送用のサーバとしてのみ使用す</description>
+      <description>&lt;p&gt;DTIのServersman@VPSを昨日から借り始めた。学校のproxyがgitを通してくれないので、SSH転送用のサーバとしてのみ使用するつもりである。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

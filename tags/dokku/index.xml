@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dokku on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Dokku on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/dokku/</link>
-    <description>Recent content in dokku on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Dokku on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 10 May 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/dokku/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
       <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
-      <description>最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。 dokkuでマニュアル通り作成したのだ</description>
+      <description>&lt;p&gt;最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。&lt;/p&gt;&#xA;&lt;p&gt;dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,21 +4,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <title>復活&amp;Topsy再び | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-  <meta name="description" content="ブログがようやく復活した。 というか、修論＋就職のコンボでメンテ自体してなかったが、 気がついていたらアプリケーション・サーバーが落ちていた。 と" />
+  <meta name="description" content="ブログがようやく復活した。
+というか、修論＋就職のコンボでメンテ自体してなかったが、
+気がついていたらアプリケーション・サーバーが落ちていた。
+とりあえずDBがぶっ壊れていたので、Redisにdump.rdbを読み込み直して応急処置をとる。
+また、node.jsで書いていたbacktweetのproxyも落ちていたので、
+この機会にtopsyを復活させた。" />
   
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
 <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
-<meta property="og:title" content="復活&amp;Topsy再び" />
-<meta property="og:description" content="ブログがようやく復活した。 というか、修論＋就職のコンボでメンテ自体してなかったが、 気がついていたらアプリケーション・サーバーが落ちていた。 と" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2011/06/13/c21f138e3e26/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2011-06-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2011-06-13T00:00:00+00:00" />
-
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2011/06/13/c21f138e3e26/">
+  <meta property="og:site_name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:title" content="復活&Topsy再び">
+  <meta property="og:description" content="ブログがようやく復活した。
+というか、修論＋就職のコンボでメンテ自体してなかったが、 気がついていたらアプリケーション・サーバーが落ちていた。 とりあえずDBがぶっ壊れていたので、Redisにdump.rdbを読み込み直して応急処置をとる。 また、node.jsで書いていたbacktweetのproxyも落ちていたので、 この機会にtopsyを復活させた。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2011-06-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2011-06-13T00:00:00+00:00">
+    <meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png">
 
 <meta name="twitter:title" content="復活&amp;Topsy再び"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
-<meta name="twitter:description" content="ブログがようやく復活した。 というか、修論＋就職のコンボでメンテ自体してなかったが、 気がついていたらアプリケーション・サーバーが落ちていた。 と"/>
+<meta name="twitter:description" content="ブログがようやく復活した。
+というか、修論＋就職のコンボでメンテ自体してなかったが、
+気がついていたらアプリケーション・サーバーが落ちていた。
+とりあえずDBがぶっ壊れていたので、Redisにdump.rdbを読み込み直して応急処置をとる。
+また、node.jsで書いていたbacktweetのproxyも落ちていたので、
+この機会にtopsyを復活させた。"/>
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <script>
  
@@ -98,17 +112,5 @@
     <div class="right"></div>
   </div>
 </div>
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-WMCEBYW7WE', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>

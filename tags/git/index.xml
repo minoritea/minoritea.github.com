@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Git on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/git/</link>
-    <description>Recent content in git on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Git on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 10 May 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/git/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
       <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
-      <description>最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。 dokkuでマニュアル通り作成したのだ</description>
+      <description>&lt;p&gt;最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。&lt;/p&gt;&#xA;&lt;p&gt;dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ubuntu14.04でgit pull/git cloneしたときにgnutlsがエラー吐くときの対処法</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</link>
       <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/2ec606865ae5/</guid>
-      <description>git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。 gnutls_handshake() failed: A record packet with illegal version was received. これは、ubuntu</description>
+      <description>&lt;p&gt;git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gnutls_handshake() failed: A record packet with illegal version was received.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;これは、ubuntuのgitパッケージがdebianベースのため、gnutlsに依存しているためhttps接続の際にエラーとなるらしい。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>json on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Json on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/json/</link>
-    <description>Recent content in json on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Json on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 17 Nov 2010 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/json/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://tanstaafl.0pt.jp/posts/2010/11/17/75eb52a3779e/</link>
       <pubDate>Wed, 17 Nov 2010 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2010/11/17/75eb52a3779e/</guid>
-      <description>Twitter APIで取得していたコメントが消えてしまった。Twitter検索で引っかかるのは7日間だけである。これでは少し寂しいのでツイートの取得にT</description>
+      <description>&lt;p&gt;Twitter APIで取得していたコメントが消えてしまった。Twitter検索で引っかかるのは7日間だけである。これでは少し寂しいのでツイートの取得にTopsyを利用してみた。Topsyはツイッター等の発言をベースにした検索エンジンで、公開されたAPIから特定のサイトについてのツイートを抽出して取得するといったことが出来る。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,21 +4,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <title>1ページAppでクローラに動的なメタ情報を読ませることが出来るか？ | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-  <meta name="description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン" />
+  <meta name="description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
+URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。" />
   
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
 <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
-<meta property="og:title" content="1ページAppでクローラに動的なメタ情報を読ませることが出来るか？" />
-<meta property="og:description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2014-04-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2014-04-04T00:00:00+00:00" />
-
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2014/04/04/9ca958c064f2/">
+  <meta property="og:site_name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:title" content="1ページAppでクローラに動的なメタ情報を読ませることが出来るか？">
+  <meta property="og:description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。 URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2014-04-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2014-04-04T00:00:00+00:00">
+    <meta property="article:tag" content="Javascript">
+    <meta property="article:tag" content="Angularjs">
+    <meta property="article:tag" content="1ページapp">
+    <meta property="article:tag" content="Spa">
+    <meta property="article:tag" content="Seo">
+    <meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png">
 
 <meta name="twitter:title" content="1ページAppでクローラに動的なメタ情報を読ませることが出来るか？"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
-<meta name="twitter:description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン"/>
+<meta name="twitter:description" content="このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
+URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。"/>
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <script>
  
@@ -58,11 +68,11 @@
         <div class="tags">
           
             <div class="tag">
-                <a href="/tags/javascript/">javascript</a>
+                <a href="/tags/javascript/">Javascript</a>
             </div>
           
             <div class="tag">
-                <a href="/tags/angularjs/">angularjs</a>
+                <a href="/tags/angularjs/">Angularjs</a>
             </div>
           
             <div class="tag">
@@ -70,11 +80,11 @@
             </div>
           
             <div class="tag">
-                <a href="/tags/spa/">spa</a>
+                <a href="/tags/spa/">Spa</a>
             </div>
           
             <div class="tag">
-                <a href="/tags/seo/">seo</a>
+                <a href="/tags/seo/">Seo</a>
             </div>
           
         </div>
@@ -118,17 +128,5 @@ URLのパラメータやフラグメントを元に、Ajaxなどで動的にコ�
     <div class="right"></div>
   </div>
 </div>
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-WMCEBYW7WE', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>

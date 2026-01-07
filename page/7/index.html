@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html  lang="ja" ><head>
-	<meta name="generator" content="Hugo 0.122.0">
+	<meta name="generator" content="Hugo 0.154.2">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
 <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
-<meta property="og:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" />
-
+<meta property="og:url" content="https://tanstaafl.0pt.jp/">
+  <meta property="og:site_name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png">
 
 <meta name="twitter:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content=""/>
@@ -57,7 +58,8 @@
       <time>Wed, Apr 16, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/04/16/b5d918640be9/">AngularJSでチェックボックスとモデルを紐付ける</a></h1>
-  <div class="summary">AngularJSを使ったフォームでチェックボックスを使いたいとする。 このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、ch...</div>
+  <div class="summary"><p>AngularJSを使ったフォームでチェックボックスを使いたいとする。
+このとき単に真偽値を取りたいのであればそのままモデルを設定すれば、checkboxの値（true/false）をモデルに紐付けることが出来る。</p>...</div>
 </article>
 
       
@@ -66,7 +68,8 @@
       <time>Fri, Apr 4, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/04/04/9ca958c064f2/">1ページAppでクローラに動的なメタ情報を読ませることが出来るか？</a></h1>
-  <div class="summary">このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシン...</div>
+  <div class="summary"><p>このブログは1ページAppを目指して作っている（まだ完成していないがいずれは少数の静的ページに集約したいと思っている）。1ページAppはシングルページアプリケーション（SPA）とも言い、1ページのHTMLページ内で動的にコンテンツを切り替えていくアプリのことだ。
+URLのパラメータやフラグメントを元に、Ajaxなどで動的にコンテンツをロードすることであたかもそれぞれのページが存在するかのように別々のコンテンツを表示する。</p>...</div>
 </article>
 
       
@@ -75,7 +78,8 @@
       <time>Thu, Apr 3, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/04/03/edc4359544c9/">AngularJS で外部javascriptを遅延読み込み</a></h1>
-  <div class="summary">新しいブログエンジンでもコメントシステムはDisqusを使っている。 Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービス...</div>
+  <div class="summary"><p>新しいブログエンジンでもコメントシステムはDisqusを使っている。
+Disqusは記事ごとにコメント欄を生成し埋め込んでくれる優れたサービスなのだが、実装方法としてはjavascriptをブログ内で読み込んで指定のタグにロードしたDOM要素を展開するという仕組みである。</p>...</div>
 </article>
 
       
@@ -84,7 +88,9 @@
       <time>Tue, Apr 1, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/04/01/2ea63fe1b3f1/">ブログのお引越し</a></h1>
-  <div class="summary">ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。 理由の一つはangularjsの習作...</div>
+  <div class="summary"><p>ブログをgithub page（Octopress）から独自のアプリ（sinatraベース）に引っ越した。</p>
+<p>理由の一つはangularjsの習作として色々自分で試してみたかったからだ。
+angularjsについてはまたいろいろ挑戦してみたい。</p>...</div>
 </article>
 
       
@@ -93,7 +99,12 @@
       <time>Sat, Aug 31, 2013</time>
   </div>
   <h1 class="article-title"><a href="/posts/2013/08/31/ed3690f9cb82/">Rubyでインスタンス変数のテスト</a></h1>
-  <div class="summary">あるオブジェクトOのメソッドAを呼ぶと内部変数Xの値が変わるとする。 メソッドAの目的はXの値を更新することだが、返り値からXの値を知ることは...</div>
+  <div class="summary"><ol>
+<li>あるオブジェクトOのメソッドAを呼ぶと内部変数Xの値が変わるとする。</li>
+<li>メソッドAの目的はXの値を更新することだが、返り値からXの値を知ることは出来ない。</li>
+<li>オブジェクトOの他のメソッドからXの値を直接知ることは出来ない。</li>
+</ol>
+<p>以上のような状況のとき、メソッドAのテストってどうすればいいんだろうと思ったんだけど、シンプルにインスタンス変数にアクセスすることにした。メソッドAの正しい挙動は内部変数を変更することなので、そのテストは、変数の変更を検知することだと思ったからだ。</p>...</div>
 </article>
 
       
@@ -154,17 +165,5 @@
     <div class="right"></div>
   </div>
 </div>
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-WMCEBYW7WE', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>

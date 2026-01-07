@@ -4,7 +4,7 @@
     <title>CloudFlare on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/cloudflare/</link>
     <description>Recent content in CloudFlare on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 24 Feb 2016 13:57:31 +0900</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://tanstaafl.0pt.jp/posts/2016/02/24/6376f38fce39/</link>
       <pubDate>Wed, 24 Feb 2016 13:57:31 +0900</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2016/02/24/6376f38fce39/</guid>
-      <description>https://www.cloudflare.com/http2/ でアナウンスされている通り、 CloudFlare経由でコンテンツ配信する場合、SSLかつ、ブラウザが対応していれば 自動でHTTP2プロトコ</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.cloudflare.com/http2/&#34;&gt;https://www.cloudflare.com/http2/&lt;/a&gt; でアナウンスされている通り、&#xA;CloudFlare経由でコンテンツ配信する場合、SSLかつ、ブラウザが対応していれば&#xA;自動でHTTP2プロトコルで配信される。&#xA;このブログもCloudFlare経由で配信しているため、HTTP2になっているはずである。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ブログをHugoに移行した</title>
       <link>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</link>
       <pubDate>Wed, 24 Feb 2016 01:02:53 +0900</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2016/02/24/86cc9db51dbf/</guid>
-      <description>このブログは手製blogエンジンで構築していたのだが、 サイトの管理が面倒になってしまい放置してしまっていた。 そのため、今回Github Pag</description>
+      <description>&lt;p&gt;このブログは手製blogエンジンで構築していたのだが、&#xA;サイトの管理が面倒になってしまい放置してしまっていた。&lt;/p&gt;&#xA;&lt;p&gt;そのため、今回Github Pagesに移行することにした。&#xA;移行にあたって静的ページジェネレータをいくつか検討した結果、&#xA;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を採用した。&#xA;別にJekyllをそのまま使っても良かったのだがGo製で早いと評判だったので&#xA;Hugoにした。今のところ、そのまま使えている。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

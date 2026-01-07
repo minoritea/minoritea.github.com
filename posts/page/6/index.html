@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
 <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" />
-
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/">
+  <meta property="og:site_name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:title" content="Posts">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png">
 
 <meta name="twitter:title" content="Posts"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content=""/>
@@ -56,7 +57,8 @@
       <time>Sat, May 10, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/05/10/7dd28c8c4515/">dokkuでgit pushするとfatalしてハマった</a></h1>
-  <div class="summary">最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。 dokkuでマニュアル通り作成したのだ...</div>
+  <div class="summary"><p>最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。</p>
+<p>dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。</p>...</div>
 </article>
 
       
@@ -65,7 +67,9 @@
       <time>Sat, May 10, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/05/10/2ec606865ae5/">Ubuntu14.04でgit pull/git cloneしたときにgnutlsがエラー吐くときの対処法</a></h1>
-  <div class="summary">git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。 gnutls_handshake() failed: A record packet with illegal version was received. これは、ubuntu...</div>
+  <div class="summary"><p>git pull, git cloneをhttpsのremoteに対して実行した場合に、以下の様なエラーになる場合がある。</p>
+<pre tabindex="0"><code>gnutls_handshake() failed: A record packet with illegal version was received.
+</code></pre><p>これは、ubuntuのgitパッケージがdebianベースのため、gnutlsに依存しているためhttps接続の際にエラーとなるらしい。</p>...</div>
 </article>
 
       
@@ -74,7 +78,8 @@
       <time>Fri, Apr 25, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/04/25/17fc41c12020/">Turbolinksモドキを入れた</a></h1>
-  <div class="summary">結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。 というわけでTurbolinksモ...</div>
+  <div class="summary"><p>結局zenbackは外すことにした。ほしいのはソーシャルボタンなのでそこは後で頑張って実装することにする。</p>
+<p>というわけでTurbolinksモドキをSinatra + AngularJSで動かしている。気持ち読み込みが早くなったように思うのでよい。</p>...</div>
 </article>
 
       
@@ -83,7 +88,12 @@
       <time>Wed, Apr 23, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/04/23/a5f908f6c164/">AngularJS&#43;SinatraでTurbolinks</a></h1>
-  <div class="summary">表題の通りにKawasaki.rbで発表してきた。 スライドはこちら。 http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks Angular jsとsinatraでturbolinks from Minori Tokuda なお、このブログを...</div>
+  <div class="summary"><p>表題の通りに<a href="http://kawasakirb.doorkeeper.jp/">Kawasaki.rb</a>で発表してきた。</p>
+<p>スライドはこちら。</p>
+<p><a href="http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks">http://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks</a></p>
+<iframe src="//www.slideshare.net/slideshow/embed_code/33852359" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px 1px 0; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/minoritokuda/angular-jssinatraturbolinks" title="Angular jsとsinatraでturbolinks" target="_blank">Angular jsとsinatraでturbolinks</a> </strong> from <strong><a href="http://www.slideshare.net/minoritokuda" target="_blank">Minori Tokuda</a></strong> </div>
+<p>なお、このブログを対象にTurbolinksモドキを実装してみたのだが、
+Zenbackと相性が悪く今日のDeployは断念した。</p>...</div>
 </article>
 
       
@@ -92,7 +102,12 @@
       <time>Sun, Apr 20, 2014</time>
   </div>
   <h1 class="article-title"><a href="/posts/2014/04/20/9405e4f19790/">大江戸Ruby会議04に参加してきた！</a></h1>
-  <div class="summary">大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。 遅刻したため途中からのレポートとなる。 Nobody Knows Nobu...</div>
+  <div class="summary"><p>大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。</p>
+<p>遅刻したため途中からのレポートとなる。</p>
+<h2 id="nobody-knows-nobu">Nobody Knows Nobu</h2>
+<p><a href="https://twitter.com/_zzak">ザックさん</a>の発表は絵芝居仕立てでコア・コミッターの中田さんの貢献についての紹介。愛と笑いのある発表でほんわかした。こういう暖かさがRubyコミュニティのいいところだと思う。</p>
+<h2 id="私は如何にして異国でエンジニアとして生き抜いてきたか">私は如何にして異国でエンジニアとして生き抜いてきたか</h2>
+<p><a href="https://twitter.com/lchin">レオさん</a>の発表は海外で働くエンジニアとしての発表。オーストラリア出身のレオさんが8年間日本で働いてきた経験から得た知見を共有してくれた。おおきくまとめると海外で働くには言語とジョブスキルが大切というこ話だった。</p>...</div>
 </article>
 
       
@@ -153,17 +168,5 @@
     <div class="right"></div>
   </div>
 </div>
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-WMCEBYW7WE', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>

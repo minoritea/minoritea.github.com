@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>flickr on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Flickr on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/flickr/</link>
-    <description>Recent content in flickr on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Flickr on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 31 May 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/flickr/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</link>
       <pubDate>Fri, 31 May 2013 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2013/05/31/c1143b3e227b/</guid>
-      <description>Octopressの画像置き場をどうするか考えてflickrにしてみた。 public/images以下に置いておくのがデフォルトなんだろうけ</description>
+      <description>&lt;p&gt;Octopressの画像置き場をどうするか考えてflickrにしてみた。&lt;/p&gt;&#xA;&lt;p&gt;public/images以下に置いておくのがデフォルトなんだろうけど、&#xA;githubにあんまりバイナリを置くのも悪いしなぁと思って色々探していた。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

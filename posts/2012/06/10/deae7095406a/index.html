@@ -4,21 +4,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <title>データが飛んだ | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-  <meta name="description" content="ブログのデータが飛んだ。ごっそりだ。 原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先である" />
+  <meta name="description" content="ブログのデータが飛んだ。ごっそりだ。
+原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先であるdump.rdbのパーミッションがredisで無くなっていたためである。ファイル所有者が僕のログインユーザになっていたので作業中になにかミスったのだろうと思うが今となってはどのタイミングで変わったのかは定かではない。" />
   
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
 <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
-<meta property="og:title" content="データが飛んだ" />
-<meta property="og:description" content="ブログのデータが飛んだ。ごっそりだ。 原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先である" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2012-06-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2012-06-10T00:00:00+00:00" />
-
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2012/06/10/deae7095406a/">
+  <meta property="og:site_name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:title" content="データが飛んだ">
+  <meta property="og:description" content="ブログのデータが飛んだ。ごっそりだ。
+原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先であるdump.rdbのパーミッションがredisで無くなっていたためである。ファイル所有者が僕のログインユーザになっていたので作業中になにかミスったのだろうと思うが今となってはどのタイミングで変わったのかは定かではない。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2012-06-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2012-06-10T00:00:00+00:00">
+    <meta property="article:tag" content="Redis">
+    <meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png">
 
 <meta name="twitter:title" content="データが飛んだ"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
-<meta name="twitter:description" content="ブログのデータが飛んだ。ごっそりだ。 原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先である"/>
+<meta name="twitter:description" content="ブログのデータが飛んだ。ごっそりだ。
+原因は、先日sakuraのメンテがあってサーバを再起動したのだが、redisのバイナリデータ保存先であるdump.rdbのパーミッションがredisで無くなっていたためである。ファイル所有者が僕のログインユーザになっていたので作業中になにかミスったのだろうと思うが今となってはどのタイミングで変わったのかは定かではない。"/>
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <script>
  
@@ -58,7 +65,7 @@
         <div class="tags">
           
             <div class="tag">
-                <a href="/tags/redis/">redis</a>
+                <a href="/tags/redis/">Redis</a>
             </div>
           
         </div>
@@ -94,17 +101,5 @@
     <div class="right"></div>
   </div>
 </div>
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-WMCEBYW7WE', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>

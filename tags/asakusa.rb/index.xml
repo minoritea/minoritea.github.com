@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>asakusa.rb on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Asakusa.rb on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/asakusa.rb/</link>
-    <description>Recent content in asakusa.rb on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Asakusa.rb on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 20 Apr 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/asakusa.rb/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</link>
       <pubDate>Sun, 20 Apr 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/04/20/9405e4f19790/</guid>
-      <description>大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。 遅刻したため途中からのレポートとなる。 Nobody Knows Nobu</description>
+      <description>&lt;p&gt;大江戸Ruby会議04に参加してきた。一日たっぷり濃いイベントを堪能してきたのでレポートしたい。&lt;/p&gt;&#xA;&lt;p&gt;遅刻したため途中からのレポートとなる。&lt;/p&gt;&#xA;&lt;h2 id=&#34;nobody-knows-nobu&#34;&gt;Nobody Knows Nobu&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://twitter.com/_zzak&#34;&gt;ザックさん&lt;/a&gt;の発表は絵芝居仕立てでコア・コミッターの中田さんの貢献についての紹介。愛と笑いのある発表でほんわかした。こういう暖かさがRubyコミュニティのいいところだと思う。&lt;/p&gt;&#xA;&lt;h2 id=&#34;私は如何にして異国でエンジニアとして生き抜いてきたか&#34;&gt;私は如何にして異国でエンジニアとして生き抜いてきたか&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://twitter.com/lchin&#34;&gt;レオさん&lt;/a&gt;の発表は海外で働くエンジニアとしての発表。オーストラリア出身のレオさんが8年間日本で働いてきた経験から得た知見を共有してくれた。おおきくまとめると海外で働くには言語とジョブスキルが大切というこ話だった。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

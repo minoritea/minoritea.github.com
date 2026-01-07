@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docker on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
+    <title>Docker on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
     <link>https://tanstaafl.0pt.jp/tags/docker/</link>
-    <description>Recent content in docker on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Docker on フリーランチなど無い - There ain&#39;t no such thing as a free lunch</description>
+    <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 09 Dec 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tanstaafl.0pt.jp/tags/docker/index.xml" rel="self" type="application/rss+xml" />
@@ -13,21 +13,21 @@
       <link>https://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</link>
       <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/</guid>
-      <description>先日書いた、CoreOSでバックアップを取っていなかったためデータを飛ばした話の続きである。 前回fleetを使うという話をしたのだけれど、自</description>
+      <description>&lt;p&gt;先日書いた、&lt;a href=&#34;https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442&#34;&gt;CoreOSでバックアップを取っていなかったためデータを飛ばした話&lt;/a&gt;の続きである。&lt;/p&gt;&#xA;&lt;p&gt;前回fleetを使うという話をしたのだけれど、自分が今使っている環境はシングルホストだしsystemdを使うことにした。最もfleetはsystemdを分散クラスタ上で管理するためのツールのようなので、実際やることは変わらないだろう。&lt;/p&gt;</description>
     </item>
     <item>
       <title>CoreOSつかってたらデータが飛んだ</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</link>
       <pubDate>Sat, 06 Dec 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/12/06/8fc4abc5b442/</guid>
-      <description>DBのデータが飛んだので先日書いたReactについての記事は下書きから復元した。 原因はCoreOSが自動アップデートしたため、Postgre</description>
+      <description>&lt;p&gt;DBのデータが飛んだので先日書いたReactについての記事は下書きから復元した。&lt;/p&gt;&#xA;&lt;p&gt;原因はCoreOSが自動アップデートしたため、Postgresを動かしていたDockerコンテナが停止してしまったためだ。&lt;/p&gt;</description>
     </item>
     <item>
       <title>dokkuでgit pushするとfatalしてハマった</title>
       <link>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</link>
       <pubDate>Sat, 10 May 2014 00:00:00 +0000</pubDate>
       <guid>https://tanstaafl.0pt.jp/posts/2014/05/10/7dd28c8c4515/</guid>
-      <description>最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。 dokkuでマニュアル通り作成したのだ</description>
+      <description>&lt;p&gt;最近herokuからdockerベースの環境に乗り換えようと思って、とりあえずdokkuを試している。&lt;/p&gt;&#xA;&lt;p&gt;dokkuでマニュアル通り作成したのだが、以下の様なエラーが出てどうにもならなかった。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

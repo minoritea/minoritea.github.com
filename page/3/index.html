@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html  lang="ja" ><head>
-	<meta name="generator" content="Hugo 0.122.0">
+	<meta name="generator" content="Hugo 0.154.2">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
 <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
-<meta property="og:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" />
-
+<meta property="og:url" content="https://tanstaafl.0pt.jp/">
+  <meta property="og:site_name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png">
 
 <meta name="twitter:title" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
 <meta name="twitter:description" content=""/>
@@ -57,7 +58,9 @@
       <time>Sat, May 29, 2021</time>
   </div>
   <h1 class="article-title"><a href="/posts/2021/05/29/004f44725a8d/">今選ぶソフトウェア開発者向けのノートPCについて</a></h1>
-  <div class="summary">結論から言うと自分はMacbook Proを入手した。正確に言うと会社に買ってもらった。 長い転職活動がようやく終わり、新しい会社に入ることにな...</div>
+  <div class="summary"><p>結論から言うと自分はMacbook Proを入手した。正確に言うと会社に買ってもらった。</p>
+<p>長い転職活動がようやく終わり、新しい会社に入ることになった。
+それで新しいPCが支給されることになり何がいいかということで色々悩んだのだが結局Intel Core i7搭載のMacbook Pro 13インチモデルを選択した。</p>...</div>
 </article>
 
       
@@ -66,7 +69,9 @@
       <time>Mon, Apr 26, 2021</time>
   </div>
   <h1 class="article-title"><a href="/posts/2021/04/26/6d5662badcb9/">ユニコーン企業のひみつ</a></h1>
-  <div class="summary">「ユニコーン企業のひみつ」という本を読んだ。 本旨は、成功したスタートアップ企業、所謂ユニコーンの開発手法や組織は、エンタープライズ系開発を主...</div>
+  <div class="summary"><p>「ユニコーン企業のひみつ」という本を読んだ。</p>
+<p>本旨は、成功したスタートアップ企業、所謂ユニコーンの開発手法や組織は、エンタープライズ系開発を主としている企業とは違うものですよ、という話である。
+そしてそれらの企業が具体的にどういうやり方で彼らのプロダクトを開発しているのかを書いている。</p>...</div>
 </article>
 
       
@@ -75,7 +80,10 @@
       <time>Mon, Apr 12, 2021</time>
   </div>
   <h1 class="article-title"><a href="/posts/2021/04/12/d350907547b2/">Amplify&amp;Next.jsでnext/linkを使ったときに `incompatible with the href value` エラーが出る</a></h1>
-  <div class="summary">The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar). 上記のようなエラーが出るときがある。 結論から言うと、これはRewrites and Redirectsの設定漏れによるもの。...</div>
+  <div class="summary"><pre tabindex="0"><code>The provided `as` value (/foo/1) is incompatible with the `href` value (/foo/[id]/bar).
+</code></pre><p>上記のようなエラーが出るときがある。
+結論から言うと、これは<code>Rewrites and Redirects</code>の設定漏れによるもの。</p>
+<p>SSGで生成したコンテンツにDynamic Routingを行う場合配信サーバ（Amplifyの場合Cloudfront）で書き換えの設定を行う必要がある。</p>...</div>
 </article>
 
       
@@ -84,7 +92,14 @@
       <time>Tue, Apr 6, 2021</time>
   </div>
   <h1 class="article-title"><a href="/posts/2021/04/06/cf6f5d000730/">Amplifyについてのメモ</a></h1>
-  <div class="summary">ここ3日ほどAmplify（+Next.js）と取っ組み合って得た知見を残しておく。 Amplify SSRでNext.jsのAPI Routesを動かすのは...</div>
+  <div class="summary"><p>ここ3日ほどAmplify（+Next.js）と取っ組み合って得た知見を残しておく。</p>
+<h2 id="amplify-ssrでnextjsのapi-routesを動かすのはこの記事書いている時点では無理っぽい">Amplify SSRでNext.jsのAPI Routesを動かすのは（この記事書いている時点では）無理っぽい</h2>
+<ul>
+<li>next exportはAPI Routesを除外するため</li>
+<li>SSRでAPI動かしたかったら結局Serverless使わないといけないみたい</li>
+</ul>
+<p>そもそもなんでAPI Routesを使いたかったかというと、
+GraphQLのエンドポイントをNextアプリの中に組み込みたかったから。</p>...</div>
 </article>
 
       
@@ -93,7 +108,10 @@
       <time>Mon, Mar 29, 2021</time>
   </div>
   <h1 class="article-title"><a href="/posts/2021/03/29/32311201c2ba/">寝る前にコーヒーを飲んでいる</a></h1>
-  <div class="summary">最近夜寝る前にコーヒーを淹れて飲むようにしている。 よくコーヒーを飲むと目が覚めて眠れないという人がいるのだが、 残念ながら自分はカフェインに耐...</div>
+  <div class="summary"><p>最近夜寝る前にコーヒーを淹れて飲むようにしている。</p>
+<p>よくコーヒーを飲むと目が覚めて眠れないという人がいるのだが、
+残念ながら自分はカフェインに耐性があるのか、いくらコーヒーを飲んでも眠れなくなったという経験がない。
+眠気覚ましにコーヒーを飲むということが出来ないのは残念に思っている。</p>...</div>
 </article>
 
       
@@ -154,17 +172,5 @@
     <div class="right"></div>
   </div>
 </div>
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-WMCEBYW7WE', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>

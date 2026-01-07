@@ -4,21 +4,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <title>SystemdでDocker上のPostgreSQLをバックアップする | フリーランチなど無い - There ain&#39;t no such thing as a free lunch</title>
-  <meta name="description" content="先日書いた、CoreOSでバックアップを取っていなかったためデータを飛ばした話の続きである。 前回fleetを使うという話をしたのだけれど、自" />
+  <meta name="description" content="先日書いた、CoreOSでバックアップを取っていなかったためデータを飛ばした話の続きである。
+前回fleetを使うという話をしたのだけれど、自分が今使っている環境はシングルホストだしsystemdを使うことにした。最もfleetはsystemdを分散クラスタ上で管理するためのツールのようなので、実際やることは変わらないだろう。" />
   
   <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/theme.css" />
   <link rel="alternate" type="application/rss+xml" title="RSS2.0" href="/index.xml">
 <link rel="stylesheet" href="https://tanstaafl.0pt.jp/css/author.css">
-<meta property="og:title" content="SystemdでDocker上のPostgreSQLをバックアップする" />
-<meta property="og:description" content="先日書いた、CoreOSでバックアップを取っていなかったためデータを飛ばした話の続きである。 前回fleetを使うという話をしたのだけれど、自" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/" /><meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2014-12-09T00:00:00+00:00" />
-<meta property="article:modified_time" content="2014-12-09T00:00:00+00:00" />
-
+<meta property="og:url" content="https://tanstaafl.0pt.jp/posts/2014/12/09/15cb34942165/">
+  <meta property="og:site_name" content="フリーランチなど無い - There ain&#39;t no such thing as a free lunch">
+  <meta property="og:title" content="SystemdでDocker上のPostgreSQLをバックアップする">
+  <meta property="og:description" content="先日書いた、CoreOSでバックアップを取っていなかったためデータを飛ばした話の続きである。
+前回fleetを使うという話をしたのだけれど、自分が今使っている環境はシングルホストだしsystemdを使うことにした。最もfleetはsystemdを分散クラスタ上で管理するためのツールのようなので、実際やることは変わらないだろう。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2014-12-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2014-12-09T00:00:00+00:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Coreos">
+    <meta property="article:tag" content="Systemd">
+    <meta property="article:tag" content="Postgres">
+    <meta property="og:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png">
 
 <meta name="twitter:title" content="SystemdでDocker上のPostgreSQLをバックアップする"/><meta name="twitter:image" content="https://tanstaafl.0pt.jp/images/simple_thumbnail.png"/><meta name="twitter:card" content="summary"/>
-<meta name="twitter:description" content="先日書いた、CoreOSでバックアップを取っていなかったためデータを飛ばした話の続きである。 前回fleetを使うという話をしたのだけれど、自"/>
+<meta name="twitter:description" content="先日書いた、CoreOSでバックアップを取っていなかったためデータを飛ばした話の続きである。
+前回fleetを使うという話をしたのだけれど、自分が今使っている環境はシングルホストだしsystemdを使うことにした。最もfleetはsystemdを分散クラスタ上で管理するためのツールのようなので、実際やることは変わらないだろう。"/>
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <script>
  
@@ -58,19 +68,19 @@
         <div class="tags">
           
             <div class="tag">
-                <a href="/tags/docker/">docker</a>
+                <a href="/tags/docker/">Docker</a>
             </div>
           
             <div class="tag">
-                <a href="/tags/coreos/">coreos</a>
+                <a href="/tags/coreos/">Coreos</a>
             </div>
           
             <div class="tag">
-                <a href="/tags/systemd/">systemd</a>
+                <a href="/tags/systemd/">Systemd</a>
             </div>
           
             <div class="tag">
-                <a href="/tags/postgres/">postgres</a>
+                <a href="/tags/postgres/">Postgres</a>
             </div>
           
         </div>
@@ -141,17 +151,5 @@ WantedBy=default.target
     <div class="right"></div>
   </div>
 </div>
-
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'G-WMCEBYW7WE', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
 </body>
 </html>
